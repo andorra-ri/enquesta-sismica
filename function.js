@@ -355,7 +355,8 @@ const getIndices = (data) => {
     pictureIndex,
     furnitureIndex,
     damageIndex,
-    cws,cii
+    cws,
+    cii,
   };
 };
 

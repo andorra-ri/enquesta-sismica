@@ -137,7 +137,7 @@ const json = {
           title: "Carrer",
           inputType: "text",
           isRequired: false,
-          
+
           visibleIf: "{locationMap}='no'",
         },
         {
@@ -710,15 +710,26 @@ const getSeism = async () => {
   window.survey = model;
 
   model.locale = "ca";
-  survey.onComplete.add(function (sender) {
+  survey.onComplete.add(async function (sender) {
     const indices = getIndices(sender.data);
     document.querySelector("#surveyResult").textContent =
-      "Resultar JSON:\n" +JSON.stringify(indices) + "---"+ JSON.stringify(sender.data, null, 3) ;
+      "Resultar JSON:\n" +
+      JSON.stringify(indices) +
+      "---" +
+      JSON.stringify(sender.data, null, 3);
+
+    await supabaseClient.from("survey").insert([
+      {
+        survey_data: sender.data,
+        cws: indices.cws,
+        cii: indices.cii,
+        indices: indices,
+      },
+    ]);
   });
 
   model.render("surveyElement");
 };
-
 
 const getIndices = (data) => {
   const feltYesNo = data.felt === "yes" ? 1 : 0;
@@ -1042,9 +1053,9 @@ const getIndices = (data) => {
     pictureIndex,
     furnitureIndex,
     damageIndex,
-    cws,cii
+    cws,
+    cii,
   };
 };
-
 
 getSeism();
