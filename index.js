@@ -645,7 +645,7 @@ const supabaseAnonKey =
   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYW5vbiIsImlhdCI6MTYzOTA4ODc0NiwiZXhwIjoxOTU0NjY0NzQ2fQ.XmlC695aKtt85caWPcPSDWBUP9z4RDS_eGQ-eWjfwKE";
 
 const getSeism = async () => {
-  const supabaseClient = supabase.createClient(supabaseUrl, supabaseAnonKey);
+  const supabaseClient = supabase.createClient(supabaseUrl, supabaseAnonKey, {schema: 'seismology'});
 
   const { data: dataSeism, error: errorSeism } = await supabaseClient
     .from("seism")
