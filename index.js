@@ -292,6 +292,7 @@ const json = {
       ],
     },
     {
+      title: "Percepció personal",
       elements: [
         {
           type: "dropdown",
@@ -636,6 +637,7 @@ const json = {
       ],
     },
     {
+      title: "Índex de percepció",
       elements: [
         {
           type: "imagepicker",
