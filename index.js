@@ -635,6 +635,67 @@ const json = {
         },
       ],
     },
+    {
+      elements: [
+        {
+          type: "imagepicker",
+          name: "perceptionImage",
+          title:
+            "Seleccioneu la imatge que millor resumeixi la situació viscuda",
+          imageWidth: 362,
+          imageHeight: 288,
+          showLabel: true,
+          defaultValue: "notSpecified",
+          choices: [
+            {
+              text: "No percebut",
+              value: "notPerceived",
+              imageLink: "images/EMS98-1.jpg",
+            },
+            {
+              text: "Poc percebut",
+              value: "perceived",
+              imageLink: "images/EMS98-2.jpg",
+            },
+            {
+              text: "Lleuger",
+              value: "light",
+              imageLink: "images/EMS98-3.jpg",
+            },
+            {
+              text: "Moderat",
+              value: "moderate",
+              imageLink: "images/EMS98-4.jpg",
+            },
+            {
+              text: "Fort",
+              value: "strong",
+              imageLink: "images/EMS98-5.jpg",
+            },
+            {
+              text: "Molt fort",
+              value: "veryStrong",
+              imageLink: "images/EMS98-6.jpg",
+            },
+            {
+              text: "Sever",
+              value: "severe",
+              imageLink: "images/EMS98-7.jpg",
+            },
+            {
+              text: "Molt sever",
+              value: "verySevere",
+              imageLink: "images/EMS98-8.jpg",
+            },
+            {
+              text: "No especificat",
+              value: "notSpecified",
+              imageLink: "images/EMS98-0.jpg",
+            },
+          ],
+        },
+      ],
+    },
   ],
 };
 
@@ -645,7 +706,9 @@ const supabaseAnonKey =
   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYW5vbiIsImlhdCI6MTYzOTA4ODc0NiwiZXhwIjoxOTU0NjY0NzQ2fQ.XmlC695aKtt85caWPcPSDWBUP9z4RDS_eGQ-eWjfwKE";
 
 const getSeism = async () => {
-  const supabaseClient = supabase.createClient(supabaseUrl, supabaseAnonKey, {schema: 'seismology'});
+  const supabaseClient = supabase.createClient(supabaseUrl, supabaseAnonKey, {
+    schema: "seismology",
+  });
 
   const { data: dataSeism, error: errorSeism } = await supabaseClient
     .from("seism")
