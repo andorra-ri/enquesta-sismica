@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<cataleg_macrosismica>
+    <questionari temps_rx="1636977171" programa="heu_percebut" font="heu_percebut_web" institucio="ICGC">
+        <esdeveniment>
+            <tipus_seleccio>1</tipus_seleccio>
+            <codi_esdeveniment/>
+            <to_eqseleccionat/>
+            <mag_eqseleccionat/>
+            <regepi_eqseleccionat/>
+            <to_proposat>2021-11-15T12:49:00</to_proposat>
+            <to_proposat_unix>1636976940</to_proposat_unix>
+        </esdeveniment>
+        <lloc_percepcio>
+            <capa_municipi_usuari>muni_cat</capa_municipi_usuari>
+            <desc_capa_municipi_usuari>Municipis de Catalunya</desc_capa_municipi_usuari>
+            <codi_municipi_usuari>08073</codi_municipi_usuari>
+            <nom_municipi_usuari>Cornell&#xE0; de Llobregat</nom_municipi_usuari>
+            <capa_entitat_poblacio_usuari>ep_cat</capa_entitat_poblacio_usuari>
+            <desc_capa_entitat_poblacio_usuari>Entitats de Poblaci&#xF3; de Catalunya</desc_capa_entitat_poblacio_usuari>
+            <codi_entitat_poblacio_usuari>08073000301</codi_entitat_poblacio_usuari>
+            <nom_entitat_poblacio_usuari>Cornell&#xE0; de Llobregat</nom_entitat_poblacio_usuari>
+            <tipus_via_usuari></tipus_via_usuari>
+            <nom_via_usuari>Domenech i Muntaner</nom_via_usuari>
+            <numero_via_usuari>10</numero_via_usuari>
+            <codi_postal_usuari>08940</codi_postal_usuari>
+            <toponim_usuari></toponim_usuari>
+            <pais_usuari>Catalunya</pais_usuari>
+            <codi_municipi_geo></codi_municipi_geo>
+            <nom_municipi_geo></nom_municipi_geo>
+            <codi_entitat_poblacio_geo></codi_entitat_poblacio_geo>
+            <nom_entitat_poblacio_geo></nom_entitat_poblacio_geo>
+            <tipus_via_geo></tipus_via_geo>
+            <nom_via_geo></nom_via_geo>
+            <numero_via_geo></numero_via_geo>
+            <codi_postal_geo></codi_postal_geo>
+            <toponim_geo></toponim_geo>
+            <coordenada_geo>
+                <latitud></latitud>
+                <longitud></longitud>
+                <elevacio></elevacio>
+                <sistema_referencia>EPSG:4258</sistema_referencia>
+            </coordenada_geo>
+            <indicador_exactitud_geo></indicador_exactitud_geo>
+        </lloc_percepcio>
+        <ubicacio>
+            <trobava>3</trobava>
+            <trobava_txt></trobava_txt>
+            <trobava_pis>1</trobava_pis>
+            <trobava_plantes>2</trobava_plantes>
+            <estava>4</estava>
+            <estava_txt></estava_txt>
+        </ubicacio>
+        <sentir>
+            <sentit>1</sentit>
+            <quants_dins>2</quants_dins>
+            <quants_fora>1</quants_fora>
+            <quants_correr>1</quants_correr>
+            <quants_despertarse>1</quants_despertarse>
+        </sentir>
+        <percepcio>
+            <moviment>2</moviment>
+            <moviment_txt>He sentido 3 veces un temblor en el suelo durante unos 2-3 segundos. Sensaci&#xF3;n parecida a c&#xF3;mo si pasara el metro por debajo.</moviment_txt>
+            <soroll>2</soroll>
+            <soroll_txt></soroll_txt>
+            <reaccio>3</reaccio>
+            <dret>1</dret>
+            <animals>1</animals>
+        </percepcio>
+        <objectes>
+            <llums>1</llums>
+            <liquids>1</liquids>
+            <obj_vibrar>1</obj_vibrar>
+            <obj_vibrar_txt></obj_vibrar_txt>
+            <quadres>1</quadres>
+            <portes>2</portes>
+            <mobles>2</mobles>
+            <plantes>1</plantes>
+        </objectes>
+        <danys>
+            <tipus_edifici>0</tipus_edifici>
+            <any_edifici></any_edifici>
+            <danys>2</danys>
+            <danys_tipus>0</danys_tipus>
+            <danys_txt></danys_txt>
+        </danys>
+        <comentari>
+            <comentari_usuari></comentari_usuari>
+            <varis_txt></varis_txt>
+        </comentari>
+        <imatge>
+            <imatge>1</imatge>
+        </imatge>
+        <estadistica>
+            <idioma>es</idioma>
+            <mobil>1</mobil>
+            <usuari></usuari>
+        </estadistica>
+    </questionari>
+</cataleg_macrosismica>
