@@ -9091,13 +9091,15 @@ var widget = {
       
       map.locate({setView: true, watch: false})
           .on('locationfound', function(e){
-            console.log("LOCATION", e);
             var newLatLng = new __WEBPACK_IMPORTED_MODULE_0_leaflet___default.a.LatLng(e.latitude, e.longitude);
             myMarker.setLatLng(newLatLng);
             map.setView([e.latitude, e.longitude], question.zoom);
           })
           .on('locationerror', function(e){
             console.log(e);
+            map.setView([question.initialLatitude, question.initialLongitude], question.zoom - 4);
+            var newLatLng = new __WEBPACK_IMPORTED_MODULE_0_leaflet___default.a.LatLng(question.initialLatitude, question.initialLongitude);
+            myMarker.setLatLng(newLatLng);
         });
     } else {
       map.setView([question.initialLatitude, question.initialLongitude], question.zoom);

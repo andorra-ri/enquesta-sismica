@@ -114,6 +114,8 @@ const json = {
           zoom: 14,
           height: 200,
           visibleIf: "{locationMap}='yes'",
+          initialLatitude: 42.545,
+          initialLongitude: 1.563
         },
         {
           type: "dropdown",
