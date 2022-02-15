@@ -119,9 +119,19 @@ const json = {
         },
         {
           type: "dropdown",
+          name: "pais",
+          title: "País on es trobava en el moment del terràtremol",
+          visibleIf: "{locationMap}='no'",
+          defaultValue: "Andorra",
+          choices: ["Andorra", "Espanya","França"],
+          startWithNewLine: false,
+        },
+        {
+          type: "dropdown",
           name: "parroquia",
           title: "Parròquia on es trobava en el moment del terràtremol",
-          visibleIf: "{locationMap}='no'",
+          visibleIf: "{locationMap}='no' and {pais}='Andorra'",
+          startWithNewLine: false,
           choices: [],
         },
         {
@@ -130,8 +140,17 @@ const json = {
           startWithNewLine: false,
           title:
             "Territori dins la parròquia on es trobava en el moment del terràtremol",
-          visibleIf: "{locationMap}='no'",
+          visibleIf: "{locationMap}='no' and {pais}='Andorra'",
           choices: [],
+        },
+        {
+          type: "text",
+          name: "municipality",
+          title: "Municipi on es trobava en el moment del terràtremol",
+          inputType: "number",
+          isRequired: false,
+          startWithNewLine: false,
+          visibleIf: "{locationMap}='no' and {pais}!='Andorra'",
         },
         {
           type: "text",
