@@ -176,7 +176,6 @@ const json = {
           type: "dropdown",
           name: "position",
           title: "Al moment de la sacsejada es trobava",
-          isRequired: true,
           hasNone: false,
           defaultValue: "notSpecified",
           choices: [
@@ -218,7 +217,6 @@ const json = {
           type: "dropdown",
           name: "situationObserver",
           title: "Al moment de la sacsejada, estaveu",
-          isRequired: true,
           hasNone: false,
           defaultValue: "notSpecified",
           choices: [
@@ -245,7 +243,6 @@ const json = {
           name: "numberPeopleInside",
           title:
             "Al moment de la sacsejada, quantes persones sentiren el terratrèmol?",
-          isRequired: true,
           hasNone: false,
           defaultValue: "notSpecified",
           visibleIf: "{position}='insideBuilding'",
@@ -264,7 +261,6 @@ const json = {
           name: "numberPeopleOutside",
           title:
             "Al moment de la sacsejada, quantes persones sentiren el terratrèmol?",
-          isRequired: true,
           hasNone: false,
           defaultValue: "notSpecified",
           visibleIf: "{position}!='insideBuilding'",
@@ -281,7 +277,6 @@ const json = {
           type: "dropdown",
           name: "numberPeopleGoingOut",
           title: "Quantes persones sortiren al carrer espantades?",
-          isRequired: true,
           hasNone: false,
           defaultValue: "notSpecified",
           choices: [
@@ -297,7 +292,6 @@ const json = {
           type: "dropdown",
           name: "numberPeopleAwake",
           title: "Quantes persones es van despertar?",
-          isRequired: true,
           hasNone: false,
           defaultValue: "notSpecified",
           choices: [
@@ -319,7 +313,6 @@ const json = {
           type: "dropdown",
           name: "movementDescription",
           title: "Com descriuria el moviment durant el terratrèmol?",
-          isRequired: true,
           hasNone: false,
           defaultValue: "notSpecified",
           choices: [
@@ -336,7 +329,6 @@ const json = {
           type: "dropdown",
           name: "noise",
           title: "Va sentir algun soroll?",
-          isRequired: true,
           hasNone: false,
           defaultValue: "notSpecified",
           choices: [
@@ -352,7 +344,6 @@ const json = {
           type: "dropdown",
           name: "reaction",
           title: "Quina reacció vareu tenir durant el terratrèmol?",
-          isRequired: true,
           hasNone: false,
           defaultValue: "notSpecified",
           choices: [
@@ -369,7 +360,6 @@ const json = {
           type: "dropdown",
           name: "standingDifficulty",
           title: "Us va resultar difícil estar dret durant el terratrèmol?",
-          isRequired: true,
           hasNone: false,
           defaultValue: "notSpecified",
           choices: [
@@ -383,7 +373,6 @@ const json = {
           type: "dropdown",
           name: "animalsFrightened",
           title: "Es van espantar els animals?",
-          isRequired: true,
           hasNone: false,
           defaultValue: "notSpecified",
           choices: [
@@ -508,7 +497,6 @@ const json = {
               name: "commentseffectsShelves",
               title: "Descriviu, si voleu, quins objectes van caure",
               inputType: "text",
-              isRequired: false,
               maxWidth: "700px",
             },
           ],
