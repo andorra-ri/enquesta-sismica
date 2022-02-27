@@ -768,8 +768,7 @@ const getSeism = async () => {
     .from("seism")
     .select();
 
-  errorSeism && console.log("Error downloading seisms:", errorSeism);
-
+    errorSeism && console.log("Error downloading seisms:", errorSeism);
   const { data: dataMunicipalities, error: errorMunicipalities } =
     await supabaseClient
       .from("territorial_division")
@@ -794,7 +793,7 @@ const getSeism = async () => {
                 ...element,
                 choices: dataSeism.map(
                   (seism) =>
-                    seism.datetime +
+                  `${new Date(seism.datetime).toLocaleDateString('ca-ES', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' , timeZone: 'CET'})} ${new Date(seism.datetime).toLocaleTimeString('ca-ES', {hour: '2-digit', minute:'2-digit', timeZone: 'CET'})}` +
                     " magnitud: " +
                     seism.magnitude +
                     " (" +
