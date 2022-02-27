@@ -2,7 +2,6 @@ Survey.StylesManager.applyTheme("bootstrap");
 
 Survey.defaultBootstrapCss.navigationButton = "btn btn-green";
 
-
 Survey.defaultBootstrapCss.navigationButton = "btn btn-green";
 
 const now = new Date();
@@ -50,7 +49,9 @@ const json = {
           type: "text",
           inputType: "date",
           title: "Data del terratrèmol:",
-          defaultValue: `${now.getFullYear()}-${(now.getMonth()+1).toString().padStart(2, '0')}-${now.getDate().toString().padStart(2, '0')}`,
+          defaultValue: `${now.getFullYear()}-${(now.getMonth() + 1)
+            .toString()
+            .padStart(2, "0")}-${now.getDate().toString().padStart(2, "0")}`,
           isRequired: true,
           autoComplete: "bdate",
           maxWidth: "300px",
@@ -60,7 +61,10 @@ const json = {
           name: "earthquakeHour",
           type: "text",
           inputType: "text",
-          defaultValue: `${now.getHours().toString().padStart(2, '0')}:${now.getMinutes().toString().padStart(2, '0')}`,
+          defaultValue: `${now.getHours().toString().padStart(2, "0")}:${now
+            .getMinutes()
+            .toString()
+            .padStart(2, "0")}`,
           title: "Hora:",
           placeHolder: "HH:MM",
           startWithNewLine: false,
@@ -122,7 +126,7 @@ const json = {
           height: 200,
           visibleIf: "{locationMap}='yes'",
           initialLatitude: 42.545,
-          initialLongitude: 1.563
+          initialLongitude: 1.563,
         },
         {
           type: "dropdown",
@@ -131,7 +135,7 @@ const json = {
           title: "País on es trobava en el moment del terràtremol",
           visibleIf: "{locationMap}='no'",
           defaultValue: "Andorra",
-          choices: ["Andorra", "Espanya","França"],
+          choices: ["Andorra", "Espanya", "França"],
           startWithNewLine: false,
         },
         {
@@ -212,14 +216,13 @@ const json = {
           title: "Quants pisos té l'edifici?",
           startWithNewLine: false,
           visibleIf: "{position}='insideBuilding'",
-          "validators": [
+          validators: [
             {
-                "type": "numeric",
-                "minValue": 1,
-                "maxValue": 25
-            }
-        ]
-        
+              type: "numeric",
+              minValue: 1,
+              maxValue: 25,
+            },
+          ],
         },
         {
           type: "comment",
@@ -571,13 +574,13 @@ const json = {
               title: "Any de contrucció de l'edifici",
               maxWidth: "400px",
               startWithNewLine: false,
-              "validators": [
+              validators: [
                 {
-                    "type": "numeric",
-                    "minValue": 1000,
-                    "maxValue": 2050
-                }
-            ]
+                  type: "numeric",
+                  minValue: 1000,
+                  maxValue: 2050,
+                },
+              ],
             },
             {
               type: "dropdown",
@@ -768,7 +771,7 @@ const getSeism = async () => {
     .from("seism")
     .select();
 
-    errorSeism && console.log("Error downloading seisms:", errorSeism);
+  errorSeism && console.log("Error downloading seisms:", errorSeism);
   const { data: dataMunicipalities, error: errorMunicipalities } =
     await supabaseClient
       .from("territorial_division")
@@ -793,7 +796,17 @@ const getSeism = async () => {
                 ...element,
                 choices: dataSeism.map(
                   (seism) =>
-                  `${new Date(seism.datetime).toLocaleDateString('ca-ES', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' , timeZone: 'CET'})} ${new Date(seism.datetime).toLocaleTimeString('ca-ES', {hour: '2-digit', minute:'2-digit', timeZone: 'CET'})}` +
+                    `${new Date(seism.datetime).toLocaleDateString("ca-ES", {
+                      weekday: "long",
+                      year: "numeric",
+                      month: "long",
+                      day: "numeric",
+                      timeZone: "CET",
+                    })} ${new Date(seism.datetime).toLocaleTimeString("ca-ES", {
+                      hour: "2-digit",
+                      minute: "2-digit",
+                      timeZone: "CET",
+                    })}` +
                     " magnitud: " +
                     seism.magnitude +
                     " (" +
@@ -1215,9 +1228,11 @@ const createPerceptionLocation = (data, doc) => {
   const geoCoordinates = doc.createElement("coordenada_geo");
 
   const geoCoordinatesLat = doc.createElement("latitud");
-  if (data.leaflet && data.leaflet.lat) geoCoordinatesLat.innerHTML = data.leaflet.lat;
+  if (data.leaflet && data.leaflet.lat)
+    geoCoordinatesLat.innerHTML = data.leaflet.lat;
   const geoCoordinatesLon = doc.createElement("longitud");
-  if (data.leaflet && data.leaflet.lng) geoCoordinatesLon.innerHTML = data.leaflet.lng;
+  if (data.leaflet && data.leaflet.lng)
+    geoCoordinatesLon.innerHTML = data.leaflet.lng;
   const geoCoordinatesAltitude = doc.createElement("elevacio");
   const geoCoordinatesEPSG = doc.createElement("sistema_referencia");
   geoCoordinatesEPSG.innerHTML = "EPSG:4326";
