@@ -794,8 +794,8 @@ const getSeism = async () => {
             case "seism":
               return {
                 ...element,
-                choices: dataSeism.map(
-                  (seism) =>
+                choices: dataSeism.map((seism) => ({
+                  text:
                     `${new Date(seism.datetime).toLocaleDateString("ca-ES", {
                       weekday: "long",
                       year: "numeric",
@@ -811,8 +811,9 @@ const getSeism = async () => {
                     seism.magnitude +
                     " (" +
                     seism.region +
-                    ")"
-                ),
+                    ")",
+                  value: seism.guid,
+                })),
               };
             case "parroquia":
               return {
@@ -854,6 +855,7 @@ const getSeism = async () => {
         cii: indices.cii,
         indices: indices,
         xml_report: xmlReport,
+        seism_guid: sender.data.seism,
       },
     ]);
   });
