@@ -19,7 +19,7 @@ const json = {
         {
           type: "radiogroup",
           name: "existentSeism",
-          title: "Triar un sisme mesurat",
+          title: "Surt el sisme que ha percebut a la llista inferior?",
           colCount: 2,
           isRequired: true,
           hasNone: false,
@@ -65,7 +65,7 @@ const json = {
             .getMinutes()
             .toString()
             .padStart(2, "0")}`,
-          title: "Hora:",
+          title: "Hora (local):",
           placeHolder: "HH:MM",
           startWithNewLine: false,
 
@@ -132,7 +132,7 @@ const json = {
           type: "dropdown",
           maxWidth: "700px",
           name: "pais",
-          title: "País on es trobava en el moment del terràtremol",
+          title: "País on es trobava en el moment del terratrèmol",
           visibleIf: "{locationMap}='no'",
           defaultValue: "Andorra",
           choices: ["Andorra", "Espanya", "França"],
@@ -142,7 +142,7 @@ const json = {
           type: "dropdown",
           maxWidth: "700px",
           name: "parroquia",
-          title: "Parròquia on es trobava en el moment del terràtremol",
+          title: "Parròquia on es trobava en el moment del terratrèmol",
           visibleIf: "{locationMap}='no' and {pais}='Andorra'",
           startWithNewLine: false,
           choices: [],
@@ -153,14 +153,14 @@ const json = {
           name: "territori",
           startWithNewLine: false,
           title:
-            "Territori dins la parròquia on es trobava en el moment del terràtremol",
+            "Territori dins la parròquia on es trobava en el moment del terratrèmol",
           visibleIf: "{locationMap}='no' and {pais}='Andorra'",
           choices: [],
         },
         {
           type: "text",
           name: "municipality",
-          title: "Municipi on es trobava en el moment del terràtremol",
+          title: "Municipi on es trobava en el moment del terratrèmol",
           inputType: "number",
           isRequired: false,
           startWithNewLine: false,
@@ -190,7 +190,7 @@ const json = {
           type: "dropdown",
           maxWidth: "700px",
           name: "position",
-          title: "Al moment de la sacsejada es trobava",
+          title: "En el moment de la sacsejada es trobava...",
           hasNone: false,
           defaultValue: "notSpecified",
           choices: [
@@ -227,7 +227,7 @@ const json = {
         {
           type: "comment",
           name: "commentsBuilding",
-          title: "Descripció del lloc on ereu",
+          title: "Indiqui on es trobava:",
           inputType: "text",
           isRequired: false,
           maxWidth: "700px",
@@ -237,7 +237,7 @@ const json = {
           type: "dropdown",
           maxWidth: "700px",
           name: "situationObserver",
-          title: "Al moment de la sacsejada, estaveu",
+          title: "En el moment de la sacsejada, estava...",
           hasNone: false,
           defaultValue: "notSpecified",
           choices: [
@@ -253,7 +253,7 @@ const json = {
         {
           type: "comment",
           name: "commentsBuilding",
-          title: "Descriviu el que feieu en el moment de la sacsejada",
+          title: "Indiqui que estava fent:",
           inputType: "text",
           isRequired: false,
           maxWidth: "700px",
@@ -263,8 +263,7 @@ const json = {
           type: "dropdown",
           maxWidth: "700px",
           name: "numberPeopleInside",
-          title:
-            "Al moment de la sacsejada, quantes persones sentiren el terratrèmol?",
+          title: " Quantes persones van percebre el terratrèmol a prop seu?",
           hasNone: false,
           defaultValue: "notSpecified",
           visibleIf: "{position}='insideBuilding'",
@@ -282,8 +281,7 @@ const json = {
           type: "radiogroup",
           colCount: 3,
           name: "numberPeopleOutside",
-          title:
-            "Al moment de la sacsejada, quantes persones sentiren el terratrèmol?",
+          title: "Quantes persones van percebre el terratrèmol a prop seu?",
           hasNone: false,
           defaultValue: "notSpecified",
           visibleIf: "{position}!='insideBuilding'",
@@ -300,7 +298,8 @@ const json = {
           type: "radiogroup",
           colCount: 3,
           name: "numberPeopleGoingOut",
-          title: "Quantes persones sortiren al carrer espantades?",
+          title:
+            "A prop seu, quantes persones van córrer espantades al carrer?",
           hasNone: false,
           defaultValue: "notSpecified",
           choices: [
@@ -316,7 +315,7 @@ const json = {
           type: "radiogroup",
           colCount: 3,
           name: "numberPeopleAwake",
-          title: "Quantes persones es van despertar?",
+          title: "A prop seu, quantes persones es van despertar?",
           hasNone: false,
           defaultValue: "notSpecified",
           choices: [
@@ -355,14 +354,14 @@ const json = {
           type: "dropdown",
           maxWidth: "700px",
           name: "noise",
-          title: "Va sentir algun soroll?",
+          title: "Va sentir soroll?",
           hasNone: false,
           defaultValue: "notSpecified",
           choices: [
             { value: "notSpecified", text: "Sense especificar" },
             { value: "no", text: "No" },
             { value: "didntNotice", text: "No m'hi vaig fixar" },
-            { value: "weak", text: "Dèbil" },
+            { value: "weak", text: "Feble" },
             { value: "moderate", text: "Moderat" },
             { value: "strong", text: "Fort" },
           ],
@@ -371,7 +370,7 @@ const json = {
           type: "dropdown",
           maxWidth: "700px",
           name: "reaction",
-          title: "Quina reacció vareu tenir durant el terratrèmol?",
+          title: "Quina reacció va tenir durant el terratrèmol?",
           hasNone: false,
           defaultValue: "notSpecified",
           choices: [
@@ -388,7 +387,7 @@ const json = {
           type: "dropdown",
           maxWidth: "700px",
           name: "standingDifficulty",
-          title: "Us va resultar difícil estar dret durant el terratrèmol?",
+          title: "Li va resultar difícil estar dret durant el terratrèmol?",
           hasNone: false,
           defaultValue: "notSpecified",
           choices: [
@@ -515,7 +514,7 @@ const json = {
               type: "dropdown",
               maxWidth: "700px",
               name: "effectsShelves",
-              title: "A les prestatgeries o taules",
+              title: "Als objectes a les prestatgeries o taules",
               hasNone: false,
               defaultValue: "notSpecified",
               choices: [
@@ -532,12 +531,13 @@ const json = {
             {
               type: "comment",
               name: "commentseffectsShelves",
-              title: "Descriviu, si voleu, quins objectes van caure",
+              title:
+                "Descriviu, si voleu, quins objectes van vibrar o van caure",
               inputType: "text",
               maxWidth: "700px",
             },
           ],
-          title: "Quins efectes vareu observar",
+          title: "Quins efectes va observar sobre els següents objectes?",
         },
         {
           type: "panel",
@@ -547,7 +547,7 @@ const json = {
               type: "dropdown",
               maxWidth: "700px",
               name: "buildingType",
-              title: "La construcció de l'edifici és",
+              title: "La construcció de l'edifici és del tipus:",
               hasNone: false,
 
               defaultValue: "notSpecified",
@@ -563,7 +563,7 @@ const json = {
                 },
                 {
                   value: "typeC",
-                  text: "Tipus C: Construccions amb estructura metàl·ica o de formigó armat",
+                  text: "Tipus C: Construccions amb estructura metàl·lica o de formigó armat",
                 },
               ],
               maxWidth: "700px",
@@ -571,7 +571,7 @@ const json = {
             {
               type: "text",
               name: "buildingYear",
-              title: "Any de contrucció de l'edifici",
+              title: "Any de construcció de l'edifici (si el sap)",
               maxWidth: "400px",
               startWithNewLine: false,
               validators: [
@@ -586,7 +586,7 @@ const json = {
               type: "dropdown",
               maxWidth: "700px",
               name: "buildingDamage",
-              title: "Vareu observar danys a l'edifici?",
+              title: "Va observar danys a l'edifici?",
               hasNone: false,
               defaultValue: "notSpecified",
               choices: [
@@ -599,7 +599,7 @@ const json = {
             {
               type: "checkbox",
               name: "buildingDamageDescription",
-              title: "Vareu observar danys a l'edifici?",
+              title: "Quins danys va observar?",
               visibleIf: "{buildingDamage}='yes'",
               colCount: 3,
               choices: [
@@ -684,7 +684,7 @@ const json = {
         {
           type: "comment",
           name: "comments",
-          title: "Desitgeu afegir algun altre comentari o aclaració?",
+          title: "Desitgeu afegir algun comentari general o aclariment?",
           inputType: "text",
           isRequired: false,
           maxWidth: "700px",
@@ -698,7 +698,7 @@ const json = {
           type: "imagepicker",
           name: "perceptionImage",
           title:
-            "Seleccioneu la imatge que millor resumeixi la situació viscuda",
+            "Seleccioni la imatge que millor resumeixi la situació viscuda",
           imageWidth: 362,
           imageHeight: 288,
           showLabel: true,
