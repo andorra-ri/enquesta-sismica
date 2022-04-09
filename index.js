@@ -10,7 +10,7 @@ const json = {
   title: "Enquesta sísmica",
   showProgressBar: "top",
   logo: "logo.png",
-  logoWidth: 200,
+  logoWidth: 300,
   logoHeight: 60,
   completedHtml: "Gràcies per omplir el formulari.",
   pages: [
@@ -19,7 +19,7 @@ const json = {
         {
           type: "radiogroup",
           name: "existentSeism",
-          title: "Surt el sisme que ha percebut a la llista inferior?",
+          title: "Surt el sisme que ha percebut o no a la llista inferior?",
           colCount: 2,
           isRequired: true,
           hasNone: false,
@@ -65,7 +65,7 @@ const json = {
             .getMinutes()
             .toString()
             .padStart(2, "0")}`,
-          title: "Hora (local):",
+          title: "Hora local (HH:MM):",
           placeHolder: "HH:MM",
           startWithNewLine: false,
 
@@ -109,7 +109,7 @@ const json = {
           choices: [
             {
               value: "yes",
-              text: "Sí, seleccionar la ubicació arrossegant la icona del mapa",
+              text: "Sí, seleccionar la ubicació arrossegant la icona blava del mapa",
             },
             {
               value: "no",
@@ -120,7 +120,7 @@ const json = {
         {
           type: "leaflet",
           name: "leaflet",
-          title: "Lloc",
+          title: "Ubicació el més detallada possible",
           useUserPosition: true,
           zoom: 14,
           height: 200,
@@ -206,14 +206,14 @@ const json = {
         {
           type: "text",
           name: "floor",
-          title: "En quin pis es trobava?",
+          title: "Al pis",
           inputType: "number",
           visibleIf: "{position}='insideBuilding'",
         },
         {
           type: "text",
           name: "totalFloors",
-          title: "Quants pisos té l'edifici?",
+          title: "Nombre total de plantes",
           startWithNewLine: false,
           visibleIf: "{position}='insideBuilding'",
           validators: [
@@ -263,7 +263,7 @@ const json = {
           type: "dropdown",
           maxWidth: "700px",
           name: "numberPeopleInside",
-          title: " Quantes persones van percebre el terratrèmol a prop seu?",
+          title: " A prop seu, quantes persones van percebre el terratrèmol?",
           hasNone: false,
           defaultValue: "notSpecified",
           visibleIf: "{position}='insideBuilding'",
@@ -281,7 +281,7 @@ const json = {
           type: "radiogroup",
           colCount: 3,
           name: "numberPeopleOutside",
-          title: "Quantes persones van percebre el terratrèmol a prop seu?",
+          title: "A prop seu, quantes persones van percebre el terratrèmol?",
           hasNone: false,
           defaultValue: "notSpecified",
           visibleIf: "{position}!='insideBuilding'",
@@ -684,7 +684,8 @@ const json = {
         {
           type: "comment",
           name: "comments",
-          title: "Desitgeu afegir algun comentari general o aclariment?",
+          title:
+            "Desitgeu afegir algun aclariment o descriure el que heu notat?",
           inputType: "text",
           isRequired: false,
           maxWidth: "700px",
