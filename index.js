@@ -8,6 +8,10 @@ const now = new Date();
 
 const json = {
   title: "Enquesta sísmica",
+  titleMaxWidth: 100,
+  description: `Per tal d'avaluar la o les intensitats amb les quals s’ha notat el terratrèmol al territori andorrà, li agrairíem que ompli la següent enquesta sísmica de la manera més detallada possible. 
+
+Encara que no hagi notat el terratrèmol, la seva informació és igualment útil. Gràcies per la seva col·laboració.`,
   showProgressBar: "top",
   logo: "logo.png",
   logoWidth: 300,
@@ -841,6 +845,17 @@ const getSeism = async () => {
   window.survey = model;
 
   model.locale = "ca";
+
+  const converter = new showdown.Converter();
+  survey.onTextMarkdown.add(function (survey, options) {
+    //convert the mardown text to html
+    var str = converter.makeHtml(options.text);
+    //remove root paragraphs <p></p>
+    str = str.substring(3);
+    str = str.substring(0, str.length - 4);
+    //set html
+    options.html = str;
+  });
   survey.onComplete.add(async function (sender) {
     const indices = getIndices(sender.data);
     document.querySelector("#surveyResult").textContent =
