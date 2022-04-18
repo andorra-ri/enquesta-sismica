@@ -180,9 +180,9 @@ Encara que no hagi notat el terratrèmol, la seva informació és igualment úti
         },
         {
           type: "text",
-          name: "street",
+          name: "streetNumber",
           title: "Número",
-          inputType: "number",
+          inputType: "text",
           isRequired: false,
           startWithNewLine: false,
 
@@ -438,6 +438,46 @@ Encara que no hagi notat el terratrèmol, la seva informació és igualment úti
           ],
         },
         {
+          type: "dropdown",
+          maxWidth: "700px",
+          name: "whatDidYouDo",
+          title: "Què va fer durant la sacsejada?",
+          hasNone: false,
+          defaultValue: "notSpecified",
+          choices: [
+            { value: "notSpecified", text: "Sense especificar" },
+            { value: "nothing", text: "Res" },
+            { value: "ranOutside", text: "Va córrer cap a fora" },
+            { value: "enteredBuilding", text: "Va entrar en un edifici" },
+            {
+              value: "protectedUnderSolidTable",
+              text: "Es va protegir sota una taula sòlida",
+            },
+            {
+              value: "protectedOnWallAngle",
+              text: "Es va refugiar en un angle de la paret",
+            },
+            {
+              value: "protectedUnderDoorFrame",
+              text: "Es va protegir sota el marc d’una porta",
+            },
+            {
+              value: "lookedThroughWindow",
+              text: "Va mirar per la finestra per veure què passava",
+            },
+            { value: "other", text: "Altres" },
+          ],
+        },
+        {
+          type: "comment",
+          name: "commentsWhatDidYouDo",
+          title: "Indiqui què va fer:",
+          inputType: "text",
+          isRequired: false,
+          maxWidth: "700px",
+          visibleIf: "{whatDidYouDo}='other'",
+        },
+        {
           type: "panel",
           name: "effects",
           elements: [
@@ -628,7 +668,7 @@ Encara que no hagi notat el terratrèmol, la seva informació és igualment úti
               name: "buildingDamageDescription",
               title: "Quins danys va observar?",
               visibleIf: "{buildingDamage}='yes'",
-              colCount: 3,
+              colCount: 2,
               choices: [
                 {
                   value: "smallCracksCoating",
@@ -719,6 +759,15 @@ Encara que no hagi notat el terratrèmol, la seva informació és igualment úti
           name: "comments",
           title:
             "Desitgeu afegir algun aclariment o descriure el que heu notat?",
+          inputType: "text",
+          isRequired: false,
+          maxWidth: "700px",
+        },
+        {
+          type: "comment",
+          name: "otherSeisms",
+          title:
+            "Si just abans o després d'aquest terratrèmol en va notar d'altres indiqui-ho a continuació",
           inputType: "text",
           isRequired: false,
           maxWidth: "700px",
