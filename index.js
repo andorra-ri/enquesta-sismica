@@ -736,6 +736,15 @@ Encara que no hagi notat el terratrèmol, la seva informació és igualment úti
                 },
               ],
             },
+            {
+              type: "comment",
+              name: "commentsDamage",
+              title: "Altres comentaris sobre els danys",
+              inputType: "text",
+              isRequired: false,
+              maxWidth: "700px",
+              visibleIf: "{buildingDamage}='yes'",
+            },
           ],
           title: "Danys observats als edificis",
         },
@@ -745,32 +754,24 @@ Encara que no hagi notat el terratrèmol, la seva informació és igualment úti
           elements: [
             {
               type: "comment",
-              name: "commentsDamage",
-              title: "Altres comentaris sobre els danys",
+              name: "comments",
+              title:
+                "Desitgeu afegir algun aclariment o descriure el que heu notat?",
+              inputType: "text",
+              isRequired: false,
+              maxWidth: "700px",
+            },
+            {
+              type: "comment",
+              name: "otherSeisms",
+              title:
+                "Si just abans o després d'aquest terratrèmol en va notar d'altres indiqui-ho a continuació",
               inputType: "text",
               isRequired: false,
               maxWidth: "700px",
             },
           ],
           title: "Altres comentaris",
-        },
-        {
-          type: "comment",
-          name: "comments",
-          title:
-            "Desitgeu afegir algun aclariment o descriure el que heu notat?",
-          inputType: "text",
-          isRequired: false,
-          maxWidth: "700px",
-        },
-        {
-          type: "comment",
-          name: "otherSeisms",
-          title:
-            "Si just abans o després d'aquest terratrèmol en va notar d'altres indiqui-ho a continuació",
-          inputType: "text",
-          isRequired: false,
-          maxWidth: "700px",
         },
       ],
     },
