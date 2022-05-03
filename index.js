@@ -366,7 +366,7 @@ Encara que no hagi notat el terratrèmol, la seva informació és igualment úti
           defaultValue: "notSpecified",
           choices: [
             { value: "notSpecified", text: "Sense especificar" },
-            { value: "notFelt", text: "No vaig sentir el moviment" },
+            { value: "notFelt", text: "No vaig percebre el moviment" },
             { value: "veryMild", text: "Molt lleu" },
             { value: "mild", text: "Lleu" },
             { value: "moderate", text: "Moderat" },
