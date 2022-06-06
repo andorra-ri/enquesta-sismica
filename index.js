@@ -1,4 +1,4 @@
-Survey.StylesManager.applyTheme("bootstrap");
+// Survey.StylesManager.applyTheme("bootstrap");
 
 Survey.defaultBootstrapCss.navigationButton = "btn btn-green";
 
@@ -772,6 +772,16 @@ Encara que no hagi notat el terratrèmol, la seva informació és igualment úti
           isRequired: false,
           maxWidth: "700px",
         },
+        {
+          type: "file",
+          title: "Afegeix una foto si en tens",
+          name: "image",
+          storeDataAsText: false,
+          showPreview: true,
+          imageWidth: 150,
+          maxSize: 502400,
+          visibleIf: "{felt} = 'yes'",
+        },
       ],
     },
     {
@@ -934,6 +944,52 @@ const getSeism = async () => {
     //set html
     options.html = str;
   });
+
+  function uuidv4() {
+    return ([1e7] + -1e3 + -4e3 + -8e3 + -1e11).replace(/[018]/g, (c) =>
+      (
+        c ^
+        (crypto.getRandomValues(new Uint8Array(1))[0] & (15 >> (c / 4)))
+      ).toString(16)
+    );
+  }
+
+  survey.onUploadFiles.add(async function (survey, options) {
+    const fileToUpload = options.files[0];
+    const fileName = `public/${uuidv4()}.jpg`;
+    const { data, error } = await supabaseClient.storage
+      .from("seismology")
+      .upload(fileName, fileToUpload);
+
+    const formData = new FormData();
+    formData.append(
+      "41221ac5-0d5b-48a1-9c9a-7dfd8d32b10e.jpg",
+      options.files[0]
+    );
+
+    options.callback(
+      "success",
+      options.files.map(function (file) {
+        return { file, content: fileName };
+      })
+    );
+  });
+
+  survey.onDownloadFile.add(async function (survey, options) {
+    const { data, error } = await supabaseClient.storage
+      .from("seismology")
+      .download("public/41221ac5-0d5b-48a1-9c9a-7dfd8d32b10e.jpg");
+
+    const file = new File([data], "41221ac5-0d5b-48a1-9c9a-7dfd8d32b10e.jpg", {
+      type: options.fileValue.type,
+    });
+    const reader = new FileReader();
+    reader.onload = function (e) {
+      options.callback("success", e.target.result);
+    };
+    reader.readAsDataURL(file);
+  });
+
   survey.onComplete.add(async function (sender) {
     const indices = getIndices(sender.data);
     document.querySelector("#surveyResult").textContent =
@@ -950,6 +1006,7 @@ const getSeism = async () => {
         indices: indices,
         xml_report: xmlReport,
         seism_guid: sender.data.seism,
+        image: sender.data.image && sender.data.image[0].content,
       },
     ]);
   });
