@@ -6,7 +6,9 @@
     "build": "rollup -c",
     "dev": "rollup -c -w",
     "start": "sirv public --no-clear",
-    "check": "svelte-check --tsconfig ./tsconfig.json"
+    "check": "svelte-check --tsconfig ./tsconfig.json",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d public -t"
   },
   "devDependencies": {
     "@material-ui/core": "^4.12.4",
@@ -32,6 +34,7 @@
     "eslint": "^8.16.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-svelte3": "^4.0.0",
+    "gh-pages": "^4.0.0",
     "leaflet": "^1.9.1",
     "prettier": "^2.6.2",
     "prettier-plugin-svelte": "^2.7.0",
