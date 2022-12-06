@@ -1,4 +1,4 @@
-import type { FormValues } from './store';
+import type { FormValues } from "./store";
 export declare const getIndices: (data: FormValues) => {
     feltIndex: number;
     reactionIndex: number;

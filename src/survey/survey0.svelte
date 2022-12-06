@@ -184,7 +184,7 @@
 			</Option>
 		{/each}
 	</Select>
-	<div class="halign">
+	<div >
 		{#if formValues.position === 'insideBuilding'}
 			<div>
 				<Select style="min-width: 300px" label="Al pis" bind:value={formValues.floor}>
@@ -227,7 +227,7 @@
 		<div>Voleu triar la ubicació amb un mapa?</div>
 		<FormField>
 			<Radio bind:group={formValues.locationMap} value="yes" touch />
-			<span slot="label">Sí, seleccioneu la ubicació el més detallada possible arrossegant la icona blava del mapa</span>
+			<span slot="label">Seleccioneu la ubicació el més detallada possible arrossegant la icona blava del mapa</span>
 		</FormField>
 		<FormField>
 			<Radio bind:group={formValues.locationMap} value="no" touch />

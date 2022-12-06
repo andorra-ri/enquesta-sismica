@@ -42,7 +42,7 @@ export declare const schema: yup.ObjectSchema<import("yup/lib/object").Assign<im
     buildingType: yup.StringSchema<string | undefined, import("yup/lib/types").AnyObject, string | undefined>;
     buildingYear: yup.StringSchema<string | undefined, import("yup/lib/types").AnyObject, string | undefined>;
     buildingDamage: yup.StringSchema<string | undefined, import("yup/lib/types").AnyObject, string | undefined>;
-    buildingDamageDescription: yup.StringSchema<string | undefined, import("yup/lib/types").AnyObject, string | undefined>;
+    buildingDamageDescription: yup.ArraySchema<yup.StringSchema<string | undefined, import("yup/lib/types").AnyObject, string | undefined>, import("yup/lib/types").AnyObject, (string | undefined)[] | undefined, (string | undefined)[] | undefined>;
     commentsDamage: yup.StringSchema<string | undefined, import("yup/lib/types").AnyObject, string | undefined>;
     comments: yup.StringSchema<string | undefined, import("yup/lib/types").AnyObject, string | undefined>;
     otherSeisms: yup.StringSchema<string | undefined, import("yup/lib/types").AnyObject, string | undefined>;
@@ -86,7 +86,7 @@ export declare const schema: yup.ObjectSchema<import("yup/lib/object").Assign<im
     buildingType: yup.StringSchema<string | undefined, import("yup/lib/types").AnyObject, string | undefined>;
     buildingYear: yup.StringSchema<string | undefined, import("yup/lib/types").AnyObject, string | undefined>;
     buildingDamage: yup.StringSchema<string | undefined, import("yup/lib/types").AnyObject, string | undefined>;
-    buildingDamageDescription: yup.StringSchema<string | undefined, import("yup/lib/types").AnyObject, string | undefined>;
+    buildingDamageDescription: yup.ArraySchema<yup.StringSchema<string | undefined, import("yup/lib/types").AnyObject, string | undefined>, import("yup/lib/types").AnyObject, (string | undefined)[] | undefined, (string | undefined)[] | undefined>;
     commentsDamage: yup.StringSchema<string | undefined, import("yup/lib/types").AnyObject, string | undefined>;
     comments: yup.StringSchema<string | undefined, import("yup/lib/types").AnyObject, string | undefined>;
     otherSeisms: yup.StringSchema<string | undefined, import("yup/lib/types").AnyObject, string | undefined>;
@@ -130,7 +130,7 @@ export declare const schema: yup.ObjectSchema<import("yup/lib/object").Assign<im
     buildingType: yup.StringSchema<string | undefined, import("yup/lib/types").AnyObject, string | undefined>;
     buildingYear: yup.StringSchema<string | undefined, import("yup/lib/types").AnyObject, string | undefined>;
     buildingDamage: yup.StringSchema<string | undefined, import("yup/lib/types").AnyObject, string | undefined>;
-    buildingDamageDescription: yup.StringSchema<string | undefined, import("yup/lib/types").AnyObject, string | undefined>;
+    buildingDamageDescription: yup.ArraySchema<yup.StringSchema<string | undefined, import("yup/lib/types").AnyObject, string | undefined>, import("yup/lib/types").AnyObject, (string | undefined)[] | undefined, (string | undefined)[] | undefined>;
     commentsDamage: yup.StringSchema<string | undefined, import("yup/lib/types").AnyObject, string | undefined>;
     comments: yup.StringSchema<string | undefined, import("yup/lib/types").AnyObject, string | undefined>;
     otherSeisms: yup.StringSchema<string | undefined, import("yup/lib/types").AnyObject, string | undefined>;
@@ -178,7 +178,7 @@ export interface FormValues {
     buildingType?: keyof typeof buildingType;
     buildingYear?: string;
     buildingDamage?: keyof typeof buildingDamage;
-    buildingDamageDescription?: keyof typeof buildingDamageDescription;
+    buildingDamageDescription?: (keyof typeof buildingDamageDescription)[];
     commentsDamage?: string;
     comments?: string;
     otherSeisms?: string;

@@ -6,16 +6,18 @@
       d’això, cal afegir el soterrani i la planta baixa a “Al pis” i que sigui “Planta 10 o
       superior”. Al nombre total de plantes: posar que el 10 plantes sigui “10 plantes o més”.
 
-- La pregunta d’introduir l’adreça, te com l’enunciat al costat, quan normalment ho
-  poses dins el requadre. Potser és perquè no hi cap, no ho sé.. però per si de cas t’ho
-  faig notar.
+- [x] La pregunta d’introduir l’adreça, te com l’enunciat al costat, quan normalment ho
+      poses dins el requadre. Potser és perquè no hi cap, no ho sé.. però per si de cas t’ho
+      faig notar.
 
-- Aprofitant la captura de pantalla anterior, la pregunta “Al pis” i “nombre plantes” és
-  una línia contínua. Es pot dividir en 2 per a que vegin visualment que son 2 preguntes
-  diferents? (potser el camp “al pis” es pot fer més curt).
-- La pregunta del mapa hauria de canviar l’enunciat per: ”Seleccioneu la ubicació el més
-  detallada possible arrossegant la icona blava del mapa”. No hi ha opcions de resposta.
-- La pregunta de “quins danys va observar” (si has posat que si), ha de ser multichoice.
+  --- Si es posa tot el text, queda tallat i no s'enten res...
+
+- [x] Aprofitant la captura de pantalla anterior, la pregunta “Al pis” i “nombre plantes” és
+      una línia contínua. Es pot dividir en 2 per a que vegin visualment que son 2 preguntes
+      diferents? (potser el camp “al pis” es pot fer més curt).
+- [x] La pregunta del mapa hauria de canviar l’enunciat per: ”Seleccioneu la ubicació el més
+      detallada possible arrossegant la icona blava del mapa”. No hi ha opcions de resposta.
+- [x] La pregunta de “quins danys va observar” (si has posat que si), ha de ser multichoice. --> Transformat a checkboxes
 - La pregunta de la foto s’activa si diuen que SI han observat danys. Sinó, no cal penjar
   foto.
 - La Pregunta “Desitgeu afegir algun aclariment o descriure el que heu notat” pot anar

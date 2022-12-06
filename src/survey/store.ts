@@ -43,6 +43,7 @@ export const surveyValues = writable<FormValues>({
   comments: "",
   otherSeisms: "",
   perceptionImage: "",
+  buildingDamageDescription: [],
 });
 
 export const surveyPage = writable(0);
@@ -105,8 +106,8 @@ export const schema = yup.object().shape({
   buildingYear: yup.string(),
   buildingDamage: yup.string().oneOf(Object.keys(buildingDamage)),
   buildingDamageDescription: yup
-    .string()
-    .oneOf(Object.keys(buildingDamageDescription)),
+    .array()
+    .of(yup.string().oneOf(Object.keys(buildingDamageDescription))),
   commentsDamage: yup.string(),
   comments: yup.string(),
   otherSeisms: yup.string(),
@@ -162,7 +163,7 @@ export interface FormValues {
   buildingType?: keyof typeof buildingType;
   buildingYear?: string;
   buildingDamage?: keyof typeof buildingDamage;
-  buildingDamageDescription?: keyof typeof buildingDamageDescription;
+  buildingDamageDescription?: (keyof typeof buildingDamageDescription)[];
   commentsDamage?: string;
   comments?: string;
   otherSeisms?: string;

@@ -1,35 +1,36 @@
 <script lang="ts">
-	import { v4 as uuidv4 } from 'uuid';
 	import Card from '@smui/card';
+	import Checkbox from '@smui/checkbox';
 	import Radio from '@smui/radio';
+	import { v4 as uuidv4 } from 'uuid';
 
-	import Select, { Option } from '@smui/select';
-	import { changePage, schema, surveyValues, type FormValues } from './store';
 	import Button from '@smui/button';
 	import LinearProgress from '@smui/linear-progress';
+	import Select, { Option } from '@smui/select';
+	import { changePage, schema, surveyValues, type FormValues } from './store';
 
-	import {
-		animalsFrightened,
-		buildingDamage,
-		buildingDamageDescription,
-		buildingType,
-		effectsDoorsWindows,
-		effectsFurniture,
-		effectsLamps,
-		effectsLiquids,
-		effectsPaintings,
-		effectsPlants,
-		effectsShelves,
-		movementDescription,
-		noise,
-		reaction,
-		standingDifficulty,
-		whatDidYouDo
-	} from './surveyObjects';
-	import Textfield from '@smui/textfield';
 	import FormField from '@smui/form-field';
+	import Textfield from '@smui/textfield';
 	import Dropzone from 'svelte-file-dropzone';
 	import { uploadImage } from './fetch';
+	import {
+	  animalsFrightened,
+	  buildingDamage,
+	  buildingDamageDescription,
+	  buildingType,
+	  effectsDoorsWindows,
+	  effectsFurniture,
+	  effectsLamps,
+	  effectsLiquids,
+	  effectsPaintings,
+	  effectsPlants,
+	  effectsShelves,
+	  movementDescription,
+	  noise,
+	  reaction,
+	  standingDifficulty,
+	  whatDidYouDo
+	} from './surveyObjects';
 
 	let formValues: FormValues = {};
 	let publicUrl: string;
@@ -52,9 +53,10 @@
 		const fileToUpload = files.accepted[0];
 		const fileName = `public/${uuidv4()}.jpg`;
 		publicUrl = await uploadImage(fileName, fileToUpload);
-
+		buildingDamageDescription
 		formValues.image = fileName;
 	};
+
 
 	let errors: Error[] = [];
 	const handleSubmit = () => {
@@ -96,7 +98,7 @@
 	<Select style="max-width: 400px" label="Va sentir soroll?" bind:value={formValues.noise}>
 		{#each Object.entries(noise) as [position, positionText]}
 			<Option value={position}>
-				{positionText}
+				{positionText}buildingDamageDescription
 			</Option>
 		{/each}
 	</Select>
@@ -148,7 +150,7 @@
 			</FormField>
 		{/each}
 	</div>
-</Card>
+</Card>buildingDamageDescription
 
 <Card padded>
 	<Select
@@ -297,23 +299,28 @@
 	</Select>
 
 	{#if formValues.buildingDamage === 'yes'}
-		<div>
-			<Select
-				style="max-width: 400px"
-				label="Quins danys va observar?"
-				bind:value={formValues.buildingDamageDescription}
-			>
-				{#each Object.entries(buildingDamageDescription) as [position, positionText]}
-					<Option value={position}>
-						{positionText}
-					</Option>
-				{/each}
-			</Select>
+		<div class="two-column">
+			
+			{#each Object.entries(buildingDamageDescription) as [position, positionText]}
+			<FormField>
+				<Checkbox
+				bind:group={formValues.buildingDamageDescription}
+				  value={position}
+				  
+				/>
+				<span slot="label"
+				  >{positionText}</span
+				>
+			  </FormField>
+			{/each}
 		</div>
-		<FormField>
-			<div>Altres comentaris sobre els danys</div>
-			<Textfield bind:value={formValues.commentsDamage} type="email" />
-		</FormField>
+		<div>
+			<FormField>
+				<div>Altres comentaris sobre els danys</div>
+				<Textfield bind:value={formValues.commentsDamage} type="email" />
+			</FormField>
+		</div>
+		
 	{/if}
 
 	<FormField>
@@ -354,5 +361,10 @@
 	}
 	.radio-group {
 		font-family: Roboto, sans-serif;
+	}
+	.two-column{
+		font-family: Roboto, sans-serif;
+		display: grid;
+  		grid-template-columns: 1fr 1fr;	
 	}
 </style>
