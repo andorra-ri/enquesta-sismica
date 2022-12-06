@@ -18,7 +18,8 @@
 		numberPeopleInsideOptions,
 		numberPeopleOutsideOptions,
 		positionOptions,
-		situationObserverOptions
+		situationObserverOptions,
+        totalFloorOptions
 	} from './surveyObjects';
 
 	let seisms: SeismsData[] = [];
@@ -203,7 +204,7 @@
 					label="Nombre total de plantes"
 					bind:value={formValues.totalFloors}
 				>
-					{#each Object.entries(floorOptions) as [floor, floorText]}
+					{#each Object.entries(totalFloorOptions) as [floor, floorText]}
 						<Option value={floor}>
 							{floorText}
 						</Option>

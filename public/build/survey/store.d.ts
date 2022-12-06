@@ -1,5 +1,5 @@
-import * as yup from 'yup';
-import { animalsFrightened, buildingDamage, buildingDamageDescription, buildingType, effectsDoorsWindows, effectsFurniture, effectsLamps, effectsLiquids, effectsPaintings, effectsPlants, effectsShelves, floorOptions, movementDescription, noise, numberPeopleAwake, numberPeopleGoingOutOptions, numberPeopleInsideOptions, numberPeopleOutsideOptions, positionOptions, reaction, situationObserverOptions, standingDifficulty, whatDidYouDo } from './surveyObjects';
+import * as yup from "yup";
+import { animalsFrightened, buildingDamage, buildingDamageDescription, buildingType, effectsDoorsWindows, effectsFurniture, effectsLamps, effectsLiquids, effectsPaintings, effectsPlants, effectsShelves, floorOptions, movementDescription, noise, numberPeopleAwake, numberPeopleGoingOutOptions, numberPeopleInsideOptions, numberPeopleOutsideOptions, positionOptions, reaction, situationObserverOptions, standingDifficulty, totalFloorOptions, whatDidYouDo } from "./surveyObjects";
 export declare const surveyValues: import("svelte/store").Writable<FormValues>;
 export declare const surveyPage: import("svelte/store").Writable<number>;
 export declare const changePage: () => void;
@@ -152,7 +152,7 @@ export interface FormValues {
     streetNumber?: string;
     position?: keyof typeof positionOptions;
     floor?: keyof typeof floorOptions;
-    totalFloors?: keyof typeof floorOptions;
+    totalFloors?: keyof typeof totalFloorOptions;
     commentsPosition?: string;
     situationObserver?: keyof typeof situationObserverOptions;
     commentsBuilding?: string;
