@@ -2,7 +2,8 @@ import * as yup from "yup";
 import { animalsFrightened, buildingDamage, buildingDamageDescription, buildingType, effectsDoorsWindows, effectsFurniture, effectsLamps, effectsLiquids, effectsPaintings, effectsPlants, effectsShelves, floorOptions, movementDescription, noise, numberPeopleAwake, numberPeopleGoingOutOptions, numberPeopleInsideOptions, numberPeopleOutsideOptions, positionOptions, reaction, situationObserverOptions, standingDifficulty, totalFloorOptions, whatDidYouDo } from "./surveyObjects";
 export declare const surveyValues: import("svelte/store").Writable<FormValues>;
 export declare const surveyPage: import("svelte/store").Writable<number>;
-export declare const changePage: () => void;
+export declare const nextPage: () => void;
+export declare const previousPage: () => void;
 export declare const schema: yup.ObjectSchema<import("yup/lib/object").Assign<import("yup/lib/object").ObjectShape, {
     existentSeism: import("yup/lib/string").RequiredStringSchema<string | undefined, import("yup/lib/types").AnyObject>;
     earthquakeDate: yup.DateSchema<Date | null | undefined, import("yup/lib/types").AnyObject, Date | null | undefined>;

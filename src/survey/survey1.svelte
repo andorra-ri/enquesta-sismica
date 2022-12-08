@@ -3,11 +3,12 @@
 	import Checkbox from '@smui/checkbox';
 	import Radio from '@smui/radio';
 	import { v4 as uuidv4 } from 'uuid';
+	import { onDestroy} from 'svelte';
 
 	import Button from '@smui/button';
 	import LinearProgress from '@smui/linear-progress';
 	import Select, { Option } from '@smui/select';
-	import { changePage, schema, surveyValues, type FormValues } from './store';
+	import { nextPage, previousPage, schema, surveyValues, type FormValues } from './store';
 
 	import FormField from '@smui/form-field';
 	import Textfield from '@smui/textfield';
@@ -34,9 +35,13 @@
 
 	let formValues: FormValues = {};
 	let publicUrl: string;
-	surveyValues.subscribe((data) => {
+	const unsubscribe = surveyValues.subscribe((data) => {
 		formValues = data;
 	});
+
+
+	onDestroy(unsubscribe);
+
 	interface Files {
 		accepted: string[];
 		rejected: string[];
@@ -65,7 +70,7 @@
 			.then(function (valid) {
 				console.log('VALID  !');
 				surveyValues.update(() => formValues);
-				changePage();
+				nextPage();
 			})
 			.catch(function (valid) {
 				errors = valid.inner.reduce(
@@ -75,6 +80,23 @@
 				console.log(errors);
 			});
 	};
+
+	const handlePrevious = () => {
+		schema
+			.validate(formValues, { abortEarly: false })
+			.then(function (valid) {
+				surveyValues.update(() => formValues);
+				previousPage();
+			})
+			.catch(function (valid) {
+				errors = valid.inner.reduce(
+					(acc, d) => ({ ...acc, [d.path]: { value: d.value, message: d.message } }),
+					{}
+				);
+				console.log(errors);
+			});
+	};
+
 </script>
 
 <div class="section-title">Percepció personal</div>
@@ -150,7 +172,7 @@
 			</FormField>
 		{/each}
 	</div>
-</Card>buildingDamageDescription
+</Card>
 
 <Card padded>
 	<Select
@@ -322,13 +344,12 @@
 		</div>
 		
 	{/if}
-
+</Card>
+<Card padded>
 	<FormField>
 		<div>Desitgeu afegir algun aclariment o descriure el que heu notat?</div>
 		<Textfield style="width: 70%" bind:value={formValues.comments} type="email" />
 	</FormField>
-</Card>
-<Card padded>
 	<FormField>
 		<div>
 			Si just abans o després d'aquest terratrèmol en va notar d'altres indiqui-ho a continuació
@@ -336,7 +357,7 @@
 		<Textfield style="width: 70%" bind:value={formValues.otherSeisms} type="email" />
 	</FormField>
 </Card>
-{#if formValues.felt === 'yes' && !formValues.image}
+{#if formValues.buildingDamage === 'yes' && !formValues.image}
 	<Card padded>
 		<div>Afegeix una foto si en tens:</div>
 		<Dropzone on:drop={handleFilesSelect}
@@ -350,7 +371,9 @@
 		<img src={publicUrl} alt="imatge de l'usuari" />
 	</Card>
 {/if}
-<div><Button type="submit" on:click={handleSubmit}>Següent</Button></div>
+<div class="buttons">
+	<Button variant="raised" on:click={handlePrevious}>Anterior</Button>
+	<Button variant="raised"  on:click={handleSubmit}>Següent</Button></div>
 
 <style>
 	.section-title {
@@ -366,5 +389,8 @@
 		font-family: Roboto, sans-serif;
 		display: grid;
   		grid-template-columns: 1fr 1fr;	
+	}
+	.buttons{
+		margin-top:5px;
 	}
 </style>

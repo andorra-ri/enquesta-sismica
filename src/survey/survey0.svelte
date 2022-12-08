@@ -7,10 +7,10 @@
 	import Select, { Option } from '@smui/select';
 	import Switch from '@smui/switch';
 	import Textfield from '@smui/textfield';
-	import { onMount } from 'svelte';
+	import { onMount , onDestroy} from 'svelte';
 	import { getParroquiesData, getSeismData, type ParroquiaData, type SeismsData } from './fetch';
 	import Leaflet from './leaflet.svelte';
-	import { changePage, schema, surveyValues, type FormValues } from './store';
+	import { nextPage, schema, surveyValues, type FormValues } from './store';
 	import {
 		floorOptions,
 		numberPeopleAwake,
@@ -26,10 +26,11 @@
 	let parroquies: ParroquiaData[] = [];
 
 	let formValues: FormValues = {};
-	surveyValues.subscribe((data) => {
+	const unsubscribe = surveyValues.subscribe((data) => {
 		formValues = data;
 	});
 
+	onDestroy(unsubscribe);
 	onMount(async () => {
 		seisms = await getSeismData();
 		parroquies = await getParroquiesData();
@@ -39,7 +40,7 @@
 		formValues.coordinates = coords;
 	};
 
-	let feltSeism: boolean = false;
+	let feltSeism: boolean = formValues.felt ==='yes' ? true :  false;
 
 	$: feltSeism, (formValues.felt = feltSeism ? 'yes' : 'no');
 
@@ -79,8 +80,8 @@
 			.then(function (valid) {
 				console.log('VALID  !');
 				surveyValues.update(() => formValues);
-				changePage();
-			})
+				nextPage();}
+			)
 			.catch(function (valid) {
 				errors = valid.inner.reduce(
 					(acc, d) => ({ ...acc, [d.path]: { value: d.value, message: d.message } }),
@@ -125,8 +126,8 @@
 		<span slot="label">No apareix a la llista. Introduir la data i hora manualment</span>
 	</FormField>
 </Card>
-
-{#if formValues.existentSeism === 'yes'}
+<!-- if length is not checked, option doesn't exist before loading seisms and seismuuid is set to undefined! -->
+{#if formValues.existentSeism === 'yes' && seisms.length > 0}
 	<Card padded class={'seism' in errors ? 'error' : 'valid'}>
 		<div>Triï el sisme *</div>
 		<FormField>
@@ -392,7 +393,7 @@
 	</div>
 </Card>
 
-<div>
+<div class="buttons">
 	{#if Object.keys(errors).length > 0}
 		<div class="error">
 			{#each Object.entries(errors) as [fieldName, error]}
@@ -401,7 +402,7 @@
 		</div>
 	{/if}
 
-	<Button type="submit" on:click={handleSubmit}>Següent</Button>
+	<Button variant="raised" type="submit" on:click={handleSubmit}>Següent</Button>
 </div> 
 
 <style>
@@ -413,9 +414,19 @@
 	}
 	.header {
 		font-weight: bold;
-		display: flex;
 		font-family: Roboto, sans-serif;
 		padding-bottom: 10px;
+		display: flex;
+	}
+	.header img {
+		max-width: 500px;
+	}
+
+ @media(max-width: 800px){
+	.header{
+			display:flex;
+			flex-direction:column;
+		}
 	}
 	.title {
 		font-size: 2em;
@@ -433,5 +444,8 @@
 	.field-label {
 		font-family: Roboto, sans-serif;
 		font-size: 14px;
+	}
+	.buttons{
+		margin-top:5px;
 	}
 </style>

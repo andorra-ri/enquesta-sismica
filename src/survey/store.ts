@@ -28,6 +28,7 @@ import {
 } from "./surveyObjects";
 
 export const surveyValues = writable<FormValues>({
+  seism: "",
   existentSeism: "yes",
   earthquakeDate: "",
   earthquakeHour: "",
@@ -48,7 +49,8 @@ export const surveyValues = writable<FormValues>({
 
 export const surveyPage = writable(0);
 
-export const changePage = () => surveyPage.update((n) => (n < 3 ? n + 1 : n));
+export const nextPage = () => surveyPage.update((n) => (n < 4 ? n + 1 : n));
+export const previousPage = () => surveyPage.update((n) => (n > 0 ? n - 1 : n));
 
 export const schema = yup.object().shape({
   existentSeism: yup.string().oneOf(["yes", "no"]).required(),

@@ -18,19 +18,19 @@
 - [x] La pregunta del mapa hauria de canviar l’enunciat per: ”Seleccioneu la ubicació el més
       detallada possible arrossegant la icona blava del mapa”. No hi ha opcions de resposta.
 - [x] La pregunta de “quins danys va observar” (si has posat que si), ha de ser multichoice. --> Transformat a checkboxes
-- La pregunta de la foto s’activa si diuen que SI han observat danys. Sinó, no cal penjar
-  foto.
-- La Pregunta “Desitgeu afegir algun aclariment o descriure el que heu notat” pot anar
-  en un altre caixetí? Es una pregunta general (abans crec que ho teníem com un bloc
-  anoment “Altres comentaris”). Podria ser un bloc Altres comentaris, i tenir les 2
-  ultimes preguntes: algun aclariment i si just abans va notar d’altres.
-  GENERAL
-- La capçalera al mirar-la en mòbil es massa gran. Es pot posar el text sota els logos? Així
-  s’estira i no ocupa tant. T’he de mirar si treiem el logo POCRISC; potser no caldrà.
+- [x] La pregunta de la foto s’activa si diuen que SI han observat danys. Sinó, no cal penjar
+      foto.
+- [x] La Pregunta “Desitgeu afegir algun aclariment o descriure el que heu notat” pot anar
+      en un altre caixetí? Es una pregunta general (abans crec que ho teníem com un bloc
+      anoment “Altres comentaris”). Podria ser un bloc Altres comentaris, i tenir les 2
+      ultimes preguntes: algun aclariment i si just abans va notar d’altres.
+      GENERAL
+- [x] La capçalera al mirar-la en mòbil es massa gran. Es pot posar el text sota els logos? Així
+      s’estira i no ocupa tant. T’he de mirar si treiem el logo POCRISC; potser no caldrà.
 
-- Es pot posar el botó “anterior”? Només hi ha el següent per passar de pàgina. Aquest
-  (“següent”), pot ser una mica més gran o amb requadre exterior rollo botó per a que
-  es vegi més?
-- Si li dono al botó “Enviar el formulari” no passa res. No sé si es que no s’envia, o no
-  apareix el típic “gràcies per respondre eetc”. Acabo de fer un el 30/11/2022 a les
-  17:36h (per si vols veure si s’ha enviat). De fet, li he donat varies vegades a Enviar.
+- [x] Es pot posar el botó “anterior”? Només hi ha el següent per passar de pàgina. Aquest
+      (“següent”), pot ser una mica més gran o amb requadre exterior rollo botó per a que
+      es vegi més?
+- [x] Si li dono al botó “Enviar el formulari” no passa res. No sé si es que no s’envia, o no
+      apareix el típic “gràcies per respondre eetc”. Acabo de fer un el 30/11/2022 a les
+      17:36h (per si vols veure si s’ha enviat). De fet, li he donat varies vegades a Enviar.

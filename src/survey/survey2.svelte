@@ -8,15 +8,19 @@
 		Supporting,
 		Label
 	} from '@smui/image-list';
+	import { onDestroy } from 'svelte';
+
 	import { sendToSupabase } from './fetch';
-	import { schema, surveyValues, type FormValues } from './store';
+	import { schema, surveyValues, previousPage, nextPage, type FormValues } from './store';
 	import { perceptionIndexImages } from './surveyObjects';
 	import LinearProgress from '@smui/linear-progress';
 
 	let formValues: FormValues = {};
-	surveyValues.subscribe((data) => {
+	const unsubscribe = surveyValues.subscribe((data) => {
 		formValues = data;
 	});
+
+	onDestroy(unsubscribe);
 
 	const handleSubmit = async () => {
 		try {
@@ -24,9 +28,26 @@
 			surveyValues.update(() => formValues);
 			await sendToSupabase($surveyValues);
 			console.log('data sent');
+			nextPage();
 		} catch (error) {
 			console.log('Errors enviant dades', error);
 		}
+	};
+
+	const handlePrevious = () => {
+		schema
+			.validate(formValues, { abortEarly: false })
+			.then(function (valid) {
+				surveyValues.update(() => formValues);
+				previousPage();
+			})
+			.catch(function (valid) {
+				errors = valid.inner.reduce(
+					(acc, d) => ({ ...acc, [d.path]: { value: d.value, message: d.message } }),
+					{}
+				);
+				console.log(errors);
+			});
 	};
 </script>
 
@@ -52,7 +73,12 @@
 		{/each}
 	</ImageList>
 </div>
-<Button type="submit" on:click={handleSubmit}>Enviar el formulari</Button>
+
+<div class="buttons">
+	<Button variant="raised" on:click={handlePrevious}>Anterior</Button>
+	<Button variant="raised" on:click={handleSubmit}>Enviar el formulari</Button>
+
+</div>
 
 <style lang="scss">
 	@use '@material/image-list/index' as image-list;
