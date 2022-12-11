@@ -120,7 +120,7 @@
 	<Select style="max-width: 400px" label="Va sentir soroll?" bind:value={formValues.noise}>
 		{#each Object.entries(noise) as [position, positionText]}
 			<Option value={position}>
-				{positionText}buildingDamageDescription
+				{positionText}
 			</Option>
 		{/each}
 	</Select>
