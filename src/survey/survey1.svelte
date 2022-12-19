@@ -205,6 +205,7 @@
 </Card>
 
 <Card padded>
+	<div>Quins efectes va observar sobre els següents objectes?</div>
 	<Select
 		style="max-width: 400px"
 		label="Als líquids en recipients:"
@@ -216,9 +217,6 @@
 			</Option>
 		{/each}
 	</Select>
-</Card>
-
-<Card padded>
 	<Select
 		style="max-width: 400px"
 		label="Als quadres penjats a les parets:"
@@ -230,9 +228,7 @@
 			</Option>
 		{/each}
 	</Select>
-</Card>
 
-<Card padded>
 	<Select
 		style="max-width: 400px"
 		label="A portes i finestres:"
@@ -244,9 +240,7 @@
 			</Option>
 		{/each}
 	</Select>
-</Card>
 
-<Card padded>
 	<Select
 		style="max-width: 400px"
 		label="A mobles i electrodomèstics:"
@@ -258,9 +252,7 @@
 			</Option>
 		{/each}
 	</Select>
-</Card>
 
-<Card padded>
 	<Select style="max-width: 400px" label="A les plantes:" bind:value={formValues.effectsPlants}>
 		{#each Object.entries(effectsPlants) as [position, positionText]}
 			<Option value={position}>
@@ -268,9 +260,7 @@
 			</Option>
 		{/each}
 	</Select>
-</Card>
 
-<Card padded>
 	<Select
 		style="max-width: 400px"
 		label="Als objectes a les prestatgeries o taules:"

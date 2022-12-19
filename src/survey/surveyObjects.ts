@@ -184,7 +184,7 @@ export const effectsShelves = {
   notSpecified: "Sense especificar",
   none: "Cap",
   vibration: "Van vibrar",
-  strongVibration: "Van vibrar am força",
+  strongVibration: "Van vibrar amb força",
   someFall: "Alguna va caure",
   manyFall: "Moltes van caure",
   mostFall: "La majoria van caure",

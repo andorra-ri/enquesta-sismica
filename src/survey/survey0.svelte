@@ -97,7 +97,6 @@
 			e.target.showPicker();
 		}
 	}
-console.log(Object.keys(floorOptions))
 
 </script>
 

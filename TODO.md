@@ -4,7 +4,7 @@
 
 - [x] Pregunta soroll, les respostes tenen un “DamageDescription”:
 
-- [] Després de “què va fer durant la sacsejada” i abans de “Als llums penjats”, falta un títol tipus com la de percepció personal que sigui “Quins efectes va observar sobre els següents objectes?”, i dins aquest bloc anirien: als llums, als líquids, als quadres, a portes, a mobles, a les plantes, als objectes. Vaja, com a l’ICGC.
+- [x] Després de “què va fer durant la sacsejada” i abans de “Als llums penjats”, falta un títol tipus com la de percepció personal que sigui “Quins efectes va observar sobre els següents objectes?”, i dins aquest bloc anirien: als llums, als líquids, als quadres, a portes, a mobles, a les plantes, als objectes. Vaja, com a l’ICGC.
 
 - [] La pregunta de “Als objectes a les prestatgeries o taules”; a la opció “van vibrar amb força” falta al B de AMB.
 

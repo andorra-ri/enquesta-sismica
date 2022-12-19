@@ -6969,7 +6969,7 @@ var app = (function () {
         notSpecified: "Sense especificar",
         none: "Cap",
         vibration: "Van vibrar",
-        strongVibration: "Van vibrar am força",
+        strongVibration: "Van vibrar amb força",
         someFall: "Alguna va caure",
         manyFall: "Moltes van caure",
         mostFall: "La majoria van caure",
@@ -40090,7 +40090,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (95:0) <LinearProgress progress={0.333}>
+    // (94:0) <LinearProgress progress={0.333}>
     function create_default_slot_45$1(ctx) {
     	let t;
 
@@ -40110,14 +40110,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_45$1.name,
     		type: "slot",
-    		source: "(95:0) <LinearProgress progress={0.333}>",
+    		source: "(94:0) <LinearProgress progress={0.333}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (98:1) <FormField>
+    // (97:1) <FormField>
     function create_default_slot_44$1(ctx) {
     	let radio;
     	let updating_group;
@@ -40173,14 +40173,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_44$1.name,
     		type: "slot",
-    		source: "(98:1) <FormField>",
+    		source: "(97:1) <FormField>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (100:2) 
+    // (99:2) 
     function create_label_slot_11(ctx) {
     	let span;
 
@@ -40189,7 +40189,7 @@ var app = (function () {
     			span = element("span");
     			span.textContent = "Sí, triar de la llista de sota";
     			attr_dev(span, "slot", "label");
-    			add_location(span, file$7, 99, 2, 3830);
+    			add_location(span, file$7, 98, 2, 3790);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -40204,14 +40204,14 @@ var app = (function () {
     		block,
     		id: create_label_slot_11.name,
     		type: "slot",
-    		source: "(100:2) ",
+    		source: "(99:2) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (102:1) <FormField>
+    // (101:1) <FormField>
     function create_default_slot_43$1(ctx) {
     	let radio;
     	let updating_group;
@@ -40267,14 +40267,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_43$1.name,
     		type: "slot",
-    		source: "(102:1) <FormField>",
+    		source: "(101:1) <FormField>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (104:2) 
+    // (103:2) 
     function create_label_slot_10(ctx) {
     	let span;
 
@@ -40283,7 +40283,7 @@ var app = (function () {
     			span = element("span");
     			span.textContent = "No apareix a la llista. Introduir la data i hora manualment";
     			attr_dev(span, "slot", "label");
-    			add_location(span, file$7, 103, 2, 3983);
+    			add_location(span, file$7, 102, 2, 3943);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -40298,14 +40298,14 @@ var app = (function () {
     		block,
     		id: create_label_slot_10.name,
     		type: "slot",
-    		source: "(104:2) ",
+    		source: "(103:2) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (96:0) <Card padded class={'existentSeism' in errors ? 'error' : 'valid'}>
+    // (95:0) <Card padded class={'existentSeism' in errors ? 'error' : 'valid'}>
     function create_default_slot_42$1(ctx) {
     	let div;
     	let t1;
@@ -40344,7 +40344,7 @@ var app = (function () {
     			create_component(formfield0.$$.fragment);
     			t2 = space();
     			create_component(formfield1.$$.fragment);
-    			add_location(div, file$7, 96, 1, 3679);
+    			add_location(div, file$7, 95, 1, 3639);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -40394,14 +40394,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_42$1.name,
     		type: "slot",
-    		source: "(96:0) <Card padded class={'existentSeism' in errors ? 'error' : 'valid'}>",
+    		source: "(95:0) <Card padded class={'existentSeism' in errors ? 'error' : 'valid'}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (131:0) {:else}
+    // (130:0) {:else}
     function create_else_block$1(ctx) {
     	let card;
     	let current;
@@ -40451,14 +40451,14 @@ var app = (function () {
     		block,
     		id: create_else_block$1.name,
     		type: "else",
-    		source: "(131:0) {:else}",
+    		source: "(130:0) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (108:0) {#if formValues.existentSeism === 'yes' && seisms.length > 0}
+    // (107:0) {#if formValues.existentSeism === 'yes' && seisms.length > 0}
     function create_if_block_16(ctx) {
     	let card;
     	let current;
@@ -40509,14 +40509,14 @@ var app = (function () {
     		block,
     		id: create_if_block_16.name,
     		type: "if",
-    		source: "(108:0) {#if formValues.existentSeism === 'yes' && seisms.length > 0}",
+    		source: "(107:0) {#if formValues.existentSeism === 'yes' && seisms.length > 0}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (133:3) <FormField>
+    // (132:3) <FormField>
     function create_default_slot_41$1(ctx) {
     	let div;
     	let t1;
@@ -40544,7 +40544,7 @@ var app = (function () {
     			div.textContent = "Data del terratrèmol *";
     			t1 = space();
     			create_component(textfield.$$.fragment);
-    			add_location(div, file$7, 133, 4, 5036);
+    			add_location(div, file$7, 132, 4, 4996);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -40583,14 +40583,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_41$1.name,
     		type: "slot",
-    		source: "(133:3) <FormField>",
+    		source: "(132:3) <FormField>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (139:3) <FormField>
+    // (138:3) <FormField>
     function create_default_slot_40$1(ctx) {
     	let div;
     	let t1;
@@ -40617,7 +40617,7 @@ var app = (function () {
     			div.textContent = "Hora local (HH:MM) *";
     			t1 = space();
     			create_component(textfield.$$.fragment);
-    			add_location(div, file$7, 139, 4, 5269);
+    			add_location(div, file$7, 138, 4, 5229);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -40656,14 +40656,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_40$1.name,
     		type: "slot",
-    		source: "(139:3) <FormField>",
+    		source: "(138:3) <FormField>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (131:7) <Card padded class="halign">
+    // (130:7) <Card padded class="halign">
     function create_default_slot_39$1(ctx) {
     	let div0;
     	let formfield0;
@@ -40702,13 +40702,13 @@ var app = (function () {
     			? 'error'
     			: 'valid') + " svelte-xt7jk9"));
 
-    			add_location(div0, file$7, 131, 2, 4956);
+    			add_location(div0, file$7, 130, 2, 4916);
 
     			attr_dev(div1, "class", div1_class_value = "" + (null_to_empty('earthquakeHour' in /*errors*/ ctx[7]
     			? 'error'
     			: 'valid') + " svelte-xt7jk9"));
 
-    			add_location(div1, file$7, 137, 2, 5189);
+    			add_location(div1, file$7, 136, 2, 5149);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div0, anchor);
@@ -40771,14 +40771,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_39$1.name,
     		type: "slot",
-    		source: "(131:7) <Card padded class=\\\"halign\\\">",
+    		source: "(130:7) <Card padded class=\\\"halign\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (114:5) <Option value={seism.guid}       >
+    // (113:5) <Option value={seism.guid}       >
     function create_default_slot_38$1(ctx) {
     	let t_value = `${new Date(/*seism*/ ctx[68].datetime).toLocaleDateString('ca-ES', {
 		weekday: 'long',
@@ -40823,14 +40823,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_38$1.name,
     		type: "slot",
-    		source: "(114:5) <Option value={seism.guid}       >",
+    		source: "(113:5) <Option value={seism.guid}       >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (113:4) {#each seisms as seism}
+    // (112:4) {#each seisms as seism}
     function create_each_block_12$1(ctx) {
     	let option;
     	let current;
@@ -40880,14 +40880,14 @@ var app = (function () {
     		block,
     		id: create_each_block_12$1.name,
     		type: "each",
-    		source: "(113:4) {#each seisms as seism}",
+    		source: "(112:4) {#each seisms as seism}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (112:3) <Select style="min-width: 300px" label="Data del sisme" bind:value={formValues.seism}>
+    // (111:3) <Select style="min-width: 300px" label="Data del sisme" bind:value={formValues.seism}>
     function create_default_slot_37$1(ctx) {
     	let each_1_anchor;
     	let current;
@@ -40976,14 +40976,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_37$1.name,
     		type: "slot",
-    		source: "(112:3) <Select style=\\\"min-width: 300px\\\" label=\\\"Data del sisme\\\" bind:value={formValues.seism}>",
+    		source: "(111:3) <Select style=\\\"min-width: 300px\\\" label=\\\"Data del sisme\\\" bind:value={formValues.seism}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (111:2) <FormField>
+    // (110:2) <FormField>
     function create_default_slot_36$1(ctx) {
     	let select;
     	let updating_value;
@@ -41048,14 +41048,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_36$1.name,
     		type: "slot",
-    		source: "(111:2) <FormField>",
+    		source: "(110:2) <FormField>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (109:1) <Card padded class={'seism' in errors ? 'error' : 'valid'}>
+    // (108:1) <Card padded class={'seism' in errors ? 'error' : 'valid'}>
     function create_default_slot_35$1(ctx) {
     	let div;
     	let t1;
@@ -41076,7 +41076,7 @@ var app = (function () {
     			div.textContent = "Triï el sisme *";
     			t1 = space();
     			create_component(formfield.$$.fragment);
-    			add_location(div, file$7, 109, 2, 4329);
+    			add_location(div, file$7, 108, 2, 4289);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -41113,14 +41113,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_35$1.name,
     		type: "slot",
-    		source: "(109:1) <Card padded class={'seism' in errors ? 'error' : 'valid'}>",
+    		source: "(108:1) <Card padded class={'seism' in errors ? 'error' : 'valid'}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (149:1) <FormField>
+    // (148:1) <FormField>
     function create_default_slot_34$1(ctx) {
     	let switch_1;
     	let updating_checked;
@@ -41186,14 +41186,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_34$1.name,
     		type: "slot",
-    		source: "(149:1) <FormField>",
+    		source: "(148:1) <FormField>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (147:0) <Card padded class={'felt' in errors ? 'error' : 'valid'}>
+    // (146:0) <Card padded class={'felt' in errors ? 'error' : 'valid'}>
     function create_default_slot_33$1(ctx) {
     	let div;
     	let t1;
@@ -41214,7 +41214,7 @@ var app = (function () {
     			div.textContent = "Ha notat el sisme? *";
     			t1 = space();
     			create_component(formfield.$$.fragment);
-    			add_location(div, file$7, 147, 1, 5471);
+    			add_location(div, file$7, 146, 1, 5431);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -41251,14 +41251,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_33$1.name,
     		type: "slot",
-    		source: "(147:0) <Card padded class={'felt' in errors ? 'error' : 'valid'}>",
+    		source: "(146:0) <Card padded class={'felt' in errors ? 'error' : 'valid'}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (161:3) <Option value={position}>
+    // (160:3) <Option value={position}>
     function create_default_slot_32$1(ctx) {
     	let t0_value = /*positionText*/ ctx[65] + "";
     	let t0;
@@ -41284,14 +41284,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_32$1.name,
     		type: "slot",
-    		source: "(161:3) <Option value={position}>",
+    		source: "(160:3) <Option value={position}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (160:2) {#each Object.entries(positionOptions) as [position, positionText]}
+    // (159:2) {#each Object.entries(positionOptions) as [position, positionText]}
     function create_each_block_11$1(ctx) {
     	let option;
     	let current;
@@ -41340,14 +41340,14 @@ var app = (function () {
     		block,
     		id: create_each_block_11$1.name,
     		type: "each",
-    		source: "(160:2) {#each Object.entries(positionOptions) as [position, positionText]}",
+    		source: "(159:2) {#each Object.entries(positionOptions) as [position, positionText]}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (155:1) <Select   style="min-width: 300px"   label="En el moment de la sacsejada es trobava..."   bind:value={formValues.position}  >
+    // (154:1) <Select   style="min-width: 300px"   label="En el moment de la sacsejada es trobava..."   bind:value={formValues.position}  >
     function create_default_slot_31$1(ctx) {
     	let each_1_anchor;
     	let current;
@@ -41436,14 +41436,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_31$1.name,
     		type: "slot",
-    		source: "(155:1) <Select   style=\\\"min-width: 300px\\\"   label=\\\"En el moment de la sacsejada es trobava...\\\"   bind:value={formValues.position}  >",
+    		source: "(154:1) <Select   style=\\\"min-width: 300px\\\"   label=\\\"En el moment de la sacsejada es trobava...\\\"   bind:value={formValues.position}  >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (167:2) {#if formValues.position === 'insideBuilding'}
+    // (166:2) {#if formValues.position === 'insideBuilding'}
     function create_if_block_15(ctx) {
     	let div;
     	let select;
@@ -41472,7 +41472,7 @@ var app = (function () {
     		c: function create() {
     			div = element("div");
     			create_component(select.$$.fragment);
-    			add_location(div, file$7, 167, 3, 5957);
+    			add_location(div, file$7, 166, 3, 5917);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -41513,14 +41513,14 @@ var app = (function () {
     		block,
     		id: create_if_block_15.name,
     		type: "if",
-    		source: "(167:2) {#if formValues.position === 'insideBuilding'}",
+    		source: "(166:2) {#if formValues.position === 'insideBuilding'}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (171:6) <Option value={floor}>
+    // (170:6) <Option value={floor}>
     function create_default_slot_30$1(ctx) {
     	let t0_value = /*floorText*/ ctx[59] + "";
     	let t0;
@@ -41546,14 +41546,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_30$1.name,
     		type: "slot",
-    		source: "(171:6) <Option value={floor}>",
+    		source: "(170:6) <Option value={floor}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (170:5) {#each Object.entries(floorOptions) as [floor, floorText]}
+    // (169:5) {#each Object.entries(floorOptions) as [floor, floorText]}
     function create_each_block_10$1(ctx) {
     	let option;
     	let current;
@@ -41602,14 +41602,14 @@ var app = (function () {
     		block,
     		id: create_each_block_10$1.name,
     		type: "each",
-    		source: "(170:5) {#each Object.entries(floorOptions) as [floor, floorText]}",
+    		source: "(169:5) {#each Object.entries(floorOptions) as [floor, floorText]}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (169:4) <Select style="min-width: 300px" label="Al pis" bind:value={formValues.floor}>
+    // (168:4) <Select style="min-width: 300px" label="Al pis" bind:value={formValues.floor}>
     function create_default_slot_29$1(ctx) {
     	let each_1_anchor;
     	let current;
@@ -41698,14 +41698,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_29$1.name,
     		type: "slot",
-    		source: "(169:4) <Select style=\\\"min-width: 300px\\\" label=\\\"Al pis\\\" bind:value={formValues.floor}>",
+    		source: "(168:4) <Select style=\\\"min-width: 300px\\\" label=\\\"Al pis\\\" bind:value={formValues.floor}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (179:2) {#if formValues.position === 'insideBuilding'}
+    // (178:2) {#if formValues.position === 'insideBuilding'}
     function create_if_block_14(ctx) {
     	let div;
     	let select;
@@ -41734,7 +41734,7 @@ var app = (function () {
     		c: function create() {
     			div = element("div");
     			create_component(select.$$.fragment);
-    			add_location(div, file$7, 179, 3, 6272);
+    			add_location(div, file$7, 178, 3, 6232);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -41775,14 +41775,14 @@ var app = (function () {
     		block,
     		id: create_if_block_14.name,
     		type: "if",
-    		source: "(179:2) {#if formValues.position === 'insideBuilding'}",
+    		source: "(178:2) {#if formValues.position === 'insideBuilding'}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (187:6) <Option value={floor}>
+    // (186:6) <Option value={floor}>
     function create_default_slot_28$1(ctx) {
     	let t0_value = /*floorText*/ ctx[59] + "";
     	let t0;
@@ -41808,14 +41808,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_28$1.name,
     		type: "slot",
-    		source: "(187:6) <Option value={floor}>",
+    		source: "(186:6) <Option value={floor}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (186:5) {#each Object.entries(totalFloorOptions) as [floor, floorText]}
+    // (185:5) {#each Object.entries(totalFloorOptions) as [floor, floorText]}
     function create_each_block_9$1(ctx) {
     	let option;
     	let current;
@@ -41864,14 +41864,14 @@ var app = (function () {
     		block,
     		id: create_each_block_9$1.name,
     		type: "each",
-    		source: "(186:5) {#each Object.entries(totalFloorOptions) as [floor, floorText]}",
+    		source: "(185:5) {#each Object.entries(totalFloorOptions) as [floor, floorText]}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (181:4) <Select      style="min-width: 300px"      label="Nombre total de plantes"      bind:value={formValues.totalFloors}     >
+    // (180:4) <Select      style="min-width: 300px"      label="Nombre total de plantes"      bind:value={formValues.totalFloors}     >
     function create_default_slot_27$1(ctx) {
     	let each_1_anchor;
     	let current;
@@ -41960,14 +41960,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_27$1.name,
     		type: "slot",
-    		source: "(181:4) <Select      style=\\\"min-width: 300px\\\"      label=\\\"Nombre total de plantes\\\"      bind:value={formValues.totalFloors}     >",
+    		source: "(180:4) <Select      style=\\\"min-width: 300px\\\"      label=\\\"Nombre total de plantes\\\"      bind:value={formValues.totalFloors}     >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (196:1) {#if formValues.position === 'other'}
+    // (195:1) {#if formValues.position === 'other'}
     function create_if_block_13(ctx) {
     	let div;
     	let span;
@@ -41997,8 +41997,8 @@ var app = (function () {
     			t1 = space();
     			create_component(textfield.$$.fragment);
     			attr_dev(span, "class", "field-label svelte-xt7jk9");
-    			add_location(span, file$7, 197, 3, 6641);
-    			add_location(div, file$7, 196, 2, 6632);
+    			add_location(span, file$7, 196, 3, 6601);
+    			add_location(div, file$7, 195, 2, 6592);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -42037,14 +42037,14 @@ var app = (function () {
     		block,
     		id: create_if_block_13.name,
     		type: "if",
-    		source: "(196:1) {#if formValues.position === 'other'}",
+    		source: "(195:1) {#if formValues.position === 'other'}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (154:0) <Card padded>
+    // (153:0) <Card padded>
     function create_default_slot_26$1(ctx) {
     	let select;
     	let updating_value;
@@ -42087,7 +42087,7 @@ var app = (function () {
     			t2 = space();
     			if (if_block2) if_block2.c();
     			if_block2_anchor = empty();
-    			add_location(div, file$7, 165, 1, 5898);
+    			add_location(div, file$7, 164, 1, 5858);
     		},
     		m: function mount(target, anchor) {
     			mount_component(select, target, anchor);
@@ -42216,14 +42216,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_26$1.name,
     		type: "slot",
-    		source: "(154:0) <Card padded>",
+    		source: "(153:0) <Card padded>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (263:32) 
+    // (262:32) 
     function create_if_block_12(ctx) {
     	let card;
     	let current;
@@ -42272,14 +42272,14 @@ var app = (function () {
     		block,
     		id: create_if_block_12.name,
     		type: "if",
-    		source: "(263:32) ",
+    		source: "(262:32) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (203:1) {#if  formValues.position === 'insideBuilding'}
+    // (202:1) {#if  formValues.position === 'insideBuilding'}
     function create_if_block_8(ctx) {
     	let card;
     	let current;
@@ -42328,14 +42328,14 @@ var app = (function () {
     		block,
     		id: create_if_block_8.name,
     		type: "if",
-    		source: "(203:1) {#if  formValues.position === 'insideBuilding'}",
+    		source: "(202:1) {#if  formValues.position === 'insideBuilding'}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (264:1) <Card padded>
+    // (263:1) <Card padded>
     function create_default_slot_25$1(ctx) {
     	let div;
     	let t1;
@@ -42353,7 +42353,7 @@ var app = (function () {
     			div.textContent = "Seleccioneu la ubicació el més detallada possible arrossegant la icona blava del mapa";
     			t1 = space();
     			create_component(leaflet.$$.fragment);
-    			add_location(div, file$7, 265, 1, 8807);
+    			add_location(div, file$7, 264, 1, 8767);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -42382,14 +42382,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_25$1.name,
     		type: "slot",
-    		source: "(264:1) <Card padded>",
+    		source: "(263:1) <Card padded>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (212:6) <Option value={country}>
+    // (211:6) <Option value={country}>
     function create_default_slot_24$1(ctx) {
     	let t;
 
@@ -42410,14 +42410,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_24$1.name,
     		type: "slot",
-    		source: "(212:6) <Option value={country}>",
+    		source: "(211:6) <Option value={country}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (211:5) {#each ['Andorra', 'Espanya', 'França'] as country}
+    // (210:5) {#each ['Andorra', 'Espanya', 'França'] as country}
     function create_each_block_8$1(ctx) {
     	let option;
     	let current;
@@ -42466,14 +42466,14 @@ var app = (function () {
     		block,
     		id: create_each_block_8$1.name,
     		type: "each",
-    		source: "(211:5) {#each ['Andorra', 'Espanya', 'França'] as country}",
+    		source: "(210:5) {#each ['Andorra', 'Espanya', 'França'] as country}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (210:4) <Select bind:value={pais} label="País">
+    // (209:4) <Select bind:value={pais} label="País">
     function create_default_slot_23$1(ctx) {
     	let each_1_anchor;
     	let current;
@@ -42530,14 +42530,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_23$1.name,
     		type: "slot",
-    		source: "(210:4) <Select bind:value={pais} label=\\\"País\\\">",
+    		source: "(209:4) <Select bind:value={pais} label=\\\"País\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (209:3) <FormField>
+    // (208:3) <FormField>
     function create_default_slot_22$1(ctx) {
     	let select;
     	let updating_value;
@@ -42601,14 +42601,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_22$1.name,
     		type: "slot",
-    		source: "(209:3) <FormField>",
+    		source: "(208:3) <FormField>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (215:4) 
+    // (214:4) 
     function create_label_slot_9(ctx) {
     	let span;
 
@@ -42617,7 +42617,7 @@ var app = (function () {
     			span = element("span");
     			span.textContent = "País on es trobava en el moment del terratrèmol";
     			attr_dev(span, "slot", "label");
-    			add_location(span, file$7, 214, 4, 7180);
+    			add_location(span, file$7, 213, 4, 7140);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -42632,14 +42632,14 @@ var app = (function () {
     		block,
     		id: create_label_slot_9.name,
     		type: "slot",
-    		source: "(215:4) ",
+    		source: "(214:4) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (243:75) 
+    // (242:75) 
     function create_if_block_11(ctx) {
     	let formfield;
     	let current;
@@ -42690,14 +42690,14 @@ var app = (function () {
     		block,
     		id: create_if_block_11.name,
     		type: "if",
-    		source: "(243:75) ",
+    		source: "(242:75) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (217:3) {#if formValues.pais === 'Andorra'}
+    // (216:3) {#if formValues.pais === 'Andorra'}
     function create_if_block_10(ctx) {
     	let formfield0;
     	let t;
@@ -42776,14 +42776,14 @@ var app = (function () {
     		block,
     		id: create_if_block_10.name,
     		type: "if",
-    		source: "(217:3) {#if formValues.pais === 'Andorra'}",
+    		source: "(216:3) {#if formValues.pais === 'Andorra'}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (244:4) <FormField>
+    // (243:4) <FormField>
     function create_default_slot_21$1(ctx) {
     	let textfield;
     	let updating_value;
@@ -42839,14 +42839,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_21$1.name,
     		type: "slot",
-    		source: "(244:4) <FormField>",
+    		source: "(243:4) <FormField>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (246:5) 
+    // (245:5) 
     function create_label_slot_8(ctx) {
     	let span;
 
@@ -42855,7 +42855,7 @@ var app = (function () {
     			span = element("span");
     			span.textContent = "Municipi on es trobava en el moment del terratrèmol";
     			attr_dev(span, "slot", "label");
-    			add_location(span, file$7, 245, 5, 8321);
+    			add_location(span, file$7, 244, 5, 8281);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -42870,14 +42870,14 @@ var app = (function () {
     		block,
     		id: create_label_slot_8.name,
     		type: "slot",
-    		source: "(246:5) ",
+    		source: "(245:5) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (221:7) <Option value={parroquia}>
+    // (220:7) <Option value={parroquia}>
     function create_default_slot_20$1(ctx) {
     	let t_value = /*parroquia*/ ctx[3] + "";
     	let t;
@@ -42901,14 +42901,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_20$1.name,
     		type: "slot",
-    		source: "(221:7) <Option value={parroquia}>",
+    		source: "(220:7) <Option value={parroquia}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (220:6) {#each [...new Set(parroquies.map((d) => d.parroquia))] as parroquia}
+    // (219:6) {#each [...new Set(parroquies.map((d) => d.parroquia))] as parroquia}
     function create_each_block_7$1(ctx) {
     	let option;
     	let current;
@@ -42958,14 +42958,14 @@ var app = (function () {
     		block,
     		id: create_each_block_7$1.name,
     		type: "each",
-    		source: "(220:6) {#each [...new Set(parroquies.map((d) => d.parroquia))] as parroquia}",
+    		source: "(219:6) {#each [...new Set(parroquies.map((d) => d.parroquia))] as parroquia}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (219:5) <Select disabled={formValues.pais !== 'Andorra'} bind:value={parroquia} label="Parròquia">
+    // (218:5) <Select disabled={formValues.pais !== 'Andorra'} bind:value={parroquia} label="Parròquia">
     function create_default_slot_19$1(ctx) {
     	let each_1_anchor;
     	let current;
@@ -43054,14 +43054,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_19$1.name,
     		type: "slot",
-    		source: "(219:5) <Select disabled={formValues.pais !== 'Andorra'} bind:value={parroquia} label=\\\"Parròquia\\\">",
+    		source: "(218:5) <Select disabled={formValues.pais !== 'Andorra'} bind:value={parroquia} label=\\\"Parròquia\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (218:4) <FormField>
+    // (217:4) <FormField>
     function create_default_slot_18$1(ctx) {
     	let select;
     	let updating_value;
@@ -43127,14 +43127,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_18$1.name,
     		type: "slot",
-    		source: "(218:4) <FormField>",
+    		source: "(217:4) <FormField>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (224:5) 
+    // (223:5) 
     function create_label_slot_7(ctx) {
     	let span;
 
@@ -43143,7 +43143,7 @@ var app = (function () {
     			span = element("span");
     			span.textContent = "Parròquia on es trobava en el moment del terratrèmol";
     			attr_dev(span, "slot", "label");
-    			add_location(span, file$7, 223, 5, 7585);
+    			add_location(span, file$7, 222, 5, 7545);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -43158,14 +43158,14 @@ var app = (function () {
     		block,
     		id: create_label_slot_7.name,
     		type: "slot",
-    		source: "(224:5) ",
+    		source: "(223:5) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (236:7) <Option value={territori}>
+    // (235:7) <Option value={territori}>
     function create_default_slot_17$1(ctx) {
     	let t_value = /*territori*/ ctx[50] + "";
     	let t;
@@ -43189,14 +43189,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_17$1.name,
     		type: "slot",
-    		source: "(236:7) <Option value={territori}>",
+    		source: "(235:7) <Option value={territori}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (233:6) {#each parroquies        .filter((d) => d.parroquia === formValues.parroquia)        .map((d) => d.territori) as territori}
+    // (232:6) {#each parroquies        .filter((d) => d.parroquia === formValues.parroquia)        .map((d) => d.territori) as territori}
     function create_each_block_6$1(ctx) {
     	let option;
     	let current;
@@ -43246,14 +43246,14 @@ var app = (function () {
     		block,
     		id: create_each_block_6$1.name,
     		type: "each",
-    		source: "(233:6) {#each parroquies        .filter((d) => d.parroquia === formValues.parroquia)        .map((d) => d.territori) as territori}",
+    		source: "(232:6) {#each parroquies        .filter((d) => d.parroquia === formValues.parroquia)        .map((d) => d.territori) as territori}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (228:5) <Select       disabled={!formValues.parroquia}       bind:value={formValues.territori}       label="Territori"      >
+    // (227:5) <Select       disabled={!formValues.parroquia}       bind:value={formValues.territori}       label="Territori"      >
     function create_default_slot_16$1(ctx) {
     	let each_1_anchor;
     	let current;
@@ -43342,14 +43342,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_16$1.name,
     		type: "slot",
-    		source: "(228:5) <Select       disabled={!formValues.parroquia}       bind:value={formValues.territori}       label=\\\"Territori\\\"      >",
+    		source: "(227:5) <Select       disabled={!formValues.parroquia}       bind:value={formValues.territori}       label=\\\"Territori\\\"      >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (227:4) <FormField>
+    // (226:4) <FormField>
     function create_default_slot_15$1(ctx) {
     	let select;
     	let updating_value;
@@ -43415,14 +43415,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_15$1.name,
     		type: "slot",
-    		source: "(227:4) <FormField>",
+    		source: "(226:4) <FormField>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (239:5) 
+    // (238:5) 
     function create_label_slot_6(ctx) {
     	let span;
 
@@ -43431,7 +43431,7 @@ var app = (function () {
     			span = element("span");
     			span.textContent = "Territori dins la parròquia on es trobava en el moment del terratrèmol";
     			attr_dev(span, "slot", "label");
-    			add_location(span, file$7, 238, 5, 8039);
+    			add_location(span, file$7, 237, 5, 7999);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -43446,14 +43446,14 @@ var app = (function () {
     		block,
     		id: create_label_slot_6.name,
     		type: "slot",
-    		source: "(239:5) ",
+    		source: "(238:5) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (249:3) {#if !!formValues.pais}
+    // (248:3) {#if !!formValues.pais}
     function create_if_block_9(ctx) {
     	let formfield0;
     	let t;
@@ -43532,14 +43532,14 @@ var app = (function () {
     		block,
     		id: create_if_block_9.name,
     		type: "if",
-    		source: "(249:3) {#if !!formValues.pais}",
+    		source: "(248:3) {#if !!formValues.pais}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (250:4) <FormField>
+    // (249:4) <FormField>
     function create_default_slot_14$1(ctx) {
     	let textfield;
     	let updating_value;
@@ -43595,14 +43595,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_14$1.name,
     		type: "slot",
-    		source: "(250:4) <FormField>",
+    		source: "(249:4) <FormField>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (252:5) 
+    // (251:5) 
     function create_label_slot_5(ctx) {
     	let span;
 
@@ -43611,7 +43611,7 @@ var app = (function () {
     			span = element("span");
     			span.textContent = "Carrer";
     			attr_dev(span, "slot", "label");
-    			add_location(span, file$7, 251, 5, 8536);
+    			add_location(span, file$7, 250, 5, 8496);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -43626,14 +43626,14 @@ var app = (function () {
     		block,
     		id: create_label_slot_5.name,
     		type: "slot",
-    		source: "(252:5) ",
+    		source: "(251:5) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (255:4) <FormField>
+    // (254:4) <FormField>
     function create_default_slot_13$1(ctx) {
     	let textfield;
     	let updating_value;
@@ -43689,14 +43689,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_13$1.name,
     		type: "slot",
-    		source: "(255:4) <FormField>",
+    		source: "(254:4) <FormField>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (257:5) 
+    // (256:5) 
     function create_label_slot_4(ctx) {
     	let span;
 
@@ -43705,7 +43705,7 @@ var app = (function () {
     			span = element("span");
     			span.textContent = "Número";
     			attr_dev(span, "slot", "label");
-    			add_location(span, file$7, 256, 5, 8677);
+    			add_location(span, file$7, 255, 5, 8637);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -43720,14 +43720,14 @@ var app = (function () {
     		block,
     		id: create_label_slot_4.name,
     		type: "slot",
-    		source: "(257:5) ",
+    		source: "(256:5) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (204:1) <Card padded>
+    // (203:1) <Card padded>
     function create_default_slot_12$1(ctx) {
     	let div;
     	let formfield;
@@ -43777,7 +43777,7 @@ var app = (function () {
     			? 'error'
     			: 'valid') + " svelte-xt7jk9"));
 
-    			add_location(div, file$7, 205, 2, 6877);
+    			add_location(div, file$7, 204, 2, 6837);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -43893,14 +43893,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_12$1.name,
     		type: "slot",
-    		source: "(204:1) <Card padded>",
+    		source: "(203:1) <Card padded>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (280:4) <Option value={situationObserver}>
+    // (279:4) <Option value={situationObserver}>
     function create_default_slot_11$1(ctx) {
     	let t0_value = /*situationObserverText*/ ctx[47] + "";
     	let t0;
@@ -43926,14 +43926,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_11$1.name,
     		type: "slot",
-    		source: "(280:4) <Option value={situationObserver}>",
+    		source: "(279:4) <Option value={situationObserver}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (279:3) {#each Object.entries(situationObserverOptions) as [situationObserver, situationObserverText]}
+    // (278:3) {#each Object.entries(situationObserverOptions) as [situationObserver, situationObserverText]}
     function create_each_block_5$1(ctx) {
     	let option;
     	let current;
@@ -43982,14 +43982,14 @@ var app = (function () {
     		block,
     		id: create_each_block_5$1.name,
     		type: "each",
-    		source: "(279:3) {#each Object.entries(situationObserverOptions) as [situationObserver, situationObserverText]}",
+    		source: "(278:3) {#each Object.entries(situationObserverOptions) as [situationObserver, situationObserverText]}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (274:2) <Select    style="min-width: 300px"    label="En el moment de la sacsejada, estava..."    bind:value={formValues.situationObserver}   >
+    // (273:2) <Select    style="min-width: 300px"    label="En el moment de la sacsejada, estava..."    bind:value={formValues.situationObserver}   >
     function create_default_slot_10$1(ctx) {
     	let each_1_anchor;
     	let current;
@@ -44078,14 +44078,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_10$1.name,
     		type: "slot",
-    		source: "(274:2) <Select    style=\\\"min-width: 300px\\\"    label=\\\"En el moment de la sacsejada, estava...\\\"    bind:value={formValues.situationObserver}   >",
+    		source: "(273:2) <Select    style=\\\"min-width: 300px\\\"    label=\\\"En el moment de la sacsejada, estava...\\\"    bind:value={formValues.situationObserver}   >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (273:1) <FormField>
+    // (272:1) <FormField>
     function create_default_slot_9$1(ctx) {
     	let select;
     	let updating_value;
@@ -44150,14 +44150,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_9$1.name,
     		type: "slot",
-    		source: "(273:1) <FormField>",
+    		source: "(272:1) <FormField>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (287:1) {#if formValues.situationObserver === 'other'}
+    // (286:1) {#if formValues.situationObserver === 'other'}
     function create_if_block_7(ctx) {
     	let div;
     	let span;
@@ -44187,8 +44187,8 @@ var app = (function () {
     			t1 = space();
     			create_component(textfield.$$.fragment);
     			attr_dev(span, "class", "field-label svelte-xt7jk9");
-    			add_location(span, file$7, 288, 3, 9404);
-    			add_location(div, file$7, 287, 2, 9395);
+    			add_location(span, file$7, 287, 3, 9364);
+    			add_location(div, file$7, 286, 2, 9355);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -44227,14 +44227,14 @@ var app = (function () {
     		block,
     		id: create_if_block_7.name,
     		type: "if",
-    		source: "(287:1) {#if formValues.situationObserver === 'other'}",
+    		source: "(286:1) {#if formValues.situationObserver === 'other'}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (272:0) <Card padded>
+    // (271:0) <Card padded>
     function create_default_slot_8$1(ctx) {
     	let formfield;
     	let t;
@@ -44320,14 +44320,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_8$1.name,
     		type: "slot",
-    		source: "(272:0) <Card padded>",
+    		source: "(271:0) <Card padded>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (295:1) {#if formValues.position === 'insideBuilding'}
+    // (294:1) {#if formValues.position === 'insideBuilding'}
     function create_if_block_5$1(ctx) {
     	let div;
     	let p;
@@ -44356,9 +44356,9 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			add_location(p, file$7, 296, 3, 9650);
+    			add_location(p, file$7, 295, 3, 9610);
     			attr_dev(div, "class", "radio-group");
-    			add_location(div, file$7, 295, 2, 9621);
+    			add_location(div, file$7, 294, 2, 9581);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -44428,21 +44428,21 @@ var app = (function () {
     		block,
     		id: create_if_block_5$1.name,
     		type: "if",
-    		source: "(295:1) {#if formValues.position === 'insideBuilding'}",
+    		source: "(294:1) {#if formValues.position === 'insideBuilding'}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (299:4) {#if i > 0 && i % 3 === 0}
+    // (298:4) {#if i > 0 && i % 3 === 0}
     function create_if_block_6(ctx) {
     	let br;
 
     	const block = {
     		c: function create() {
     			br = element("br");
-    			add_location(br, file$7, 299, 5, 9843);
+    			add_location(br, file$7, 298, 5, 9803);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, br, anchor);
@@ -44456,14 +44456,14 @@ var app = (function () {
     		block,
     		id: create_if_block_6.name,
     		type: "if",
-    		source: "(299:4) {#if i > 0 && i % 3 === 0}",
+    		source: "(298:4) {#if i > 0 && i % 3 === 0}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (302:4) <FormField style="min-width: 250px">
+    // (301:4) <FormField style="min-width: 250px">
     function create_default_slot_7$2(ctx) {
     	let radio;
     	let updating_group;
@@ -44523,14 +44523,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_7$2.name,
     		type: "slot",
-    		source: "(302:4) <FormField style=\\\"min-width: 250px\\\">",
+    		source: "(301:4) <FormField style=\\\"min-width: 250px\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (304:5) 
+    // (303:5) 
     function create_label_slot_3(ctx) {
     	let span;
     	let t0_value = /*numberPeopleText*/ ctx[40] + "";
@@ -44543,7 +44543,7 @@ var app = (function () {
     			t0 = text(t0_value);
     			t1 = space();
     			attr_dev(span, "slot", "label");
-    			add_location(span, file$7, 303, 5, 9985);
+    			add_location(span, file$7, 302, 5, 9945);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -44560,14 +44560,14 @@ var app = (function () {
     		block,
     		id: create_label_slot_3.name,
     		type: "slot",
-    		source: "(304:5) ",
+    		source: "(303:5) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (298:3) {#each Object.entries(numberPeopleInsideOptions) as [numberPeople, numberPeopleText], i}
+    // (297:3) {#each Object.entries(numberPeopleInsideOptions) as [numberPeople, numberPeopleText], i}
     function create_each_block_4$1(ctx) {
     	let t;
     	let formfield;
@@ -44627,14 +44627,14 @@ var app = (function () {
     		block,
     		id: create_each_block_4$1.name,
     		type: "each",
-    		source: "(298:3) {#each Object.entries(numberPeopleInsideOptions) as [numberPeople, numberPeopleText], i}",
+    		source: "(297:3) {#each Object.entries(numberPeopleInsideOptions) as [numberPeople, numberPeopleText], i}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (312:1) {#if formValues.position !== 'insideBuilding'}
+    // (311:1) {#if formValues.position !== 'insideBuilding'}
     function create_if_block_3$2(ctx) {
     	let div;
     	let p;
@@ -44663,9 +44663,9 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			add_location(p, file$7, 313, 3, 10167);
+    			add_location(p, file$7, 312, 3, 10127);
     			attr_dev(div, "class", "radio-group");
-    			add_location(div, file$7, 312, 2, 10138);
+    			add_location(div, file$7, 311, 2, 10098);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -44735,21 +44735,21 @@ var app = (function () {
     		block,
     		id: create_if_block_3$2.name,
     		type: "if",
-    		source: "(312:1) {#if formValues.position !== 'insideBuilding'}",
+    		source: "(311:1) {#if formValues.position !== 'insideBuilding'}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (316:4) {#if i > 0 && i % 3 === 0}
+    // (315:4) {#if i > 0 && i % 3 === 0}
     function create_if_block_4$1(ctx) {
     	let br;
 
     	const block = {
     		c: function create() {
     			br = element("br");
-    			add_location(br, file$7, 316, 5, 10361);
+    			add_location(br, file$7, 315, 5, 10321);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, br, anchor);
@@ -44763,14 +44763,14 @@ var app = (function () {
     		block,
     		id: create_if_block_4$1.name,
     		type: "if",
-    		source: "(316:4) {#if i > 0 && i % 3 === 0}",
+    		source: "(315:4) {#if i > 0 && i % 3 === 0}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (319:4) <FormField style="min-width: 250px">
+    // (318:4) <FormField style="min-width: 250px">
     function create_default_slot_6$2(ctx) {
     	let radio;
     	let updating_group;
@@ -44830,14 +44830,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_6$2.name,
     		type: "slot",
-    		source: "(319:4) <FormField style=\\\"min-width: 250px\\\">",
+    		source: "(318:4) <FormField style=\\\"min-width: 250px\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (321:5) 
+    // (320:5) 
     function create_label_slot_2$1(ctx) {
     	let span;
     	let t0_value = /*numberPeopleText*/ ctx[40] + "";
@@ -44850,7 +44850,7 @@ var app = (function () {
     			t0 = text(t0_value);
     			t1 = space();
     			attr_dev(span, "slot", "label");
-    			add_location(span, file$7, 320, 5, 10504);
+    			add_location(span, file$7, 319, 5, 10464);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -44867,14 +44867,14 @@ var app = (function () {
     		block,
     		id: create_label_slot_2$1.name,
     		type: "slot",
-    		source: "(321:5) ",
+    		source: "(320:5) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (315:3) {#each Object.entries(numberPeopleOutsideOptions) as [numberPeople, numberPeopleText], i}
+    // (314:3) {#each Object.entries(numberPeopleOutsideOptions) as [numberPeople, numberPeopleText], i}
     function create_each_block_3$1(ctx) {
     	let t;
     	let formfield;
@@ -44934,14 +44934,14 @@ var app = (function () {
     		block,
     		id: create_each_block_3$1.name,
     		type: "each",
-    		source: "(315:3) {#each Object.entries(numberPeopleOutsideOptions) as [numberPeople, numberPeopleText], i}",
+    		source: "(314:3) {#each Object.entries(numberPeopleOutsideOptions) as [numberPeople, numberPeopleText], i}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (294:0) <Card padded>
+    // (293:0) <Card padded>
     function create_default_slot_5$2(ctx) {
     	let t;
     	let if_block1_anchor;
@@ -45033,21 +45033,21 @@ var app = (function () {
     		block,
     		id: create_default_slot_5$2.name,
     		type: "slot",
-    		source: "(294:0) <Card padded>",
+    		source: "(293:0) <Card padded>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (333:3) {#if i > 0 && i % 3 === 0}
+    // (332:3) {#if i > 0 && i % 3 === 0}
     function create_if_block_2$2(ctx) {
     	let br;
 
     	const block = {
     		c: function create() {
     			br = element("br");
-    			add_location(br, file$7, 333, 4, 10853);
+    			add_location(br, file$7, 332, 4, 10813);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, br, anchor);
@@ -45061,14 +45061,14 @@ var app = (function () {
     		block,
     		id: create_if_block_2$2.name,
     		type: "if",
-    		source: "(333:3) {#if i > 0 && i % 3 === 0}",
+    		source: "(332:3) {#if i > 0 && i % 3 === 0}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (336:3) <FormField style="min-width: 250px">
+    // (335:3) <FormField style="min-width: 250px">
     function create_default_slot_4$2(ctx) {
     	let radio;
     	let updating_group;
@@ -45128,14 +45128,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_4$2.name,
     		type: "slot",
-    		source: "(336:3) <FormField style=\\\"min-width: 250px\\\">",
+    		source: "(335:3) <FormField style=\\\"min-width: 250px\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (338:4) 
+    // (337:4) 
     function create_label_slot_1$1(ctx) {
     	let span;
     	let t0_value = /*numberPeopleText*/ ctx[40] + "";
@@ -45148,7 +45148,7 @@ var app = (function () {
     			t0 = text(t0_value);
     			t1 = space();
     			attr_dev(span, "slot", "label");
-    			add_location(span, file$7, 337, 4, 10993);
+    			add_location(span, file$7, 336, 4, 10953);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -45165,14 +45165,14 @@ var app = (function () {
     		block,
     		id: create_label_slot_1$1.name,
     		type: "slot",
-    		source: "(338:4) ",
+    		source: "(337:4) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (332:2) {#each Object.entries(numberPeopleGoingOutOptions) as [numberPeople, numberPeopleText], i}
+    // (331:2) {#each Object.entries(numberPeopleGoingOutOptions) as [numberPeople, numberPeopleText], i}
     function create_each_block_2$1(ctx) {
     	let t;
     	let formfield;
@@ -45232,14 +45232,14 @@ var app = (function () {
     		block,
     		id: create_each_block_2$1.name,
     		type: "each",
-    		source: "(332:2) {#each Object.entries(numberPeopleGoingOutOptions) as [numberPeople, numberPeopleText], i}",
+    		source: "(331:2) {#each Object.entries(numberPeopleGoingOutOptions) as [numberPeople, numberPeopleText], i}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (329:0) <Card padded>
+    // (328:0) <Card padded>
     function create_default_slot_3$2(ctx) {
     	let div;
     	let p;
@@ -45268,9 +45268,9 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			add_location(p, file$7, 330, 2, 10657);
+    			add_location(p, file$7, 329, 2, 10617);
     			attr_dev(div, "class", "radio-group");
-    			add_location(div, file$7, 329, 1, 10629);
+    			add_location(div, file$7, 328, 1, 10589);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -45340,21 +45340,21 @@ var app = (function () {
     		block,
     		id: create_default_slot_3$2.name,
     		type: "slot",
-    		source: "(329:0) <Card padded>",
+    		source: "(328:0) <Card padded>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (349:3) {#if i > 0 && i % 3 === 0}
+    // (348:3) {#if i > 0 && i % 3 === 0}
     function create_if_block_1$2(ctx) {
     	let br;
 
     	const block = {
     		c: function create() {
     			br = element("br");
-    			add_location(br, file$7, 349, 4, 11305);
+    			add_location(br, file$7, 348, 4, 11265);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, br, anchor);
@@ -45368,14 +45368,14 @@ var app = (function () {
     		block,
     		id: create_if_block_1$2.name,
     		type: "if",
-    		source: "(349:3) {#if i > 0 && i % 3 === 0}",
+    		source: "(348:3) {#if i > 0 && i % 3 === 0}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (352:3) <FormField style="min-width: 250px">
+    // (351:3) <FormField style="min-width: 250px">
     function create_default_slot_2$2(ctx) {
     	let radio;
     	let updating_group;
@@ -45435,14 +45435,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_2$2.name,
     		type: "slot",
-    		source: "(352:3) <FormField style=\\\"min-width: 250px\\\">",
+    		source: "(351:3) <FormField style=\\\"min-width: 250px\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (354:4) 
+    // (353:4) 
     function create_label_slot$1(ctx) {
     	let span;
     	let t0_value = /*numberPeopleText*/ ctx[40] + "";
@@ -45455,7 +45455,7 @@ var app = (function () {
     			t0 = text(t0_value);
     			t1 = space();
     			attr_dev(span, "slot", "label");
-    			add_location(span, file$7, 353, 4, 11442);
+    			add_location(span, file$7, 352, 4, 11402);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -45472,14 +45472,14 @@ var app = (function () {
     		block,
     		id: create_label_slot$1.name,
     		type: "slot",
-    		source: "(354:4) ",
+    		source: "(353:4) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (348:2) {#each Object.entries(numberPeopleAwake) as [numberPeople, numberPeopleText], i}
+    // (347:2) {#each Object.entries(numberPeopleAwake) as [numberPeople, numberPeopleText], i}
     function create_each_block_1$1(ctx) {
     	let t;
     	let formfield;
@@ -45539,14 +45539,14 @@ var app = (function () {
     		block,
     		id: create_each_block_1$1.name,
     		type: "each",
-    		source: "(348:2) {#each Object.entries(numberPeopleAwake) as [numberPeople, numberPeopleText], i}",
+    		source: "(347:2) {#each Object.entries(numberPeopleAwake) as [numberPeople, numberPeopleText], i}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (345:0) <Card padded>
+    // (344:0) <Card padded>
     function create_default_slot_1$2(ctx) {
     	let div;
     	let p;
@@ -45575,9 +45575,9 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			add_location(p, file$7, 346, 2, 11134);
+    			add_location(p, file$7, 345, 2, 11094);
     			attr_dev(div, "class", "radio-group");
-    			add_location(div, file$7, 345, 1, 11106);
+    			add_location(div, file$7, 344, 1, 11066);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -45647,14 +45647,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_1$2.name,
     		type: "slot",
-    		source: "(345:0) <Card padded>",
+    		source: "(344:0) <Card padded>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (363:1) {#if Object.keys(errors).length > 0}
+    // (362:1) {#if Object.keys(errors).length > 0}
     function create_if_block$3(ctx) {
     	let div;
     	let each_value = Object.entries(/*errors*/ ctx[7]);
@@ -45674,7 +45674,7 @@ var app = (function () {
     			}
 
     			attr_dev(div, "class", "error svelte-xt7jk9");
-    			add_location(div, file$7, 363, 2, 11603);
+    			add_location(div, file$7, 362, 2, 11563);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -45718,14 +45718,14 @@ var app = (function () {
     		block,
     		id: create_if_block$3.name,
     		type: "if",
-    		source: "(363:1) {#if Object.keys(errors).length > 0}",
+    		source: "(362:1) {#if Object.keys(errors).length > 0}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (365:3) {#each Object.entries(errors) as [fieldName, error]}
+    // (364:3) {#each Object.entries(errors) as [fieldName, error]}
     function create_each_block$2(ctx) {
     	let div;
     	let t0_value = /*fieldName*/ ctx[35] + "";
@@ -45740,7 +45740,7 @@ var app = (function () {
     			t0 = text(t0_value);
     			t1 = text(": ");
     			t2 = text(t2_value);
-    			add_location(div, file$7, 365, 4, 11683);
+    			add_location(div, file$7, 364, 4, 11643);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -45761,14 +45761,14 @@ var app = (function () {
     		block,
     		id: create_each_block$2.name,
     		type: "each",
-    		source: "(365:3) {#each Object.entries(errors) as [fieldName, error]}",
+    		source: "(364:3) {#each Object.entries(errors) as [fieldName, error]}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (371:1) <Button variant="raised" type="submit" on:click={handleSubmit}>
+    // (370:1) <Button variant="raised" type="submit" on:click={handleSubmit}>
     function create_default_slot$4(ctx) {
     	let t;
 
@@ -45788,7 +45788,7 @@ var app = (function () {
     		block,
     		id: create_default_slot$4.name,
     		type: "slot",
-    		source: "(371:1) <Button variant=\\\"raised\\\" type=\\\"submit\\\" on:click={handleSubmit}>",
+    		source: "(370:1) <Button variant=\\\"raised\\\" type=\\\"submit\\\" on:click={handleSubmit}>",
     		ctx
     	});
 
@@ -45989,16 +45989,16 @@ var app = (function () {
     			if (!src_url_equal(img.src, img_src_value = "images/logo.png")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "logo");
     			attr_dev(img, "class", "logo svelte-xt7jk9");
-    			add_location(img, file$7, 80, 1, 3082);
+    			add_location(img, file$7, 79, 1, 3042);
     			attr_dev(div0, "class", "title svelte-xt7jk9");
-    			add_location(div0, file$7, 82, 2, 3145);
-    			add_location(p0, file$7, 83, 2, 3189);
-    			add_location(p1, file$7, 88, 2, 3400);
-    			add_location(div1, file$7, 81, 1, 3137);
+    			add_location(div0, file$7, 81, 2, 3105);
+    			add_location(p0, file$7, 82, 2, 3149);
+    			add_location(p1, file$7, 87, 2, 3360);
+    			add_location(div1, file$7, 80, 1, 3097);
     			attr_dev(div2, "class", "header svelte-xt7jk9");
-    			add_location(div2, file$7, 79, 0, 3060);
+    			add_location(div2, file$7, 78, 0, 3020);
     			attr_dev(div3, "class", "buttons svelte-xt7jk9");
-    			add_location(div3, file$7, 361, 0, 11541);
+    			add_location(div3, file$7, 360, 0, 11501);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -46355,7 +46355,6 @@ var app = (function () {
     		});
     	};
 
-    	console.log(Object.keys(floorOptions));
     	const writable_props = [];
 
     	Object_1$2.keys($$props).forEach(key => {
@@ -50218,7 +50217,7 @@ var app = (function () {
     }
 
     // (74:0) <LinearProgress progress={0.666}>
-    function create_default_slot_56(ctx) {
+    function create_default_slot_51(ctx) {
     	let t;
 
     	const block = {
@@ -50235,7 +50234,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_56.name,
+    		id: create_default_slot_51.name,
     		type: "slot",
     		source: "(74:0) <LinearProgress progress={0.666}>",
     		ctx
@@ -50245,7 +50244,7 @@ var app = (function () {
     }
 
     // (83:3) <Option value={position}>
-    function create_default_slot_55(ctx) {
+    function create_default_slot_50(ctx) {
     	let t0_value = /*positionText*/ ctx[32] + "";
     	let t0;
     	let t1;
@@ -50268,7 +50267,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_55.name,
+    		id: create_default_slot_50.name,
     		type: "slot",
     		source: "(83:3) <Option value={position}>",
     		ctx
@@ -50285,7 +50284,7 @@ var app = (function () {
     	option = new Option({
     			props: {
     				value: /*position*/ ctx[31],
-    				$$slots: { default: [create_default_slot_55] },
+    				$$slots: { default: [create_default_slot_50] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -50334,7 +50333,7 @@ var app = (function () {
     }
 
     // (77:1) <Select   style="max-width: 400px"   label="Com descriuria el moviment durant el terratrèmol?"   bind:value={formValues.movementDescription}  >
-    function create_default_slot_54(ctx) {
+    function create_default_slot_49(ctx) {
     	let each_1_anchor;
     	let current;
     	let each_value_15 = Object.entries(movementDescription);
@@ -50420,7 +50419,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_54.name,
+    		id: create_default_slot_49.name,
     		type: "slot",
     		source: "(77:1) <Select   style=\\\"max-width: 400px\\\"   label=\\\"Com descriuria el moviment durant el terratrèmol?\\\"   bind:value={formValues.movementDescription}  >",
     		ctx
@@ -50430,7 +50429,7 @@ var app = (function () {
     }
 
     // (76:0) <Card padded>
-    function create_default_slot_53(ctx) {
+    function create_default_slot_48(ctx) {
     	let select;
     	let updating_value;
     	let current;
@@ -50442,7 +50441,7 @@ var app = (function () {
     	let select_props = {
     		style: "max-width: 400px",
     		label: "Com descriuria el moviment durant el terratrèmol?",
-    		$$slots: { default: [create_default_slot_54] },
+    		$$slots: { default: [create_default_slot_49] },
     		$$scope: { ctx }
     	};
 
@@ -50492,7 +50491,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_53.name,
+    		id: create_default_slot_48.name,
     		type: "slot",
     		source: "(76:0) <Card padded>",
     		ctx
@@ -50502,7 +50501,7 @@ var app = (function () {
     }
 
     // (93:3) <Option value={position}>
-    function create_default_slot_52(ctx) {
+    function create_default_slot_47(ctx) {
     	let t0_value = /*positionText*/ ctx[32] + "";
     	let t0;
     	let t1;
@@ -50525,7 +50524,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_52.name,
+    		id: create_default_slot_47.name,
     		type: "slot",
     		source: "(93:3) <Option value={position}>",
     		ctx
@@ -50542,7 +50541,7 @@ var app = (function () {
     	option = new Option({
     			props: {
     				value: /*position*/ ctx[31],
-    				$$slots: { default: [create_default_slot_52] },
+    				$$slots: { default: [create_default_slot_47] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -50591,7 +50590,7 @@ var app = (function () {
     }
 
     // (91:1) <Select style="max-width: 400px" label="Va sentir soroll?" bind:value={formValues.noise}>
-    function create_default_slot_51(ctx) {
+    function create_default_slot_46(ctx) {
     	let each_1_anchor;
     	let current;
     	let each_value_14 = Object.entries(noise);
@@ -50677,7 +50676,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_51.name,
+    		id: create_default_slot_46.name,
     		type: "slot",
     		source: "(91:1) <Select style=\\\"max-width: 400px\\\" label=\\\"Va sentir soroll?\\\" bind:value={formValues.noise}>",
     		ctx
@@ -50687,7 +50686,7 @@ var app = (function () {
     }
 
     // (90:0) <Card padded>
-    function create_default_slot_50(ctx) {
+    function create_default_slot_45(ctx) {
     	let select;
     	let updating_value;
     	let current;
@@ -50699,7 +50698,7 @@ var app = (function () {
     	let select_props = {
     		style: "max-width: 400px",
     		label: "Va sentir soroll?",
-    		$$slots: { default: [create_default_slot_51] },
+    		$$slots: { default: [create_default_slot_46] },
     		$$scope: { ctx }
     	};
 
@@ -50749,7 +50748,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_50.name,
+    		id: create_default_slot_45.name,
     		type: "slot",
     		source: "(90:0) <Card padded>",
     		ctx
@@ -50759,7 +50758,7 @@ var app = (function () {
     }
 
     // (107:3) <Option value={position}>
-    function create_default_slot_49(ctx) {
+    function create_default_slot_44(ctx) {
     	let t0_value = /*positionText*/ ctx[32] + "";
     	let t0;
     	let t1;
@@ -50782,7 +50781,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_49.name,
+    		id: create_default_slot_44.name,
     		type: "slot",
     		source: "(107:3) <Option value={position}>",
     		ctx
@@ -50799,7 +50798,7 @@ var app = (function () {
     	option = new Option({
     			props: {
     				value: /*position*/ ctx[31],
-    				$$slots: { default: [create_default_slot_49] },
+    				$$slots: { default: [create_default_slot_44] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -50848,7 +50847,7 @@ var app = (function () {
     }
 
     // (101:1) <Select   style="max-width: 400px"   label="Quina reacció va tenir durant el terratrèmol?"   bind:value={formValues.reaction}  >
-    function create_default_slot_48(ctx) {
+    function create_default_slot_43(ctx) {
     	let each_1_anchor;
     	let current;
     	let each_value_13 = Object.entries(reaction);
@@ -50934,7 +50933,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_48.name,
+    		id: create_default_slot_43.name,
     		type: "slot",
     		source: "(101:1) <Select   style=\\\"max-width: 400px\\\"   label=\\\"Quina reacció va tenir durant el terratrèmol?\\\"   bind:value={formValues.reaction}  >",
     		ctx
@@ -50944,7 +50943,7 @@ var app = (function () {
     }
 
     // (100:0) <Card padded>
-    function create_default_slot_47(ctx) {
+    function create_default_slot_42(ctx) {
     	let select;
     	let updating_value;
     	let current;
@@ -50956,7 +50955,7 @@ var app = (function () {
     	let select_props = {
     		style: "max-width: 400px",
     		label: "Quina reacció va tenir durant el terratrèmol?",
-    		$$slots: { default: [create_default_slot_48] },
+    		$$slots: { default: [create_default_slot_43] },
     		$$scope: { ctx }
     	};
 
@@ -51006,7 +51005,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_47.name,
+    		id: create_default_slot_42.name,
     		type: "slot",
     		source: "(100:0) <Card padded>",
     		ctx
@@ -51044,7 +51043,7 @@ var app = (function () {
     }
 
     // (121:3) <FormField style="min-width: 250px">
-    function create_default_slot_46(ctx) {
+    function create_default_slot_41(ctx) {
     	let radio;
     	let updating_group;
     	let t;
@@ -51101,7 +51100,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_46.name,
+    		id: create_default_slot_41.name,
     		type: "slot",
     		source: "(121:3) <FormField style=\\\"min-width: 250px\\\">",
     		ctx
@@ -51159,7 +51158,7 @@ var app = (function () {
     				style: "min-width: 250px",
     				$$slots: {
     					label: [create_label_slot_2],
-    					default: [create_default_slot_46]
+    					default: [create_default_slot_41]
     				},
     				$$scope: { ctx }
     			},
@@ -51215,7 +51214,7 @@ var app = (function () {
     }
 
     // (114:0) <Card padded>
-    function create_default_slot_45(ctx) {
+    function create_default_slot_40(ctx) {
     	let div;
     	let p;
     	let t1;
@@ -51313,7 +51312,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_45.name,
+    		id: create_default_slot_40.name,
     		type: "slot",
     		source: "(114:0) <Card padded>",
     		ctx
@@ -51351,7 +51350,7 @@ var app = (function () {
     }
 
     // (138:3) <FormField style="min-width: 250px">
-    function create_default_slot_44(ctx) {
+    function create_default_slot_39(ctx) {
     	let radio;
     	let updating_group;
     	let t;
@@ -51408,7 +51407,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_44.name,
+    		id: create_default_slot_39.name,
     		type: "slot",
     		source: "(138:3) <FormField style=\\\"min-width: 250px\\\">",
     		ctx
@@ -51466,7 +51465,7 @@ var app = (function () {
     				style: "min-width: 250px",
     				$$slots: {
     					label: [create_label_slot_1],
-    					default: [create_default_slot_44]
+    					default: [create_default_slot_39]
     				},
     				$$scope: { ctx }
     			},
@@ -51522,7 +51521,7 @@ var app = (function () {
     }
 
     // (131:0) <Card padded>
-    function create_default_slot_43(ctx) {
+    function create_default_slot_38(ctx) {
     	let div;
     	let p;
     	let t1;
@@ -51620,7 +51619,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_43.name,
+    		id: create_default_slot_38.name,
     		type: "slot",
     		source: "(131:0) <Card padded>",
     		ctx
@@ -51630,7 +51629,7 @@ var app = (function () {
     }
 
     // (155:3) <Option value={position}>
-    function create_default_slot_42(ctx) {
+    function create_default_slot_37(ctx) {
     	let t0_value = /*positionText*/ ctx[32] + "";
     	let t0;
     	let t1;
@@ -51653,7 +51652,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_42.name,
+    		id: create_default_slot_37.name,
     		type: "slot",
     		source: "(155:3) <Option value={position}>",
     		ctx
@@ -51670,7 +51669,7 @@ var app = (function () {
     	option = new Option({
     			props: {
     				value: /*position*/ ctx[31],
-    				$$slots: { default: [create_default_slot_42] },
+    				$$slots: { default: [create_default_slot_37] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -51719,7 +51718,7 @@ var app = (function () {
     }
 
     // (149:1) <Select   style="max-width: 400px"   label="Què va fer durant la sacsejada?"   bind:value={formValues.whatDidYouDo}  >
-    function create_default_slot_41(ctx) {
+    function create_default_slot_36(ctx) {
     	let each_1_anchor;
     	let current;
     	let each_value_10 = Object.entries(whatDidYouDo);
@@ -51805,7 +51804,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_41.name,
+    		id: create_default_slot_36.name,
     		type: "slot",
     		source: "(149:1) <Select   style=\\\"max-width: 400px\\\"   label=\\\"Què va fer durant la sacsejada?\\\"   bind:value={formValues.whatDidYouDo}  >",
     		ctx
@@ -51821,7 +51820,7 @@ var app = (function () {
 
     	formfield = new FormField({
     			props: {
-    				$$slots: { default: [create_default_slot_40] },
+    				$$slots: { default: [create_default_slot_35] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -51870,7 +51869,7 @@ var app = (function () {
     }
 
     // (162:2) <FormField>
-    function create_default_slot_40(ctx) {
+    function create_default_slot_35(ctx) {
     	let div;
     	let t1;
     	let textfield;
@@ -51933,7 +51932,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_40.name,
+    		id: create_default_slot_35.name,
     		type: "slot",
     		source: "(162:2) <FormField>",
     		ctx
@@ -51943,7 +51942,7 @@ var app = (function () {
     }
 
     // (148:0) <Card padded>
-    function create_default_slot_39(ctx) {
+    function create_default_slot_34(ctx) {
     	let select;
     	let updating_value;
     	let t;
@@ -51957,7 +51956,7 @@ var app = (function () {
     	let select_props = {
     		style: "max-width: 400px",
     		label: "Què va fer durant la sacsejada?",
-    		$$slots: { default: [create_default_slot_41] },
+    		$$slots: { default: [create_default_slot_36] },
     		$$scope: { ctx }
     	};
 
@@ -52042,7 +52041,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_39.name,
+    		id: create_default_slot_34.name,
     		type: "slot",
     		source: "(148:0) <Card padded>",
     		ctx
@@ -52052,7 +52051,7 @@ var app = (function () {
     }
 
     // (171:3) <Option value={position}>
-    function create_default_slot_38(ctx) {
+    function create_default_slot_33(ctx) {
     	let t0_value = /*positionText*/ ctx[32] + "";
     	let t0;
     	let t1;
@@ -52075,7 +52074,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_38.name,
+    		id: create_default_slot_33.name,
     		type: "slot",
     		source: "(171:3) <Option value={position}>",
     		ctx
@@ -52092,7 +52091,7 @@ var app = (function () {
     	option = new Option({
     			props: {
     				value: /*position*/ ctx[31],
-    				$$slots: { default: [create_default_slot_38] },
+    				$$slots: { default: [create_default_slot_33] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -52141,7 +52140,7 @@ var app = (function () {
     }
 
     // (169:1) <Select style="max-width: 400px" label="Als llums penjats:" bind:value={formValues.effectsLamps}>
-    function create_default_slot_37(ctx) {
+    function create_default_slot_32(ctx) {
     	let each_1_anchor;
     	let current;
     	let each_value_9 = Object.entries(effectsLamps);
@@ -52227,7 +52226,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_37.name,
+    		id: create_default_slot_32.name,
     		type: "slot",
     		source: "(169:1) <Select style=\\\"max-width: 400px\\\" label=\\\"Als llums penjats:\\\" bind:value={formValues.effectsLamps}>",
     		ctx
@@ -52237,7 +52236,7 @@ var app = (function () {
     }
 
     // (168:0) <Card padded>
-    function create_default_slot_36(ctx) {
+    function create_default_slot_31(ctx) {
     	let select;
     	let updating_value;
     	let current;
@@ -52249,7 +52248,7 @@ var app = (function () {
     	let select_props = {
     		style: "max-width: 400px",
     		label: "Als llums penjats:",
-    		$$slots: { default: [create_default_slot_37] },
+    		$$slots: { default: [create_default_slot_32] },
     		$$scope: { ctx }
     	};
 
@@ -52299,7 +52298,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_36.name,
+    		id: create_default_slot_31.name,
     		type: "slot",
     		source: "(168:0) <Card padded>",
     		ctx
@@ -52308,8 +52307,8 @@ var app = (function () {
     	return block;
     }
 
-    // (185:3) <Option value={position}>
-    function create_default_slot_35(ctx) {
+    // (186:3) <Option value={position}>
+    function create_default_slot_30(ctx) {
     	let t0_value = /*positionText*/ ctx[32] + "";
     	let t0;
     	let t1;
@@ -52332,16 +52331,16 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_35.name,
+    		id: create_default_slot_30.name,
     		type: "slot",
-    		source: "(185:3) <Option value={position}>",
+    		source: "(186:3) <Option value={position}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (184:2) {#each Object.entries(effectsLiquids) as [position, positionText]}
+    // (185:2) {#each Object.entries(effectsLiquids) as [position, positionText]}
     function create_each_block_8(ctx) {
     	let option;
     	let current;
@@ -52349,7 +52348,7 @@ var app = (function () {
     	option = new Option({
     			props: {
     				value: /*position*/ ctx[31],
-    				$$slots: { default: [create_default_slot_35] },
+    				$$slots: { default: [create_default_slot_30] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -52390,15 +52389,15 @@ var app = (function () {
     		block,
     		id: create_each_block_8.name,
     		type: "each",
-    		source: "(184:2) {#each Object.entries(effectsLiquids) as [position, positionText]}",
+    		source: "(185:2) {#each Object.entries(effectsLiquids) as [position, positionText]}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (179:1) <Select   style="max-width: 400px"   label="Als líquids en recipients:"   bind:value={formValues.effectsLiquids}  >
-    function create_default_slot_34(ctx) {
+    // (180:1) <Select   style="max-width: 400px"   label="Als líquids en recipients:"   bind:value={formValues.effectsLiquids}  >
+    function create_default_slot_29(ctx) {
     	let each_1_anchor;
     	let current;
     	let each_value_8 = Object.entries(effectsLiquids);
@@ -52484,89 +52483,17 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_34.name,
+    		id: create_default_slot_29.name,
     		type: "slot",
-    		source: "(179:1) <Select   style=\\\"max-width: 400px\\\"   label=\\\"Als líquids en recipients:\\\"   bind:value={formValues.effectsLiquids}  >",
+    		source: "(180:1) <Select   style=\\\"max-width: 400px\\\"   label=\\\"Als líquids en recipients:\\\"   bind:value={formValues.effectsLiquids}  >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (178:0) <Card padded>
-    function create_default_slot_33(ctx) {
-    	let select;
-    	let updating_value;
-    	let current;
-
-    	function select_value_binding_5(value) {
-    		/*select_value_binding_5*/ ctx[13](value);
-    	}
-
-    	let select_props = {
-    		style: "max-width: 400px",
-    		label: "Als líquids en recipients:",
-    		$$slots: { default: [create_default_slot_34] },
-    		$$scope: { ctx }
-    	};
-
-    	if (/*formValues*/ ctx[0].effectsLiquids !== void 0) {
-    		select_props.value = /*formValues*/ ctx[0].effectsLiquids;
-    	}
-
-    	select = new Select({ props: select_props, $$inline: true });
-    	binding_callbacks.push(() => bind(select, 'value', select_value_binding_5));
-
-    	const block = {
-    		c: function create() {
-    			create_component(select.$$.fragment);
-    		},
-    		m: function mount(target, anchor) {
-    			mount_component(select, target, anchor);
-    			current = true;
-    		},
-    		p: function update(ctx, dirty) {
-    			const select_changes = {};
-
-    			if (dirty[2] & /*$$scope*/ 4) {
-    				select_changes.$$scope = { dirty, ctx };
-    			}
-
-    			if (!updating_value && dirty[0] & /*formValues*/ 1) {
-    				updating_value = true;
-    				select_changes.value = /*formValues*/ ctx[0].effectsLiquids;
-    				add_flush_callback(() => updating_value = false);
-    			}
-
-    			select.$set(select_changes);
-    		},
-    		i: function intro(local) {
-    			if (current) return;
-    			transition_in(select.$$.fragment, local);
-    			current = true;
-    		},
-    		o: function outro(local) {
-    			transition_out(select.$$.fragment, local);
-    			current = false;
-    		},
-    		d: function destroy(detaching) {
-    			destroy_component(select, detaching);
-    		}
-    	};
-
-    	dispatch_dev("SvelteRegisterBlock", {
-    		block,
-    		id: create_default_slot_33.name,
-    		type: "slot",
-    		source: "(178:0) <Card padded>",
-    		ctx
-    	});
-
-    	return block;
-    }
-
-    // (199:3) <Option value={position}>
-    function create_default_slot_32(ctx) {
+    // (197:3) <Option value={position}>
+    function create_default_slot_28(ctx) {
     	let t0_value = /*positionText*/ ctx[32] + "";
     	let t0;
     	let t1;
@@ -52589,16 +52516,16 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_32.name,
+    		id: create_default_slot_28.name,
     		type: "slot",
-    		source: "(199:3) <Option value={position}>",
+    		source: "(197:3) <Option value={position}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (198:2) {#each Object.entries(effectsPaintings) as [position, positionText]}
+    // (196:2) {#each Object.entries(effectsPaintings) as [position, positionText]}
     function create_each_block_7(ctx) {
     	let option;
     	let current;
@@ -52606,7 +52533,7 @@ var app = (function () {
     	option = new Option({
     			props: {
     				value: /*position*/ ctx[31],
-    				$$slots: { default: [create_default_slot_32] },
+    				$$slots: { default: [create_default_slot_28] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -52647,15 +52574,15 @@ var app = (function () {
     		block,
     		id: create_each_block_7.name,
     		type: "each",
-    		source: "(198:2) {#each Object.entries(effectsPaintings) as [position, positionText]}",
+    		source: "(196:2) {#each Object.entries(effectsPaintings) as [position, positionText]}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (193:1) <Select   style="max-width: 400px"   label="Als quadres penjats a les parets:"   bind:value={formValues.effectsPaintings}  >
-    function create_default_slot_31(ctx) {
+    // (191:1) <Select   style="max-width: 400px"   label="Als quadres penjats a les parets:"   bind:value={formValues.effectsPaintings}  >
+    function create_default_slot_27(ctx) {
     	let each_1_anchor;
     	let current;
     	let each_value_7 = Object.entries(effectsPaintings);
@@ -52741,89 +52668,17 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_31.name,
+    		id: create_default_slot_27.name,
     		type: "slot",
-    		source: "(193:1) <Select   style=\\\"max-width: 400px\\\"   label=\\\"Als quadres penjats a les parets:\\\"   bind:value={formValues.effectsPaintings}  >",
+    		source: "(191:1) <Select   style=\\\"max-width: 400px\\\"   label=\\\"Als quadres penjats a les parets:\\\"   bind:value={formValues.effectsPaintings}  >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (192:0) <Card padded>
-    function create_default_slot_30(ctx) {
-    	let select;
-    	let updating_value;
-    	let current;
-
-    	function select_value_binding_6(value) {
-    		/*select_value_binding_6*/ ctx[14](value);
-    	}
-
-    	let select_props = {
-    		style: "max-width: 400px",
-    		label: "Als quadres penjats a les parets:",
-    		$$slots: { default: [create_default_slot_31] },
-    		$$scope: { ctx }
-    	};
-
-    	if (/*formValues*/ ctx[0].effectsPaintings !== void 0) {
-    		select_props.value = /*formValues*/ ctx[0].effectsPaintings;
-    	}
-
-    	select = new Select({ props: select_props, $$inline: true });
-    	binding_callbacks.push(() => bind(select, 'value', select_value_binding_6));
-
-    	const block = {
-    		c: function create() {
-    			create_component(select.$$.fragment);
-    		},
-    		m: function mount(target, anchor) {
-    			mount_component(select, target, anchor);
-    			current = true;
-    		},
-    		p: function update(ctx, dirty) {
-    			const select_changes = {};
-
-    			if (dirty[2] & /*$$scope*/ 4) {
-    				select_changes.$$scope = { dirty, ctx };
-    			}
-
-    			if (!updating_value && dirty[0] & /*formValues*/ 1) {
-    				updating_value = true;
-    				select_changes.value = /*formValues*/ ctx[0].effectsPaintings;
-    				add_flush_callback(() => updating_value = false);
-    			}
-
-    			select.$set(select_changes);
-    		},
-    		i: function intro(local) {
-    			if (current) return;
-    			transition_in(select.$$.fragment, local);
-    			current = true;
-    		},
-    		o: function outro(local) {
-    			transition_out(select.$$.fragment, local);
-    			current = false;
-    		},
-    		d: function destroy(detaching) {
-    			destroy_component(select, detaching);
-    		}
-    	};
-
-    	dispatch_dev("SvelteRegisterBlock", {
-    		block,
-    		id: create_default_slot_30.name,
-    		type: "slot",
-    		source: "(192:0) <Card padded>",
-    		ctx
-    	});
-
-    	return block;
-    }
-
-    // (213:3) <Option value={position}>
-    function create_default_slot_29(ctx) {
+    // (209:3) <Option value={position}>
+    function create_default_slot_26(ctx) {
     	let t0_value = /*positionText*/ ctx[32] + "";
     	let t0;
     	let t1;
@@ -52846,16 +52701,16 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_29.name,
+    		id: create_default_slot_26.name,
     		type: "slot",
-    		source: "(213:3) <Option value={position}>",
+    		source: "(209:3) <Option value={position}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (212:2) {#each Object.entries(effectsDoorsWindows) as [position, positionText]}
+    // (208:2) {#each Object.entries(effectsDoorsWindows) as [position, positionText]}
     function create_each_block_6(ctx) {
     	let option;
     	let current;
@@ -52863,7 +52718,7 @@ var app = (function () {
     	option = new Option({
     			props: {
     				value: /*position*/ ctx[31],
-    				$$slots: { default: [create_default_slot_29] },
+    				$$slots: { default: [create_default_slot_26] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -52904,15 +52759,15 @@ var app = (function () {
     		block,
     		id: create_each_block_6.name,
     		type: "each",
-    		source: "(212:2) {#each Object.entries(effectsDoorsWindows) as [position, positionText]}",
+    		source: "(208:2) {#each Object.entries(effectsDoorsWindows) as [position, positionText]}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (207:1) <Select   style="max-width: 400px"   label="A portes i finestres:"   bind:value={formValues.effectsDoorsWindows}  >
-    function create_default_slot_28(ctx) {
+    // (203:1) <Select   style="max-width: 400px"   label="A portes i finestres:"   bind:value={formValues.effectsDoorsWindows}  >
+    function create_default_slot_25(ctx) {
     	let each_1_anchor;
     	let current;
     	let each_value_6 = Object.entries(effectsDoorsWindows);
@@ -52998,89 +52853,17 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_28.name,
+    		id: create_default_slot_25.name,
     		type: "slot",
-    		source: "(207:1) <Select   style=\\\"max-width: 400px\\\"   label=\\\"A portes i finestres:\\\"   bind:value={formValues.effectsDoorsWindows}  >",
+    		source: "(203:1) <Select   style=\\\"max-width: 400px\\\"   label=\\\"A portes i finestres:\\\"   bind:value={formValues.effectsDoorsWindows}  >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (206:0) <Card padded>
-    function create_default_slot_27(ctx) {
-    	let select;
-    	let updating_value;
-    	let current;
-
-    	function select_value_binding_7(value) {
-    		/*select_value_binding_7*/ ctx[15](value);
-    	}
-
-    	let select_props = {
-    		style: "max-width: 400px",
-    		label: "A portes i finestres:",
-    		$$slots: { default: [create_default_slot_28] },
-    		$$scope: { ctx }
-    	};
-
-    	if (/*formValues*/ ctx[0].effectsDoorsWindows !== void 0) {
-    		select_props.value = /*formValues*/ ctx[0].effectsDoorsWindows;
-    	}
-
-    	select = new Select({ props: select_props, $$inline: true });
-    	binding_callbacks.push(() => bind(select, 'value', select_value_binding_7));
-
-    	const block = {
-    		c: function create() {
-    			create_component(select.$$.fragment);
-    		},
-    		m: function mount(target, anchor) {
-    			mount_component(select, target, anchor);
-    			current = true;
-    		},
-    		p: function update(ctx, dirty) {
-    			const select_changes = {};
-
-    			if (dirty[2] & /*$$scope*/ 4) {
-    				select_changes.$$scope = { dirty, ctx };
-    			}
-
-    			if (!updating_value && dirty[0] & /*formValues*/ 1) {
-    				updating_value = true;
-    				select_changes.value = /*formValues*/ ctx[0].effectsDoorsWindows;
-    				add_flush_callback(() => updating_value = false);
-    			}
-
-    			select.$set(select_changes);
-    		},
-    		i: function intro(local) {
-    			if (current) return;
-    			transition_in(select.$$.fragment, local);
-    			current = true;
-    		},
-    		o: function outro(local) {
-    			transition_out(select.$$.fragment, local);
-    			current = false;
-    		},
-    		d: function destroy(detaching) {
-    			destroy_component(select, detaching);
-    		}
-    	};
-
-    	dispatch_dev("SvelteRegisterBlock", {
-    		block,
-    		id: create_default_slot_27.name,
-    		type: "slot",
-    		source: "(206:0) <Card padded>",
-    		ctx
-    	});
-
-    	return block;
-    }
-
-    // (227:3) <Option value={position}>
-    function create_default_slot_26(ctx) {
+    // (221:3) <Option value={position}>
+    function create_default_slot_24(ctx) {
     	let t0_value = /*positionText*/ ctx[32] + "";
     	let t0;
     	let t1;
@@ -53103,16 +52886,16 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_26.name,
+    		id: create_default_slot_24.name,
     		type: "slot",
-    		source: "(227:3) <Option value={position}>",
+    		source: "(221:3) <Option value={position}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (226:2) {#each Object.entries(effectsFurniture) as [position, positionText]}
+    // (220:2) {#each Object.entries(effectsFurniture) as [position, positionText]}
     function create_each_block_5(ctx) {
     	let option;
     	let current;
@@ -53120,7 +52903,7 @@ var app = (function () {
     	option = new Option({
     			props: {
     				value: /*position*/ ctx[31],
-    				$$slots: { default: [create_default_slot_26] },
+    				$$slots: { default: [create_default_slot_24] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -53161,15 +52944,15 @@ var app = (function () {
     		block,
     		id: create_each_block_5.name,
     		type: "each",
-    		source: "(226:2) {#each Object.entries(effectsFurniture) as [position, positionText]}",
+    		source: "(220:2) {#each Object.entries(effectsFurniture) as [position, positionText]}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (221:1) <Select   style="max-width: 400px"   label="A mobles i electrodomèstics:"   bind:value={formValues.effectsFurniture}  >
-    function create_default_slot_25(ctx) {
+    // (215:1) <Select   style="max-width: 400px"   label="A mobles i electrodomèstics:"   bind:value={formValues.effectsFurniture}  >
+    function create_default_slot_23(ctx) {
     	let each_1_anchor;
     	let current;
     	let each_value_5 = Object.entries(effectsFurniture);
@@ -53255,89 +53038,17 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_25.name,
+    		id: create_default_slot_23.name,
     		type: "slot",
-    		source: "(221:1) <Select   style=\\\"max-width: 400px\\\"   label=\\\"A mobles i electrodomèstics:\\\"   bind:value={formValues.effectsFurniture}  >",
+    		source: "(215:1) <Select   style=\\\"max-width: 400px\\\"   label=\\\"A mobles i electrodomèstics:\\\"   bind:value={formValues.effectsFurniture}  >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (220:0) <Card padded>
-    function create_default_slot_24(ctx) {
-    	let select;
-    	let updating_value;
-    	let current;
-
-    	function select_value_binding_8(value) {
-    		/*select_value_binding_8*/ ctx[16](value);
-    	}
-
-    	let select_props = {
-    		style: "max-width: 400px",
-    		label: "A mobles i electrodomèstics:",
-    		$$slots: { default: [create_default_slot_25] },
-    		$$scope: { ctx }
-    	};
-
-    	if (/*formValues*/ ctx[0].effectsFurniture !== void 0) {
-    		select_props.value = /*formValues*/ ctx[0].effectsFurniture;
-    	}
-
-    	select = new Select({ props: select_props, $$inline: true });
-    	binding_callbacks.push(() => bind(select, 'value', select_value_binding_8));
-
-    	const block = {
-    		c: function create() {
-    			create_component(select.$$.fragment);
-    		},
-    		m: function mount(target, anchor) {
-    			mount_component(select, target, anchor);
-    			current = true;
-    		},
-    		p: function update(ctx, dirty) {
-    			const select_changes = {};
-
-    			if (dirty[2] & /*$$scope*/ 4) {
-    				select_changes.$$scope = { dirty, ctx };
-    			}
-
-    			if (!updating_value && dirty[0] & /*formValues*/ 1) {
-    				updating_value = true;
-    				select_changes.value = /*formValues*/ ctx[0].effectsFurniture;
-    				add_flush_callback(() => updating_value = false);
-    			}
-
-    			select.$set(select_changes);
-    		},
-    		i: function intro(local) {
-    			if (current) return;
-    			transition_in(select.$$.fragment, local);
-    			current = true;
-    		},
-    		o: function outro(local) {
-    			transition_out(select.$$.fragment, local);
-    			current = false;
-    		},
-    		d: function destroy(detaching) {
-    			destroy_component(select, detaching);
-    		}
-    	};
-
-    	dispatch_dev("SvelteRegisterBlock", {
-    		block,
-    		id: create_default_slot_24.name,
-    		type: "slot",
-    		source: "(220:0) <Card padded>",
-    		ctx
-    	});
-
-    	return block;
-    }
-
-    // (237:3) <Option value={position}>
-    function create_default_slot_23(ctx) {
+    // (229:3) <Option value={position}>
+    function create_default_slot_22(ctx) {
     	let t0_value = /*positionText*/ ctx[32] + "";
     	let t0;
     	let t1;
@@ -53360,16 +53071,16 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_23.name,
+    		id: create_default_slot_22.name,
     		type: "slot",
-    		source: "(237:3) <Option value={position}>",
+    		source: "(229:3) <Option value={position}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (236:2) {#each Object.entries(effectsPlants) as [position, positionText]}
+    // (228:2) {#each Object.entries(effectsPlants) as [position, positionText]}
     function create_each_block_4(ctx) {
     	let option;
     	let current;
@@ -53377,7 +53088,7 @@ var app = (function () {
     	option = new Option({
     			props: {
     				value: /*position*/ ctx[31],
-    				$$slots: { default: [create_default_slot_23] },
+    				$$slots: { default: [create_default_slot_22] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -53418,15 +53129,15 @@ var app = (function () {
     		block,
     		id: create_each_block_4.name,
     		type: "each",
-    		source: "(236:2) {#each Object.entries(effectsPlants) as [position, positionText]}",
+    		source: "(228:2) {#each Object.entries(effectsPlants) as [position, positionText]}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (235:1) <Select style="max-width: 400px" label="A les plantes:" bind:value={formValues.effectsPlants}>
-    function create_default_slot_22(ctx) {
+    // (227:1) <Select style="max-width: 400px" label="A les plantes:" bind:value={formValues.effectsPlants}>
+    function create_default_slot_21(ctx) {
     	let each_1_anchor;
     	let current;
     	let each_value_4 = Object.entries(effectsPlants);
@@ -53512,88 +53223,16 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_22.name,
-    		type: "slot",
-    		source: "(235:1) <Select style=\\\"max-width: 400px\\\" label=\\\"A les plantes:\\\" bind:value={formValues.effectsPlants}>",
-    		ctx
-    	});
-
-    	return block;
-    }
-
-    // (234:0) <Card padded>
-    function create_default_slot_21(ctx) {
-    	let select;
-    	let updating_value;
-    	let current;
-
-    	function select_value_binding_9(value) {
-    		/*select_value_binding_9*/ ctx[17](value);
-    	}
-
-    	let select_props = {
-    		style: "max-width: 400px",
-    		label: "A les plantes:",
-    		$$slots: { default: [create_default_slot_22] },
-    		$$scope: { ctx }
-    	};
-
-    	if (/*formValues*/ ctx[0].effectsPlants !== void 0) {
-    		select_props.value = /*formValues*/ ctx[0].effectsPlants;
-    	}
-
-    	select = new Select({ props: select_props, $$inline: true });
-    	binding_callbacks.push(() => bind(select, 'value', select_value_binding_9));
-
-    	const block = {
-    		c: function create() {
-    			create_component(select.$$.fragment);
-    		},
-    		m: function mount(target, anchor) {
-    			mount_component(select, target, anchor);
-    			current = true;
-    		},
-    		p: function update(ctx, dirty) {
-    			const select_changes = {};
-
-    			if (dirty[2] & /*$$scope*/ 4) {
-    				select_changes.$$scope = { dirty, ctx };
-    			}
-
-    			if (!updating_value && dirty[0] & /*formValues*/ 1) {
-    				updating_value = true;
-    				select_changes.value = /*formValues*/ ctx[0].effectsPlants;
-    				add_flush_callback(() => updating_value = false);
-    			}
-
-    			select.$set(select_changes);
-    		},
-    		i: function intro(local) {
-    			if (current) return;
-    			transition_in(select.$$.fragment, local);
-    			current = true;
-    		},
-    		o: function outro(local) {
-    			transition_out(select.$$.fragment, local);
-    			current = false;
-    		},
-    		d: function destroy(detaching) {
-    			destroy_component(select, detaching);
-    		}
-    	};
-
-    	dispatch_dev("SvelteRegisterBlock", {
-    		block,
     		id: create_default_slot_21.name,
     		type: "slot",
-    		source: "(234:0) <Card padded>",
+    		source: "(227:1) <Select style=\\\"max-width: 400px\\\" label=\\\"A les plantes:\\\" bind:value={formValues.effectsPlants}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (251:3) <Option value={position}>
+    // (241:3) <Option value={position}>
     function create_default_slot_20(ctx) {
     	let t0_value = /*positionText*/ ctx[32] + "";
     	let t0;
@@ -53619,14 +53258,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_20.name,
     		type: "slot",
-    		source: "(251:3) <Option value={position}>",
+    		source: "(241:3) <Option value={position}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (250:2) {#each Object.entries(effectsShelves) as [position, positionText]}
+    // (240:2) {#each Object.entries(effectsShelves) as [position, positionText]}
     function create_each_block_3(ctx) {
     	let option;
     	let current;
@@ -53675,14 +53314,14 @@ var app = (function () {
     		block,
     		id: create_each_block_3.name,
     		type: "each",
-    		source: "(250:2) {#each Object.entries(effectsShelves) as [position, positionText]}",
+    		source: "(240:2) {#each Object.entries(effectsShelves) as [position, positionText]}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (245:1) <Select   style="max-width: 400px"   label="Als objectes a les prestatgeries o taules:"   bind:value={formValues.effectsShelves}  >
+    // (235:1) <Select   style="max-width: 400px"   label="Als objectes a les prestatgeries o taules:"   bind:value={formValues.effectsShelves}  >
     function create_default_slot_19(ctx) {
     	let each_1_anchor;
     	let current;
@@ -53771,14 +53410,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_19.name,
     		type: "slot",
-    		source: "(245:1) <Select   style=\\\"max-width: 400px\\\"   label=\\\"Als objectes a les prestatgeries o taules:\\\"   bind:value={formValues.effectsShelves}  >",
+    		source: "(235:1) <Select   style=\\\"max-width: 400px\\\"   label=\\\"Als objectes a les prestatgeries o taules:\\\"   bind:value={formValues.effectsShelves}  >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (257:1) <FormField style="width: 100%">
+    // (247:1) <FormField style="width: 100%">
     function create_default_slot_18(ctx) {
     	let div;
     	let t1;
@@ -53805,7 +53444,7 @@ var app = (function () {
     			div.textContent = "Descriviu, si voleu, quins objectes van vibrar o van caure:";
     			t1 = space();
     			create_component(textfield.$$.fragment);
-    			add_location(div, file$4, 257, 2, 7578);
+    			add_location(div, file$4, 247, 2, 7534);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -53844,26 +53483,133 @@ var app = (function () {
     		block,
     		id: create_default_slot_18.name,
     		type: "slot",
-    		source: "(257:1) <FormField style=\\\"width: 100%\\\">",
+    		source: "(247:1) <FormField style=\\\"width: 100%\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (244:0) <Card padded>
+    // (178:0) <Card padded>
     function create_default_slot_17(ctx) {
-    	let select;
+    	let div;
+    	let t1;
+    	let select0;
     	let updating_value;
-    	let t;
+    	let t2;
+    	let select1;
+    	let updating_value_1;
+    	let t3;
+    	let select2;
+    	let updating_value_2;
+    	let t4;
+    	let select3;
+    	let updating_value_3;
+    	let t5;
+    	let select4;
+    	let updating_value_4;
+    	let t6;
+    	let select5;
+    	let updating_value_5;
+    	let t7;
     	let formfield;
     	let current;
 
-    	function select_value_binding_10(value) {
-    		/*select_value_binding_10*/ ctx[18](value);
+    	function select0_value_binding(value) {
+    		/*select0_value_binding*/ ctx[13](value);
     	}
 
-    	let select_props = {
+    	let select0_props = {
+    		style: "max-width: 400px",
+    		label: "Als líquids en recipients:",
+    		$$slots: { default: [create_default_slot_29] },
+    		$$scope: { ctx }
+    	};
+
+    	if (/*formValues*/ ctx[0].effectsLiquids !== void 0) {
+    		select0_props.value = /*formValues*/ ctx[0].effectsLiquids;
+    	}
+
+    	select0 = new Select({ props: select0_props, $$inline: true });
+    	binding_callbacks.push(() => bind(select0, 'value', select0_value_binding));
+
+    	function select1_value_binding(value) {
+    		/*select1_value_binding*/ ctx[14](value);
+    	}
+
+    	let select1_props = {
+    		style: "max-width: 400px",
+    		label: "Als quadres penjats a les parets:",
+    		$$slots: { default: [create_default_slot_27] },
+    		$$scope: { ctx }
+    	};
+
+    	if (/*formValues*/ ctx[0].effectsPaintings !== void 0) {
+    		select1_props.value = /*formValues*/ ctx[0].effectsPaintings;
+    	}
+
+    	select1 = new Select({ props: select1_props, $$inline: true });
+    	binding_callbacks.push(() => bind(select1, 'value', select1_value_binding));
+
+    	function select2_value_binding(value) {
+    		/*select2_value_binding*/ ctx[15](value);
+    	}
+
+    	let select2_props = {
+    		style: "max-width: 400px",
+    		label: "A portes i finestres:",
+    		$$slots: { default: [create_default_slot_25] },
+    		$$scope: { ctx }
+    	};
+
+    	if (/*formValues*/ ctx[0].effectsDoorsWindows !== void 0) {
+    		select2_props.value = /*formValues*/ ctx[0].effectsDoorsWindows;
+    	}
+
+    	select2 = new Select({ props: select2_props, $$inline: true });
+    	binding_callbacks.push(() => bind(select2, 'value', select2_value_binding));
+
+    	function select3_value_binding(value) {
+    		/*select3_value_binding*/ ctx[16](value);
+    	}
+
+    	let select3_props = {
+    		style: "max-width: 400px",
+    		label: "A mobles i electrodomèstics:",
+    		$$slots: { default: [create_default_slot_23] },
+    		$$scope: { ctx }
+    	};
+
+    	if (/*formValues*/ ctx[0].effectsFurniture !== void 0) {
+    		select3_props.value = /*formValues*/ ctx[0].effectsFurniture;
+    	}
+
+    	select3 = new Select({ props: select3_props, $$inline: true });
+    	binding_callbacks.push(() => bind(select3, 'value', select3_value_binding));
+
+    	function select4_value_binding(value) {
+    		/*select4_value_binding*/ ctx[17](value);
+    	}
+
+    	let select4_props = {
+    		style: "max-width: 400px",
+    		label: "A les plantes:",
+    		$$slots: { default: [create_default_slot_21] },
+    		$$scope: { ctx }
+    	};
+
+    	if (/*formValues*/ ctx[0].effectsPlants !== void 0) {
+    		select4_props.value = /*formValues*/ ctx[0].effectsPlants;
+    	}
+
+    	select4 = new Select({ props: select4_props, $$inline: true });
+    	binding_callbacks.push(() => bind(select4, 'value', select4_value_binding));
+
+    	function select5_value_binding(value) {
+    		/*select5_value_binding*/ ctx[18](value);
+    	}
+
+    	let select5_props = {
     		style: "max-width: 400px",
     		label: "Als objectes a les prestatgeries o taules:",
     		$$slots: { default: [create_default_slot_19] },
@@ -53871,11 +53617,11 @@ var app = (function () {
     	};
 
     	if (/*formValues*/ ctx[0].effectsShelves !== void 0) {
-    		select_props.value = /*formValues*/ ctx[0].effectsShelves;
+    		select5_props.value = /*formValues*/ ctx[0].effectsShelves;
     	}
 
-    	select = new Select({ props: select_props, $$inline: true });
-    	binding_callbacks.push(() => bind(select, 'value', select_value_binding_10));
+    	select5 = new Select({ props: select5_props, $$inline: true });
+    	binding_callbacks.push(() => bind(select5, 'value', select5_value_binding));
 
     	formfield = new FormField({
     			props: {
@@ -53888,30 +53634,121 @@ var app = (function () {
 
     	const block = {
     		c: function create() {
-    			create_component(select.$$.fragment);
-    			t = space();
+    			div = element("div");
+    			div.textContent = "Quins efectes va observar sobre els següents objectes?";
+    			t1 = space();
+    			create_component(select0.$$.fragment);
+    			t2 = space();
+    			create_component(select1.$$.fragment);
+    			t3 = space();
+    			create_component(select2.$$.fragment);
+    			t4 = space();
+    			create_component(select3.$$.fragment);
+    			t5 = space();
+    			create_component(select4.$$.fragment);
+    			t6 = space();
+    			create_component(select5.$$.fragment);
+    			t7 = space();
     			create_component(formfield.$$.fragment);
+    			add_location(div, file$4, 178, 1, 5804);
     		},
     		m: function mount(target, anchor) {
-    			mount_component(select, target, anchor);
-    			insert_dev(target, t, anchor);
+    			insert_dev(target, div, anchor);
+    			insert_dev(target, t1, anchor);
+    			mount_component(select0, target, anchor);
+    			insert_dev(target, t2, anchor);
+    			mount_component(select1, target, anchor);
+    			insert_dev(target, t3, anchor);
+    			mount_component(select2, target, anchor);
+    			insert_dev(target, t4, anchor);
+    			mount_component(select3, target, anchor);
+    			insert_dev(target, t5, anchor);
+    			mount_component(select4, target, anchor);
+    			insert_dev(target, t6, anchor);
+    			mount_component(select5, target, anchor);
+    			insert_dev(target, t7, anchor);
     			mount_component(formfield, target, anchor);
     			current = true;
     		},
     		p: function update(ctx, dirty) {
-    			const select_changes = {};
+    			const select0_changes = {};
 
     			if (dirty[2] & /*$$scope*/ 4) {
-    				select_changes.$$scope = { dirty, ctx };
+    				select0_changes.$$scope = { dirty, ctx };
     			}
 
     			if (!updating_value && dirty[0] & /*formValues*/ 1) {
     				updating_value = true;
-    				select_changes.value = /*formValues*/ ctx[0].effectsShelves;
+    				select0_changes.value = /*formValues*/ ctx[0].effectsLiquids;
     				add_flush_callback(() => updating_value = false);
     			}
 
-    			select.$set(select_changes);
+    			select0.$set(select0_changes);
+    			const select1_changes = {};
+
+    			if (dirty[2] & /*$$scope*/ 4) {
+    				select1_changes.$$scope = { dirty, ctx };
+    			}
+
+    			if (!updating_value_1 && dirty[0] & /*formValues*/ 1) {
+    				updating_value_1 = true;
+    				select1_changes.value = /*formValues*/ ctx[0].effectsPaintings;
+    				add_flush_callback(() => updating_value_1 = false);
+    			}
+
+    			select1.$set(select1_changes);
+    			const select2_changes = {};
+
+    			if (dirty[2] & /*$$scope*/ 4) {
+    				select2_changes.$$scope = { dirty, ctx };
+    			}
+
+    			if (!updating_value_2 && dirty[0] & /*formValues*/ 1) {
+    				updating_value_2 = true;
+    				select2_changes.value = /*formValues*/ ctx[0].effectsDoorsWindows;
+    				add_flush_callback(() => updating_value_2 = false);
+    			}
+
+    			select2.$set(select2_changes);
+    			const select3_changes = {};
+
+    			if (dirty[2] & /*$$scope*/ 4) {
+    				select3_changes.$$scope = { dirty, ctx };
+    			}
+
+    			if (!updating_value_3 && dirty[0] & /*formValues*/ 1) {
+    				updating_value_3 = true;
+    				select3_changes.value = /*formValues*/ ctx[0].effectsFurniture;
+    				add_flush_callback(() => updating_value_3 = false);
+    			}
+
+    			select3.$set(select3_changes);
+    			const select4_changes = {};
+
+    			if (dirty[2] & /*$$scope*/ 4) {
+    				select4_changes.$$scope = { dirty, ctx };
+    			}
+
+    			if (!updating_value_4 && dirty[0] & /*formValues*/ 1) {
+    				updating_value_4 = true;
+    				select4_changes.value = /*formValues*/ ctx[0].effectsPlants;
+    				add_flush_callback(() => updating_value_4 = false);
+    			}
+
+    			select4.$set(select4_changes);
+    			const select5_changes = {};
+
+    			if (dirty[2] & /*$$scope*/ 4) {
+    				select5_changes.$$scope = { dirty, ctx };
+    			}
+
+    			if (!updating_value_5 && dirty[0] & /*formValues*/ 1) {
+    				updating_value_5 = true;
+    				select5_changes.value = /*formValues*/ ctx[0].effectsShelves;
+    				add_flush_callback(() => updating_value_5 = false);
+    			}
+
+    			select5.$set(select5_changes);
     			const formfield_changes = {};
 
     			if (dirty[0] & /*formValues*/ 1 | dirty[2] & /*$$scope*/ 4) {
@@ -53922,18 +53759,40 @@ var app = (function () {
     		},
     		i: function intro(local) {
     			if (current) return;
-    			transition_in(select.$$.fragment, local);
+    			transition_in(select0.$$.fragment, local);
+    			transition_in(select1.$$.fragment, local);
+    			transition_in(select2.$$.fragment, local);
+    			transition_in(select3.$$.fragment, local);
+    			transition_in(select4.$$.fragment, local);
+    			transition_in(select5.$$.fragment, local);
     			transition_in(formfield.$$.fragment, local);
     			current = true;
     		},
     		o: function outro(local) {
-    			transition_out(select.$$.fragment, local);
+    			transition_out(select0.$$.fragment, local);
+    			transition_out(select1.$$.fragment, local);
+    			transition_out(select2.$$.fragment, local);
+    			transition_out(select3.$$.fragment, local);
+    			transition_out(select4.$$.fragment, local);
+    			transition_out(select5.$$.fragment, local);
     			transition_out(formfield.$$.fragment, local);
     			current = false;
     		},
     		d: function destroy(detaching) {
-    			destroy_component(select, detaching);
-    			if (detaching) detach_dev(t);
+    			if (detaching) detach_dev(div);
+    			if (detaching) detach_dev(t1);
+    			destroy_component(select0, detaching);
+    			if (detaching) detach_dev(t2);
+    			destroy_component(select1, detaching);
+    			if (detaching) detach_dev(t3);
+    			destroy_component(select2, detaching);
+    			if (detaching) detach_dev(t4);
+    			destroy_component(select3, detaching);
+    			if (detaching) detach_dev(t5);
+    			destroy_component(select4, detaching);
+    			if (detaching) detach_dev(t6);
+    			destroy_component(select5, detaching);
+    			if (detaching) detach_dev(t7);
     			destroy_component(formfield, detaching);
     		}
     	};
@@ -53942,14 +53801,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_17.name,
     		type: "slot",
-    		source: "(244:0) <Card padded>",
+    		source: "(178:0) <Card padded>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (269:3) <Option value={position}>
+    // (259:3) <Option value={position}>
     function create_default_slot_16(ctx) {
     	let t0_value = /*positionText*/ ctx[32] + "";
     	let t0;
@@ -53975,14 +53834,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_16.name,
     		type: "slot",
-    		source: "(269:3) <Option value={position}>",
+    		source: "(259:3) <Option value={position}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (268:2) {#each Object.entries(buildingType) as [position, positionText]}
+    // (258:2) {#each Object.entries(buildingType) as [position, positionText]}
     function create_each_block_2(ctx) {
     	let option;
     	let current;
@@ -54031,14 +53890,14 @@ var app = (function () {
     		block,
     		id: create_each_block_2.name,
     		type: "each",
-    		source: "(268:2) {#each Object.entries(buildingType) as [position, positionText]}",
+    		source: "(258:2) {#each Object.entries(buildingType) as [position, positionText]}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (263:1) <Select   style="max-width: 400px"   label="La construcció de l'edifici és del tipus:"   bind:value={formValues.buildingType}  >
+    // (253:1) <Select   style="max-width: 400px"   label="La construcció de l'edifici és del tipus:"   bind:value={formValues.buildingType}  >
     function create_default_slot_15(ctx) {
     	let each_1_anchor;
     	let current;
@@ -54127,14 +53986,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_15.name,
     		type: "slot",
-    		source: "(263:1) <Select   style=\\\"max-width: 400px\\\"   label=\\\"La construcció de l'edifici és del tipus:\\\"   bind:value={formValues.buildingType}  >",
+    		source: "(253:1) <Select   style=\\\"max-width: 400px\\\"   label=\\\"La construcció de l'edifici és del tipus:\\\"   bind:value={formValues.buildingType}  >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (275:1) <FormField>
+    // (265:1) <FormField>
     function create_default_slot_14(ctx) {
     	let div;
     	let t1;
@@ -54161,7 +54020,7 @@ var app = (function () {
     			div.textContent = "Any de construcció de l'edifici (si el sap)";
     			t1 = space();
     			create_component(textfield.$$.fragment);
-    			add_location(div, file$4, 275, 2, 8075);
+    			add_location(div, file$4, 265, 2, 8031);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -54200,14 +54059,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_14.name,
     		type: "slot",
-    		source: "(275:1) <FormField>",
+    		source: "(265:1) <FormField>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (262:0) <Card padded>
+    // (252:0) <Card padded>
     function create_default_slot_13(ctx) {
     	let select;
     	let updating_value;
@@ -54215,8 +54074,8 @@ var app = (function () {
     	let formfield;
     	let current;
 
-    	function select_value_binding_11(value) {
-    		/*select_value_binding_11*/ ctx[20](value);
+    	function select_value_binding_5(value) {
+    		/*select_value_binding_5*/ ctx[20](value);
     	}
 
     	let select_props = {
@@ -54231,7 +54090,7 @@ var app = (function () {
     	}
 
     	select = new Select({ props: select_props, $$inline: true });
-    	binding_callbacks.push(() => bind(select, 'value', select_value_binding_11));
+    	binding_callbacks.push(() => bind(select, 'value', select_value_binding_5));
 
     	formfield = new FormField({
     			props: {
@@ -54297,14 +54156,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_13.name,
     		type: "slot",
-    		source: "(262:0) <Card padded>",
+    		source: "(252:0) <Card padded>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (288:3) <Option value={position}>
+    // (278:3) <Option value={position}>
     function create_default_slot_12(ctx) {
     	let t0_value = /*positionText*/ ctx[32] + "";
     	let t0;
@@ -54330,14 +54189,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_12.name,
     		type: "slot",
-    		source: "(288:3) <Option value={position}>",
+    		source: "(278:3) <Option value={position}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (287:2) {#each Object.entries(buildingDamage) as [position, positionText]}
+    // (277:2) {#each Object.entries(buildingDamage) as [position, positionText]}
     function create_each_block_1(ctx) {
     	let option;
     	let current;
@@ -54386,14 +54245,14 @@ var app = (function () {
     		block,
     		id: create_each_block_1.name,
     		type: "each",
-    		source: "(287:2) {#each Object.entries(buildingDamage) as [position, positionText]}",
+    		source: "(277:2) {#each Object.entries(buildingDamage) as [position, positionText]}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (282:1) <Select   style="max-width: 400px"   label="Va observar danys a l'edifici?"   bind:value={formValues.buildingDamage}  >
+    // (272:1) <Select   style="max-width: 400px"   label="Va observar danys a l'edifici?"   bind:value={formValues.buildingDamage}  >
     function create_default_slot_11(ctx) {
     	let each_1_anchor;
     	let current;
@@ -54482,14 +54341,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_11.name,
     		type: "slot",
-    		source: "(282:1) <Select   style=\\\"max-width: 400px\\\"   label=\\\"Va observar danys a l'edifici?\\\"   bind:value={formValues.buildingDamage}  >",
+    		source: "(272:1) <Select   style=\\\"max-width: 400px\\\"   label=\\\"Va observar danys a l'edifici?\\\"   bind:value={formValues.buildingDamage}  >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (294:1) {#if formValues.buildingDamage === 'yes'}
+    // (284:1) {#if formValues.buildingDamage === 'yes'}
     function create_if_block_2$1(ctx) {
     	let div0;
     	let t;
@@ -54528,8 +54387,8 @@ var app = (function () {
     			div1 = element("div");
     			create_component(formfield.$$.fragment);
     			attr_dev(div0, "class", "two-column svelte-161svza");
-    			add_location(div0, file$4, 294, 2, 8552);
-    			add_location(div1, file$4, 309, 2, 8879);
+    			add_location(div0, file$4, 284, 2, 8508);
+    			add_location(div1, file$4, 299, 2, 8835);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div0, anchor);
@@ -54613,14 +54472,14 @@ var app = (function () {
     		block,
     		id: create_if_block_2$1.name,
     		type: "if",
-    		source: "(294:1) {#if formValues.buildingDamage === 'yes'}",
+    		source: "(284:1) {#if formValues.buildingDamage === 'yes'}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (298:3) <FormField>
+    // (288:3) <FormField>
     function create_default_slot_10(ctx) {
     	let checkbox;
     	let updating_group;
@@ -54680,14 +54539,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_10.name,
     		type: "slot",
-    		source: "(298:3) <FormField>",
+    		source: "(288:3) <FormField>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (304:4) 
+    // (294:4) 
     function create_label_slot(ctx) {
     	let span;
     	let t_value = /*positionText*/ ctx[32] + "";
@@ -54698,7 +54557,7 @@ var app = (function () {
     			span = element("span");
     			t = text(t_value);
     			attr_dev(span, "slot", "label");
-    			add_location(span, file$4, 303, 4, 8786);
+    			add_location(span, file$4, 293, 4, 8742);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -54714,14 +54573,14 @@ var app = (function () {
     		block,
     		id: create_label_slot.name,
     		type: "slot",
-    		source: "(304:4) ",
+    		source: "(294:4) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (297:3) {#each Object.entries(buildingDamageDescription) as [position, positionText]}
+    // (287:3) {#each Object.entries(buildingDamageDescription) as [position, positionText]}
     function create_each_block$1(ctx) {
     	let formfield;
     	let current;
@@ -54772,14 +54631,14 @@ var app = (function () {
     		block,
     		id: create_each_block$1.name,
     		type: "each",
-    		source: "(297:3) {#each Object.entries(buildingDamageDescription) as [position, positionText]}",
+    		source: "(287:3) {#each Object.entries(buildingDamageDescription) as [position, positionText]}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (311:3) <FormField>
+    // (301:3) <FormField>
     function create_default_slot_9(ctx) {
     	let div;
     	let t1;
@@ -54806,7 +54665,7 @@ var app = (function () {
     			div.textContent = "Altres comentaris sobre els danys";
     			t1 = space();
     			create_component(textfield.$$.fragment);
-    			add_location(div, file$4, 311, 4, 8904);
+    			add_location(div, file$4, 301, 4, 8860);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -54845,14 +54704,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_9.name,
     		type: "slot",
-    		source: "(311:3) <FormField>",
+    		source: "(301:3) <FormField>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (281:0) <Card padded>
+    // (271:0) <Card padded>
     function create_default_slot_8(ctx) {
     	let select;
     	let updating_value;
@@ -54860,8 +54719,8 @@ var app = (function () {
     	let if_block_anchor;
     	let current;
 
-    	function select_value_binding_12(value) {
-    		/*select_value_binding_12*/ ctx[22](value);
+    	function select_value_binding_6(value) {
+    		/*select_value_binding_6*/ ctx[22](value);
     	}
 
     	let select_props = {
@@ -54876,7 +54735,7 @@ var app = (function () {
     	}
 
     	select = new Select({ props: select_props, $$inline: true });
-    	binding_callbacks.push(() => bind(select, 'value', select_value_binding_12));
+    	binding_callbacks.push(() => bind(select, 'value', select_value_binding_6));
     	let if_block = /*formValues*/ ctx[0].buildingDamage === 'yes' && create_if_block_2$1(ctx);
 
     	const block = {
@@ -54954,14 +54813,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_8.name,
     		type: "slot",
-    		source: "(281:0) <Card padded>",
+    		source: "(271:0) <Card padded>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (320:1) <FormField>
+    // (310:1) <FormField>
     function create_default_slot_7$1(ctx) {
     	let div;
     	let t1;
@@ -54988,7 +54847,7 @@ var app = (function () {
     			div.textContent = "Desitgeu afegir algun aclariment o descriure el que heu notat?";
     			t1 = space();
     			create_component(textfield.$$.fragment);
-    			add_location(div, file$4, 320, 2, 9091);
+    			add_location(div, file$4, 310, 2, 9047);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -55027,14 +54886,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_7$1.name,
     		type: "slot",
-    		source: "(320:1) <FormField>",
+    		source: "(310:1) <FormField>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (324:1) <FormField>
+    // (314:1) <FormField>
     function create_default_slot_6$1(ctx) {
     	let div;
     	let t1;
@@ -55061,7 +54920,7 @@ var app = (function () {
     			div.textContent = "Si just abans o després d'aquest terratrèmol en va notar d'altres indiqui-ho a continuació";
     			t1 = space();
     			create_component(textfield.$$.fragment);
-    			add_location(div, file$4, 324, 2, 9275);
+    			add_location(div, file$4, 314, 2, 9231);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -55100,14 +54959,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_6$1.name,
     		type: "slot",
-    		source: "(324:1) <FormField>",
+    		source: "(314:1) <FormField>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (319:0) <Card padded>
+    // (309:0) <Card padded>
     function create_default_slot_5$1(ctx) {
     	let formfield0;
     	let t;
@@ -55180,14 +55039,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_5$1.name,
     		type: "slot",
-    		source: "(319:0) <Card padded>",
+    		source: "(309:0) <Card padded>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (331:0) {#if formValues.buildingDamage === 'yes' && !formValues.image}
+    // (321:0) {#if formValues.buildingDamage === 'yes' && !formValues.image}
     function create_if_block_1$1(ctx) {
     	let card;
     	let current;
@@ -55236,14 +55095,14 @@ var app = (function () {
     		block,
     		id: create_if_block_1$1.name,
     		type: "if",
-    		source: "(331:0) {#if formValues.buildingDamage === 'yes' && !formValues.image}",
+    		source: "(321:0) {#if formValues.buildingDamage === 'yes' && !formValues.image}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (334:2) <Dropzone on:drop={handleFilesSelect}    >
+    // (324:2) <Dropzone on:drop={handleFilesSelect}    >
     function create_default_slot_4$1(ctx) {
     	let t;
 
@@ -55263,14 +55122,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_4$1.name,
     		type: "slot",
-    		source: "(334:2) <Dropzone on:drop={handleFilesSelect}    >",
+    		source: "(324:2) <Dropzone on:drop={handleFilesSelect}    >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (332:1) <Card padded>
+    // (322:1) <Card padded>
     function create_default_slot_3$1(ctx) {
     	let div;
     	let t1;
@@ -55293,7 +55152,7 @@ var app = (function () {
     			div.textContent = "Afegeix una foto si en tens:";
     			t1 = space();
     			create_component(dropzone.$$.fragment);
-    			add_location(div, file$4, 332, 2, 9570);
+    			add_location(div, file$4, 322, 2, 9526);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -55330,14 +55189,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_3$1.name,
     		type: "slot",
-    		source: "(332:1) <Card padded>",
+    		source: "(322:1) <Card padded>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (340:0) {#if formValues.image}
+    // (330:0) {#if formValues.image}
     function create_if_block$2(ctx) {
     	let card;
     	let current;
@@ -55386,14 +55245,14 @@ var app = (function () {
     		block,
     		id: create_if_block$2.name,
     		type: "if",
-    		source: "(340:0) {#if formValues.image}",
+    		source: "(330:0) {#if formValues.image}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (341:1) <Card padded>
+    // (331:1) <Card padded>
     function create_default_slot_2$1(ctx) {
     	let img;
     	let img_src_value;
@@ -55403,7 +55262,7 @@ var app = (function () {
     			img = element("img");
     			if (!src_url_equal(img.src, img_src_value = /*publicUrl*/ ctx[1])) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "imatge de l'usuari");
-    			add_location(img, file$4, 341, 2, 9778);
+    			add_location(img, file$4, 331, 2, 9734);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, img, anchor);
@@ -55422,14 +55281,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_2$1.name,
     		type: "slot",
-    		source: "(341:1) <Card padded>",
+    		source: "(331:1) <Card padded>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (346:1) <Button variant="raised" on:click={handlePrevious}>
+    // (336:1) <Button variant="raised" on:click={handlePrevious}>
     function create_default_slot_1$1(ctx) {
     	let t;
 
@@ -55449,14 +55308,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_1$1.name,
     		type: "slot",
-    		source: "(346:1) <Button variant=\\\"raised\\\" on:click={handlePrevious}>",
+    		source: "(336:1) <Button variant=\\\"raised\\\" on:click={handlePrevious}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (347:1) <Button variant="raised"  on:click={handleSubmit}>
+    // (337:1) <Button variant="raised"  on:click={handleSubmit}>
     function create_default_slot$3(ctx) {
     	let t;
 
@@ -55476,7 +55335,7 @@ var app = (function () {
     		block,
     		id: create_default_slot$3.name,
     		type: "slot",
-    		source: "(347:1) <Button variant=\\\"raised\\\"  on:click={handleSubmit}>",
+    		source: "(337:1) <Button variant=\\\"raised\\\"  on:click={handleSubmit}>",
     		ctx
     	});
 
@@ -55510,28 +55369,18 @@ var app = (function () {
     	let t12;
     	let card10;
     	let t13;
-    	let card11;
     	let t14;
-    	let card12;
     	let t15;
-    	let card13;
-    	let t16;
-    	let card14;
-    	let t17;
-    	let card15;
-    	let t18;
-    	let t19;
-    	let t20;
     	let div1;
     	let button0;
-    	let t21;
+    	let t16;
     	let button1;
     	let current;
 
     	linearprogress = new LinearProgress({
     			props: {
     				progress: 0.666,
-    				$$slots: { default: [create_default_slot_56] },
+    				$$slots: { default: [create_default_slot_51] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -55540,7 +55389,7 @@ var app = (function () {
     	card0 = new Card({
     			props: {
     				padded: true,
-    				$$slots: { default: [create_default_slot_53] },
+    				$$slots: { default: [create_default_slot_48] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -55549,7 +55398,7 @@ var app = (function () {
     	card1 = new Card({
     			props: {
     				padded: true,
-    				$$slots: { default: [create_default_slot_50] },
+    				$$slots: { default: [create_default_slot_45] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -55558,7 +55407,7 @@ var app = (function () {
     	card2 = new Card({
     			props: {
     				padded: true,
-    				$$slots: { default: [create_default_slot_47] },
+    				$$slots: { default: [create_default_slot_42] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -55567,7 +55416,7 @@ var app = (function () {
     	card3 = new Card({
     			props: {
     				padded: true,
-    				$$slots: { default: [create_default_slot_45] },
+    				$$slots: { default: [create_default_slot_40] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -55576,7 +55425,7 @@ var app = (function () {
     	card4 = new Card({
     			props: {
     				padded: true,
-    				$$slots: { default: [create_default_slot_43] },
+    				$$slots: { default: [create_default_slot_38] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -55585,7 +55434,7 @@ var app = (function () {
     	card5 = new Card({
     			props: {
     				padded: true,
-    				$$slots: { default: [create_default_slot_39] },
+    				$$slots: { default: [create_default_slot_34] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -55594,7 +55443,7 @@ var app = (function () {
     	card6 = new Card({
     			props: {
     				padded: true,
-    				$$slots: { default: [create_default_slot_36] },
+    				$$slots: { default: [create_default_slot_31] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -55603,7 +55452,7 @@ var app = (function () {
     	card7 = new Card({
     			props: {
     				padded: true,
-    				$$slots: { default: [create_default_slot_33] },
+    				$$slots: { default: [create_default_slot_17] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -55612,7 +55461,7 @@ var app = (function () {
     	card8 = new Card({
     			props: {
     				padded: true,
-    				$$slots: { default: [create_default_slot_30] },
+    				$$slots: { default: [create_default_slot_13] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -55621,58 +55470,13 @@ var app = (function () {
     	card9 = new Card({
     			props: {
     				padded: true,
-    				$$slots: { default: [create_default_slot_27] },
-    				$$scope: { ctx }
-    			},
-    			$$inline: true
-    		});
-
-    	card10 = new Card({
-    			props: {
-    				padded: true,
-    				$$slots: { default: [create_default_slot_24] },
-    				$$scope: { ctx }
-    			},
-    			$$inline: true
-    		});
-
-    	card11 = new Card({
-    			props: {
-    				padded: true,
-    				$$slots: { default: [create_default_slot_21] },
-    				$$scope: { ctx }
-    			},
-    			$$inline: true
-    		});
-
-    	card12 = new Card({
-    			props: {
-    				padded: true,
-    				$$slots: { default: [create_default_slot_17] },
-    				$$scope: { ctx }
-    			},
-    			$$inline: true
-    		});
-
-    	card13 = new Card({
-    			props: {
-    				padded: true,
-    				$$slots: { default: [create_default_slot_13] },
-    				$$scope: { ctx }
-    			},
-    			$$inline: true
-    		});
-
-    	card14 = new Card({
-    			props: {
-    				padded: true,
     				$$slots: { default: [create_default_slot_8] },
     				$$scope: { ctx }
     			},
     			$$inline: true
     		});
 
-    	card15 = new Card({
+    	card10 = new Card({
     			props: {
     				padded: true,
     				$$slots: { default: [create_default_slot_5$1] },
@@ -55735,28 +55539,18 @@ var app = (function () {
     			t12 = space();
     			create_component(card10.$$.fragment);
     			t13 = space();
-    			create_component(card11.$$.fragment);
-    			t14 = space();
-    			create_component(card12.$$.fragment);
-    			t15 = space();
-    			create_component(card13.$$.fragment);
-    			t16 = space();
-    			create_component(card14.$$.fragment);
-    			t17 = space();
-    			create_component(card15.$$.fragment);
-    			t18 = space();
     			if (if_block0) if_block0.c();
-    			t19 = space();
+    			t14 = space();
     			if (if_block1) if_block1.c();
-    			t20 = space();
+    			t15 = space();
     			div1 = element("div");
     			create_component(button0.$$.fragment);
-    			t21 = space();
+    			t16 = space();
     			create_component(button1.$$.fragment);
     			attr_dev(div0, "class", "section-title svelte-161svza");
     			add_location(div0, file$4, 72, 0, 3163);
     			attr_dev(div1, "class", "buttons svelte-161svza");
-    			add_location(div1, file$4, 344, 0, 9842);
+    			add_location(div1, file$4, 334, 0, 9798);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -55788,23 +55582,13 @@ var app = (function () {
     			insert_dev(target, t12, anchor);
     			mount_component(card10, target, anchor);
     			insert_dev(target, t13, anchor);
-    			mount_component(card11, target, anchor);
-    			insert_dev(target, t14, anchor);
-    			mount_component(card12, target, anchor);
-    			insert_dev(target, t15, anchor);
-    			mount_component(card13, target, anchor);
-    			insert_dev(target, t16, anchor);
-    			mount_component(card14, target, anchor);
-    			insert_dev(target, t17, anchor);
-    			mount_component(card15, target, anchor);
-    			insert_dev(target, t18, anchor);
     			if (if_block0) if_block0.m(target, anchor);
-    			insert_dev(target, t19, anchor);
+    			insert_dev(target, t14, anchor);
     			if (if_block1) if_block1.m(target, anchor);
-    			insert_dev(target, t20, anchor);
+    			insert_dev(target, t15, anchor);
     			insert_dev(target, div1, anchor);
     			mount_component(button0, div1, null);
-    			append_dev(div1, t21);
+    			append_dev(div1, t16);
     			mount_component(button1, div1, null);
     			current = true;
     		},
@@ -55893,41 +55677,6 @@ var app = (function () {
     			}
 
     			card10.$set(card10_changes);
-    			const card11_changes = {};
-
-    			if (dirty[0] & /*formValues*/ 1 | dirty[2] & /*$$scope*/ 4) {
-    				card11_changes.$$scope = { dirty, ctx };
-    			}
-
-    			card11.$set(card11_changes);
-    			const card12_changes = {};
-
-    			if (dirty[0] & /*formValues*/ 1 | dirty[2] & /*$$scope*/ 4) {
-    				card12_changes.$$scope = { dirty, ctx };
-    			}
-
-    			card12.$set(card12_changes);
-    			const card13_changes = {};
-
-    			if (dirty[0] & /*formValues*/ 1 | dirty[2] & /*$$scope*/ 4) {
-    				card13_changes.$$scope = { dirty, ctx };
-    			}
-
-    			card13.$set(card13_changes);
-    			const card14_changes = {};
-
-    			if (dirty[0] & /*formValues*/ 1 | dirty[2] & /*$$scope*/ 4) {
-    				card14_changes.$$scope = { dirty, ctx };
-    			}
-
-    			card14.$set(card14_changes);
-    			const card15_changes = {};
-
-    			if (dirty[0] & /*formValues*/ 1 | dirty[2] & /*$$scope*/ 4) {
-    				card15_changes.$$scope = { dirty, ctx };
-    			}
-
-    			card15.$set(card15_changes);
 
     			if (/*formValues*/ ctx[0].buildingDamage === 'yes' && !/*formValues*/ ctx[0].image) {
     				if (if_block0) {
@@ -55940,7 +55689,7 @@ var app = (function () {
     					if_block0 = create_if_block_1$1(ctx);
     					if_block0.c();
     					transition_in(if_block0, 1);
-    					if_block0.m(t19.parentNode, t19);
+    					if_block0.m(t14.parentNode, t14);
     				}
     			} else if (if_block0) {
     				group_outros();
@@ -55963,7 +55712,7 @@ var app = (function () {
     					if_block1 = create_if_block$2(ctx);
     					if_block1.c();
     					transition_in(if_block1, 1);
-    					if_block1.m(t20.parentNode, t20);
+    					if_block1.m(t15.parentNode, t15);
     				}
     			} else if (if_block1) {
     				group_outros();
@@ -56004,11 +55753,6 @@ var app = (function () {
     			transition_in(card8.$$.fragment, local);
     			transition_in(card9.$$.fragment, local);
     			transition_in(card10.$$.fragment, local);
-    			transition_in(card11.$$.fragment, local);
-    			transition_in(card12.$$.fragment, local);
-    			transition_in(card13.$$.fragment, local);
-    			transition_in(card14.$$.fragment, local);
-    			transition_in(card15.$$.fragment, local);
     			transition_in(if_block0);
     			transition_in(if_block1);
     			transition_in(button0.$$.fragment, local);
@@ -56028,11 +55772,6 @@ var app = (function () {
     			transition_out(card8.$$.fragment, local);
     			transition_out(card9.$$.fragment, local);
     			transition_out(card10.$$.fragment, local);
-    			transition_out(card11.$$.fragment, local);
-    			transition_out(card12.$$.fragment, local);
-    			transition_out(card13.$$.fragment, local);
-    			transition_out(card14.$$.fragment, local);
-    			transition_out(card15.$$.fragment, local);
     			transition_out(if_block0);
     			transition_out(if_block1);
     			transition_out(button0.$$.fragment, local);
@@ -56066,20 +55805,10 @@ var app = (function () {
     			if (detaching) detach_dev(t12);
     			destroy_component(card10, detaching);
     			if (detaching) detach_dev(t13);
-    			destroy_component(card11, detaching);
-    			if (detaching) detach_dev(t14);
-    			destroy_component(card12, detaching);
-    			if (detaching) detach_dev(t15);
-    			destroy_component(card13, detaching);
-    			if (detaching) detach_dev(t16);
-    			destroy_component(card14, detaching);
-    			if (detaching) detach_dev(t17);
-    			destroy_component(card15, detaching);
-    			if (detaching) detach_dev(t18);
     			if (if_block0) if_block0.d(detaching);
-    			if (detaching) detach_dev(t19);
+    			if (detaching) detach_dev(t14);
     			if (if_block1) if_block1.d(detaching);
-    			if (detaching) detach_dev(t20);
+    			if (detaching) detach_dev(t15);
     			if (detaching) detach_dev(div1);
     			destroy_component(button0);
     			destroy_component(button1);
@@ -56255,42 +55984,42 @@ var app = (function () {
     		}
     	}
 
-    	function select_value_binding_5(value) {
+    	function select0_value_binding(value) {
     		if ($$self.$$.not_equal(formValues.effectsLiquids, value)) {
     			formValues.effectsLiquids = value;
     			$$invalidate(0, formValues);
     		}
     	}
 
-    	function select_value_binding_6(value) {
+    	function select1_value_binding(value) {
     		if ($$self.$$.not_equal(formValues.effectsPaintings, value)) {
     			formValues.effectsPaintings = value;
     			$$invalidate(0, formValues);
     		}
     	}
 
-    	function select_value_binding_7(value) {
+    	function select2_value_binding(value) {
     		if ($$self.$$.not_equal(formValues.effectsDoorsWindows, value)) {
     			formValues.effectsDoorsWindows = value;
     			$$invalidate(0, formValues);
     		}
     	}
 
-    	function select_value_binding_8(value) {
+    	function select3_value_binding(value) {
     		if ($$self.$$.not_equal(formValues.effectsFurniture, value)) {
     			formValues.effectsFurniture = value;
     			$$invalidate(0, formValues);
     		}
     	}
 
-    	function select_value_binding_9(value) {
+    	function select4_value_binding(value) {
     		if ($$self.$$.not_equal(formValues.effectsPlants, value)) {
     			formValues.effectsPlants = value;
     			$$invalidate(0, formValues);
     		}
     	}
 
-    	function select_value_binding_10(value) {
+    	function select5_value_binding(value) {
     		if ($$self.$$.not_equal(formValues.effectsShelves, value)) {
     			formValues.effectsShelves = value;
     			$$invalidate(0, formValues);
@@ -56304,7 +56033,7 @@ var app = (function () {
     		}
     	}
 
-    	function select_value_binding_11(value) {
+    	function select_value_binding_5(value) {
     		if ($$self.$$.not_equal(formValues.buildingType, value)) {
     			formValues.buildingType = value;
     			$$invalidate(0, formValues);
@@ -56318,7 +56047,7 @@ var app = (function () {
     		}
     	}
 
-    	function select_value_binding_12(value) {
+    	function select_value_binding_6(value) {
     		if ($$self.$$.not_equal(formValues.buildingDamage, value)) {
     			formValues.buildingDamage = value;
     			$$invalidate(0, formValues);
@@ -56424,16 +56153,16 @@ var app = (function () {
     		select_value_binding_3,
     		textfield_value_binding,
     		select_value_binding_4,
-    		select_value_binding_5,
-    		select_value_binding_6,
-    		select_value_binding_7,
-    		select_value_binding_8,
-    		select_value_binding_9,
-    		select_value_binding_10,
+    		select0_value_binding,
+    		select1_value_binding,
+    		select2_value_binding,
+    		select3_value_binding,
+    		select4_value_binding,
+    		select5_value_binding,
     		textfield_value_binding_1,
-    		select_value_binding_11,
+    		select_value_binding_5,
     		textfield_value_binding_2,
-    		select_value_binding_12,
+    		select_value_binding_6,
     		checkbox_group_binding,
     		textfield_value_binding_3,
     		textfield_value_binding_4,
