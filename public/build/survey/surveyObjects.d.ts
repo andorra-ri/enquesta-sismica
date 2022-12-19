@@ -1,3 +1,7 @@
+export declare const yesNo: {
+    no: string;
+    yes: string;
+};
 export declare const positionOptions: {
     notSpecified: string;
     outsideBuilding: string;

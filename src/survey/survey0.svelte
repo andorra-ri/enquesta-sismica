@@ -12,6 +12,7 @@
 	import Leaflet from './leaflet.svelte';
 	import { nextPage, schema, surveyValues, type FormValues } from './store';
 	import {
+		yesNo,
 		floorOptions,
 		numberPeopleAwake,
 		numberPeopleGoingOutOptions,
@@ -40,10 +41,7 @@
 		formValues.coordinates = coords;
 	};
 
-	let feltSeism: boolean = formValues.felt ==='yes' ? true :  false;
-
-	$: feltSeism, (formValues.felt = feltSeism ? 'yes' : 'no');
-
+	
 	let pais: string | undefined;
 	let parroquia: string | undefined;
 	let municipality: string = '';
@@ -168,10 +166,18 @@
 {/if}
 
 <Card padded class={'felt' in errors ? 'error' : 'valid'}>
-	<div>Ha notat el sisme? *</div>
 	<FormField>
-		<Switch bind:checked={feltSeism} />
-		{feltSeism ? 'Sí' : 'No'}
+		<Select
+		style="min-width: 300px"
+		label="Ha notat el sisme? *"
+		bind:value={formValues.felt}
+	>
+		{#each Object.entries(yesNo) as [position, positionText]}
+			<Option value={position}>
+				{positionText}
+			</Option>
+		{/each}
+	</Select>
 	</FormField>
 </Card>
 <Card padded>
@@ -385,9 +391,10 @@
 <div class="buttons">
 	{#if Object.keys(errors).length > 0}
 		<div class="error">
-			{#each Object.entries(errors) as [fieldName, error]}
+			Hi ha camps obligatoris sense omplir. Si us plau revisi les respostes
+			<!-- {#each Object.entries(errors) as [fieldName, error]}
 				<div>{fieldName}: {error.message}</div>
-			{/each}
+			{/each} -->
 		</div>
 	{/if}
 
@@ -395,7 +402,7 @@
 </div> 
 
 <style>
-	.error {
+	:global(.error) {
 		border-style: dotted;
 		border-color: red;
 		border-width: 1px;

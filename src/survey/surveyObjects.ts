@@ -1,3 +1,8 @@
+export const yesNo = {
+  no: "No",
+  yes: "Sí",
+};
+
 export const positionOptions = {
   notSpecified: "Sense especificar",
   outsideBuilding: "A l'aire lliure",
@@ -198,13 +203,11 @@ export const buildingType = {
     "Tipus B: Construccions amb mur de fàbrica de totxo, blocs de morter, etc.",
   typeC: "Tipus C: Construccions amb estructura metàl·lica o de formigó armat",
 };
-
 export const buildingDamage = {
   notSpecified: "Sense especificar",
   no: "No",
   yes: "Sí",
 };
-
 export const buildingDamageDescription = {
   smallCracksCoating: "Revestiment de les parets amb petites esquerdes",
   bigCracksCoating: "Revestiment de les parets amb esquerdes grans",

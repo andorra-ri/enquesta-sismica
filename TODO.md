@@ -10,10 +10,10 @@
 
 - [x] La pregunta de la foto s’activa si diuen que SI han observat danys. Sinó, no cal penjar foto. Es a dir no va a l’últim bloc, sinó quan es parla de danys.
 
-- [] Si no respons una de les preguntes obligatòries, es pot marcar en vermell la que falta per a que ho vegin? A sota si surt un missatget, però en anglès i amb variables/noms diferents. Si es pot i és fàcil eh! Es possible que et digui de fer una pregunta més obligatòria, ja et diria.
+- [x] Si no respons una de les preguntes obligatòries, es pot marcar en vermell la que falta per a que ho vegin? A sota si surt un missatget, però en anglès i amb variables/noms diferents. Si es pot i és fàcil eh! Es possible que et digui de fer una pregunta més obligatòria, ja et diria.
 
 - [x] Quan dones al botó “Següent” per passar pàgina al formulari, es pot fer que la següent pàgina s’obri per la part de dalt de tot? Sobretot la pàgina 2, que s’obre a la part de final.
-- [] Quan selecciones el sisme del llistat, podem posar també la regió? (si és complicat fer-ho no cal).
+- [x] Quan selecciones el sisme del llistat, podem posar també la regió? (si és complicat fer-ho no cal).
 
 - [x] A totes les preguntes de “a prop seu, quantes persones”... jo treuria la resposta “No ho
       sé”. Per això ja està la de “Sense especificar”. Sinó les dues volen dir el mateix, i a més
