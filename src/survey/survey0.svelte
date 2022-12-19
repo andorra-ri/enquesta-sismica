@@ -222,25 +222,9 @@
 		</div>
 	{/if}
 </Card>
-<Card padded>
-	{#if formValues.position !== 'insideBuilding'}
-	<div class={'locationMap' in errors ? 'error' : 'valid'}>
-		<div>Voleu triar la ubicació amb un mapa?</div>
-		<FormField>
-			<Radio bind:group={formValues.locationMap} value="yes" touch />
-			<span slot="label">Seleccioneu la ubicació el més detallada possible arrossegant la icona blava del mapa</span>
-		</FormField>
-		<FormField>
-			<Radio bind:group={formValues.locationMap} value="no" touch />
-			<span slot="label"
-				>No, afegir la ubicació a mà (trieu aquesta opció si sabeu l'adreça exacta)</span
-			>
-		</FormField>
-	</div>
-	{/if}
+	{#if  formValues.position === 'insideBuilding'}
+	<Card padded>
 
-	{#if formValues.locationMap === 'no' || formValues.position === 'insideBuilding'}
-		
 		<div
 			class={'pais' in errors || 'parroquia' in errors || 'territori' in errors ? 'error' : 'valid'}
 		>
@@ -296,12 +280,16 @@
 				</FormField>
 			{/if}
 		</div>
-
+	</Card>
 		
-	{:else}
+	{:else if  formValues.position}
+	<Card padded>
+
+	<div>Seleccioneu la ubicació el més detallada possible arrossegant la icona blava del mapa</div>
 	<Leaflet onChange={setCoordinates} /> 
+	</Card>
 	{/if}
-</Card>
+
 
 <Card padded>
 	<FormField>
