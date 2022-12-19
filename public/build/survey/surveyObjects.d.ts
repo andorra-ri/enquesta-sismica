@@ -27,16 +27,16 @@ export declare const floorOptions: {
     notSpecified: string;
     soterrani: string;
     plantaBaixa: string;
-    1: string;
-    2: string;
-    3: string;
-    4: string;
-    5: string;
-    6: string;
-    7: string;
-    8: string;
-    9: string;
-    10: string;
+    "Planta 1": string;
+    "Planta 2": string;
+    "Planta 3": string;
+    "Planta 4": string;
+    "Planta 5": string;
+    "Planta 6": string;
+    "Planta 7": string;
+    "Planta 8": string;
+    "Planta 9": string;
+    "Planta 10": string;
 };
 export declare const totalFloorOptions: {
     1: string;

@@ -97,6 +97,8 @@
 			e.target.showPicker();
 		}
 	}
+console.log(Object.keys(floorOptions))
+
 </script>
 
 <div class="header">

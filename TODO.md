@@ -1,6 +1,6 @@
 - [x] La pregunta del mapa hauria de canviar l’enunciat per: ”Seleccioneu la ubicació el més detallada possible arrossegant la icona blava del mapa”. No hi ha opcions de resposta. El mapa només ha de sortir si la resposta anterior NO és “dins un edifici”. No ha d’estar activa per defecte quan entres ni tenir dos opcions de resposta.
 
-- [] A la pregunta dels pisos i plantes, es pot escollir l’ordre en que surten les opcions? Es a dir, que 1r surti soterrani, després planta baixa i després planta 1. Una mica per ordre ascendent.
+- [x] A la pregunta dels pisos i plantes, es pot escollir l’ordre en que surten les opcions? Es a dir, que 1r surti soterrani, després planta baixa i després planta 1. Una mica per ordre ascendent.
 
 - [x] Pregunta soroll, les respostes tenen un “DamageDescription”:
 

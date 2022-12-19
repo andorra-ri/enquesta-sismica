@@ -6832,16 +6832,16 @@ var app = (function () {
         notSpecified: "Sense especificar",
         soterrani: "Soterrani",
         plantaBaixa: "Planta Baixa",
-        1: "Planta 1",
-        2: "Planta 2",
-        3: "Planta 3",
-        4: "Planta 4",
-        5: "Planta 5",
-        6: "Planta 6",
-        7: "Planta 7",
-        8: "Planta 8",
-        9: "Planta 9",
-        10: "Planta 10",
+        "Planta 1": "Planta 1",
+        "Planta 2": "Planta 2",
+        "Planta 3": "Planta 3",
+        "Planta 4": "Planta 4",
+        "Planta 5": "Planta 5",
+        "Planta 6": "Planta 6",
+        "Planta 7": "Planta 7",
+        "Planta 8": "Planta 8",
+        "Planta 9": "Planta 9",
+        "Planta 10": "Planta 10",
     };
     const totalFloorOptions = {
         1: "1 planta",
@@ -40090,7 +40090,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (94:0) <LinearProgress progress={0.333}>
+    // (95:0) <LinearProgress progress={0.333}>
     function create_default_slot_45$1(ctx) {
     	let t;
 
@@ -40110,14 +40110,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_45$1.name,
     		type: "slot",
-    		source: "(94:0) <LinearProgress progress={0.333}>",
+    		source: "(95:0) <LinearProgress progress={0.333}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (97:1) <FormField>
+    // (98:1) <FormField>
     function create_default_slot_44$1(ctx) {
     	let radio;
     	let updating_group;
@@ -40173,14 +40173,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_44$1.name,
     		type: "slot",
-    		source: "(97:1) <FormField>",
+    		source: "(98:1) <FormField>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (99:2) 
+    // (100:2) 
     function create_label_slot_11(ctx) {
     	let span;
 
@@ -40189,7 +40189,7 @@ var app = (function () {
     			span = element("span");
     			span.textContent = "Sí, triar de la llista de sota";
     			attr_dev(span, "slot", "label");
-    			add_location(span, file$7, 98, 2, 3790);
+    			add_location(span, file$7, 99, 2, 3830);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -40204,14 +40204,14 @@ var app = (function () {
     		block,
     		id: create_label_slot_11.name,
     		type: "slot",
-    		source: "(99:2) ",
+    		source: "(100:2) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (101:1) <FormField>
+    // (102:1) <FormField>
     function create_default_slot_43$1(ctx) {
     	let radio;
     	let updating_group;
@@ -40267,14 +40267,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_43$1.name,
     		type: "slot",
-    		source: "(101:1) <FormField>",
+    		source: "(102:1) <FormField>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (103:2) 
+    // (104:2) 
     function create_label_slot_10(ctx) {
     	let span;
 
@@ -40283,7 +40283,7 @@ var app = (function () {
     			span = element("span");
     			span.textContent = "No apareix a la llista. Introduir la data i hora manualment";
     			attr_dev(span, "slot", "label");
-    			add_location(span, file$7, 102, 2, 3943);
+    			add_location(span, file$7, 103, 2, 3983);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -40298,14 +40298,14 @@ var app = (function () {
     		block,
     		id: create_label_slot_10.name,
     		type: "slot",
-    		source: "(103:2) ",
+    		source: "(104:2) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (95:0) <Card padded class={'existentSeism' in errors ? 'error' : 'valid'}>
+    // (96:0) <Card padded class={'existentSeism' in errors ? 'error' : 'valid'}>
     function create_default_slot_42$1(ctx) {
     	let div;
     	let t1;
@@ -40344,7 +40344,7 @@ var app = (function () {
     			create_component(formfield0.$$.fragment);
     			t2 = space();
     			create_component(formfield1.$$.fragment);
-    			add_location(div, file$7, 95, 1, 3639);
+    			add_location(div, file$7, 96, 1, 3679);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -40394,14 +40394,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_42$1.name,
     		type: "slot",
-    		source: "(95:0) <Card padded class={'existentSeism' in errors ? 'error' : 'valid'}>",
+    		source: "(96:0) <Card padded class={'existentSeism' in errors ? 'error' : 'valid'}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (130:0) {:else}
+    // (131:0) {:else}
     function create_else_block$1(ctx) {
     	let card;
     	let current;
@@ -40451,14 +40451,14 @@ var app = (function () {
     		block,
     		id: create_else_block$1.name,
     		type: "else",
-    		source: "(130:0) {:else}",
+    		source: "(131:0) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (107:0) {#if formValues.existentSeism === 'yes' && seisms.length > 0}
+    // (108:0) {#if formValues.existentSeism === 'yes' && seisms.length > 0}
     function create_if_block_16(ctx) {
     	let card;
     	let current;
@@ -40509,14 +40509,14 @@ var app = (function () {
     		block,
     		id: create_if_block_16.name,
     		type: "if",
-    		source: "(107:0) {#if formValues.existentSeism === 'yes' && seisms.length > 0}",
+    		source: "(108:0) {#if formValues.existentSeism === 'yes' && seisms.length > 0}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (132:3) <FormField>
+    // (133:3) <FormField>
     function create_default_slot_41$1(ctx) {
     	let div;
     	let t1;
@@ -40544,7 +40544,7 @@ var app = (function () {
     			div.textContent = "Data del terratrèmol *";
     			t1 = space();
     			create_component(textfield.$$.fragment);
-    			add_location(div, file$7, 132, 4, 4996);
+    			add_location(div, file$7, 133, 4, 5036);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -40583,14 +40583,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_41$1.name,
     		type: "slot",
-    		source: "(132:3) <FormField>",
+    		source: "(133:3) <FormField>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (138:3) <FormField>
+    // (139:3) <FormField>
     function create_default_slot_40$1(ctx) {
     	let div;
     	let t1;
@@ -40617,7 +40617,7 @@ var app = (function () {
     			div.textContent = "Hora local (HH:MM) *";
     			t1 = space();
     			create_component(textfield.$$.fragment);
-    			add_location(div, file$7, 138, 4, 5229);
+    			add_location(div, file$7, 139, 4, 5269);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -40656,14 +40656,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_40$1.name,
     		type: "slot",
-    		source: "(138:3) <FormField>",
+    		source: "(139:3) <FormField>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (130:7) <Card padded class="halign">
+    // (131:7) <Card padded class="halign">
     function create_default_slot_39$1(ctx) {
     	let div0;
     	let formfield0;
@@ -40702,13 +40702,13 @@ var app = (function () {
     			? 'error'
     			: 'valid') + " svelte-xt7jk9"));
 
-    			add_location(div0, file$7, 130, 2, 4916);
+    			add_location(div0, file$7, 131, 2, 4956);
 
     			attr_dev(div1, "class", div1_class_value = "" + (null_to_empty('earthquakeHour' in /*errors*/ ctx[7]
     			? 'error'
     			: 'valid') + " svelte-xt7jk9"));
 
-    			add_location(div1, file$7, 136, 2, 5149);
+    			add_location(div1, file$7, 137, 2, 5189);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div0, anchor);
@@ -40771,14 +40771,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_39$1.name,
     		type: "slot",
-    		source: "(130:7) <Card padded class=\\\"halign\\\">",
+    		source: "(131:7) <Card padded class=\\\"halign\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (113:5) <Option value={seism.guid}       >
+    // (114:5) <Option value={seism.guid}       >
     function create_default_slot_38$1(ctx) {
     	let t_value = `${new Date(/*seism*/ ctx[68].datetime).toLocaleDateString('ca-ES', {
 		weekday: 'long',
@@ -40823,14 +40823,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_38$1.name,
     		type: "slot",
-    		source: "(113:5) <Option value={seism.guid}       >",
+    		source: "(114:5) <Option value={seism.guid}       >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (112:4) {#each seisms as seism}
+    // (113:4) {#each seisms as seism}
     function create_each_block_12$1(ctx) {
     	let option;
     	let current;
@@ -40880,14 +40880,14 @@ var app = (function () {
     		block,
     		id: create_each_block_12$1.name,
     		type: "each",
-    		source: "(112:4) {#each seisms as seism}",
+    		source: "(113:4) {#each seisms as seism}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (111:3) <Select style="min-width: 300px" label="Data del sisme" bind:value={formValues.seism}>
+    // (112:3) <Select style="min-width: 300px" label="Data del sisme" bind:value={formValues.seism}>
     function create_default_slot_37$1(ctx) {
     	let each_1_anchor;
     	let current;
@@ -40976,14 +40976,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_37$1.name,
     		type: "slot",
-    		source: "(111:3) <Select style=\\\"min-width: 300px\\\" label=\\\"Data del sisme\\\" bind:value={formValues.seism}>",
+    		source: "(112:3) <Select style=\\\"min-width: 300px\\\" label=\\\"Data del sisme\\\" bind:value={formValues.seism}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (110:2) <FormField>
+    // (111:2) <FormField>
     function create_default_slot_36$1(ctx) {
     	let select;
     	let updating_value;
@@ -41048,14 +41048,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_36$1.name,
     		type: "slot",
-    		source: "(110:2) <FormField>",
+    		source: "(111:2) <FormField>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (108:1) <Card padded class={'seism' in errors ? 'error' : 'valid'}>
+    // (109:1) <Card padded class={'seism' in errors ? 'error' : 'valid'}>
     function create_default_slot_35$1(ctx) {
     	let div;
     	let t1;
@@ -41076,7 +41076,7 @@ var app = (function () {
     			div.textContent = "Triï el sisme *";
     			t1 = space();
     			create_component(formfield.$$.fragment);
-    			add_location(div, file$7, 108, 2, 4289);
+    			add_location(div, file$7, 109, 2, 4329);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -41113,14 +41113,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_35$1.name,
     		type: "slot",
-    		source: "(108:1) <Card padded class={'seism' in errors ? 'error' : 'valid'}>",
+    		source: "(109:1) <Card padded class={'seism' in errors ? 'error' : 'valid'}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (148:1) <FormField>
+    // (149:1) <FormField>
     function create_default_slot_34$1(ctx) {
     	let switch_1;
     	let updating_checked;
@@ -41186,14 +41186,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_34$1.name,
     		type: "slot",
-    		source: "(148:1) <FormField>",
+    		source: "(149:1) <FormField>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (146:0) <Card padded class={'felt' in errors ? 'error' : 'valid'}>
+    // (147:0) <Card padded class={'felt' in errors ? 'error' : 'valid'}>
     function create_default_slot_33$1(ctx) {
     	let div;
     	let t1;
@@ -41214,7 +41214,7 @@ var app = (function () {
     			div.textContent = "Ha notat el sisme? *";
     			t1 = space();
     			create_component(formfield.$$.fragment);
-    			add_location(div, file$7, 146, 1, 5431);
+    			add_location(div, file$7, 147, 1, 5471);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -41251,14 +41251,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_33$1.name,
     		type: "slot",
-    		source: "(146:0) <Card padded class={'felt' in errors ? 'error' : 'valid'}>",
+    		source: "(147:0) <Card padded class={'felt' in errors ? 'error' : 'valid'}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (160:3) <Option value={position}>
+    // (161:3) <Option value={position}>
     function create_default_slot_32$1(ctx) {
     	let t0_value = /*positionText*/ ctx[65] + "";
     	let t0;
@@ -41284,14 +41284,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_32$1.name,
     		type: "slot",
-    		source: "(160:3) <Option value={position}>",
+    		source: "(161:3) <Option value={position}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (159:2) {#each Object.entries(positionOptions) as [position, positionText]}
+    // (160:2) {#each Object.entries(positionOptions) as [position, positionText]}
     function create_each_block_11$1(ctx) {
     	let option;
     	let current;
@@ -41340,14 +41340,14 @@ var app = (function () {
     		block,
     		id: create_each_block_11$1.name,
     		type: "each",
-    		source: "(159:2) {#each Object.entries(positionOptions) as [position, positionText]}",
+    		source: "(160:2) {#each Object.entries(positionOptions) as [position, positionText]}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (154:1) <Select   style="min-width: 300px"   label="En el moment de la sacsejada es trobava..."   bind:value={formValues.position}  >
+    // (155:1) <Select   style="min-width: 300px"   label="En el moment de la sacsejada es trobava..."   bind:value={formValues.position}  >
     function create_default_slot_31$1(ctx) {
     	let each_1_anchor;
     	let current;
@@ -41436,14 +41436,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_31$1.name,
     		type: "slot",
-    		source: "(154:1) <Select   style=\\\"min-width: 300px\\\"   label=\\\"En el moment de la sacsejada es trobava...\\\"   bind:value={formValues.position}  >",
+    		source: "(155:1) <Select   style=\\\"min-width: 300px\\\"   label=\\\"En el moment de la sacsejada es trobava...\\\"   bind:value={formValues.position}  >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (166:2) {#if formValues.position === 'insideBuilding'}
+    // (167:2) {#if formValues.position === 'insideBuilding'}
     function create_if_block_15(ctx) {
     	let div;
     	let select;
@@ -41472,7 +41472,7 @@ var app = (function () {
     		c: function create() {
     			div = element("div");
     			create_component(select.$$.fragment);
-    			add_location(div, file$7, 166, 3, 5917);
+    			add_location(div, file$7, 167, 3, 5957);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -41513,14 +41513,14 @@ var app = (function () {
     		block,
     		id: create_if_block_15.name,
     		type: "if",
-    		source: "(166:2) {#if formValues.position === 'insideBuilding'}",
+    		source: "(167:2) {#if formValues.position === 'insideBuilding'}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (170:6) <Option value={floor}>
+    // (171:6) <Option value={floor}>
     function create_default_slot_30$1(ctx) {
     	let t0_value = /*floorText*/ ctx[59] + "";
     	let t0;
@@ -41546,14 +41546,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_30$1.name,
     		type: "slot",
-    		source: "(170:6) <Option value={floor}>",
+    		source: "(171:6) <Option value={floor}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (169:5) {#each Object.entries(floorOptions) as [floor, floorText]}
+    // (170:5) {#each Object.entries(floorOptions) as [floor, floorText]}
     function create_each_block_10$1(ctx) {
     	let option;
     	let current;
@@ -41602,14 +41602,14 @@ var app = (function () {
     		block,
     		id: create_each_block_10$1.name,
     		type: "each",
-    		source: "(169:5) {#each Object.entries(floorOptions) as [floor, floorText]}",
+    		source: "(170:5) {#each Object.entries(floorOptions) as [floor, floorText]}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (168:4) <Select style="min-width: 300px" label="Al pis" bind:value={formValues.floor}>
+    // (169:4) <Select style="min-width: 300px" label="Al pis" bind:value={formValues.floor}>
     function create_default_slot_29$1(ctx) {
     	let each_1_anchor;
     	let current;
@@ -41698,14 +41698,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_29$1.name,
     		type: "slot",
-    		source: "(168:4) <Select style=\\\"min-width: 300px\\\" label=\\\"Al pis\\\" bind:value={formValues.floor}>",
+    		source: "(169:4) <Select style=\\\"min-width: 300px\\\" label=\\\"Al pis\\\" bind:value={formValues.floor}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (178:2) {#if formValues.position === 'insideBuilding'}
+    // (179:2) {#if formValues.position === 'insideBuilding'}
     function create_if_block_14(ctx) {
     	let div;
     	let select;
@@ -41734,7 +41734,7 @@ var app = (function () {
     		c: function create() {
     			div = element("div");
     			create_component(select.$$.fragment);
-    			add_location(div, file$7, 178, 3, 6232);
+    			add_location(div, file$7, 179, 3, 6272);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -41775,14 +41775,14 @@ var app = (function () {
     		block,
     		id: create_if_block_14.name,
     		type: "if",
-    		source: "(178:2) {#if formValues.position === 'insideBuilding'}",
+    		source: "(179:2) {#if formValues.position === 'insideBuilding'}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (186:6) <Option value={floor}>
+    // (187:6) <Option value={floor}>
     function create_default_slot_28$1(ctx) {
     	let t0_value = /*floorText*/ ctx[59] + "";
     	let t0;
@@ -41808,14 +41808,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_28$1.name,
     		type: "slot",
-    		source: "(186:6) <Option value={floor}>",
+    		source: "(187:6) <Option value={floor}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (185:5) {#each Object.entries(totalFloorOptions) as [floor, floorText]}
+    // (186:5) {#each Object.entries(totalFloorOptions) as [floor, floorText]}
     function create_each_block_9$1(ctx) {
     	let option;
     	let current;
@@ -41864,14 +41864,14 @@ var app = (function () {
     		block,
     		id: create_each_block_9$1.name,
     		type: "each",
-    		source: "(185:5) {#each Object.entries(totalFloorOptions) as [floor, floorText]}",
+    		source: "(186:5) {#each Object.entries(totalFloorOptions) as [floor, floorText]}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (180:4) <Select      style="min-width: 300px"      label="Nombre total de plantes"      bind:value={formValues.totalFloors}     >
+    // (181:4) <Select      style="min-width: 300px"      label="Nombre total de plantes"      bind:value={formValues.totalFloors}     >
     function create_default_slot_27$1(ctx) {
     	let each_1_anchor;
     	let current;
@@ -41960,14 +41960,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_27$1.name,
     		type: "slot",
-    		source: "(180:4) <Select      style=\\\"min-width: 300px\\\"      label=\\\"Nombre total de plantes\\\"      bind:value={formValues.totalFloors}     >",
+    		source: "(181:4) <Select      style=\\\"min-width: 300px\\\"      label=\\\"Nombre total de plantes\\\"      bind:value={formValues.totalFloors}     >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (195:1) {#if formValues.position === 'other'}
+    // (196:1) {#if formValues.position === 'other'}
     function create_if_block_13(ctx) {
     	let div;
     	let span;
@@ -41997,8 +41997,8 @@ var app = (function () {
     			t1 = space();
     			create_component(textfield.$$.fragment);
     			attr_dev(span, "class", "field-label svelte-xt7jk9");
-    			add_location(span, file$7, 196, 3, 6601);
-    			add_location(div, file$7, 195, 2, 6592);
+    			add_location(span, file$7, 197, 3, 6641);
+    			add_location(div, file$7, 196, 2, 6632);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -42037,14 +42037,14 @@ var app = (function () {
     		block,
     		id: create_if_block_13.name,
     		type: "if",
-    		source: "(195:1) {#if formValues.position === 'other'}",
+    		source: "(196:1) {#if formValues.position === 'other'}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (153:0) <Card padded>
+    // (154:0) <Card padded>
     function create_default_slot_26$1(ctx) {
     	let select;
     	let updating_value;
@@ -42087,7 +42087,7 @@ var app = (function () {
     			t2 = space();
     			if (if_block2) if_block2.c();
     			if_block2_anchor = empty();
-    			add_location(div, file$7, 164, 1, 5858);
+    			add_location(div, file$7, 165, 1, 5898);
     		},
     		m: function mount(target, anchor) {
     			mount_component(select, target, anchor);
@@ -42216,14 +42216,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_26$1.name,
     		type: "slot",
-    		source: "(153:0) <Card padded>",
+    		source: "(154:0) <Card padded>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (262:32) 
+    // (263:32) 
     function create_if_block_12(ctx) {
     	let card;
     	let current;
@@ -42272,14 +42272,14 @@ var app = (function () {
     		block,
     		id: create_if_block_12.name,
     		type: "if",
-    		source: "(262:32) ",
+    		source: "(263:32) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (202:1) {#if  formValues.position === 'insideBuilding'}
+    // (203:1) {#if  formValues.position === 'insideBuilding'}
     function create_if_block_8(ctx) {
     	let card;
     	let current;
@@ -42328,14 +42328,14 @@ var app = (function () {
     		block,
     		id: create_if_block_8.name,
     		type: "if",
-    		source: "(202:1) {#if  formValues.position === 'insideBuilding'}",
+    		source: "(203:1) {#if  formValues.position === 'insideBuilding'}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (263:1) <Card padded>
+    // (264:1) <Card padded>
     function create_default_slot_25$1(ctx) {
     	let div;
     	let t1;
@@ -42353,7 +42353,7 @@ var app = (function () {
     			div.textContent = "Seleccioneu la ubicació el més detallada possible arrossegant la icona blava del mapa";
     			t1 = space();
     			create_component(leaflet.$$.fragment);
-    			add_location(div, file$7, 264, 1, 8767);
+    			add_location(div, file$7, 265, 1, 8807);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -42382,14 +42382,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_25$1.name,
     		type: "slot",
-    		source: "(263:1) <Card padded>",
+    		source: "(264:1) <Card padded>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (211:6) <Option value={country}>
+    // (212:6) <Option value={country}>
     function create_default_slot_24$1(ctx) {
     	let t;
 
@@ -42410,14 +42410,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_24$1.name,
     		type: "slot",
-    		source: "(211:6) <Option value={country}>",
+    		source: "(212:6) <Option value={country}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (210:5) {#each ['Andorra', 'Espanya', 'França'] as country}
+    // (211:5) {#each ['Andorra', 'Espanya', 'França'] as country}
     function create_each_block_8$1(ctx) {
     	let option;
     	let current;
@@ -42466,14 +42466,14 @@ var app = (function () {
     		block,
     		id: create_each_block_8$1.name,
     		type: "each",
-    		source: "(210:5) {#each ['Andorra', 'Espanya', 'França'] as country}",
+    		source: "(211:5) {#each ['Andorra', 'Espanya', 'França'] as country}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (209:4) <Select bind:value={pais} label="País">
+    // (210:4) <Select bind:value={pais} label="País">
     function create_default_slot_23$1(ctx) {
     	let each_1_anchor;
     	let current;
@@ -42530,14 +42530,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_23$1.name,
     		type: "slot",
-    		source: "(209:4) <Select bind:value={pais} label=\\\"País\\\">",
+    		source: "(210:4) <Select bind:value={pais} label=\\\"País\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (208:3) <FormField>
+    // (209:3) <FormField>
     function create_default_slot_22$1(ctx) {
     	let select;
     	let updating_value;
@@ -42601,14 +42601,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_22$1.name,
     		type: "slot",
-    		source: "(208:3) <FormField>",
+    		source: "(209:3) <FormField>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (214:4) 
+    // (215:4) 
     function create_label_slot_9(ctx) {
     	let span;
 
@@ -42617,7 +42617,7 @@ var app = (function () {
     			span = element("span");
     			span.textContent = "País on es trobava en el moment del terratrèmol";
     			attr_dev(span, "slot", "label");
-    			add_location(span, file$7, 213, 4, 7140);
+    			add_location(span, file$7, 214, 4, 7180);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -42632,14 +42632,14 @@ var app = (function () {
     		block,
     		id: create_label_slot_9.name,
     		type: "slot",
-    		source: "(214:4) ",
+    		source: "(215:4) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (242:75) 
+    // (243:75) 
     function create_if_block_11(ctx) {
     	let formfield;
     	let current;
@@ -42690,14 +42690,14 @@ var app = (function () {
     		block,
     		id: create_if_block_11.name,
     		type: "if",
-    		source: "(242:75) ",
+    		source: "(243:75) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (216:3) {#if formValues.pais === 'Andorra'}
+    // (217:3) {#if formValues.pais === 'Andorra'}
     function create_if_block_10(ctx) {
     	let formfield0;
     	let t;
@@ -42776,14 +42776,14 @@ var app = (function () {
     		block,
     		id: create_if_block_10.name,
     		type: "if",
-    		source: "(216:3) {#if formValues.pais === 'Andorra'}",
+    		source: "(217:3) {#if formValues.pais === 'Andorra'}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (243:4) <FormField>
+    // (244:4) <FormField>
     function create_default_slot_21$1(ctx) {
     	let textfield;
     	let updating_value;
@@ -42839,14 +42839,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_21$1.name,
     		type: "slot",
-    		source: "(243:4) <FormField>",
+    		source: "(244:4) <FormField>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (245:5) 
+    // (246:5) 
     function create_label_slot_8(ctx) {
     	let span;
 
@@ -42855,7 +42855,7 @@ var app = (function () {
     			span = element("span");
     			span.textContent = "Municipi on es trobava en el moment del terratrèmol";
     			attr_dev(span, "slot", "label");
-    			add_location(span, file$7, 244, 5, 8281);
+    			add_location(span, file$7, 245, 5, 8321);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -42870,14 +42870,14 @@ var app = (function () {
     		block,
     		id: create_label_slot_8.name,
     		type: "slot",
-    		source: "(245:5) ",
+    		source: "(246:5) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (220:7) <Option value={parroquia}>
+    // (221:7) <Option value={parroquia}>
     function create_default_slot_20$1(ctx) {
     	let t_value = /*parroquia*/ ctx[3] + "";
     	let t;
@@ -42901,14 +42901,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_20$1.name,
     		type: "slot",
-    		source: "(220:7) <Option value={parroquia}>",
+    		source: "(221:7) <Option value={parroquia}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (219:6) {#each [...new Set(parroquies.map((d) => d.parroquia))] as parroquia}
+    // (220:6) {#each [...new Set(parroquies.map((d) => d.parroquia))] as parroquia}
     function create_each_block_7$1(ctx) {
     	let option;
     	let current;
@@ -42958,14 +42958,14 @@ var app = (function () {
     		block,
     		id: create_each_block_7$1.name,
     		type: "each",
-    		source: "(219:6) {#each [...new Set(parroquies.map((d) => d.parroquia))] as parroquia}",
+    		source: "(220:6) {#each [...new Set(parroquies.map((d) => d.parroquia))] as parroquia}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (218:5) <Select disabled={formValues.pais !== 'Andorra'} bind:value={parroquia} label="Parròquia">
+    // (219:5) <Select disabled={formValues.pais !== 'Andorra'} bind:value={parroquia} label="Parròquia">
     function create_default_slot_19$1(ctx) {
     	let each_1_anchor;
     	let current;
@@ -43054,14 +43054,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_19$1.name,
     		type: "slot",
-    		source: "(218:5) <Select disabled={formValues.pais !== 'Andorra'} bind:value={parroquia} label=\\\"Parròquia\\\">",
+    		source: "(219:5) <Select disabled={formValues.pais !== 'Andorra'} bind:value={parroquia} label=\\\"Parròquia\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (217:4) <FormField>
+    // (218:4) <FormField>
     function create_default_slot_18$1(ctx) {
     	let select;
     	let updating_value;
@@ -43127,14 +43127,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_18$1.name,
     		type: "slot",
-    		source: "(217:4) <FormField>",
+    		source: "(218:4) <FormField>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (223:5) 
+    // (224:5) 
     function create_label_slot_7(ctx) {
     	let span;
 
@@ -43143,7 +43143,7 @@ var app = (function () {
     			span = element("span");
     			span.textContent = "Parròquia on es trobava en el moment del terratrèmol";
     			attr_dev(span, "slot", "label");
-    			add_location(span, file$7, 222, 5, 7545);
+    			add_location(span, file$7, 223, 5, 7585);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -43158,14 +43158,14 @@ var app = (function () {
     		block,
     		id: create_label_slot_7.name,
     		type: "slot",
-    		source: "(223:5) ",
+    		source: "(224:5) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (235:7) <Option value={territori}>
+    // (236:7) <Option value={territori}>
     function create_default_slot_17$1(ctx) {
     	let t_value = /*territori*/ ctx[50] + "";
     	let t;
@@ -43189,14 +43189,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_17$1.name,
     		type: "slot",
-    		source: "(235:7) <Option value={territori}>",
+    		source: "(236:7) <Option value={territori}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (232:6) {#each parroquies        .filter((d) => d.parroquia === formValues.parroquia)        .map((d) => d.territori) as territori}
+    // (233:6) {#each parroquies        .filter((d) => d.parroquia === formValues.parroquia)        .map((d) => d.territori) as territori}
     function create_each_block_6$1(ctx) {
     	let option;
     	let current;
@@ -43246,14 +43246,14 @@ var app = (function () {
     		block,
     		id: create_each_block_6$1.name,
     		type: "each",
-    		source: "(232:6) {#each parroquies        .filter((d) => d.parroquia === formValues.parroquia)        .map((d) => d.territori) as territori}",
+    		source: "(233:6) {#each parroquies        .filter((d) => d.parroquia === formValues.parroquia)        .map((d) => d.territori) as territori}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (227:5) <Select       disabled={!formValues.parroquia}       bind:value={formValues.territori}       label="Territori"      >
+    // (228:5) <Select       disabled={!formValues.parroquia}       bind:value={formValues.territori}       label="Territori"      >
     function create_default_slot_16$1(ctx) {
     	let each_1_anchor;
     	let current;
@@ -43342,14 +43342,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_16$1.name,
     		type: "slot",
-    		source: "(227:5) <Select       disabled={!formValues.parroquia}       bind:value={formValues.territori}       label=\\\"Territori\\\"      >",
+    		source: "(228:5) <Select       disabled={!formValues.parroquia}       bind:value={formValues.territori}       label=\\\"Territori\\\"      >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (226:4) <FormField>
+    // (227:4) <FormField>
     function create_default_slot_15$1(ctx) {
     	let select;
     	let updating_value;
@@ -43415,14 +43415,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_15$1.name,
     		type: "slot",
-    		source: "(226:4) <FormField>",
+    		source: "(227:4) <FormField>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (238:5) 
+    // (239:5) 
     function create_label_slot_6(ctx) {
     	let span;
 
@@ -43431,7 +43431,7 @@ var app = (function () {
     			span = element("span");
     			span.textContent = "Territori dins la parròquia on es trobava en el moment del terratrèmol";
     			attr_dev(span, "slot", "label");
-    			add_location(span, file$7, 237, 5, 7999);
+    			add_location(span, file$7, 238, 5, 8039);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -43446,14 +43446,14 @@ var app = (function () {
     		block,
     		id: create_label_slot_6.name,
     		type: "slot",
-    		source: "(238:5) ",
+    		source: "(239:5) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (248:3) {#if !!formValues.pais}
+    // (249:3) {#if !!formValues.pais}
     function create_if_block_9(ctx) {
     	let formfield0;
     	let t;
@@ -43532,14 +43532,14 @@ var app = (function () {
     		block,
     		id: create_if_block_9.name,
     		type: "if",
-    		source: "(248:3) {#if !!formValues.pais}",
+    		source: "(249:3) {#if !!formValues.pais}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (249:4) <FormField>
+    // (250:4) <FormField>
     function create_default_slot_14$1(ctx) {
     	let textfield;
     	let updating_value;
@@ -43595,14 +43595,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_14$1.name,
     		type: "slot",
-    		source: "(249:4) <FormField>",
+    		source: "(250:4) <FormField>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (251:5) 
+    // (252:5) 
     function create_label_slot_5(ctx) {
     	let span;
 
@@ -43611,7 +43611,7 @@ var app = (function () {
     			span = element("span");
     			span.textContent = "Carrer";
     			attr_dev(span, "slot", "label");
-    			add_location(span, file$7, 250, 5, 8496);
+    			add_location(span, file$7, 251, 5, 8536);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -43626,14 +43626,14 @@ var app = (function () {
     		block,
     		id: create_label_slot_5.name,
     		type: "slot",
-    		source: "(251:5) ",
+    		source: "(252:5) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (254:4) <FormField>
+    // (255:4) <FormField>
     function create_default_slot_13$1(ctx) {
     	let textfield;
     	let updating_value;
@@ -43689,14 +43689,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_13$1.name,
     		type: "slot",
-    		source: "(254:4) <FormField>",
+    		source: "(255:4) <FormField>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (256:5) 
+    // (257:5) 
     function create_label_slot_4(ctx) {
     	let span;
 
@@ -43705,7 +43705,7 @@ var app = (function () {
     			span = element("span");
     			span.textContent = "Número";
     			attr_dev(span, "slot", "label");
-    			add_location(span, file$7, 255, 5, 8637);
+    			add_location(span, file$7, 256, 5, 8677);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -43720,14 +43720,14 @@ var app = (function () {
     		block,
     		id: create_label_slot_4.name,
     		type: "slot",
-    		source: "(256:5) ",
+    		source: "(257:5) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (203:1) <Card padded>
+    // (204:1) <Card padded>
     function create_default_slot_12$1(ctx) {
     	let div;
     	let formfield;
@@ -43777,7 +43777,7 @@ var app = (function () {
     			? 'error'
     			: 'valid') + " svelte-xt7jk9"));
 
-    			add_location(div, file$7, 204, 2, 6837);
+    			add_location(div, file$7, 205, 2, 6877);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -43893,14 +43893,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_12$1.name,
     		type: "slot",
-    		source: "(203:1) <Card padded>",
+    		source: "(204:1) <Card padded>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (279:4) <Option value={situationObserver}>
+    // (280:4) <Option value={situationObserver}>
     function create_default_slot_11$1(ctx) {
     	let t0_value = /*situationObserverText*/ ctx[47] + "";
     	let t0;
@@ -43926,14 +43926,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_11$1.name,
     		type: "slot",
-    		source: "(279:4) <Option value={situationObserver}>",
+    		source: "(280:4) <Option value={situationObserver}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (278:3) {#each Object.entries(situationObserverOptions) as [situationObserver, situationObserverText]}
+    // (279:3) {#each Object.entries(situationObserverOptions) as [situationObserver, situationObserverText]}
     function create_each_block_5$1(ctx) {
     	let option;
     	let current;
@@ -43982,14 +43982,14 @@ var app = (function () {
     		block,
     		id: create_each_block_5$1.name,
     		type: "each",
-    		source: "(278:3) {#each Object.entries(situationObserverOptions) as [situationObserver, situationObserverText]}",
+    		source: "(279:3) {#each Object.entries(situationObserverOptions) as [situationObserver, situationObserverText]}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (273:2) <Select    style="min-width: 300px"    label="En el moment de la sacsejada, estava..."    bind:value={formValues.situationObserver}   >
+    // (274:2) <Select    style="min-width: 300px"    label="En el moment de la sacsejada, estava..."    bind:value={formValues.situationObserver}   >
     function create_default_slot_10$1(ctx) {
     	let each_1_anchor;
     	let current;
@@ -44078,14 +44078,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_10$1.name,
     		type: "slot",
-    		source: "(273:2) <Select    style=\\\"min-width: 300px\\\"    label=\\\"En el moment de la sacsejada, estava...\\\"    bind:value={formValues.situationObserver}   >",
+    		source: "(274:2) <Select    style=\\\"min-width: 300px\\\"    label=\\\"En el moment de la sacsejada, estava...\\\"    bind:value={formValues.situationObserver}   >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (272:1) <FormField>
+    // (273:1) <FormField>
     function create_default_slot_9$1(ctx) {
     	let select;
     	let updating_value;
@@ -44150,14 +44150,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_9$1.name,
     		type: "slot",
-    		source: "(272:1) <FormField>",
+    		source: "(273:1) <FormField>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (286:1) {#if formValues.situationObserver === 'other'}
+    // (287:1) {#if formValues.situationObserver === 'other'}
     function create_if_block_7(ctx) {
     	let div;
     	let span;
@@ -44187,8 +44187,8 @@ var app = (function () {
     			t1 = space();
     			create_component(textfield.$$.fragment);
     			attr_dev(span, "class", "field-label svelte-xt7jk9");
-    			add_location(span, file$7, 287, 3, 9364);
-    			add_location(div, file$7, 286, 2, 9355);
+    			add_location(span, file$7, 288, 3, 9404);
+    			add_location(div, file$7, 287, 2, 9395);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -44227,14 +44227,14 @@ var app = (function () {
     		block,
     		id: create_if_block_7.name,
     		type: "if",
-    		source: "(286:1) {#if formValues.situationObserver === 'other'}",
+    		source: "(287:1) {#if formValues.situationObserver === 'other'}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (271:0) <Card padded>
+    // (272:0) <Card padded>
     function create_default_slot_8$1(ctx) {
     	let formfield;
     	let t;
@@ -44320,14 +44320,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_8$1.name,
     		type: "slot",
-    		source: "(271:0) <Card padded>",
+    		source: "(272:0) <Card padded>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (294:1) {#if formValues.position === 'insideBuilding'}
+    // (295:1) {#if formValues.position === 'insideBuilding'}
     function create_if_block_5$1(ctx) {
     	let div;
     	let p;
@@ -44356,9 +44356,9 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			add_location(p, file$7, 295, 3, 9610);
+    			add_location(p, file$7, 296, 3, 9650);
     			attr_dev(div, "class", "radio-group");
-    			add_location(div, file$7, 294, 2, 9581);
+    			add_location(div, file$7, 295, 2, 9621);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -44428,21 +44428,21 @@ var app = (function () {
     		block,
     		id: create_if_block_5$1.name,
     		type: "if",
-    		source: "(294:1) {#if formValues.position === 'insideBuilding'}",
+    		source: "(295:1) {#if formValues.position === 'insideBuilding'}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (298:4) {#if i > 0 && i % 3 === 0}
+    // (299:4) {#if i > 0 && i % 3 === 0}
     function create_if_block_6(ctx) {
     	let br;
 
     	const block = {
     		c: function create() {
     			br = element("br");
-    			add_location(br, file$7, 298, 5, 9803);
+    			add_location(br, file$7, 299, 5, 9843);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, br, anchor);
@@ -44456,14 +44456,14 @@ var app = (function () {
     		block,
     		id: create_if_block_6.name,
     		type: "if",
-    		source: "(298:4) {#if i > 0 && i % 3 === 0}",
+    		source: "(299:4) {#if i > 0 && i % 3 === 0}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (301:4) <FormField style="min-width: 250px">
+    // (302:4) <FormField style="min-width: 250px">
     function create_default_slot_7$2(ctx) {
     	let radio;
     	let updating_group;
@@ -44523,14 +44523,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_7$2.name,
     		type: "slot",
-    		source: "(301:4) <FormField style=\\\"min-width: 250px\\\">",
+    		source: "(302:4) <FormField style=\\\"min-width: 250px\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (303:5) 
+    // (304:5) 
     function create_label_slot_3(ctx) {
     	let span;
     	let t0_value = /*numberPeopleText*/ ctx[40] + "";
@@ -44543,7 +44543,7 @@ var app = (function () {
     			t0 = text(t0_value);
     			t1 = space();
     			attr_dev(span, "slot", "label");
-    			add_location(span, file$7, 302, 5, 9945);
+    			add_location(span, file$7, 303, 5, 9985);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -44560,14 +44560,14 @@ var app = (function () {
     		block,
     		id: create_label_slot_3.name,
     		type: "slot",
-    		source: "(303:5) ",
+    		source: "(304:5) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (297:3) {#each Object.entries(numberPeopleInsideOptions) as [numberPeople, numberPeopleText], i}
+    // (298:3) {#each Object.entries(numberPeopleInsideOptions) as [numberPeople, numberPeopleText], i}
     function create_each_block_4$1(ctx) {
     	let t;
     	let formfield;
@@ -44627,14 +44627,14 @@ var app = (function () {
     		block,
     		id: create_each_block_4$1.name,
     		type: "each",
-    		source: "(297:3) {#each Object.entries(numberPeopleInsideOptions) as [numberPeople, numberPeopleText], i}",
+    		source: "(298:3) {#each Object.entries(numberPeopleInsideOptions) as [numberPeople, numberPeopleText], i}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (311:1) {#if formValues.position !== 'insideBuilding'}
+    // (312:1) {#if formValues.position !== 'insideBuilding'}
     function create_if_block_3$2(ctx) {
     	let div;
     	let p;
@@ -44663,9 +44663,9 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			add_location(p, file$7, 312, 3, 10127);
+    			add_location(p, file$7, 313, 3, 10167);
     			attr_dev(div, "class", "radio-group");
-    			add_location(div, file$7, 311, 2, 10098);
+    			add_location(div, file$7, 312, 2, 10138);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -44735,21 +44735,21 @@ var app = (function () {
     		block,
     		id: create_if_block_3$2.name,
     		type: "if",
-    		source: "(311:1) {#if formValues.position !== 'insideBuilding'}",
+    		source: "(312:1) {#if formValues.position !== 'insideBuilding'}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (315:4) {#if i > 0 && i % 3 === 0}
+    // (316:4) {#if i > 0 && i % 3 === 0}
     function create_if_block_4$1(ctx) {
     	let br;
 
     	const block = {
     		c: function create() {
     			br = element("br");
-    			add_location(br, file$7, 315, 5, 10321);
+    			add_location(br, file$7, 316, 5, 10361);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, br, anchor);
@@ -44763,14 +44763,14 @@ var app = (function () {
     		block,
     		id: create_if_block_4$1.name,
     		type: "if",
-    		source: "(315:4) {#if i > 0 && i % 3 === 0}",
+    		source: "(316:4) {#if i > 0 && i % 3 === 0}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (318:4) <FormField style="min-width: 250px">
+    // (319:4) <FormField style="min-width: 250px">
     function create_default_slot_6$2(ctx) {
     	let radio;
     	let updating_group;
@@ -44830,14 +44830,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_6$2.name,
     		type: "slot",
-    		source: "(318:4) <FormField style=\\\"min-width: 250px\\\">",
+    		source: "(319:4) <FormField style=\\\"min-width: 250px\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (320:5) 
+    // (321:5) 
     function create_label_slot_2$1(ctx) {
     	let span;
     	let t0_value = /*numberPeopleText*/ ctx[40] + "";
@@ -44850,7 +44850,7 @@ var app = (function () {
     			t0 = text(t0_value);
     			t1 = space();
     			attr_dev(span, "slot", "label");
-    			add_location(span, file$7, 319, 5, 10464);
+    			add_location(span, file$7, 320, 5, 10504);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -44867,14 +44867,14 @@ var app = (function () {
     		block,
     		id: create_label_slot_2$1.name,
     		type: "slot",
-    		source: "(320:5) ",
+    		source: "(321:5) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (314:3) {#each Object.entries(numberPeopleOutsideOptions) as [numberPeople, numberPeopleText], i}
+    // (315:3) {#each Object.entries(numberPeopleOutsideOptions) as [numberPeople, numberPeopleText], i}
     function create_each_block_3$1(ctx) {
     	let t;
     	let formfield;
@@ -44934,14 +44934,14 @@ var app = (function () {
     		block,
     		id: create_each_block_3$1.name,
     		type: "each",
-    		source: "(314:3) {#each Object.entries(numberPeopleOutsideOptions) as [numberPeople, numberPeopleText], i}",
+    		source: "(315:3) {#each Object.entries(numberPeopleOutsideOptions) as [numberPeople, numberPeopleText], i}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (293:0) <Card padded>
+    // (294:0) <Card padded>
     function create_default_slot_5$2(ctx) {
     	let t;
     	let if_block1_anchor;
@@ -45033,21 +45033,21 @@ var app = (function () {
     		block,
     		id: create_default_slot_5$2.name,
     		type: "slot",
-    		source: "(293:0) <Card padded>",
+    		source: "(294:0) <Card padded>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (332:3) {#if i > 0 && i % 3 === 0}
+    // (333:3) {#if i > 0 && i % 3 === 0}
     function create_if_block_2$2(ctx) {
     	let br;
 
     	const block = {
     		c: function create() {
     			br = element("br");
-    			add_location(br, file$7, 332, 4, 10813);
+    			add_location(br, file$7, 333, 4, 10853);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, br, anchor);
@@ -45061,14 +45061,14 @@ var app = (function () {
     		block,
     		id: create_if_block_2$2.name,
     		type: "if",
-    		source: "(332:3) {#if i > 0 && i % 3 === 0}",
+    		source: "(333:3) {#if i > 0 && i % 3 === 0}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (335:3) <FormField style="min-width: 250px">
+    // (336:3) <FormField style="min-width: 250px">
     function create_default_slot_4$2(ctx) {
     	let radio;
     	let updating_group;
@@ -45128,14 +45128,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_4$2.name,
     		type: "slot",
-    		source: "(335:3) <FormField style=\\\"min-width: 250px\\\">",
+    		source: "(336:3) <FormField style=\\\"min-width: 250px\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (337:4) 
+    // (338:4) 
     function create_label_slot_1$1(ctx) {
     	let span;
     	let t0_value = /*numberPeopleText*/ ctx[40] + "";
@@ -45148,7 +45148,7 @@ var app = (function () {
     			t0 = text(t0_value);
     			t1 = space();
     			attr_dev(span, "slot", "label");
-    			add_location(span, file$7, 336, 4, 10953);
+    			add_location(span, file$7, 337, 4, 10993);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -45165,14 +45165,14 @@ var app = (function () {
     		block,
     		id: create_label_slot_1$1.name,
     		type: "slot",
-    		source: "(337:4) ",
+    		source: "(338:4) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (331:2) {#each Object.entries(numberPeopleGoingOutOptions) as [numberPeople, numberPeopleText], i}
+    // (332:2) {#each Object.entries(numberPeopleGoingOutOptions) as [numberPeople, numberPeopleText], i}
     function create_each_block_2$1(ctx) {
     	let t;
     	let formfield;
@@ -45232,14 +45232,14 @@ var app = (function () {
     		block,
     		id: create_each_block_2$1.name,
     		type: "each",
-    		source: "(331:2) {#each Object.entries(numberPeopleGoingOutOptions) as [numberPeople, numberPeopleText], i}",
+    		source: "(332:2) {#each Object.entries(numberPeopleGoingOutOptions) as [numberPeople, numberPeopleText], i}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (328:0) <Card padded>
+    // (329:0) <Card padded>
     function create_default_slot_3$2(ctx) {
     	let div;
     	let p;
@@ -45268,9 +45268,9 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			add_location(p, file$7, 329, 2, 10617);
+    			add_location(p, file$7, 330, 2, 10657);
     			attr_dev(div, "class", "radio-group");
-    			add_location(div, file$7, 328, 1, 10589);
+    			add_location(div, file$7, 329, 1, 10629);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -45340,21 +45340,21 @@ var app = (function () {
     		block,
     		id: create_default_slot_3$2.name,
     		type: "slot",
-    		source: "(328:0) <Card padded>",
+    		source: "(329:0) <Card padded>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (348:3) {#if i > 0 && i % 3 === 0}
+    // (349:3) {#if i > 0 && i % 3 === 0}
     function create_if_block_1$2(ctx) {
     	let br;
 
     	const block = {
     		c: function create() {
     			br = element("br");
-    			add_location(br, file$7, 348, 4, 11265);
+    			add_location(br, file$7, 349, 4, 11305);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, br, anchor);
@@ -45368,14 +45368,14 @@ var app = (function () {
     		block,
     		id: create_if_block_1$2.name,
     		type: "if",
-    		source: "(348:3) {#if i > 0 && i % 3 === 0}",
+    		source: "(349:3) {#if i > 0 && i % 3 === 0}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (351:3) <FormField style="min-width: 250px">
+    // (352:3) <FormField style="min-width: 250px">
     function create_default_slot_2$2(ctx) {
     	let radio;
     	let updating_group;
@@ -45435,14 +45435,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_2$2.name,
     		type: "slot",
-    		source: "(351:3) <FormField style=\\\"min-width: 250px\\\">",
+    		source: "(352:3) <FormField style=\\\"min-width: 250px\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (353:4) 
+    // (354:4) 
     function create_label_slot$1(ctx) {
     	let span;
     	let t0_value = /*numberPeopleText*/ ctx[40] + "";
@@ -45455,7 +45455,7 @@ var app = (function () {
     			t0 = text(t0_value);
     			t1 = space();
     			attr_dev(span, "slot", "label");
-    			add_location(span, file$7, 352, 4, 11402);
+    			add_location(span, file$7, 353, 4, 11442);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -45472,14 +45472,14 @@ var app = (function () {
     		block,
     		id: create_label_slot$1.name,
     		type: "slot",
-    		source: "(353:4) ",
+    		source: "(354:4) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (347:2) {#each Object.entries(numberPeopleAwake) as [numberPeople, numberPeopleText], i}
+    // (348:2) {#each Object.entries(numberPeopleAwake) as [numberPeople, numberPeopleText], i}
     function create_each_block_1$1(ctx) {
     	let t;
     	let formfield;
@@ -45539,14 +45539,14 @@ var app = (function () {
     		block,
     		id: create_each_block_1$1.name,
     		type: "each",
-    		source: "(347:2) {#each Object.entries(numberPeopleAwake) as [numberPeople, numberPeopleText], i}",
+    		source: "(348:2) {#each Object.entries(numberPeopleAwake) as [numberPeople, numberPeopleText], i}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (344:0) <Card padded>
+    // (345:0) <Card padded>
     function create_default_slot_1$2(ctx) {
     	let div;
     	let p;
@@ -45575,9 +45575,9 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			add_location(p, file$7, 345, 2, 11094);
+    			add_location(p, file$7, 346, 2, 11134);
     			attr_dev(div, "class", "radio-group");
-    			add_location(div, file$7, 344, 1, 11066);
+    			add_location(div, file$7, 345, 1, 11106);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -45647,14 +45647,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_1$2.name,
     		type: "slot",
-    		source: "(344:0) <Card padded>",
+    		source: "(345:0) <Card padded>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (362:1) {#if Object.keys(errors).length > 0}
+    // (363:1) {#if Object.keys(errors).length > 0}
     function create_if_block$3(ctx) {
     	let div;
     	let each_value = Object.entries(/*errors*/ ctx[7]);
@@ -45674,7 +45674,7 @@ var app = (function () {
     			}
 
     			attr_dev(div, "class", "error svelte-xt7jk9");
-    			add_location(div, file$7, 362, 2, 11563);
+    			add_location(div, file$7, 363, 2, 11603);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -45718,14 +45718,14 @@ var app = (function () {
     		block,
     		id: create_if_block$3.name,
     		type: "if",
-    		source: "(362:1) {#if Object.keys(errors).length > 0}",
+    		source: "(363:1) {#if Object.keys(errors).length > 0}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (364:3) {#each Object.entries(errors) as [fieldName, error]}
+    // (365:3) {#each Object.entries(errors) as [fieldName, error]}
     function create_each_block$2(ctx) {
     	let div;
     	let t0_value = /*fieldName*/ ctx[35] + "";
@@ -45740,7 +45740,7 @@ var app = (function () {
     			t0 = text(t0_value);
     			t1 = text(": ");
     			t2 = text(t2_value);
-    			add_location(div, file$7, 364, 4, 11643);
+    			add_location(div, file$7, 365, 4, 11683);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -45761,14 +45761,14 @@ var app = (function () {
     		block,
     		id: create_each_block$2.name,
     		type: "each",
-    		source: "(364:3) {#each Object.entries(errors) as [fieldName, error]}",
+    		source: "(365:3) {#each Object.entries(errors) as [fieldName, error]}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (370:1) <Button variant="raised" type="submit" on:click={handleSubmit}>
+    // (371:1) <Button variant="raised" type="submit" on:click={handleSubmit}>
     function create_default_slot$4(ctx) {
     	let t;
 
@@ -45788,7 +45788,7 @@ var app = (function () {
     		block,
     		id: create_default_slot$4.name,
     		type: "slot",
-    		source: "(370:1) <Button variant=\\\"raised\\\" type=\\\"submit\\\" on:click={handleSubmit}>",
+    		source: "(371:1) <Button variant=\\\"raised\\\" type=\\\"submit\\\" on:click={handleSubmit}>",
     		ctx
     	});
 
@@ -45989,16 +45989,16 @@ var app = (function () {
     			if (!src_url_equal(img.src, img_src_value = "images/logo.png")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "logo");
     			attr_dev(img, "class", "logo svelte-xt7jk9");
-    			add_location(img, file$7, 79, 1, 3042);
+    			add_location(img, file$7, 80, 1, 3082);
     			attr_dev(div0, "class", "title svelte-xt7jk9");
-    			add_location(div0, file$7, 81, 2, 3105);
-    			add_location(p0, file$7, 82, 2, 3149);
-    			add_location(p1, file$7, 87, 2, 3360);
-    			add_location(div1, file$7, 80, 1, 3097);
+    			add_location(div0, file$7, 82, 2, 3145);
+    			add_location(p0, file$7, 83, 2, 3189);
+    			add_location(p1, file$7, 88, 2, 3400);
+    			add_location(div1, file$7, 81, 1, 3137);
     			attr_dev(div2, "class", "header svelte-xt7jk9");
-    			add_location(div2, file$7, 78, 0, 3020);
+    			add_location(div2, file$7, 79, 0, 3060);
     			attr_dev(div3, "class", "buttons svelte-xt7jk9");
-    			add_location(div3, file$7, 360, 0, 11501);
+    			add_location(div3, file$7, 361, 0, 11541);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -46355,6 +46355,7 @@ var app = (function () {
     		});
     	};
 
+    	console.log(Object.keys(floorOptions));
     	const writable_props = [];
 
     	Object_1$2.keys($$props).forEach(key => {
