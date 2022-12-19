@@ -334,6 +334,17 @@
 		</div>
 		
 	{/if}
+
+	{#if formValues.buildingDamage === 'yes' && !formValues.image}
+		<div>Afegeix una foto si en tens:</div>
+		<Dropzone on:drop={handleFilesSelect}
+			>Arrossega el fitxer o fes clic per afegir les imatges</Dropzone
+		>
+	{/if}
+
+	{#if formValues.image}
+			<img src={publicUrl} alt="imatge de l'usuari" />
+	{/if}
 </Card>
 <Card padded>
 	<FormField>
@@ -347,20 +358,7 @@
 		<Textfield style="width: 70%" bind:value={formValues.otherSeisms} type="email" />
 	</FormField>
 </Card>
-{#if formValues.buildingDamage === 'yes' && !formValues.image}
-	<Card padded>
-		<div>Afegeix una foto si en tens:</div>
-		<Dropzone on:drop={handleFilesSelect}
-			>Arrossega el fitxer o fes clic per afegir les imatges</Dropzone
-		>
-	</Card>
-{/if}
 
-{#if formValues.image}
-	<Card padded>
-		<img src={publicUrl} alt="imatge de l'usuari" />
-	</Card>
-{/if}
 <div class="buttons">
 	<Button variant="raised" on:click={handlePrevious}>Anterior</Button>
 	<Button variant="raised"  on:click={handleSubmit}>Següent</Button></div>

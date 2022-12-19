@@ -40544,7 +40544,7 @@ var app = (function () {
     			div.textContent = "Data del terratrèmol *";
     			t1 = space();
     			create_component(textfield.$$.fragment);
-    			add_location(div, file$7, 132, 4, 4996);
+    			add_location(div, file$7, 132, 4, 5014);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -40617,7 +40617,7 @@ var app = (function () {
     			div.textContent = "Hora local (HH:MM) *";
     			t1 = space();
     			create_component(textfield.$$.fragment);
-    			add_location(div, file$7, 138, 4, 5229);
+    			add_location(div, file$7, 138, 4, 5247);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -40702,13 +40702,13 @@ var app = (function () {
     			? 'error'
     			: 'valid') + " svelte-xt7jk9"));
 
-    			add_location(div0, file$7, 130, 2, 4916);
+    			add_location(div0, file$7, 130, 2, 4934);
 
     			attr_dev(div1, "class", div1_class_value = "" + (null_to_empty('earthquakeHour' in /*errors*/ ctx[7]
     			? 'error'
     			: 'valid') + " svelte-xt7jk9"));
 
-    			add_location(div1, file$7, 136, 2, 5149);
+    			add_location(div1, file$7, 136, 2, 5167);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div0, anchor);
@@ -40790,7 +40790,7 @@ var app = (function () {
 		hour: '2-digit',
 		minute: '2-digit',
 		timeZone: 'CET'
-	})}` + "";
+	})} (${/*seism*/ ctx[68].region})` + "";
 
     	let t;
 
@@ -40812,7 +40812,7 @@ var app = (function () {
 				hour: '2-digit',
 				minute: '2-digit',
 				timeZone: 'CET'
-			})}` + "")) set_data_dev(t, t_value);
+			})} (${/*seism*/ ctx[68].region})` + "")) set_data_dev(t, t_value);
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(t);
@@ -41214,7 +41214,7 @@ var app = (function () {
     			div.textContent = "Ha notat el sisme? *";
     			t1 = space();
     			create_component(formfield.$$.fragment);
-    			add_location(div, file$7, 146, 1, 5431);
+    			add_location(div, file$7, 146, 1, 5449);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -41472,7 +41472,7 @@ var app = (function () {
     		c: function create() {
     			div = element("div");
     			create_component(select.$$.fragment);
-    			add_location(div, file$7, 166, 3, 5917);
+    			add_location(div, file$7, 166, 3, 5935);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -41734,7 +41734,7 @@ var app = (function () {
     		c: function create() {
     			div = element("div");
     			create_component(select.$$.fragment);
-    			add_location(div, file$7, 178, 3, 6232);
+    			add_location(div, file$7, 178, 3, 6250);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -41997,8 +41997,8 @@ var app = (function () {
     			t1 = space();
     			create_component(textfield.$$.fragment);
     			attr_dev(span, "class", "field-label svelte-xt7jk9");
-    			add_location(span, file$7, 196, 3, 6601);
-    			add_location(div, file$7, 195, 2, 6592);
+    			add_location(span, file$7, 196, 3, 6619);
+    			add_location(div, file$7, 195, 2, 6610);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -42087,7 +42087,7 @@ var app = (function () {
     			t2 = space();
     			if (if_block2) if_block2.c();
     			if_block2_anchor = empty();
-    			add_location(div, file$7, 164, 1, 5858);
+    			add_location(div, file$7, 164, 1, 5876);
     		},
     		m: function mount(target, anchor) {
     			mount_component(select, target, anchor);
@@ -42353,7 +42353,7 @@ var app = (function () {
     			div.textContent = "Seleccioneu la ubicació el més detallada possible arrossegant la icona blava del mapa";
     			t1 = space();
     			create_component(leaflet.$$.fragment);
-    			add_location(div, file$7, 264, 1, 8767);
+    			add_location(div, file$7, 264, 1, 8785);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -42617,7 +42617,7 @@ var app = (function () {
     			span = element("span");
     			span.textContent = "País on es trobava en el moment del terratrèmol";
     			attr_dev(span, "slot", "label");
-    			add_location(span, file$7, 213, 4, 7140);
+    			add_location(span, file$7, 213, 4, 7158);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -42855,7 +42855,7 @@ var app = (function () {
     			span = element("span");
     			span.textContent = "Municipi on es trobava en el moment del terratrèmol";
     			attr_dev(span, "slot", "label");
-    			add_location(span, file$7, 244, 5, 8281);
+    			add_location(span, file$7, 244, 5, 8299);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -43143,7 +43143,7 @@ var app = (function () {
     			span = element("span");
     			span.textContent = "Parròquia on es trobava en el moment del terratrèmol";
     			attr_dev(span, "slot", "label");
-    			add_location(span, file$7, 222, 5, 7545);
+    			add_location(span, file$7, 222, 5, 7563);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -43431,7 +43431,7 @@ var app = (function () {
     			span = element("span");
     			span.textContent = "Territori dins la parròquia on es trobava en el moment del terratrèmol";
     			attr_dev(span, "slot", "label");
-    			add_location(span, file$7, 237, 5, 7999);
+    			add_location(span, file$7, 237, 5, 8017);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -43611,7 +43611,7 @@ var app = (function () {
     			span = element("span");
     			span.textContent = "Carrer";
     			attr_dev(span, "slot", "label");
-    			add_location(span, file$7, 250, 5, 8496);
+    			add_location(span, file$7, 250, 5, 8514);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -43705,7 +43705,7 @@ var app = (function () {
     			span = element("span");
     			span.textContent = "Número";
     			attr_dev(span, "slot", "label");
-    			add_location(span, file$7, 255, 5, 8637);
+    			add_location(span, file$7, 255, 5, 8655);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -43777,7 +43777,7 @@ var app = (function () {
     			? 'error'
     			: 'valid') + " svelte-xt7jk9"));
 
-    			add_location(div, file$7, 204, 2, 6837);
+    			add_location(div, file$7, 204, 2, 6855);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -44187,8 +44187,8 @@ var app = (function () {
     			t1 = space();
     			create_component(textfield.$$.fragment);
     			attr_dev(span, "class", "field-label svelte-xt7jk9");
-    			add_location(span, file$7, 287, 3, 9364);
-    			add_location(div, file$7, 286, 2, 9355);
+    			add_location(span, file$7, 287, 3, 9382);
+    			add_location(div, file$7, 286, 2, 9373);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -44356,9 +44356,9 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			add_location(p, file$7, 295, 3, 9610);
+    			add_location(p, file$7, 295, 3, 9628);
     			attr_dev(div, "class", "radio-group");
-    			add_location(div, file$7, 294, 2, 9581);
+    			add_location(div, file$7, 294, 2, 9599);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -44442,7 +44442,7 @@ var app = (function () {
     	const block = {
     		c: function create() {
     			br = element("br");
-    			add_location(br, file$7, 298, 5, 9803);
+    			add_location(br, file$7, 298, 5, 9821);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, br, anchor);
@@ -44543,7 +44543,7 @@ var app = (function () {
     			t0 = text(t0_value);
     			t1 = space();
     			attr_dev(span, "slot", "label");
-    			add_location(span, file$7, 302, 5, 9945);
+    			add_location(span, file$7, 302, 5, 9963);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -44663,9 +44663,9 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			add_location(p, file$7, 312, 3, 10127);
+    			add_location(p, file$7, 312, 3, 10145);
     			attr_dev(div, "class", "radio-group");
-    			add_location(div, file$7, 311, 2, 10098);
+    			add_location(div, file$7, 311, 2, 10116);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -44749,7 +44749,7 @@ var app = (function () {
     	const block = {
     		c: function create() {
     			br = element("br");
-    			add_location(br, file$7, 315, 5, 10321);
+    			add_location(br, file$7, 315, 5, 10339);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, br, anchor);
@@ -44850,7 +44850,7 @@ var app = (function () {
     			t0 = text(t0_value);
     			t1 = space();
     			attr_dev(span, "slot", "label");
-    			add_location(span, file$7, 319, 5, 10464);
+    			add_location(span, file$7, 319, 5, 10482);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -45047,7 +45047,7 @@ var app = (function () {
     	const block = {
     		c: function create() {
     			br = element("br");
-    			add_location(br, file$7, 332, 4, 10813);
+    			add_location(br, file$7, 332, 4, 10831);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, br, anchor);
@@ -45148,7 +45148,7 @@ var app = (function () {
     			t0 = text(t0_value);
     			t1 = space();
     			attr_dev(span, "slot", "label");
-    			add_location(span, file$7, 336, 4, 10953);
+    			add_location(span, file$7, 336, 4, 10971);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -45268,9 +45268,9 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			add_location(p, file$7, 329, 2, 10617);
+    			add_location(p, file$7, 329, 2, 10635);
     			attr_dev(div, "class", "radio-group");
-    			add_location(div, file$7, 328, 1, 10589);
+    			add_location(div, file$7, 328, 1, 10607);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -45354,7 +45354,7 @@ var app = (function () {
     	const block = {
     		c: function create() {
     			br = element("br");
-    			add_location(br, file$7, 348, 4, 11265);
+    			add_location(br, file$7, 348, 4, 11283);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, br, anchor);
@@ -45455,7 +45455,7 @@ var app = (function () {
     			t0 = text(t0_value);
     			t1 = space();
     			attr_dev(span, "slot", "label");
-    			add_location(span, file$7, 352, 4, 11402);
+    			add_location(span, file$7, 352, 4, 11420);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -45575,9 +45575,9 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			add_location(p, file$7, 345, 2, 11094);
+    			add_location(p, file$7, 345, 2, 11112);
     			attr_dev(div, "class", "radio-group");
-    			add_location(div, file$7, 344, 1, 11066);
+    			add_location(div, file$7, 344, 1, 11084);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -45674,7 +45674,7 @@ var app = (function () {
     			}
 
     			attr_dev(div, "class", "error svelte-xt7jk9");
-    			add_location(div, file$7, 362, 2, 11563);
+    			add_location(div, file$7, 362, 2, 11581);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -45740,7 +45740,7 @@ var app = (function () {
     			t0 = text(t0_value);
     			t1 = text(": ");
     			t2 = text(t2_value);
-    			add_location(div, file$7, 364, 4, 11643);
+    			add_location(div, file$7, 364, 4, 11661);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -45998,7 +45998,7 @@ var app = (function () {
     			attr_dev(div2, "class", "header svelte-xt7jk9");
     			add_location(div2, file$7, 78, 0, 3020);
     			attr_dev(div3, "class", "buttons svelte-xt7jk9");
-    			add_location(div3, file$7, 360, 0, 11501);
+    			add_location(div3, file$7, 360, 0, 11519);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -50217,7 +50217,7 @@ var app = (function () {
     }
 
     // (74:0) <LinearProgress progress={0.666}>
-    function create_default_slot_51(ctx) {
+    function create_default_slot_49(ctx) {
     	let t;
 
     	const block = {
@@ -50234,7 +50234,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_51.name,
+    		id: create_default_slot_49.name,
     		type: "slot",
     		source: "(74:0) <LinearProgress progress={0.666}>",
     		ctx
@@ -50244,7 +50244,7 @@ var app = (function () {
     }
 
     // (83:3) <Option value={position}>
-    function create_default_slot_50(ctx) {
+    function create_default_slot_48(ctx) {
     	let t0_value = /*positionText*/ ctx[32] + "";
     	let t0;
     	let t1;
@@ -50267,7 +50267,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_50.name,
+    		id: create_default_slot_48.name,
     		type: "slot",
     		source: "(83:3) <Option value={position}>",
     		ctx
@@ -50284,7 +50284,7 @@ var app = (function () {
     	option = new Option({
     			props: {
     				value: /*position*/ ctx[31],
-    				$$slots: { default: [create_default_slot_50] },
+    				$$slots: { default: [create_default_slot_48] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -50333,7 +50333,7 @@ var app = (function () {
     }
 
     // (77:1) <Select   style="max-width: 400px"   label="Com descriuria el moviment durant el terratrèmol?"   bind:value={formValues.movementDescription}  >
-    function create_default_slot_49(ctx) {
+    function create_default_slot_47(ctx) {
     	let each_1_anchor;
     	let current;
     	let each_value_15 = Object.entries(movementDescription);
@@ -50419,7 +50419,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_49.name,
+    		id: create_default_slot_47.name,
     		type: "slot",
     		source: "(77:1) <Select   style=\\\"max-width: 400px\\\"   label=\\\"Com descriuria el moviment durant el terratrèmol?\\\"   bind:value={formValues.movementDescription}  >",
     		ctx
@@ -50429,7 +50429,7 @@ var app = (function () {
     }
 
     // (76:0) <Card padded>
-    function create_default_slot_48(ctx) {
+    function create_default_slot_46(ctx) {
     	let select;
     	let updating_value;
     	let current;
@@ -50441,7 +50441,7 @@ var app = (function () {
     	let select_props = {
     		style: "max-width: 400px",
     		label: "Com descriuria el moviment durant el terratrèmol?",
-    		$$slots: { default: [create_default_slot_49] },
+    		$$slots: { default: [create_default_slot_47] },
     		$$scope: { ctx }
     	};
 
@@ -50491,7 +50491,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_48.name,
+    		id: create_default_slot_46.name,
     		type: "slot",
     		source: "(76:0) <Card padded>",
     		ctx
@@ -50501,7 +50501,7 @@ var app = (function () {
     }
 
     // (93:3) <Option value={position}>
-    function create_default_slot_47(ctx) {
+    function create_default_slot_45(ctx) {
     	let t0_value = /*positionText*/ ctx[32] + "";
     	let t0;
     	let t1;
@@ -50524,7 +50524,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_47.name,
+    		id: create_default_slot_45.name,
     		type: "slot",
     		source: "(93:3) <Option value={position}>",
     		ctx
@@ -50541,7 +50541,7 @@ var app = (function () {
     	option = new Option({
     			props: {
     				value: /*position*/ ctx[31],
-    				$$slots: { default: [create_default_slot_47] },
+    				$$slots: { default: [create_default_slot_45] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -50590,7 +50590,7 @@ var app = (function () {
     }
 
     // (91:1) <Select style="max-width: 400px" label="Va sentir soroll?" bind:value={formValues.noise}>
-    function create_default_slot_46(ctx) {
+    function create_default_slot_44(ctx) {
     	let each_1_anchor;
     	let current;
     	let each_value_14 = Object.entries(noise);
@@ -50676,7 +50676,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_46.name,
+    		id: create_default_slot_44.name,
     		type: "slot",
     		source: "(91:1) <Select style=\\\"max-width: 400px\\\" label=\\\"Va sentir soroll?\\\" bind:value={formValues.noise}>",
     		ctx
@@ -50686,7 +50686,7 @@ var app = (function () {
     }
 
     // (90:0) <Card padded>
-    function create_default_slot_45(ctx) {
+    function create_default_slot_43(ctx) {
     	let select;
     	let updating_value;
     	let current;
@@ -50698,7 +50698,7 @@ var app = (function () {
     	let select_props = {
     		style: "max-width: 400px",
     		label: "Va sentir soroll?",
-    		$$slots: { default: [create_default_slot_46] },
+    		$$slots: { default: [create_default_slot_44] },
     		$$scope: { ctx }
     	};
 
@@ -50748,7 +50748,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_45.name,
+    		id: create_default_slot_43.name,
     		type: "slot",
     		source: "(90:0) <Card padded>",
     		ctx
@@ -50758,7 +50758,7 @@ var app = (function () {
     }
 
     // (107:3) <Option value={position}>
-    function create_default_slot_44(ctx) {
+    function create_default_slot_42(ctx) {
     	let t0_value = /*positionText*/ ctx[32] + "";
     	let t0;
     	let t1;
@@ -50781,7 +50781,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_44.name,
+    		id: create_default_slot_42.name,
     		type: "slot",
     		source: "(107:3) <Option value={position}>",
     		ctx
@@ -50798,7 +50798,7 @@ var app = (function () {
     	option = new Option({
     			props: {
     				value: /*position*/ ctx[31],
-    				$$slots: { default: [create_default_slot_44] },
+    				$$slots: { default: [create_default_slot_42] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -50847,7 +50847,7 @@ var app = (function () {
     }
 
     // (101:1) <Select   style="max-width: 400px"   label="Quina reacció va tenir durant el terratrèmol?"   bind:value={formValues.reaction}  >
-    function create_default_slot_43(ctx) {
+    function create_default_slot_41(ctx) {
     	let each_1_anchor;
     	let current;
     	let each_value_13 = Object.entries(reaction);
@@ -50933,7 +50933,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_43.name,
+    		id: create_default_slot_41.name,
     		type: "slot",
     		source: "(101:1) <Select   style=\\\"max-width: 400px\\\"   label=\\\"Quina reacció va tenir durant el terratrèmol?\\\"   bind:value={formValues.reaction}  >",
     		ctx
@@ -50943,7 +50943,7 @@ var app = (function () {
     }
 
     // (100:0) <Card padded>
-    function create_default_slot_42(ctx) {
+    function create_default_slot_40(ctx) {
     	let select;
     	let updating_value;
     	let current;
@@ -50955,7 +50955,7 @@ var app = (function () {
     	let select_props = {
     		style: "max-width: 400px",
     		label: "Quina reacció va tenir durant el terratrèmol?",
-    		$$slots: { default: [create_default_slot_43] },
+    		$$slots: { default: [create_default_slot_41] },
     		$$scope: { ctx }
     	};
 
@@ -51005,7 +51005,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_42.name,
+    		id: create_default_slot_40.name,
     		type: "slot",
     		source: "(100:0) <Card padded>",
     		ctx
@@ -51043,7 +51043,7 @@ var app = (function () {
     }
 
     // (121:3) <FormField style="min-width: 250px">
-    function create_default_slot_41(ctx) {
+    function create_default_slot_39(ctx) {
     	let radio;
     	let updating_group;
     	let t;
@@ -51100,7 +51100,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_41.name,
+    		id: create_default_slot_39.name,
     		type: "slot",
     		source: "(121:3) <FormField style=\\\"min-width: 250px\\\">",
     		ctx
@@ -51158,7 +51158,7 @@ var app = (function () {
     				style: "min-width: 250px",
     				$$slots: {
     					label: [create_label_slot_2],
-    					default: [create_default_slot_41]
+    					default: [create_default_slot_39]
     				},
     				$$scope: { ctx }
     			},
@@ -51214,7 +51214,7 @@ var app = (function () {
     }
 
     // (114:0) <Card padded>
-    function create_default_slot_40(ctx) {
+    function create_default_slot_38(ctx) {
     	let div;
     	let p;
     	let t1;
@@ -51312,7 +51312,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_40.name,
+    		id: create_default_slot_38.name,
     		type: "slot",
     		source: "(114:0) <Card padded>",
     		ctx
@@ -51350,7 +51350,7 @@ var app = (function () {
     }
 
     // (138:3) <FormField style="min-width: 250px">
-    function create_default_slot_39(ctx) {
+    function create_default_slot_37(ctx) {
     	let radio;
     	let updating_group;
     	let t;
@@ -51407,7 +51407,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_39.name,
+    		id: create_default_slot_37.name,
     		type: "slot",
     		source: "(138:3) <FormField style=\\\"min-width: 250px\\\">",
     		ctx
@@ -51465,7 +51465,7 @@ var app = (function () {
     				style: "min-width: 250px",
     				$$slots: {
     					label: [create_label_slot_1],
-    					default: [create_default_slot_39]
+    					default: [create_default_slot_37]
     				},
     				$$scope: { ctx }
     			},
@@ -51521,7 +51521,7 @@ var app = (function () {
     }
 
     // (131:0) <Card padded>
-    function create_default_slot_38(ctx) {
+    function create_default_slot_36(ctx) {
     	let div;
     	let p;
     	let t1;
@@ -51619,7 +51619,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_38.name,
+    		id: create_default_slot_36.name,
     		type: "slot",
     		source: "(131:0) <Card padded>",
     		ctx
@@ -51629,7 +51629,7 @@ var app = (function () {
     }
 
     // (155:3) <Option value={position}>
-    function create_default_slot_37(ctx) {
+    function create_default_slot_35(ctx) {
     	let t0_value = /*positionText*/ ctx[32] + "";
     	let t0;
     	let t1;
@@ -51652,7 +51652,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_37.name,
+    		id: create_default_slot_35.name,
     		type: "slot",
     		source: "(155:3) <Option value={position}>",
     		ctx
@@ -51669,7 +51669,7 @@ var app = (function () {
     	option = new Option({
     			props: {
     				value: /*position*/ ctx[31],
-    				$$slots: { default: [create_default_slot_37] },
+    				$$slots: { default: [create_default_slot_35] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -51718,7 +51718,7 @@ var app = (function () {
     }
 
     // (149:1) <Select   style="max-width: 400px"   label="Què va fer durant la sacsejada?"   bind:value={formValues.whatDidYouDo}  >
-    function create_default_slot_36(ctx) {
+    function create_default_slot_34(ctx) {
     	let each_1_anchor;
     	let current;
     	let each_value_10 = Object.entries(whatDidYouDo);
@@ -51804,7 +51804,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_36.name,
+    		id: create_default_slot_34.name,
     		type: "slot",
     		source: "(149:1) <Select   style=\\\"max-width: 400px\\\"   label=\\\"Què va fer durant la sacsejada?\\\"   bind:value={formValues.whatDidYouDo}  >",
     		ctx
@@ -51820,7 +51820,7 @@ var app = (function () {
 
     	formfield = new FormField({
     			props: {
-    				$$slots: { default: [create_default_slot_35] },
+    				$$slots: { default: [create_default_slot_33] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -51869,7 +51869,7 @@ var app = (function () {
     }
 
     // (162:2) <FormField>
-    function create_default_slot_35(ctx) {
+    function create_default_slot_33(ctx) {
     	let div;
     	let t1;
     	let textfield;
@@ -51932,7 +51932,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_35.name,
+    		id: create_default_slot_33.name,
     		type: "slot",
     		source: "(162:2) <FormField>",
     		ctx
@@ -51942,7 +51942,7 @@ var app = (function () {
     }
 
     // (148:0) <Card padded>
-    function create_default_slot_34(ctx) {
+    function create_default_slot_32(ctx) {
     	let select;
     	let updating_value;
     	let t;
@@ -51956,7 +51956,7 @@ var app = (function () {
     	let select_props = {
     		style: "max-width: 400px",
     		label: "Què va fer durant la sacsejada?",
-    		$$slots: { default: [create_default_slot_36] },
+    		$$slots: { default: [create_default_slot_34] },
     		$$scope: { ctx }
     	};
 
@@ -52041,7 +52041,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_34.name,
+    		id: create_default_slot_32.name,
     		type: "slot",
     		source: "(148:0) <Card padded>",
     		ctx
@@ -52051,7 +52051,7 @@ var app = (function () {
     }
 
     // (171:3) <Option value={position}>
-    function create_default_slot_33(ctx) {
+    function create_default_slot_31(ctx) {
     	let t0_value = /*positionText*/ ctx[32] + "";
     	let t0;
     	let t1;
@@ -52074,7 +52074,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_33.name,
+    		id: create_default_slot_31.name,
     		type: "slot",
     		source: "(171:3) <Option value={position}>",
     		ctx
@@ -52091,7 +52091,7 @@ var app = (function () {
     	option = new Option({
     			props: {
     				value: /*position*/ ctx[31],
-    				$$slots: { default: [create_default_slot_33] },
+    				$$slots: { default: [create_default_slot_31] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -52140,7 +52140,7 @@ var app = (function () {
     }
 
     // (169:1) <Select style="max-width: 400px" label="Als llums penjats:" bind:value={formValues.effectsLamps}>
-    function create_default_slot_32(ctx) {
+    function create_default_slot_30(ctx) {
     	let each_1_anchor;
     	let current;
     	let each_value_9 = Object.entries(effectsLamps);
@@ -52226,7 +52226,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_32.name,
+    		id: create_default_slot_30.name,
     		type: "slot",
     		source: "(169:1) <Select style=\\\"max-width: 400px\\\" label=\\\"Als llums penjats:\\\" bind:value={formValues.effectsLamps}>",
     		ctx
@@ -52236,7 +52236,7 @@ var app = (function () {
     }
 
     // (168:0) <Card padded>
-    function create_default_slot_31(ctx) {
+    function create_default_slot_29(ctx) {
     	let select;
     	let updating_value;
     	let current;
@@ -52248,7 +52248,7 @@ var app = (function () {
     	let select_props = {
     		style: "max-width: 400px",
     		label: "Als llums penjats:",
-    		$$slots: { default: [create_default_slot_32] },
+    		$$slots: { default: [create_default_slot_30] },
     		$$scope: { ctx }
     	};
 
@@ -52298,7 +52298,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_31.name,
+    		id: create_default_slot_29.name,
     		type: "slot",
     		source: "(168:0) <Card padded>",
     		ctx
@@ -52308,7 +52308,7 @@ var app = (function () {
     }
 
     // (186:3) <Option value={position}>
-    function create_default_slot_30(ctx) {
+    function create_default_slot_28(ctx) {
     	let t0_value = /*positionText*/ ctx[32] + "";
     	let t0;
     	let t1;
@@ -52331,7 +52331,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_30.name,
+    		id: create_default_slot_28.name,
     		type: "slot",
     		source: "(186:3) <Option value={position}>",
     		ctx
@@ -52348,7 +52348,7 @@ var app = (function () {
     	option = new Option({
     			props: {
     				value: /*position*/ ctx[31],
-    				$$slots: { default: [create_default_slot_30] },
+    				$$slots: { default: [create_default_slot_28] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -52397,7 +52397,7 @@ var app = (function () {
     }
 
     // (180:1) <Select   style="max-width: 400px"   label="Als líquids en recipients:"   bind:value={formValues.effectsLiquids}  >
-    function create_default_slot_29(ctx) {
+    function create_default_slot_27(ctx) {
     	let each_1_anchor;
     	let current;
     	let each_value_8 = Object.entries(effectsLiquids);
@@ -52483,7 +52483,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_29.name,
+    		id: create_default_slot_27.name,
     		type: "slot",
     		source: "(180:1) <Select   style=\\\"max-width: 400px\\\"   label=\\\"Als líquids en recipients:\\\"   bind:value={formValues.effectsLiquids}  >",
     		ctx
@@ -52493,7 +52493,7 @@ var app = (function () {
     }
 
     // (197:3) <Option value={position}>
-    function create_default_slot_28(ctx) {
+    function create_default_slot_26(ctx) {
     	let t0_value = /*positionText*/ ctx[32] + "";
     	let t0;
     	let t1;
@@ -52516,7 +52516,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_28.name,
+    		id: create_default_slot_26.name,
     		type: "slot",
     		source: "(197:3) <Option value={position}>",
     		ctx
@@ -52533,7 +52533,7 @@ var app = (function () {
     	option = new Option({
     			props: {
     				value: /*position*/ ctx[31],
-    				$$slots: { default: [create_default_slot_28] },
+    				$$slots: { default: [create_default_slot_26] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -52582,7 +52582,7 @@ var app = (function () {
     }
 
     // (191:1) <Select   style="max-width: 400px"   label="Als quadres penjats a les parets:"   bind:value={formValues.effectsPaintings}  >
-    function create_default_slot_27(ctx) {
+    function create_default_slot_25(ctx) {
     	let each_1_anchor;
     	let current;
     	let each_value_7 = Object.entries(effectsPaintings);
@@ -52668,7 +52668,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_27.name,
+    		id: create_default_slot_25.name,
     		type: "slot",
     		source: "(191:1) <Select   style=\\\"max-width: 400px\\\"   label=\\\"Als quadres penjats a les parets:\\\"   bind:value={formValues.effectsPaintings}  >",
     		ctx
@@ -52678,7 +52678,7 @@ var app = (function () {
     }
 
     // (209:3) <Option value={position}>
-    function create_default_slot_26(ctx) {
+    function create_default_slot_24(ctx) {
     	let t0_value = /*positionText*/ ctx[32] + "";
     	let t0;
     	let t1;
@@ -52701,7 +52701,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_26.name,
+    		id: create_default_slot_24.name,
     		type: "slot",
     		source: "(209:3) <Option value={position}>",
     		ctx
@@ -52718,7 +52718,7 @@ var app = (function () {
     	option = new Option({
     			props: {
     				value: /*position*/ ctx[31],
-    				$$slots: { default: [create_default_slot_26] },
+    				$$slots: { default: [create_default_slot_24] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -52767,7 +52767,7 @@ var app = (function () {
     }
 
     // (203:1) <Select   style="max-width: 400px"   label="A portes i finestres:"   bind:value={formValues.effectsDoorsWindows}  >
-    function create_default_slot_25(ctx) {
+    function create_default_slot_23(ctx) {
     	let each_1_anchor;
     	let current;
     	let each_value_6 = Object.entries(effectsDoorsWindows);
@@ -52853,7 +52853,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_25.name,
+    		id: create_default_slot_23.name,
     		type: "slot",
     		source: "(203:1) <Select   style=\\\"max-width: 400px\\\"   label=\\\"A portes i finestres:\\\"   bind:value={formValues.effectsDoorsWindows}  >",
     		ctx
@@ -52863,7 +52863,7 @@ var app = (function () {
     }
 
     // (221:3) <Option value={position}>
-    function create_default_slot_24(ctx) {
+    function create_default_slot_22(ctx) {
     	let t0_value = /*positionText*/ ctx[32] + "";
     	let t0;
     	let t1;
@@ -52886,7 +52886,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_24.name,
+    		id: create_default_slot_22.name,
     		type: "slot",
     		source: "(221:3) <Option value={position}>",
     		ctx
@@ -52903,7 +52903,7 @@ var app = (function () {
     	option = new Option({
     			props: {
     				value: /*position*/ ctx[31],
-    				$$slots: { default: [create_default_slot_24] },
+    				$$slots: { default: [create_default_slot_22] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -52952,7 +52952,7 @@ var app = (function () {
     }
 
     // (215:1) <Select   style="max-width: 400px"   label="A mobles i electrodomèstics:"   bind:value={formValues.effectsFurniture}  >
-    function create_default_slot_23(ctx) {
+    function create_default_slot_21(ctx) {
     	let each_1_anchor;
     	let current;
     	let each_value_5 = Object.entries(effectsFurniture);
@@ -53038,7 +53038,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_23.name,
+    		id: create_default_slot_21.name,
     		type: "slot",
     		source: "(215:1) <Select   style=\\\"max-width: 400px\\\"   label=\\\"A mobles i electrodomèstics:\\\"   bind:value={formValues.effectsFurniture}  >",
     		ctx
@@ -53048,7 +53048,7 @@ var app = (function () {
     }
 
     // (229:3) <Option value={position}>
-    function create_default_slot_22(ctx) {
+    function create_default_slot_20(ctx) {
     	let t0_value = /*positionText*/ ctx[32] + "";
     	let t0;
     	let t1;
@@ -53071,7 +53071,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_22.name,
+    		id: create_default_slot_20.name,
     		type: "slot",
     		source: "(229:3) <Option value={position}>",
     		ctx
@@ -53088,7 +53088,7 @@ var app = (function () {
     	option = new Option({
     			props: {
     				value: /*position*/ ctx[31],
-    				$$slots: { default: [create_default_slot_22] },
+    				$$slots: { default: [create_default_slot_20] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -53137,7 +53137,7 @@ var app = (function () {
     }
 
     // (227:1) <Select style="max-width: 400px" label="A les plantes:" bind:value={formValues.effectsPlants}>
-    function create_default_slot_21(ctx) {
+    function create_default_slot_19(ctx) {
     	let each_1_anchor;
     	let current;
     	let each_value_4 = Object.entries(effectsPlants);
@@ -53223,7 +53223,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_21.name,
+    		id: create_default_slot_19.name,
     		type: "slot",
     		source: "(227:1) <Select style=\\\"max-width: 400px\\\" label=\\\"A les plantes:\\\" bind:value={formValues.effectsPlants}>",
     		ctx
@@ -53233,7 +53233,7 @@ var app = (function () {
     }
 
     // (241:3) <Option value={position}>
-    function create_default_slot_20(ctx) {
+    function create_default_slot_18(ctx) {
     	let t0_value = /*positionText*/ ctx[32] + "";
     	let t0;
     	let t1;
@@ -53256,7 +53256,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_20.name,
+    		id: create_default_slot_18.name,
     		type: "slot",
     		source: "(241:3) <Option value={position}>",
     		ctx
@@ -53273,7 +53273,7 @@ var app = (function () {
     	option = new Option({
     			props: {
     				value: /*position*/ ctx[31],
-    				$$slots: { default: [create_default_slot_20] },
+    				$$slots: { default: [create_default_slot_18] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -53322,7 +53322,7 @@ var app = (function () {
     }
 
     // (235:1) <Select   style="max-width: 400px"   label="Als objectes a les prestatgeries o taules:"   bind:value={formValues.effectsShelves}  >
-    function create_default_slot_19(ctx) {
+    function create_default_slot_17(ctx) {
     	let each_1_anchor;
     	let current;
     	let each_value_3 = Object.entries(effectsShelves);
@@ -53408,7 +53408,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_19.name,
+    		id: create_default_slot_17.name,
     		type: "slot",
     		source: "(235:1) <Select   style=\\\"max-width: 400px\\\"   label=\\\"Als objectes a les prestatgeries o taules:\\\"   bind:value={formValues.effectsShelves}  >",
     		ctx
@@ -53418,7 +53418,7 @@ var app = (function () {
     }
 
     // (247:1) <FormField style="width: 100%">
-    function create_default_slot_18(ctx) {
+    function create_default_slot_16(ctx) {
     	let div;
     	let t1;
     	let textfield;
@@ -53481,7 +53481,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_18.name,
+    		id: create_default_slot_16.name,
     		type: "slot",
     		source: "(247:1) <FormField style=\\\"width: 100%\\\">",
     		ctx
@@ -53491,7 +53491,7 @@ var app = (function () {
     }
 
     // (178:0) <Card padded>
-    function create_default_slot_17(ctx) {
+    function create_default_slot_15(ctx) {
     	let div;
     	let t1;
     	let select0;
@@ -53522,7 +53522,7 @@ var app = (function () {
     	let select0_props = {
     		style: "max-width: 400px",
     		label: "Als líquids en recipients:",
-    		$$slots: { default: [create_default_slot_29] },
+    		$$slots: { default: [create_default_slot_27] },
     		$$scope: { ctx }
     	};
 
@@ -53540,7 +53540,7 @@ var app = (function () {
     	let select1_props = {
     		style: "max-width: 400px",
     		label: "Als quadres penjats a les parets:",
-    		$$slots: { default: [create_default_slot_27] },
+    		$$slots: { default: [create_default_slot_25] },
     		$$scope: { ctx }
     	};
 
@@ -53558,7 +53558,7 @@ var app = (function () {
     	let select2_props = {
     		style: "max-width: 400px",
     		label: "A portes i finestres:",
-    		$$slots: { default: [create_default_slot_25] },
+    		$$slots: { default: [create_default_slot_23] },
     		$$scope: { ctx }
     	};
 
@@ -53576,7 +53576,7 @@ var app = (function () {
     	let select3_props = {
     		style: "max-width: 400px",
     		label: "A mobles i electrodomèstics:",
-    		$$slots: { default: [create_default_slot_23] },
+    		$$slots: { default: [create_default_slot_21] },
     		$$scope: { ctx }
     	};
 
@@ -53594,7 +53594,7 @@ var app = (function () {
     	let select4_props = {
     		style: "max-width: 400px",
     		label: "A les plantes:",
-    		$$slots: { default: [create_default_slot_21] },
+    		$$slots: { default: [create_default_slot_19] },
     		$$scope: { ctx }
     	};
 
@@ -53612,7 +53612,7 @@ var app = (function () {
     	let select5_props = {
     		style: "max-width: 400px",
     		label: "Als objectes a les prestatgeries o taules:",
-    		$$slots: { default: [create_default_slot_19] },
+    		$$slots: { default: [create_default_slot_17] },
     		$$scope: { ctx }
     	};
 
@@ -53626,7 +53626,7 @@ var app = (function () {
     	formfield = new FormField({
     			props: {
     				style: "width: 100%",
-    				$$slots: { default: [create_default_slot_18] },
+    				$$slots: { default: [create_default_slot_16] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -53799,7 +53799,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_17.name,
+    		id: create_default_slot_15.name,
     		type: "slot",
     		source: "(178:0) <Card padded>",
     		ctx
@@ -53809,7 +53809,7 @@ var app = (function () {
     }
 
     // (259:3) <Option value={position}>
-    function create_default_slot_16(ctx) {
+    function create_default_slot_14(ctx) {
     	let t0_value = /*positionText*/ ctx[32] + "";
     	let t0;
     	let t1;
@@ -53832,7 +53832,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_16.name,
+    		id: create_default_slot_14.name,
     		type: "slot",
     		source: "(259:3) <Option value={position}>",
     		ctx
@@ -53849,7 +53849,7 @@ var app = (function () {
     	option = new Option({
     			props: {
     				value: /*position*/ ctx[31],
-    				$$slots: { default: [create_default_slot_16] },
+    				$$slots: { default: [create_default_slot_14] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -53898,7 +53898,7 @@ var app = (function () {
     }
 
     // (253:1) <Select   style="max-width: 400px"   label="La construcció de l'edifici és del tipus:"   bind:value={formValues.buildingType}  >
-    function create_default_slot_15(ctx) {
+    function create_default_slot_13(ctx) {
     	let each_1_anchor;
     	let current;
     	let each_value_2 = Object.entries(buildingType);
@@ -53984,7 +53984,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_15.name,
+    		id: create_default_slot_13.name,
     		type: "slot",
     		source: "(253:1) <Select   style=\\\"max-width: 400px\\\"   label=\\\"La construcció de l'edifici és del tipus:\\\"   bind:value={formValues.buildingType}  >",
     		ctx
@@ -53994,7 +53994,7 @@ var app = (function () {
     }
 
     // (265:1) <FormField>
-    function create_default_slot_14(ctx) {
+    function create_default_slot_12(ctx) {
     	let div;
     	let t1;
     	let textfield;
@@ -54057,7 +54057,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_14.name,
+    		id: create_default_slot_12.name,
     		type: "slot",
     		source: "(265:1) <FormField>",
     		ctx
@@ -54067,7 +54067,7 @@ var app = (function () {
     }
 
     // (252:0) <Card padded>
-    function create_default_slot_13(ctx) {
+    function create_default_slot_11(ctx) {
     	let select;
     	let updating_value;
     	let t;
@@ -54081,7 +54081,7 @@ var app = (function () {
     	let select_props = {
     		style: "max-width: 400px",
     		label: "La construcció de l'edifici és del tipus:",
-    		$$slots: { default: [create_default_slot_15] },
+    		$$slots: { default: [create_default_slot_13] },
     		$$scope: { ctx }
     	};
 
@@ -54094,7 +54094,7 @@ var app = (function () {
 
     	formfield = new FormField({
     			props: {
-    				$$slots: { default: [create_default_slot_14] },
+    				$$slots: { default: [create_default_slot_12] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -54154,7 +54154,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_13.name,
+    		id: create_default_slot_11.name,
     		type: "slot",
     		source: "(252:0) <Card padded>",
     		ctx
@@ -54164,7 +54164,7 @@ var app = (function () {
     }
 
     // (278:3) <Option value={position}>
-    function create_default_slot_12(ctx) {
+    function create_default_slot_10(ctx) {
     	let t0_value = /*positionText*/ ctx[32] + "";
     	let t0;
     	let t1;
@@ -54187,7 +54187,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_12.name,
+    		id: create_default_slot_10.name,
     		type: "slot",
     		source: "(278:3) <Option value={position}>",
     		ctx
@@ -54204,7 +54204,7 @@ var app = (function () {
     	option = new Option({
     			props: {
     				value: /*position*/ ctx[31],
-    				$$slots: { default: [create_default_slot_12] },
+    				$$slots: { default: [create_default_slot_10] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -54253,7 +54253,7 @@ var app = (function () {
     }
 
     // (272:1) <Select   style="max-width: 400px"   label="Va observar danys a l'edifici?"   bind:value={formValues.buildingDamage}  >
-    function create_default_slot_11(ctx) {
+    function create_default_slot_9(ctx) {
     	let each_1_anchor;
     	let current;
     	let each_value_1 = Object.entries(buildingDamage);
@@ -54339,7 +54339,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_11.name,
+    		id: create_default_slot_9.name,
     		type: "slot",
     		source: "(272:1) <Select   style=\\\"max-width: 400px\\\"   label=\\\"Va observar danys a l'edifici?\\\"   bind:value={formValues.buildingDamage}  >",
     		ctx
@@ -54369,7 +54369,7 @@ var app = (function () {
 
     	formfield = new FormField({
     			props: {
-    				$$slots: { default: [create_default_slot_9] },
+    				$$slots: { default: [create_default_slot_7$1] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -54480,7 +54480,7 @@ var app = (function () {
     }
 
     // (288:3) <FormField>
-    function create_default_slot_10(ctx) {
+    function create_default_slot_8(ctx) {
     	let checkbox;
     	let updating_group;
     	let t;
@@ -54537,7 +54537,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_10.name,
+    		id: create_default_slot_8.name,
     		type: "slot",
     		source: "(288:3) <FormField>",
     		ctx
@@ -54589,7 +54589,7 @@ var app = (function () {
     			props: {
     				$$slots: {
     					label: [create_label_slot],
-    					default: [create_default_slot_10]
+    					default: [create_default_slot_8]
     				},
     				$$scope: { ctx }
     			},
@@ -54639,7 +54639,7 @@ var app = (function () {
     }
 
     // (301:3) <FormField>
-    function create_default_slot_9(ctx) {
+    function create_default_slot_7$1(ctx) {
     	let div;
     	let t1;
     	let textfield;
@@ -54702,7 +54702,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_9.name,
+    		id: create_default_slot_7$1.name,
     		type: "slot",
     		source: "(301:3) <FormField>",
     		ctx
@@ -54711,12 +54711,144 @@ var app = (function () {
     	return block;
     }
 
+    // (309:1) {#if formValues.buildingDamage === 'yes' && !formValues.image}
+    function create_if_block_1$1(ctx) {
+    	let div;
+    	let t1;
+    	let dropzone;
+    	let current;
+
+    	dropzone = new Dropzone({
+    			props: {
+    				$$slots: { default: [create_default_slot_6$1] },
+    				$$scope: { ctx }
+    			},
+    			$$inline: true
+    		});
+
+    	dropzone.$on("drop", /*handleFilesSelect*/ ctx[2]);
+
+    	const block = {
+    		c: function create() {
+    			div = element("div");
+    			div.textContent = "Afegeix una foto si en tens:";
+    			t1 = space();
+    			create_component(dropzone.$$.fragment);
+    			add_location(div, file$4, 309, 2, 9077);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, div, anchor);
+    			insert_dev(target, t1, anchor);
+    			mount_component(dropzone, target, anchor);
+    			current = true;
+    		},
+    		p: function update(ctx, dirty) {
+    			const dropzone_changes = {};
+
+    			if (dirty[2] & /*$$scope*/ 4) {
+    				dropzone_changes.$$scope = { dirty, ctx };
+    			}
+
+    			dropzone.$set(dropzone_changes);
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(dropzone.$$.fragment, local);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(dropzone.$$.fragment, local);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(div);
+    			if (detaching) detach_dev(t1);
+    			destroy_component(dropzone, detaching);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block_1$1.name,
+    		type: "if",
+    		source: "(309:1) {#if formValues.buildingDamage === 'yes' && !formValues.image}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (311:2) <Dropzone on:drop={handleFilesSelect}    >
+    function create_default_slot_6$1(ctx) {
+    	let t;
+
+    	const block = {
+    		c: function create() {
+    			t = text("Arrossega el fitxer o fes clic per afegir les imatges");
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, t, anchor);
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(t);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_default_slot_6$1.name,
+    		type: "slot",
+    		source: "(311:2) <Dropzone on:drop={handleFilesSelect}    >",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (316:1) {#if formValues.image}
+    function create_if_block$2(ctx) {
+    	let img;
+    	let img_src_value;
+
+    	const block = {
+    		c: function create() {
+    			img = element("img");
+    			if (!src_url_equal(img.src, img_src_value = /*publicUrl*/ ctx[1])) attr_dev(img, "src", img_src_value);
+    			attr_dev(img, "alt", "imatge de l'usuari");
+    			add_location(img, file$4, 316, 3, 9264);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, img, anchor);
+    		},
+    		p: function update(ctx, dirty) {
+    			if (dirty[0] & /*publicUrl*/ 2 && !src_url_equal(img.src, img_src_value = /*publicUrl*/ ctx[1])) {
+    				attr_dev(img, "src", img_src_value);
+    			}
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(img);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block$2.name,
+    		type: "if",
+    		source: "(316:1) {#if formValues.image}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
     // (271:0) <Card padded>
-    function create_default_slot_8(ctx) {
+    function create_default_slot_5$1(ctx) {
     	let select;
     	let updating_value;
-    	let t;
-    	let if_block_anchor;
+    	let t0;
+    	let t1;
+    	let t2;
+    	let if_block2_anchor;
     	let current;
 
     	function select_value_binding_6(value) {
@@ -54726,7 +54858,7 @@ var app = (function () {
     	let select_props = {
     		style: "max-width: 400px",
     		label: "Va observar danys a l'edifici?",
-    		$$slots: { default: [create_default_slot_11] },
+    		$$slots: { default: [create_default_slot_9] },
     		$$scope: { ctx }
     	};
 
@@ -54736,20 +54868,30 @@ var app = (function () {
 
     	select = new Select({ props: select_props, $$inline: true });
     	binding_callbacks.push(() => bind(select, 'value', select_value_binding_6));
-    	let if_block = /*formValues*/ ctx[0].buildingDamage === 'yes' && create_if_block_2$1(ctx);
+    	let if_block0 = /*formValues*/ ctx[0].buildingDamage === 'yes' && create_if_block_2$1(ctx);
+    	let if_block1 = /*formValues*/ ctx[0].buildingDamage === 'yes' && !/*formValues*/ ctx[0].image && create_if_block_1$1(ctx);
+    	let if_block2 = /*formValues*/ ctx[0].image && create_if_block$2(ctx);
 
     	const block = {
     		c: function create() {
     			create_component(select.$$.fragment);
-    			t = space();
-    			if (if_block) if_block.c();
-    			if_block_anchor = empty();
+    			t0 = space();
+    			if (if_block0) if_block0.c();
+    			t1 = space();
+    			if (if_block1) if_block1.c();
+    			t2 = space();
+    			if (if_block2) if_block2.c();
+    			if_block2_anchor = empty();
     		},
     		m: function mount(target, anchor) {
     			mount_component(select, target, anchor);
-    			insert_dev(target, t, anchor);
-    			if (if_block) if_block.m(target, anchor);
-    			insert_dev(target, if_block_anchor, anchor);
+    			insert_dev(target, t0, anchor);
+    			if (if_block0) if_block0.m(target, anchor);
+    			insert_dev(target, t1, anchor);
+    			if (if_block1) if_block1.m(target, anchor);
+    			insert_dev(target, t2, anchor);
+    			if (if_block2) if_block2.m(target, anchor);
+    			insert_dev(target, if_block2_anchor, anchor);
     			current = true;
     		},
     		p: function update(ctx, dirty) {
@@ -54768,50 +54910,92 @@ var app = (function () {
     			select.$set(select_changes);
 
     			if (/*formValues*/ ctx[0].buildingDamage === 'yes') {
-    				if (if_block) {
-    					if_block.p(ctx, dirty);
+    				if (if_block0) {
+    					if_block0.p(ctx, dirty);
 
     					if (dirty[0] & /*formValues*/ 1) {
-    						transition_in(if_block, 1);
+    						transition_in(if_block0, 1);
     					}
     				} else {
-    					if_block = create_if_block_2$1(ctx);
-    					if_block.c();
-    					transition_in(if_block, 1);
-    					if_block.m(if_block_anchor.parentNode, if_block_anchor);
+    					if_block0 = create_if_block_2$1(ctx);
+    					if_block0.c();
+    					transition_in(if_block0, 1);
+    					if_block0.m(t1.parentNode, t1);
     				}
-    			} else if (if_block) {
+    			} else if (if_block0) {
     				group_outros();
 
-    				transition_out(if_block, 1, 1, () => {
-    					if_block = null;
+    				transition_out(if_block0, 1, 1, () => {
+    					if_block0 = null;
     				});
 
     				check_outros();
+    			}
+
+    			if (/*formValues*/ ctx[0].buildingDamage === 'yes' && !/*formValues*/ ctx[0].image) {
+    				if (if_block1) {
+    					if_block1.p(ctx, dirty);
+
+    					if (dirty[0] & /*formValues*/ 1) {
+    						transition_in(if_block1, 1);
+    					}
+    				} else {
+    					if_block1 = create_if_block_1$1(ctx);
+    					if_block1.c();
+    					transition_in(if_block1, 1);
+    					if_block1.m(t2.parentNode, t2);
+    				}
+    			} else if (if_block1) {
+    				group_outros();
+
+    				transition_out(if_block1, 1, 1, () => {
+    					if_block1 = null;
+    				});
+
+    				check_outros();
+    			}
+
+    			if (/*formValues*/ ctx[0].image) {
+    				if (if_block2) {
+    					if_block2.p(ctx, dirty);
+    				} else {
+    					if_block2 = create_if_block$2(ctx);
+    					if_block2.c();
+    					if_block2.m(if_block2_anchor.parentNode, if_block2_anchor);
+    				}
+    			} else if (if_block2) {
+    				if_block2.d(1);
+    				if_block2 = null;
     			}
     		},
     		i: function intro(local) {
     			if (current) return;
     			transition_in(select.$$.fragment, local);
-    			transition_in(if_block);
+    			transition_in(if_block0);
+    			transition_in(if_block1);
     			current = true;
     		},
     		o: function outro(local) {
     			transition_out(select.$$.fragment, local);
-    			transition_out(if_block);
+    			transition_out(if_block0);
+    			transition_out(if_block1);
     			current = false;
     		},
     		d: function destroy(detaching) {
     			destroy_component(select, detaching);
-    			if (detaching) detach_dev(t);
-    			if (if_block) if_block.d(detaching);
-    			if (detaching) detach_dev(if_block_anchor);
+    			if (detaching) detach_dev(t0);
+    			if (if_block0) if_block0.d(detaching);
+    			if (detaching) detach_dev(t1);
+    			if (if_block1) if_block1.d(detaching);
+    			if (detaching) detach_dev(t2);
+    			if (if_block2) if_block2.d(detaching);
+    			if (detaching) detach_dev(if_block2_anchor);
     		}
     	};
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_8.name,
+    		id: create_default_slot_5$1.name,
     		type: "slot",
     		source: "(271:0) <Card padded>",
     		ctx
@@ -54820,8 +55004,8 @@ var app = (function () {
     	return block;
     }
 
-    // (310:1) <FormField>
-    function create_default_slot_7$1(ctx) {
+    // (321:1) <FormField>
+    function create_default_slot_4$1(ctx) {
     	let div;
     	let t1;
     	let textfield;
@@ -54847,7 +55031,7 @@ var app = (function () {
     			div.textContent = "Desitgeu afegir algun aclariment o descriure el que heu notat?";
     			t1 = space();
     			create_component(textfield.$$.fragment);
-    			add_location(div, file$4, 310, 2, 9047);
+    			add_location(div, file$4, 321, 2, 9357);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -54884,17 +55068,17 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_7$1.name,
+    		id: create_default_slot_4$1.name,
     		type: "slot",
-    		source: "(310:1) <FormField>",
+    		source: "(321:1) <FormField>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (314:1) <FormField>
-    function create_default_slot_6$1(ctx) {
+    // (325:1) <FormField>
+    function create_default_slot_3$1(ctx) {
     	let div;
     	let t1;
     	let textfield;
@@ -54920,7 +55104,7 @@ var app = (function () {
     			div.textContent = "Si just abans o després d'aquest terratrèmol en va notar d'altres indiqui-ho a continuació";
     			t1 = space();
     			create_component(textfield.$$.fragment);
-    			add_location(div, file$4, 314, 2, 9231);
+    			add_location(div, file$4, 325, 2, 9541);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -54957,17 +55141,17 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_6$1.name,
+    		id: create_default_slot_3$1.name,
     		type: "slot",
-    		source: "(314:1) <FormField>",
+    		source: "(325:1) <FormField>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (309:0) <Card padded>
-    function create_default_slot_5$1(ctx) {
+    // (320:0) <Card padded>
+    function create_default_slot_2$1(ctx) {
     	let formfield0;
     	let t;
     	let formfield1;
@@ -54975,7 +55159,7 @@ var app = (function () {
 
     	formfield0 = new FormField({
     			props: {
-    				$$slots: { default: [create_default_slot_7$1] },
+    				$$slots: { default: [create_default_slot_4$1] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -54983,7 +55167,7 @@ var app = (function () {
 
     	formfield1 = new FormField({
     			props: {
-    				$$slots: { default: [create_default_slot_6$1] },
+    				$$slots: { default: [create_default_slot_3$1] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -55037,258 +55221,16 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_5$1.name,
-    		type: "slot",
-    		source: "(309:0) <Card padded>",
-    		ctx
-    	});
-
-    	return block;
-    }
-
-    // (321:0) {#if formValues.buildingDamage === 'yes' && !formValues.image}
-    function create_if_block_1$1(ctx) {
-    	let card;
-    	let current;
-
-    	card = new Card({
-    			props: {
-    				padded: true,
-    				$$slots: { default: [create_default_slot_3$1] },
-    				$$scope: { ctx }
-    			},
-    			$$inline: true
-    		});
-
-    	const block = {
-    		c: function create() {
-    			create_component(card.$$.fragment);
-    		},
-    		m: function mount(target, anchor) {
-    			mount_component(card, target, anchor);
-    			current = true;
-    		},
-    		p: function update(ctx, dirty) {
-    			const card_changes = {};
-
-    			if (dirty[2] & /*$$scope*/ 4) {
-    				card_changes.$$scope = { dirty, ctx };
-    			}
-
-    			card.$set(card_changes);
-    		},
-    		i: function intro(local) {
-    			if (current) return;
-    			transition_in(card.$$.fragment, local);
-    			current = true;
-    		},
-    		o: function outro(local) {
-    			transition_out(card.$$.fragment, local);
-    			current = false;
-    		},
-    		d: function destroy(detaching) {
-    			destroy_component(card, detaching);
-    		}
-    	};
-
-    	dispatch_dev("SvelteRegisterBlock", {
-    		block,
-    		id: create_if_block_1$1.name,
-    		type: "if",
-    		source: "(321:0) {#if formValues.buildingDamage === 'yes' && !formValues.image}",
-    		ctx
-    	});
-
-    	return block;
-    }
-
-    // (324:2) <Dropzone on:drop={handleFilesSelect}    >
-    function create_default_slot_4$1(ctx) {
-    	let t;
-
-    	const block = {
-    		c: function create() {
-    			t = text("Arrossega el fitxer o fes clic per afegir les imatges");
-    		},
-    		m: function mount(target, anchor) {
-    			insert_dev(target, t, anchor);
-    		},
-    		d: function destroy(detaching) {
-    			if (detaching) detach_dev(t);
-    		}
-    	};
-
-    	dispatch_dev("SvelteRegisterBlock", {
-    		block,
-    		id: create_default_slot_4$1.name,
-    		type: "slot",
-    		source: "(324:2) <Dropzone on:drop={handleFilesSelect}    >",
-    		ctx
-    	});
-
-    	return block;
-    }
-
-    // (322:1) <Card padded>
-    function create_default_slot_3$1(ctx) {
-    	let div;
-    	let t1;
-    	let dropzone;
-    	let current;
-
-    	dropzone = new Dropzone({
-    			props: {
-    				$$slots: { default: [create_default_slot_4$1] },
-    				$$scope: { ctx }
-    			},
-    			$$inline: true
-    		});
-
-    	dropzone.$on("drop", /*handleFilesSelect*/ ctx[2]);
-
-    	const block = {
-    		c: function create() {
-    			div = element("div");
-    			div.textContent = "Afegeix una foto si en tens:";
-    			t1 = space();
-    			create_component(dropzone.$$.fragment);
-    			add_location(div, file$4, 322, 2, 9526);
-    		},
-    		m: function mount(target, anchor) {
-    			insert_dev(target, div, anchor);
-    			insert_dev(target, t1, anchor);
-    			mount_component(dropzone, target, anchor);
-    			current = true;
-    		},
-    		p: function update(ctx, dirty) {
-    			const dropzone_changes = {};
-
-    			if (dirty[2] & /*$$scope*/ 4) {
-    				dropzone_changes.$$scope = { dirty, ctx };
-    			}
-
-    			dropzone.$set(dropzone_changes);
-    		},
-    		i: function intro(local) {
-    			if (current) return;
-    			transition_in(dropzone.$$.fragment, local);
-    			current = true;
-    		},
-    		o: function outro(local) {
-    			transition_out(dropzone.$$.fragment, local);
-    			current = false;
-    		},
-    		d: function destroy(detaching) {
-    			if (detaching) detach_dev(div);
-    			if (detaching) detach_dev(t1);
-    			destroy_component(dropzone, detaching);
-    		}
-    	};
-
-    	dispatch_dev("SvelteRegisterBlock", {
-    		block,
-    		id: create_default_slot_3$1.name,
-    		type: "slot",
-    		source: "(322:1) <Card padded>",
-    		ctx
-    	});
-
-    	return block;
-    }
-
-    // (330:0) {#if formValues.image}
-    function create_if_block$2(ctx) {
-    	let card;
-    	let current;
-
-    	card = new Card({
-    			props: {
-    				padded: true,
-    				$$slots: { default: [create_default_slot_2$1] },
-    				$$scope: { ctx }
-    			},
-    			$$inline: true
-    		});
-
-    	const block = {
-    		c: function create() {
-    			create_component(card.$$.fragment);
-    		},
-    		m: function mount(target, anchor) {
-    			mount_component(card, target, anchor);
-    			current = true;
-    		},
-    		p: function update(ctx, dirty) {
-    			const card_changes = {};
-
-    			if (dirty[0] & /*publicUrl*/ 2 | dirty[2] & /*$$scope*/ 4) {
-    				card_changes.$$scope = { dirty, ctx };
-    			}
-
-    			card.$set(card_changes);
-    		},
-    		i: function intro(local) {
-    			if (current) return;
-    			transition_in(card.$$.fragment, local);
-    			current = true;
-    		},
-    		o: function outro(local) {
-    			transition_out(card.$$.fragment, local);
-    			current = false;
-    		},
-    		d: function destroy(detaching) {
-    			destroy_component(card, detaching);
-    		}
-    	};
-
-    	dispatch_dev("SvelteRegisterBlock", {
-    		block,
-    		id: create_if_block$2.name,
-    		type: "if",
-    		source: "(330:0) {#if formValues.image}",
-    		ctx
-    	});
-
-    	return block;
-    }
-
-    // (331:1) <Card padded>
-    function create_default_slot_2$1(ctx) {
-    	let img;
-    	let img_src_value;
-
-    	const block = {
-    		c: function create() {
-    			img = element("img");
-    			if (!src_url_equal(img.src, img_src_value = /*publicUrl*/ ctx[1])) attr_dev(img, "src", img_src_value);
-    			attr_dev(img, "alt", "imatge de l'usuari");
-    			add_location(img, file$4, 331, 2, 9734);
-    		},
-    		m: function mount(target, anchor) {
-    			insert_dev(target, img, anchor);
-    		},
-    		p: function update(ctx, dirty) {
-    			if (dirty[0] & /*publicUrl*/ 2 && !src_url_equal(img.src, img_src_value = /*publicUrl*/ ctx[1])) {
-    				attr_dev(img, "src", img_src_value);
-    			}
-    		},
-    		d: function destroy(detaching) {
-    			if (detaching) detach_dev(img);
-    		}
-    	};
-
-    	dispatch_dev("SvelteRegisterBlock", {
-    		block,
     		id: create_default_slot_2$1.name,
     		type: "slot",
-    		source: "(331:1) <Card padded>",
+    		source: "(320:0) <Card padded>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (336:1) <Button variant="raised" on:click={handlePrevious}>
+    // (334:1) <Button variant="raised" on:click={handlePrevious}>
     function create_default_slot_1$1(ctx) {
     	let t;
 
@@ -55308,14 +55250,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_1$1.name,
     		type: "slot",
-    		source: "(336:1) <Button variant=\\\"raised\\\" on:click={handlePrevious}>",
+    		source: "(334:1) <Button variant=\\\"raised\\\" on:click={handlePrevious}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (337:1) <Button variant="raised"  on:click={handleSubmit}>
+    // (335:1) <Button variant="raised"  on:click={handleSubmit}>
     function create_default_slot$3(ctx) {
     	let t;
 
@@ -55335,7 +55277,7 @@ var app = (function () {
     		block,
     		id: create_default_slot$3.name,
     		type: "slot",
-    		source: "(337:1) <Button variant=\\\"raised\\\"  on:click={handleSubmit}>",
+    		source: "(335:1) <Button variant=\\\"raised\\\"  on:click={handleSubmit}>",
     		ctx
     	});
 
@@ -55369,18 +55311,16 @@ var app = (function () {
     	let t12;
     	let card10;
     	let t13;
-    	let t14;
-    	let t15;
     	let div1;
     	let button0;
-    	let t16;
+    	let t14;
     	let button1;
     	let current;
 
     	linearprogress = new LinearProgress({
     			props: {
     				progress: 0.666,
-    				$$slots: { default: [create_default_slot_51] },
+    				$$slots: { default: [create_default_slot_49] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -55389,7 +55329,7 @@ var app = (function () {
     	card0 = new Card({
     			props: {
     				padded: true,
-    				$$slots: { default: [create_default_slot_48] },
+    				$$slots: { default: [create_default_slot_46] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -55398,7 +55338,7 @@ var app = (function () {
     	card1 = new Card({
     			props: {
     				padded: true,
-    				$$slots: { default: [create_default_slot_45] },
+    				$$slots: { default: [create_default_slot_43] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -55407,7 +55347,7 @@ var app = (function () {
     	card2 = new Card({
     			props: {
     				padded: true,
-    				$$slots: { default: [create_default_slot_42] },
+    				$$slots: { default: [create_default_slot_40] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -55416,7 +55356,7 @@ var app = (function () {
     	card3 = new Card({
     			props: {
     				padded: true,
-    				$$slots: { default: [create_default_slot_40] },
+    				$$slots: { default: [create_default_slot_38] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -55425,7 +55365,7 @@ var app = (function () {
     	card4 = new Card({
     			props: {
     				padded: true,
-    				$$slots: { default: [create_default_slot_38] },
+    				$$slots: { default: [create_default_slot_36] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -55434,7 +55374,7 @@ var app = (function () {
     	card5 = new Card({
     			props: {
     				padded: true,
-    				$$slots: { default: [create_default_slot_34] },
+    				$$slots: { default: [create_default_slot_32] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -55443,7 +55383,7 @@ var app = (function () {
     	card6 = new Card({
     			props: {
     				padded: true,
-    				$$slots: { default: [create_default_slot_31] },
+    				$$slots: { default: [create_default_slot_29] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -55452,7 +55392,7 @@ var app = (function () {
     	card7 = new Card({
     			props: {
     				padded: true,
-    				$$slots: { default: [create_default_slot_17] },
+    				$$slots: { default: [create_default_slot_15] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -55461,7 +55401,7 @@ var app = (function () {
     	card8 = new Card({
     			props: {
     				padded: true,
-    				$$slots: { default: [create_default_slot_13] },
+    				$$slots: { default: [create_default_slot_11] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -55470,7 +55410,7 @@ var app = (function () {
     	card9 = new Card({
     			props: {
     				padded: true,
-    				$$slots: { default: [create_default_slot_8] },
+    				$$slots: { default: [create_default_slot_5$1] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -55479,14 +55419,11 @@ var app = (function () {
     	card10 = new Card({
     			props: {
     				padded: true,
-    				$$slots: { default: [create_default_slot_5$1] },
+    				$$slots: { default: [create_default_slot_2$1] },
     				$$scope: { ctx }
     			},
     			$$inline: true
     		});
-
-    	let if_block0 = /*formValues*/ ctx[0].buildingDamage === 'yes' && !/*formValues*/ ctx[0].image && create_if_block_1$1(ctx);
-    	let if_block1 = /*formValues*/ ctx[0].image && create_if_block$2(ctx);
 
     	button0 = new Button_1({
     			props: {
@@ -55539,18 +55476,14 @@ var app = (function () {
     			t12 = space();
     			create_component(card10.$$.fragment);
     			t13 = space();
-    			if (if_block0) if_block0.c();
-    			t14 = space();
-    			if (if_block1) if_block1.c();
-    			t15 = space();
     			div1 = element("div");
     			create_component(button0.$$.fragment);
-    			t16 = space();
+    			t14 = space();
     			create_component(button1.$$.fragment);
     			attr_dev(div0, "class", "section-title svelte-161svza");
     			add_location(div0, file$4, 72, 0, 3163);
     			attr_dev(div1, "class", "buttons svelte-161svza");
-    			add_location(div1, file$4, 334, 0, 9798);
+    			add_location(div1, file$4, 332, 0, 9757);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -55582,13 +55515,9 @@ var app = (function () {
     			insert_dev(target, t12, anchor);
     			mount_component(card10, target, anchor);
     			insert_dev(target, t13, anchor);
-    			if (if_block0) if_block0.m(target, anchor);
-    			insert_dev(target, t14, anchor);
-    			if (if_block1) if_block1.m(target, anchor);
-    			insert_dev(target, t15, anchor);
     			insert_dev(target, div1, anchor);
     			mount_component(button0, div1, null);
-    			append_dev(div1, t16);
+    			append_dev(div1, t14);
     			mount_component(button1, div1, null);
     			current = true;
     		},
@@ -55665,7 +55594,7 @@ var app = (function () {
     			card8.$set(card8_changes);
     			const card9_changes = {};
 
-    			if (dirty[0] & /*formValues*/ 1 | dirty[2] & /*$$scope*/ 4) {
+    			if (dirty[0] & /*publicUrl, formValues*/ 3 | dirty[2] & /*$$scope*/ 4) {
     				card9_changes.$$scope = { dirty, ctx };
     			}
 
@@ -55677,53 +55606,6 @@ var app = (function () {
     			}
 
     			card10.$set(card10_changes);
-
-    			if (/*formValues*/ ctx[0].buildingDamage === 'yes' && !/*formValues*/ ctx[0].image) {
-    				if (if_block0) {
-    					if_block0.p(ctx, dirty);
-
-    					if (dirty[0] & /*formValues*/ 1) {
-    						transition_in(if_block0, 1);
-    					}
-    				} else {
-    					if_block0 = create_if_block_1$1(ctx);
-    					if_block0.c();
-    					transition_in(if_block0, 1);
-    					if_block0.m(t14.parentNode, t14);
-    				}
-    			} else if (if_block0) {
-    				group_outros();
-
-    				transition_out(if_block0, 1, 1, () => {
-    					if_block0 = null;
-    				});
-
-    				check_outros();
-    			}
-
-    			if (/*formValues*/ ctx[0].image) {
-    				if (if_block1) {
-    					if_block1.p(ctx, dirty);
-
-    					if (dirty[0] & /*formValues*/ 1) {
-    						transition_in(if_block1, 1);
-    					}
-    				} else {
-    					if_block1 = create_if_block$2(ctx);
-    					if_block1.c();
-    					transition_in(if_block1, 1);
-    					if_block1.m(t15.parentNode, t15);
-    				}
-    			} else if (if_block1) {
-    				group_outros();
-
-    				transition_out(if_block1, 1, 1, () => {
-    					if_block1 = null;
-    				});
-
-    				check_outros();
-    			}
-
     			const button0_changes = {};
 
     			if (dirty[2] & /*$$scope*/ 4) {
@@ -55753,8 +55635,6 @@ var app = (function () {
     			transition_in(card8.$$.fragment, local);
     			transition_in(card9.$$.fragment, local);
     			transition_in(card10.$$.fragment, local);
-    			transition_in(if_block0);
-    			transition_in(if_block1);
     			transition_in(button0.$$.fragment, local);
     			transition_in(button1.$$.fragment, local);
     			current = true;
@@ -55772,8 +55652,6 @@ var app = (function () {
     			transition_out(card8.$$.fragment, local);
     			transition_out(card9.$$.fragment, local);
     			transition_out(card10.$$.fragment, local);
-    			transition_out(if_block0);
-    			transition_out(if_block1);
     			transition_out(button0.$$.fragment, local);
     			transition_out(button1.$$.fragment, local);
     			current = false;
@@ -55805,10 +55683,6 @@ var app = (function () {
     			if (detaching) detach_dev(t12);
     			destroy_component(card10, detaching);
     			if (detaching) detach_dev(t13);
-    			if (if_block0) if_block0.d(detaching);
-    			if (detaching) detach_dev(t14);
-    			if (if_block1) if_block1.d(detaching);
-    			if (detaching) detach_dev(t15);
     			if (detaching) detach_dev(div1);
     			destroy_component(button0);
     			destroy_component(button1);

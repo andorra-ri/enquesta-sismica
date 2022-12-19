@@ -6,14 +6,14 @@
 
 - [x] Després de “què va fer durant la sacsejada” i abans de “Als llums penjats”, falta un títol tipus com la de percepció personal que sigui “Quins efectes va observar sobre els següents objectes?”, i dins aquest bloc anirien: als llums, als líquids, als quadres, a portes, a mobles, a les plantes, als objectes. Vaja, com a l’ICGC.
 
-- [] La pregunta de “Als objectes a les prestatgeries o taules”; a la opció “van vibrar amb força” falta al B de AMB.
+- [x] La pregunta de “Als objectes a les prestatgeries o taules”; a la opció “van vibrar amb força” falta al B de AMB.
 
-- [] La pregunta de la foto s’activa si diuen que SI han observat danys. Sinó, no cal penjar foto. Es a dir no va a l’últim bloc, sinó quan es parla de danys.
+- [x] La pregunta de la foto s’activa si diuen que SI han observat danys. Sinó, no cal penjar foto. Es a dir no va a l’últim bloc, sinó quan es parla de danys.
 
 - [] Si no respons una de les preguntes obligatòries, es pot marcar en vermell la que falta per a que ho vegin? A sota si surt un missatget, però en anglès i amb variables/noms diferents. Si es pot i és fàcil eh! Es possible que et digui de fer una pregunta més obligatòria, ja et diria.
 
-- [] Quan dones al botó “Següent” per passar pàgina al formulari, es pot fer que la següent pàgina s’obri per la part de dalt de tot? Sobretot la pàgina 2, que s’obre a la part de final.
-  Quan selecciones el sisme del llistat, podem posar també la regió? (si és complicat fer-ho no cal).
+- [x] Quan dones al botó “Següent” per passar pàgina al formulari, es pot fer que la següent pàgina s’obri per la part de dalt de tot? Sobretot la pàgina 2, que s’obre a la part de final.
+- [] Quan selecciones el sisme del llistat, podem posar també la regió? (si és complicat fer-ho no cal).
 
 - [x] A totes les preguntes de “a prop seu, quantes persones”... jo treuria la resposta “No ho
       sé”. Per això ja està la de “Sense especificar”. Sinó les dues volen dir el mateix, i a més

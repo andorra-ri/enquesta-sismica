@@ -145,7 +145,7 @@
 							hour: '2-digit',
 							minute: '2-digit',
 							timeZone: 'CET'
-						})}`}</Option
+						})} (${seism.region})`}</Option
 					>
 				{/each}
 			</Select>
