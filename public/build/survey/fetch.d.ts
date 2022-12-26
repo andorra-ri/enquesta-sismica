@@ -1,15 +1,11 @@
-import type { FormValues } from './store';
-interface Point {
-    type: 'Point';
-    coordinates: [number, number];
-}
+import type { FormValues } from "./store";
 export interface SeismsData {
     guid: string;
     datetime: Date;
     magnitude: number;
     region: string;
-    depth: number;
-    coordinates: Point;
+    lon: string;
+    lat: string;
 }
 export declare const getSeismData: () => Promise<SeismsData[]>;
 export interface ParroquiaData {
@@ -19,4 +15,3 @@ export interface ParroquiaData {
 export declare const getParroquiesData: () => Promise<ParroquiaData[]>;
 export declare const sendToSupabase: (data: FormValues) => Promise<void>;
 export declare const uploadImage: (fileName: string, fileToUpload: string) => Promise<string>;
-export {};
