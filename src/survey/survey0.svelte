@@ -114,7 +114,7 @@
 <div>Pàgina 1 de 3</div>
 <LinearProgress progress={0.333}/>
 <Card padded class={'existentSeism' in errors ? 'error' : 'valid'}>
-	<div>Surt el sisme que ha percebut o no a la llista inferior?</div>
+	<div>SSurt a la pregunta següent el sisme que ha percebut o no?</div>
 	<FormField>
 		<Radio bind:group={formValues.existentSeism} value="yes" touch />
 		<span slot="label">Sí, triar de la llista de sota</span>
