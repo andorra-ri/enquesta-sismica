@@ -104,7 +104,7 @@
 		<div class="title">Enquesta sísmica</div>
 		<p>
 			Per tal d'avaluar la o les intensitats amb les quals s’ha notat el terratrèmol al territori
-			andorrà, li agrairíem que ompli la següent enquesta sísmica de la manera més detallada
+			andorrà, li agrairíem omplir la següent enquesta sísmica de la manera més detallada
 			possible.
 		</p>
 		<p>
