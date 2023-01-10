@@ -39237,7 +39237,7 @@ var app = (function () {
     			div.textContent = "Data del terratrèmol *";
     			t1 = space();
     			create_component(textfield.$$.fragment);
-    			add_location(div, file$7, 130, 4, 4863);
+    			add_location(div, file$7, 130, 4, 4883);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -39310,7 +39310,7 @@ var app = (function () {
     			div.textContent = "Hora local (HH:MM) *";
     			t1 = space();
     			create_component(textfield.$$.fragment);
-    			add_location(div, file$7, 136, 4, 5096);
+    			add_location(div, file$7, 136, 4, 5116);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -39395,13 +39395,13 @@ var app = (function () {
     			? 'error'
     			: 'valid');
 
-    			add_location(div0, file$7, 128, 2, 4783);
+    			add_location(div0, file$7, 128, 2, 4803);
 
     			attr_dev(div1, "class", div1_class_value = 'earthquakeHour' in /*errors*/ ctx[6]
     			? 'error'
     			: 'valid');
 
-    			add_location(div1, file$7, 134, 2, 5016);
+    			add_location(div1, file$7, 134, 2, 5036);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div0, anchor);
@@ -39483,7 +39483,7 @@ var app = (function () {
 		hour: '2-digit',
 		minute: '2-digit',
 		timeZone: 'CET'
-	})} (${/*seism*/ ctx[65].region})` + "";
+	})} (${/*seism*/ ctx[65].region}). ${/*seism*/ ctx[65].magnitude}` + "";
 
     	let t;
 
@@ -39505,7 +39505,7 @@ var app = (function () {
 				hour: '2-digit',
 				minute: '2-digit',
 				timeZone: 'CET'
-			})} (${/*seism*/ ctx[65].region})` + "")) set_data_dev(t, t_value);
+			})} (${/*seism*/ ctx[65].region}). ${/*seism*/ ctx[65].magnitude}` + "")) set_data_dev(t, t_value);
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(t);
@@ -40339,7 +40339,7 @@ var app = (function () {
     		c: function create() {
     			div = element("div");
     			create_component(select.$$.fragment);
-    			add_location(div, file$7, 172, 3, 5929);
+    			add_location(div, file$7, 172, 3, 5949);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -40601,7 +40601,7 @@ var app = (function () {
     		c: function create() {
     			div = element("div");
     			create_component(select.$$.fragment);
-    			add_location(div, file$7, 184, 3, 6244);
+    			add_location(div, file$7, 184, 3, 6264);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -40864,8 +40864,8 @@ var app = (function () {
     			t1 = space();
     			create_component(textfield.$$.fragment);
     			attr_dev(span, "class", "field-label svelte-1bnmz5f");
-    			add_location(span, file$7, 202, 3, 6613);
-    			add_location(div, file$7, 201, 2, 6604);
+    			add_location(span, file$7, 202, 3, 6633);
+    			add_location(div, file$7, 201, 2, 6624);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -40954,7 +40954,7 @@ var app = (function () {
     			t2 = space();
     			if (if_block2) if_block2.c();
     			if_block2_anchor = empty();
-    			add_location(div, file$7, 170, 1, 5870);
+    			add_location(div, file$7, 170, 1, 5890);
     		},
     		m: function mount(target, anchor) {
     			mount_component(select, target, anchor);
@@ -41220,7 +41220,7 @@ var app = (function () {
     			div.textContent = "Seleccioneu la ubicació el més detallada possible arrossegant la icona blava del mapa";
     			t1 = space();
     			create_component(leaflet.$$.fragment);
-    			add_location(div, file$7, 270, 1, 8779);
+    			add_location(div, file$7, 270, 1, 8799);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -41484,7 +41484,7 @@ var app = (function () {
     			span = element("span");
     			span.textContent = "País on es trobava en el moment del terratrèmol";
     			attr_dev(span, "slot", "label");
-    			add_location(span, file$7, 219, 4, 7152);
+    			add_location(span, file$7, 219, 4, 7172);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -41722,7 +41722,7 @@ var app = (function () {
     			span = element("span");
     			span.textContent = "Municipi on es trobava en el moment del terratrèmol";
     			attr_dev(span, "slot", "label");
-    			add_location(span, file$7, 250, 5, 8293);
+    			add_location(span, file$7, 250, 5, 8313);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -42010,7 +42010,7 @@ var app = (function () {
     			span = element("span");
     			span.textContent = "Parròquia on es trobava en el moment del terratrèmol";
     			attr_dev(span, "slot", "label");
-    			add_location(span, file$7, 228, 5, 7557);
+    			add_location(span, file$7, 228, 5, 7577);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -42298,7 +42298,7 @@ var app = (function () {
     			span = element("span");
     			span.textContent = "Territori dins la parròquia on es trobava en el moment del terratrèmol";
     			attr_dev(span, "slot", "label");
-    			add_location(span, file$7, 243, 5, 8011);
+    			add_location(span, file$7, 243, 5, 8031);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -42478,7 +42478,7 @@ var app = (function () {
     			span = element("span");
     			span.textContent = "Carrer";
     			attr_dev(span, "slot", "label");
-    			add_location(span, file$7, 256, 5, 8508);
+    			add_location(span, file$7, 256, 5, 8528);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -42572,7 +42572,7 @@ var app = (function () {
     			span = element("span");
     			span.textContent = "Número";
     			attr_dev(span, "slot", "label");
-    			add_location(span, file$7, 261, 5, 8649);
+    			add_location(span, file$7, 261, 5, 8669);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -42644,7 +42644,7 @@ var app = (function () {
     			? 'error'
     			: 'valid');
 
-    			add_location(div, file$7, 210, 2, 6849);
+    			add_location(div, file$7, 210, 2, 6869);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -43054,8 +43054,8 @@ var app = (function () {
     			t1 = space();
     			create_component(textfield.$$.fragment);
     			attr_dev(span, "class", "field-label svelte-1bnmz5f");
-    			add_location(span, file$7, 293, 3, 9376);
-    			add_location(div, file$7, 292, 2, 9367);
+    			add_location(span, file$7, 293, 3, 9396);
+    			add_location(div, file$7, 292, 2, 9387);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -43223,9 +43223,9 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			add_location(p, file$7, 301, 3, 9622);
+    			add_location(p, file$7, 301, 3, 9642);
     			attr_dev(div, "class", "radio-group");
-    			add_location(div, file$7, 300, 2, 9593);
+    			add_location(div, file$7, 300, 2, 9613);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -43309,7 +43309,7 @@ var app = (function () {
     	const block = {
     		c: function create() {
     			br = element("br");
-    			add_location(br, file$7, 304, 5, 9815);
+    			add_location(br, file$7, 304, 5, 9835);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, br, anchor);
@@ -43410,7 +43410,7 @@ var app = (function () {
     			t0 = text(t0_value);
     			t1 = space();
     			attr_dev(span, "slot", "label");
-    			add_location(span, file$7, 308, 5, 9957);
+    			add_location(span, file$7, 308, 5, 9977);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -43530,9 +43530,9 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			add_location(p, file$7, 318, 3, 10139);
+    			add_location(p, file$7, 318, 3, 10159);
     			attr_dev(div, "class", "radio-group");
-    			add_location(div, file$7, 317, 2, 10110);
+    			add_location(div, file$7, 317, 2, 10130);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -43616,7 +43616,7 @@ var app = (function () {
     	const block = {
     		c: function create() {
     			br = element("br");
-    			add_location(br, file$7, 321, 5, 10333);
+    			add_location(br, file$7, 321, 5, 10353);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, br, anchor);
@@ -43717,7 +43717,7 @@ var app = (function () {
     			t0 = text(t0_value);
     			t1 = space();
     			attr_dev(span, "slot", "label");
-    			add_location(span, file$7, 325, 5, 10476);
+    			add_location(span, file$7, 325, 5, 10496);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -43914,7 +43914,7 @@ var app = (function () {
     	const block = {
     		c: function create() {
     			br = element("br");
-    			add_location(br, file$7, 338, 4, 10825);
+    			add_location(br, file$7, 338, 4, 10845);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, br, anchor);
@@ -44015,7 +44015,7 @@ var app = (function () {
     			t0 = text(t0_value);
     			t1 = space();
     			attr_dev(span, "slot", "label");
-    			add_location(span, file$7, 342, 4, 10965);
+    			add_location(span, file$7, 342, 4, 10985);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -44135,9 +44135,9 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			add_location(p, file$7, 335, 2, 10629);
+    			add_location(p, file$7, 335, 2, 10649);
     			attr_dev(div, "class", "radio-group");
-    			add_location(div, file$7, 334, 1, 10601);
+    			add_location(div, file$7, 334, 1, 10621);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -44221,7 +44221,7 @@ var app = (function () {
     	const block = {
     		c: function create() {
     			br = element("br");
-    			add_location(br, file$7, 354, 4, 11277);
+    			add_location(br, file$7, 354, 4, 11297);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, br, anchor);
@@ -44322,7 +44322,7 @@ var app = (function () {
     			t0 = text(t0_value);
     			t1 = space();
     			attr_dev(span, "slot", "label");
-    			add_location(span, file$7, 358, 4, 11414);
+    			add_location(span, file$7, 358, 4, 11434);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -44442,9 +44442,9 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			add_location(p, file$7, 351, 2, 11106);
+    			add_location(p, file$7, 351, 2, 11126);
     			attr_dev(div, "class", "radio-group");
-    			add_location(div, file$7, 350, 1, 11078);
+    			add_location(div, file$7, 350, 1, 11098);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -44530,7 +44530,7 @@ var app = (function () {
     			div = element("div");
     			div.textContent = "Hi ha camps obligatoris sense omplir. Si us plau revisi les respostes";
     			attr_dev(div, "class", "error");
-    			add_location(div, file$7, 368, 2, 11575);
+    			add_location(div, file$7, 368, 2, 11595);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -44783,7 +44783,7 @@ var app = (function () {
     			add_location(div2, file$7, 75, 0, 2874);
     			add_location(div3, file$7, 90, 0, 3357);
     			attr_dev(div4, "class", "buttons svelte-1bnmz5f");
-    			add_location(div4, file$7, 366, 0, 11513);
+    			add_location(div4, file$7, 366, 0, 11533);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
