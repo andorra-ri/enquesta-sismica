@@ -5,22 +5,20 @@
 	import LinearProgress from '@smui/linear-progress';
 	import Radio from '@smui/radio';
 	import Select, { Option } from '@smui/select';
-	import Switch from '@smui/switch';
 	import Textfield from '@smui/textfield';
-	import { onMount , onDestroy} from 'svelte';
+	import { onDestroy, onMount } from 'svelte';
 	import { getParroquiesData, getSeismData, type ParroquiaData, type SeismsData } from './fetch';
 	import Leaflet from './leaflet.svelte';
 	import { nextPage, schema, surveyValues, type FormValues } from './store';
 	import {
-		yesNo,
-		floorOptions,
-		numberPeopleAwake,
-		numberPeopleGoingOutOptions,
-		numberPeopleInsideOptions,
-		numberPeopleOutsideOptions,
-		positionOptions,
-		situationObserverOptions,
-        totalFloorOptions
+	  floorOptions,
+	  numberPeopleAwake,
+	  numberPeopleGoingOutOptions,
+	  numberPeopleInsideOptions,
+	  numberPeopleOutsideOptions,
+	  positionOptions,
+	  situationObserverOptions,
+	  totalFloorOptions, yesNo
 	} from './surveyObjects';
 
 	let seisms: SeismsData[] = [];
@@ -113,7 +111,8 @@
 		</p>
 	</div>
 </div>
-<LinearProgress progress={0.333}>Pàgina 1 de 3</LinearProgress>
+<div>Pàgina 1 de 3</div>
+<LinearProgress progress={0.333}/>
 <Card padded class={'existentSeism' in errors ? 'error' : 'valid'}>
 	<div>Surt el sisme que ha percebut o no a la llista inferior?</div>
 	<FormField>

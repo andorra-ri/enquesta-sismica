@@ -29351,7 +29351,7 @@ var app = (function () {
     	];
 
     	let floatinglabel_props = {
-    		$$slots: { default: [create_default_slot_7$3] },
+    		$$slots: { default: [create_default_slot_7$2] },
     		$$scope: { ctx }
     	};
 
@@ -29419,7 +29419,7 @@ var app = (function () {
     }
 
     // (67:8) <FloatingLabel           bind:this={floatingLabel}           floatAbove={focused || (value != null && value !== '')}           {required}           wrapped           {...prefixFilter($$restProps, 'label$')}           >
-    function create_default_slot_7$3(ctx) {
+    function create_default_slot_7$2(ctx) {
     	let t_value = (/*label*/ ctx[17] == null ? '' : /*label*/ ctx[17]) + "";
     	let t;
     	let current;
@@ -29475,7 +29475,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_7$3.name,
+    		id: create_default_slot_7$2.name,
     		type: "slot",
     		source: "(67:8) <FloatingLabel           bind:this={floatingLabel}           floatAbove={focused || (value != null && value !== '')}           {required}           wrapped           {...prefixFilter($$restProps, 'label$')}           >",
     		ctx
@@ -38810,33 +38810,6 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (92:0) <LinearProgress progress={0.333}>
-    function create_default_slot_47$1(ctx) {
-    	let t;
-
-    	const block = {
-    		c: function create() {
-    			t = text("Pàgina 1 de 3");
-    		},
-    		m: function mount(target, anchor) {
-    			insert_dev(target, t, anchor);
-    		},
-    		d: function destroy(detaching) {
-    			if (detaching) detach_dev(t);
-    		}
-    	};
-
-    	dispatch_dev("SvelteRegisterBlock", {
-    		block,
-    		id: create_default_slot_47$1.name,
-    		type: "slot",
-    		source: "(92:0) <LinearProgress progress={0.333}>",
-    		ctx
-    	});
-
-    	return block;
-    }
-
     // (95:1) <FormField>
     function create_default_slot_46$1(ctx) {
     	let radio;
@@ -38909,7 +38882,7 @@ var app = (function () {
     			span = element("span");
     			span.textContent = "Sí, triar de la llista de sota";
     			attr_dev(span, "slot", "label");
-    			add_location(span, file$7, 96, 2, 3667);
+    			add_location(span, file$7, 96, 2, 3637);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -39003,7 +38976,7 @@ var app = (function () {
     			span = element("span");
     			span.textContent = "No apareix a la llista. Introduir la data i hora manualment";
     			attr_dev(span, "slot", "label");
-    			add_location(span, file$7, 100, 2, 3820);
+    			add_location(span, file$7, 100, 2, 3790);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -39064,7 +39037,7 @@ var app = (function () {
     			create_component(formfield0.$$.fragment);
     			t2 = space();
     			create_component(formfield1.$$.fragment);
-    			add_location(div, file$7, 93, 1, 3516);
+    			add_location(div, file$7, 93, 1, 3486);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -39264,7 +39237,7 @@ var app = (function () {
     			div.textContent = "Data del terratrèmol *";
     			t1 = space();
     			create_component(textfield.$$.fragment);
-    			add_location(div, file$7, 130, 4, 4891);
+    			add_location(div, file$7, 130, 4, 4861);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -39337,7 +39310,7 @@ var app = (function () {
     			div.textContent = "Hora local (HH:MM) *";
     			t1 = space();
     			create_component(textfield.$$.fragment);
-    			add_location(div, file$7, 136, 4, 5124);
+    			add_location(div, file$7, 136, 4, 5094);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -39422,13 +39395,13 @@ var app = (function () {
     			? 'error'
     			: 'valid');
 
-    			add_location(div0, file$7, 128, 2, 4811);
+    			add_location(div0, file$7, 128, 2, 4781);
 
     			attr_dev(div1, "class", div1_class_value = 'earthquakeHour' in /*errors*/ ctx[6]
     			? 'error'
     			: 'valid');
 
-    			add_location(div1, file$7, 134, 2, 5044);
+    			add_location(div1, file$7, 134, 2, 5014);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div0, anchor);
@@ -39796,7 +39769,7 @@ var app = (function () {
     			div.textContent = "Triï el sisme *";
     			t1 = space();
     			create_component(formfield.$$.fragment);
-    			add_location(div, file$7, 106, 2, 4166);
+    			add_location(div, file$7, 106, 2, 4136);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -40366,7 +40339,7 @@ var app = (function () {
     		c: function create() {
     			div = element("div");
     			create_component(select.$$.fragment);
-    			add_location(div, file$7, 172, 3, 5957);
+    			add_location(div, file$7, 172, 3, 5927);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -40628,7 +40601,7 @@ var app = (function () {
     		c: function create() {
     			div = element("div");
     			create_component(select.$$.fragment);
-    			add_location(div, file$7, 184, 3, 6272);
+    			add_location(div, file$7, 184, 3, 6242);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -40891,8 +40864,8 @@ var app = (function () {
     			t1 = space();
     			create_component(textfield.$$.fragment);
     			attr_dev(span, "class", "field-label svelte-1bnmz5f");
-    			add_location(span, file$7, 202, 3, 6641);
-    			add_location(div, file$7, 201, 2, 6632);
+    			add_location(span, file$7, 202, 3, 6611);
+    			add_location(div, file$7, 201, 2, 6602);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -40981,7 +40954,7 @@ var app = (function () {
     			t2 = space();
     			if (if_block2) if_block2.c();
     			if_block2_anchor = empty();
-    			add_location(div, file$7, 170, 1, 5898);
+    			add_location(div, file$7, 170, 1, 5868);
     		},
     		m: function mount(target, anchor) {
     			mount_component(select, target, anchor);
@@ -41247,7 +41220,7 @@ var app = (function () {
     			div.textContent = "Seleccioneu la ubicació el més detallada possible arrossegant la icona blava del mapa";
     			t1 = space();
     			create_component(leaflet.$$.fragment);
-    			add_location(div, file$7, 270, 1, 8807);
+    			add_location(div, file$7, 270, 1, 8777);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -41511,7 +41484,7 @@ var app = (function () {
     			span = element("span");
     			span.textContent = "País on es trobava en el moment del terratrèmol";
     			attr_dev(span, "slot", "label");
-    			add_location(span, file$7, 219, 4, 7180);
+    			add_location(span, file$7, 219, 4, 7150);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -41749,7 +41722,7 @@ var app = (function () {
     			span = element("span");
     			span.textContent = "Municipi on es trobava en el moment del terratrèmol";
     			attr_dev(span, "slot", "label");
-    			add_location(span, file$7, 250, 5, 8321);
+    			add_location(span, file$7, 250, 5, 8291);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -42037,7 +42010,7 @@ var app = (function () {
     			span = element("span");
     			span.textContent = "Parròquia on es trobava en el moment del terratrèmol";
     			attr_dev(span, "slot", "label");
-    			add_location(span, file$7, 228, 5, 7585);
+    			add_location(span, file$7, 228, 5, 7555);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -42325,7 +42298,7 @@ var app = (function () {
     			span = element("span");
     			span.textContent = "Territori dins la parròquia on es trobava en el moment del terratrèmol";
     			attr_dev(span, "slot", "label");
-    			add_location(span, file$7, 243, 5, 8039);
+    			add_location(span, file$7, 243, 5, 8009);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -42505,7 +42478,7 @@ var app = (function () {
     			span = element("span");
     			span.textContent = "Carrer";
     			attr_dev(span, "slot", "label");
-    			add_location(span, file$7, 256, 5, 8536);
+    			add_location(span, file$7, 256, 5, 8506);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -42599,7 +42572,7 @@ var app = (function () {
     			span = element("span");
     			span.textContent = "Número";
     			attr_dev(span, "slot", "label");
-    			add_location(span, file$7, 261, 5, 8677);
+    			add_location(span, file$7, 261, 5, 8647);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -42671,7 +42644,7 @@ var app = (function () {
     			? 'error'
     			: 'valid');
 
-    			add_location(div, file$7, 210, 2, 6877);
+    			add_location(div, file$7, 210, 2, 6847);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -43081,8 +43054,8 @@ var app = (function () {
     			t1 = space();
     			create_component(textfield.$$.fragment);
     			attr_dev(span, "class", "field-label svelte-1bnmz5f");
-    			add_location(span, file$7, 293, 3, 9404);
-    			add_location(div, file$7, 292, 2, 9395);
+    			add_location(span, file$7, 293, 3, 9374);
+    			add_location(div, file$7, 292, 2, 9365);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -43250,9 +43223,9 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			add_location(p, file$7, 301, 3, 9650);
+    			add_location(p, file$7, 301, 3, 9620);
     			attr_dev(div, "class", "radio-group");
-    			add_location(div, file$7, 300, 2, 9621);
+    			add_location(div, file$7, 300, 2, 9591);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -43336,7 +43309,7 @@ var app = (function () {
     	const block = {
     		c: function create() {
     			br = element("br");
-    			add_location(br, file$7, 304, 5, 9843);
+    			add_location(br, file$7, 304, 5, 9813);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, br, anchor);
@@ -43358,7 +43331,7 @@ var app = (function () {
     }
 
     // (307:4) <FormField style="min-width: 250px">
-    function create_default_slot_7$2(ctx) {
+    function create_default_slot_7$1(ctx) {
     	let radio;
     	let updating_group;
     	let t;
@@ -43415,7 +43388,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_7$2.name,
+    		id: create_default_slot_7$1.name,
     		type: "slot",
     		source: "(307:4) <FormField style=\\\"min-width: 250px\\\">",
     		ctx
@@ -43437,7 +43410,7 @@ var app = (function () {
     			t0 = text(t0_value);
     			t1 = space();
     			attr_dev(span, "slot", "label");
-    			add_location(span, file$7, 308, 5, 9985);
+    			add_location(span, file$7, 308, 5, 9955);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -43473,7 +43446,7 @@ var app = (function () {
     				style: "min-width: 250px",
     				$$slots: {
     					label: [create_label_slot_3],
-    					default: [create_default_slot_7$2]
+    					default: [create_default_slot_7$1]
     				},
     				$$scope: { ctx }
     			},
@@ -43557,9 +43530,9 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			add_location(p, file$7, 318, 3, 10167);
+    			add_location(p, file$7, 318, 3, 10137);
     			attr_dev(div, "class", "radio-group");
-    			add_location(div, file$7, 317, 2, 10138);
+    			add_location(div, file$7, 317, 2, 10108);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -43643,7 +43616,7 @@ var app = (function () {
     	const block = {
     		c: function create() {
     			br = element("br");
-    			add_location(br, file$7, 321, 5, 10361);
+    			add_location(br, file$7, 321, 5, 10331);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, br, anchor);
@@ -43744,7 +43717,7 @@ var app = (function () {
     			t0 = text(t0_value);
     			t1 = space();
     			attr_dev(span, "slot", "label");
-    			add_location(span, file$7, 325, 5, 10504);
+    			add_location(span, file$7, 325, 5, 10474);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -43941,7 +43914,7 @@ var app = (function () {
     	const block = {
     		c: function create() {
     			br = element("br");
-    			add_location(br, file$7, 338, 4, 10853);
+    			add_location(br, file$7, 338, 4, 10823);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, br, anchor);
@@ -44042,7 +44015,7 @@ var app = (function () {
     			t0 = text(t0_value);
     			t1 = space();
     			attr_dev(span, "slot", "label");
-    			add_location(span, file$7, 342, 4, 10993);
+    			add_location(span, file$7, 342, 4, 10963);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -44162,9 +44135,9 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			add_location(p, file$7, 335, 2, 10657);
+    			add_location(p, file$7, 335, 2, 10627);
     			attr_dev(div, "class", "radio-group");
-    			add_location(div, file$7, 334, 1, 10629);
+    			add_location(div, file$7, 334, 1, 10599);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -44248,7 +44221,7 @@ var app = (function () {
     	const block = {
     		c: function create() {
     			br = element("br");
-    			add_location(br, file$7, 354, 4, 11305);
+    			add_location(br, file$7, 354, 4, 11275);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, br, anchor);
@@ -44349,7 +44322,7 @@ var app = (function () {
     			t0 = text(t0_value);
     			t1 = space();
     			attr_dev(span, "slot", "label");
-    			add_location(span, file$7, 358, 4, 11442);
+    			add_location(span, file$7, 358, 4, 11412);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -44469,9 +44442,9 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			add_location(p, file$7, 351, 2, 11134);
+    			add_location(p, file$7, 351, 2, 11104);
     			attr_dev(div, "class", "radio-group");
-    			add_location(div, file$7, 350, 1, 11106);
+    			add_location(div, file$7, 350, 1, 11076);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -44557,7 +44530,7 @@ var app = (function () {
     			div = element("div");
     			div.textContent = "Hi ha camps obligatoris sense omplir. Si us plau revisi les respostes";
     			attr_dev(div, "class", "error");
-    			add_location(div, file$7, 368, 2, 11603);
+    			add_location(div, file$7, 368, 2, 11573);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -44617,40 +44590,38 @@ var app = (function () {
     	let t4;
     	let p1;
     	let t6;
-    	let linearprogress;
-    	let t7;
-    	let card0;
+    	let div3;
     	let t8;
+    	let linearprogress;
+    	let t9;
+    	let card0;
+    	let t10;
     	let current_block_type_index;
     	let if_block0;
-    	let t9;
-    	let card1;
-    	let t10;
-    	let card2;
     	let t11;
+    	let card1;
+    	let t12;
+    	let card2;
+    	let t13;
     	let current_block_type_index_1;
     	let if_block1;
-    	let t12;
-    	let card3;
-    	let t13;
-    	let card4;
     	let t14;
-    	let card5;
+    	let card3;
     	let t15;
-    	let card6;
+    	let card4;
     	let t16;
-    	let div3;
-    	let show_if = Object.keys(/*errors*/ ctx[6]).length > 0;
+    	let card5;
     	let t17;
+    	let card6;
+    	let t18;
+    	let div4;
+    	let show_if = Object.keys(/*errors*/ ctx[6]).length > 0;
+    	let t19;
     	let button;
     	let current;
 
     	linearprogress = new LinearProgress({
-    			props: {
-    				progress: 0.333,
-    				$$slots: { default: [create_default_slot_47$1] },
-    				$$scope: { ctx }
-    			},
+    			props: { progress: 0.333 },
     			$$inline: true
     		});
 
@@ -44767,48 +44738,52 @@ var app = (function () {
     			div0.textContent = "Enquesta sísmica";
     			t2 = space();
     			p0 = element("p");
-    			p0.textContent = "Per tal d'avaluar la o les intensitats amb les quals s’ha notat el terratrèmol al territori\n\t\t\tandorrà, li agrairíem que ompli la següent enquesta sísmica de la manera més detallada\n\t\t\tpossible.";
+    			p0.textContent = "Per tal d'avaluar la o les intensitats amb les quals s’ha notat el terratrèmol al territori\n\t\t\tandorrà, li agrairíem omplir la següent enquesta sísmica de la manera més detallada\n\t\t\tpossible.";
     			t4 = space();
     			p1 = element("p");
     			p1.textContent = "Encara que no hagi notat el terratrèmol, la seva informació és igualment útil. Gràcies per la\n\t\t\tseva col·laboració.";
     			t6 = space();
-    			create_component(linearprogress.$$.fragment);
-    			t7 = space();
-    			create_component(card0.$$.fragment);
-    			t8 = space();
-    			if_block0.c();
-    			t9 = space();
-    			create_component(card1.$$.fragment);
-    			t10 = space();
-    			create_component(card2.$$.fragment);
-    			t11 = space();
-    			if (if_block1) if_block1.c();
-    			t12 = space();
-    			create_component(card3.$$.fragment);
-    			t13 = space();
-    			create_component(card4.$$.fragment);
-    			t14 = space();
-    			create_component(card5.$$.fragment);
-    			t15 = space();
-    			create_component(card6.$$.fragment);
-    			t16 = space();
     			div3 = element("div");
-    			if (if_block2) if_block2.c();
+    			div3.textContent = "Pàgina 1 de 3";
+    			t8 = space();
+    			create_component(linearprogress.$$.fragment);
+    			t9 = space();
+    			create_component(card0.$$.fragment);
+    			t10 = space();
+    			if_block0.c();
+    			t11 = space();
+    			create_component(card1.$$.fragment);
+    			t12 = space();
+    			create_component(card2.$$.fragment);
+    			t13 = space();
+    			if (if_block1) if_block1.c();
+    			t14 = space();
+    			create_component(card3.$$.fragment);
+    			t15 = space();
+    			create_component(card4.$$.fragment);
+    			t16 = space();
+    			create_component(card5.$$.fragment);
     			t17 = space();
+    			create_component(card6.$$.fragment);
+    			t18 = space();
+    			div4 = element("div");
+    			if (if_block2) if_block2.c();
+    			t19 = space();
     			create_component(button.$$.fragment);
     			if (!src_url_equal(img.src, img_src_value = "images/logo.png")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "logo");
     			attr_dev(img, "class", "logo svelte-1bnmz5f");
-    			add_location(img, file$7, 77, 1, 2919);
+    			add_location(img, file$7, 76, 1, 2896);
     			attr_dev(div0, "class", "title svelte-1bnmz5f");
-    			add_location(div0, file$7, 79, 2, 2982);
-    			add_location(p0, file$7, 80, 2, 3026);
-    			add_location(p1, file$7, 85, 2, 3237);
-    			add_location(div1, file$7, 78, 1, 2974);
+    			add_location(div0, file$7, 78, 2, 2959);
+    			add_location(p0, file$7, 79, 2, 3003);
+    			add_location(p1, file$7, 84, 2, 3211);
+    			add_location(div1, file$7, 77, 1, 2951);
     			attr_dev(div2, "class", "header svelte-1bnmz5f");
-    			add_location(div2, file$7, 76, 0, 2897);
-    			attr_dev(div3, "class", "buttons svelte-1bnmz5f");
-    			add_location(div3, file$7, 366, 0, 11541);
+    			add_location(div2, file$7, 75, 0, 2874);
+    			add_location(div3, file$7, 90, 0, 3357);
+    			attr_dev(div4, "class", "buttons svelte-1bnmz5f");
+    			add_location(div4, file$7, 366, 0, 11511);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -44824,44 +44799,39 @@ var app = (function () {
     			append_dev(div1, t4);
     			append_dev(div1, p1);
     			insert_dev(target, t6, anchor);
-    			mount_component(linearprogress, target, anchor);
-    			insert_dev(target, t7, anchor);
-    			mount_component(card0, target, anchor);
+    			insert_dev(target, div3, anchor);
     			insert_dev(target, t8, anchor);
-    			if_blocks[current_block_type_index].m(target, anchor);
+    			mount_component(linearprogress, target, anchor);
     			insert_dev(target, t9, anchor);
-    			mount_component(card1, target, anchor);
+    			mount_component(card0, target, anchor);
     			insert_dev(target, t10, anchor);
-    			mount_component(card2, target, anchor);
+    			if_blocks[current_block_type_index].m(target, anchor);
     			insert_dev(target, t11, anchor);
+    			mount_component(card1, target, anchor);
+    			insert_dev(target, t12, anchor);
+    			mount_component(card2, target, anchor);
+    			insert_dev(target, t13, anchor);
 
     			if (~current_block_type_index_1) {
     				if_blocks_1[current_block_type_index_1].m(target, anchor);
     			}
 
-    			insert_dev(target, t12, anchor);
-    			mount_component(card3, target, anchor);
-    			insert_dev(target, t13, anchor);
-    			mount_component(card4, target, anchor);
     			insert_dev(target, t14, anchor);
-    			mount_component(card5, target, anchor);
+    			mount_component(card3, target, anchor);
     			insert_dev(target, t15, anchor);
-    			mount_component(card6, target, anchor);
+    			mount_component(card4, target, anchor);
     			insert_dev(target, t16, anchor);
-    			insert_dev(target, div3, anchor);
-    			if (if_block2) if_block2.m(div3, null);
-    			append_dev(div3, t17);
-    			mount_component(button, div3, null);
+    			mount_component(card5, target, anchor);
+    			insert_dev(target, t17, anchor);
+    			mount_component(card6, target, anchor);
+    			insert_dev(target, t18, anchor);
+    			insert_dev(target, div4, anchor);
+    			if (if_block2) if_block2.m(div4, null);
+    			append_dev(div4, t19);
+    			mount_component(button, div4, null);
     			current = true;
     		},
     		p: function update(ctx, dirty) {
-    			const linearprogress_changes = {};
-
-    			if (dirty[2] & /*$$scope*/ 64) {
-    				linearprogress_changes.$$scope = { dirty, ctx };
-    			}
-
-    			linearprogress.$set(linearprogress_changes);
     			const card0_changes = {};
     			if (dirty[0] & /*errors*/ 64) card0_changes.class = 'existentSeism' in /*errors*/ ctx[6] ? 'error' : 'valid';
 
@@ -44893,7 +44863,7 @@ var app = (function () {
     				}
 
     				transition_in(if_block0, 1);
-    				if_block0.m(t9.parentNode, t9);
+    				if_block0.m(t11.parentNode, t11);
     			}
 
     			const card1_changes = {};
@@ -44940,7 +44910,7 @@ var app = (function () {
     					}
 
     					transition_in(if_block1, 1);
-    					if_block1.m(t12.parentNode, t12);
+    					if_block1.m(t14.parentNode, t14);
     				} else {
     					if_block1 = null;
     				}
@@ -44980,7 +44950,7 @@ var app = (function () {
     				if (if_block2) ; else {
     					if_block2 = create_if_block$3(ctx);
     					if_block2.c();
-    					if_block2.m(div3, t17);
+    					if_block2.m(div4, t19);
     				}
     			} else if (if_block2) {
     				if_block2.d(1);
@@ -45027,31 +44997,33 @@ var app = (function () {
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(div2);
     			if (detaching) detach_dev(t6);
-    			destroy_component(linearprogress, detaching);
-    			if (detaching) detach_dev(t7);
-    			destroy_component(card0, detaching);
+    			if (detaching) detach_dev(div3);
     			if (detaching) detach_dev(t8);
-    			if_blocks[current_block_type_index].d(detaching);
+    			destroy_component(linearprogress, detaching);
     			if (detaching) detach_dev(t9);
-    			destroy_component(card1, detaching);
+    			destroy_component(card0, detaching);
     			if (detaching) detach_dev(t10);
-    			destroy_component(card2, detaching);
+    			if_blocks[current_block_type_index].d(detaching);
     			if (detaching) detach_dev(t11);
+    			destroy_component(card1, detaching);
+    			if (detaching) detach_dev(t12);
+    			destroy_component(card2, detaching);
+    			if (detaching) detach_dev(t13);
 
     			if (~current_block_type_index_1) {
     				if_blocks_1[current_block_type_index_1].d(detaching);
     			}
 
-    			if (detaching) detach_dev(t12);
-    			destroy_component(card3, detaching);
-    			if (detaching) detach_dev(t13);
-    			destroy_component(card4, detaching);
     			if (detaching) detach_dev(t14);
-    			destroy_component(card5, detaching);
+    			destroy_component(card3, detaching);
     			if (detaching) detach_dev(t15);
-    			destroy_component(card6, detaching);
+    			destroy_component(card4, detaching);
     			if (detaching) detach_dev(t16);
-    			if (detaching) detach_dev(div3);
+    			destroy_component(card5, detaching);
+    			if (detaching) detach_dev(t17);
+    			destroy_component(card6, detaching);
+    			if (detaching) detach_dev(t18);
+    			if (detaching) detach_dev(div4);
     			if (if_block2) if_block2.d();
     			destroy_component(button);
     		}
@@ -45328,15 +45300,14 @@ var app = (function () {
     		Select,
     		Option,
     		Textfield,
-    		onMount,
     		onDestroy,
+    		onMount,
     		getParroquiesData,
     		getSeismData,
     		Leaflet,
     		nextPage,
     		schema,
     		surveyValues,
-    		yesNo,
     		floorOptions,
     		numberPeopleAwake,
     		numberPeopleGoingOutOptions,
@@ -45345,6 +45316,7 @@ var app = (function () {
     		positionOptions,
     		situationObserverOptions,
     		totalFloorOptions,
+    		yesNo,
     		seisms,
     		parroquies,
     		formValues,
@@ -49018,34 +48990,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (74:0) <LinearProgress progress={0.666}>
-    function create_default_slot_49(ctx) {
-    	let t;
-
-    	const block = {
-    		c: function create() {
-    			t = text("Pàgina 2 de 3");
-    		},
-    		m: function mount(target, anchor) {
-    			insert_dev(target, t, anchor);
-    		},
-    		d: function destroy(detaching) {
-    			if (detaching) detach_dev(t);
-    		}
-    	};
-
-    	dispatch_dev("SvelteRegisterBlock", {
-    		block,
-    		id: create_default_slot_49.name,
-    		type: "slot",
-    		source: "(74:0) <LinearProgress progress={0.666}>",
-    		ctx
-    	});
-
-    	return block;
-    }
-
-    // (83:3) <Option value={position}>
+    // (84:3) <Option value={position}>
     function create_default_slot_48(ctx) {
     	let t0_value = /*positionText*/ ctx[32] + "";
     	let t0;
@@ -49071,14 +49016,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_48.name,
     		type: "slot",
-    		source: "(83:3) <Option value={position}>",
+    		source: "(84:3) <Option value={position}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (82:2) {#each Object.entries(movementDescription) as [position, positionText]}
+    // (83:2) {#each Object.entries(movementDescription) as [position, positionText]}
     function create_each_block_15(ctx) {
     	let option;
     	let current;
@@ -49127,14 +49072,14 @@ var app = (function () {
     		block,
     		id: create_each_block_15.name,
     		type: "each",
-    		source: "(82:2) {#each Object.entries(movementDescription) as [position, positionText]}",
+    		source: "(83:2) {#each Object.entries(movementDescription) as [position, positionText]}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (77:1) <Select   style="max-width: 400px"   label="Com descriuria el moviment durant el terratrèmol?"   bind:value={formValues.movementDescription}  >
+    // (78:1) <Select   style="max-width: 400px"   label="Com descriuria el moviment durant el terratrèmol?"   bind:value={formValues.movementDescription}  >
     function create_default_slot_47(ctx) {
     	let each_1_anchor;
     	let current;
@@ -49223,14 +49168,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_47.name,
     		type: "slot",
-    		source: "(77:1) <Select   style=\\\"max-width: 400px\\\"   label=\\\"Com descriuria el moviment durant el terratrèmol?\\\"   bind:value={formValues.movementDescription}  >",
+    		source: "(78:1) <Select   style=\\\"max-width: 400px\\\"   label=\\\"Com descriuria el moviment durant el terratrèmol?\\\"   bind:value={formValues.movementDescription}  >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (76:0) <Card padded>
+    // (77:0) <Card padded>
     function create_default_slot_46(ctx) {
     	let select;
     	let updating_value;
@@ -49295,14 +49240,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_46.name,
     		type: "slot",
-    		source: "(76:0) <Card padded>",
+    		source: "(77:0) <Card padded>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (93:3) <Option value={position}>
+    // (94:3) <Option value={position}>
     function create_default_slot_45(ctx) {
     	let t0_value = /*positionText*/ ctx[32] + "";
     	let t0;
@@ -49328,14 +49273,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_45.name,
     		type: "slot",
-    		source: "(93:3) <Option value={position}>",
+    		source: "(94:3) <Option value={position}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (92:2) {#each Object.entries(noise) as [position, positionText]}
+    // (93:2) {#each Object.entries(noise) as [position, positionText]}
     function create_each_block_14(ctx) {
     	let option;
     	let current;
@@ -49384,14 +49329,14 @@ var app = (function () {
     		block,
     		id: create_each_block_14.name,
     		type: "each",
-    		source: "(92:2) {#each Object.entries(noise) as [position, positionText]}",
+    		source: "(93:2) {#each Object.entries(noise) as [position, positionText]}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (91:1) <Select style="max-width: 400px" label="Va sentir soroll?" bind:value={formValues.noise}>
+    // (92:1) <Select style="max-width: 400px" label="Va sentir soroll?" bind:value={formValues.noise}>
     function create_default_slot_44(ctx) {
     	let each_1_anchor;
     	let current;
@@ -49480,14 +49425,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_44.name,
     		type: "slot",
-    		source: "(91:1) <Select style=\\\"max-width: 400px\\\" label=\\\"Va sentir soroll?\\\" bind:value={formValues.noise}>",
+    		source: "(92:1) <Select style=\\\"max-width: 400px\\\" label=\\\"Va sentir soroll?\\\" bind:value={formValues.noise}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (90:0) <Card padded>
+    // (91:0) <Card padded>
     function create_default_slot_43(ctx) {
     	let select;
     	let updating_value;
@@ -49552,14 +49497,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_43.name,
     		type: "slot",
-    		source: "(90:0) <Card padded>",
+    		source: "(91:0) <Card padded>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (107:3) <Option value={position}>
+    // (108:3) <Option value={position}>
     function create_default_slot_42(ctx) {
     	let t0_value = /*positionText*/ ctx[32] + "";
     	let t0;
@@ -49585,14 +49530,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_42.name,
     		type: "slot",
-    		source: "(107:3) <Option value={position}>",
+    		source: "(108:3) <Option value={position}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (106:2) {#each Object.entries(reaction) as [position, positionText]}
+    // (107:2) {#each Object.entries(reaction) as [position, positionText]}
     function create_each_block_13(ctx) {
     	let option;
     	let current;
@@ -49641,14 +49586,14 @@ var app = (function () {
     		block,
     		id: create_each_block_13.name,
     		type: "each",
-    		source: "(106:2) {#each Object.entries(reaction) as [position, positionText]}",
+    		source: "(107:2) {#each Object.entries(reaction) as [position, positionText]}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (101:1) <Select   style="max-width: 400px"   label="Quina reacció va tenir durant el terratrèmol?"   bind:value={formValues.reaction}  >
+    // (102:1) <Select   style="max-width: 400px"   label="Quina reacció va tenir durant el terratrèmol?"   bind:value={formValues.reaction}  >
     function create_default_slot_41(ctx) {
     	let each_1_anchor;
     	let current;
@@ -49737,14 +49682,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_41.name,
     		type: "slot",
-    		source: "(101:1) <Select   style=\\\"max-width: 400px\\\"   label=\\\"Quina reacció va tenir durant el terratrèmol?\\\"   bind:value={formValues.reaction}  >",
+    		source: "(102:1) <Select   style=\\\"max-width: 400px\\\"   label=\\\"Quina reacció va tenir durant el terratrèmol?\\\"   bind:value={formValues.reaction}  >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (100:0) <Card padded>
+    // (101:0) <Card padded>
     function create_default_slot_40(ctx) {
     	let select;
     	let updating_value;
@@ -49809,21 +49754,21 @@ var app = (function () {
     		block,
     		id: create_default_slot_40.name,
     		type: "slot",
-    		source: "(100:0) <Card padded>",
+    		source: "(101:0) <Card padded>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (118:3) {#if i > 0 && i % 4 === 0}
+    // (119:3) {#if i > 0 && i % 4 === 0}
     function create_if_block_5(ctx) {
     	let br;
 
     	const block = {
     		c: function create() {
     			br = element("br");
-    			add_location(br, file$4, 118, 4, 4375);
+    			add_location(br, file$4, 119, 4, 4371);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, br, anchor);
@@ -49837,14 +49782,14 @@ var app = (function () {
     		block,
     		id: create_if_block_5.name,
     		type: "if",
-    		source: "(118:3) {#if i > 0 && i % 4 === 0}",
+    		source: "(119:3) {#if i > 0 && i % 4 === 0}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (121:3) <FormField style="min-width: 250px">
+    // (122:3) <FormField style="min-width: 250px">
     function create_default_slot_39(ctx) {
     	let radio;
     	let updating_group;
@@ -49904,14 +49849,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_39.name,
     		type: "slot",
-    		source: "(121:3) <FormField style=\\\"min-width: 250px\\\">",
+    		source: "(122:3) <FormField style=\\\"min-width: 250px\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (123:4) 
+    // (124:4) 
     function create_label_slot_2(ctx) {
     	let span;
     	let t0_value = /*positionText*/ ctx[32] + "";
@@ -49924,7 +49869,7 @@ var app = (function () {
     			t0 = text(t0_value);
     			t1 = space();
     			attr_dev(span, "slot", "label");
-    			add_location(span, file$4, 122, 4, 4509);
+    			add_location(span, file$4, 123, 4, 4505);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -49941,14 +49886,14 @@ var app = (function () {
     		block,
     		id: create_label_slot_2.name,
     		type: "slot",
-    		source: "(123:4) ",
+    		source: "(124:4) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (117:2) {#each Object.entries(standingDifficulty) as [position, positionText], i}
+    // (118:2) {#each Object.entries(standingDifficulty) as [position, positionText], i}
     function create_each_block_12(ctx) {
     	let t;
     	let formfield;
@@ -50008,14 +49953,14 @@ var app = (function () {
     		block,
     		id: create_each_block_12.name,
     		type: "each",
-    		source: "(117:2) {#each Object.entries(standingDifficulty) as [position, positionText], i}",
+    		source: "(118:2) {#each Object.entries(standingDifficulty) as [position, positionText], i}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (114:0) <Card padded>
+    // (115:0) <Card padded>
     function create_default_slot_38(ctx) {
     	let div;
     	let p;
@@ -50044,9 +49989,9 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			add_location(p, file$4, 115, 2, 4201);
+    			add_location(p, file$4, 116, 2, 4197);
     			attr_dev(div, "class", "radio-group svelte-161svza");
-    			add_location(div, file$4, 114, 1, 4173);
+    			add_location(div, file$4, 115, 1, 4169);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -50116,21 +50061,21 @@ var app = (function () {
     		block,
     		id: create_default_slot_38.name,
     		type: "slot",
-    		source: "(114:0) <Card padded>",
+    		source: "(115:0) <Card padded>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (135:3) {#if i > 0 && i % 4 === 0}
+    // (136:3) {#if i > 0 && i % 4 === 0}
     function create_if_block_4(ctx) {
     	let br;
 
     	const block = {
     		c: function create() {
     			br = element("br");
-    			add_location(br, file$4, 135, 4, 4792);
+    			add_location(br, file$4, 136, 4, 4788);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, br, anchor);
@@ -50144,14 +50089,14 @@ var app = (function () {
     		block,
     		id: create_if_block_4.name,
     		type: "if",
-    		source: "(135:3) {#if i > 0 && i % 4 === 0}",
+    		source: "(136:3) {#if i > 0 && i % 4 === 0}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (138:3) <FormField style="min-width: 250px">
+    // (139:3) <FormField style="min-width: 250px">
     function create_default_slot_37(ctx) {
     	let radio;
     	let updating_group;
@@ -50211,14 +50156,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_37.name,
     		type: "slot",
-    		source: "(138:3) <FormField style=\\\"min-width: 250px\\\">",
+    		source: "(139:3) <FormField style=\\\"min-width: 250px\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (140:4) 
+    // (141:4) 
     function create_label_slot_1(ctx) {
     	let span;
     	let t0_value = /*positionText*/ ctx[32] + "";
@@ -50231,7 +50176,7 @@ var app = (function () {
     			t0 = text(t0_value);
     			t1 = space();
     			attr_dev(span, "slot", "label");
-    			add_location(span, file$4, 139, 4, 4925);
+    			add_location(span, file$4, 140, 4, 4921);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -50248,14 +50193,14 @@ var app = (function () {
     		block,
     		id: create_label_slot_1.name,
     		type: "slot",
-    		source: "(140:4) ",
+    		source: "(141:4) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (134:2) {#each Object.entries(animalsFrightened) as [position, positionText], i}
+    // (135:2) {#each Object.entries(animalsFrightened) as [position, positionText], i}
     function create_each_block_11(ctx) {
     	let t;
     	let formfield;
@@ -50315,14 +50260,14 @@ var app = (function () {
     		block,
     		id: create_each_block_11.name,
     		type: "each",
-    		source: "(134:2) {#each Object.entries(animalsFrightened) as [position, positionText], i}",
+    		source: "(135:2) {#each Object.entries(animalsFrightened) as [position, positionText], i}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (131:0) <Card padded>
+    // (132:0) <Card padded>
     function create_default_slot_36(ctx) {
     	let div;
     	let p;
@@ -50351,9 +50296,9 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			add_location(p, file$4, 132, 2, 4647);
+    			add_location(p, file$4, 133, 2, 4643);
     			attr_dev(div, "class", "radio-group svelte-161svza");
-    			add_location(div, file$4, 131, 1, 4619);
+    			add_location(div, file$4, 132, 1, 4615);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -50423,14 +50368,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_36.name,
     		type: "slot",
-    		source: "(131:0) <Card padded>",
+    		source: "(132:0) <Card padded>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (155:3) <Option value={position}>
+    // (156:3) <Option value={position}>
     function create_default_slot_35(ctx) {
     	let t0_value = /*positionText*/ ctx[32] + "";
     	let t0;
@@ -50456,14 +50401,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_35.name,
     		type: "slot",
-    		source: "(155:3) <Option value={position}>",
+    		source: "(156:3) <Option value={position}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (154:2) {#each Object.entries(whatDidYouDo) as [position, positionText]}
+    // (155:2) {#each Object.entries(whatDidYouDo) as [position, positionText]}
     function create_each_block_10(ctx) {
     	let option;
     	let current;
@@ -50512,14 +50457,14 @@ var app = (function () {
     		block,
     		id: create_each_block_10.name,
     		type: "each",
-    		source: "(154:2) {#each Object.entries(whatDidYouDo) as [position, positionText]}",
+    		source: "(155:2) {#each Object.entries(whatDidYouDo) as [position, positionText]}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (149:1) <Select   style="max-width: 400px"   label="Què va fer durant la sacsejada?"   bind:value={formValues.whatDidYouDo}  >
+    // (150:1) <Select   style="max-width: 400px"   label="Què va fer durant la sacsejada?"   bind:value={formValues.whatDidYouDo}  >
     function create_default_slot_34(ctx) {
     	let each_1_anchor;
     	let current;
@@ -50608,14 +50553,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_34.name,
     		type: "slot",
-    		source: "(149:1) <Select   style=\\\"max-width: 400px\\\"   label=\\\"Què va fer durant la sacsejada?\\\"   bind:value={formValues.whatDidYouDo}  >",
+    		source: "(150:1) <Select   style=\\\"max-width: 400px\\\"   label=\\\"Què va fer durant la sacsejada?\\\"   bind:value={formValues.whatDidYouDo}  >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (161:1) {#if formValues.whatDidYouDo === 'other'}
+    // (162:1) {#if formValues.whatDidYouDo === 'other'}
     function create_if_block_3$1(ctx) {
     	let formfield;
     	let current;
@@ -50663,14 +50608,14 @@ var app = (function () {
     		block,
     		id: create_if_block_3$1.name,
     		type: "if",
-    		source: "(161:1) {#if formValues.whatDidYouDo === 'other'}",
+    		source: "(162:1) {#if formValues.whatDidYouDo === 'other'}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (162:2) <FormField>
+    // (163:2) <FormField>
     function create_default_slot_33(ctx) {
     	let div;
     	let t1;
@@ -50697,7 +50642,7 @@ var app = (function () {
     			div.textContent = "Indiqui què va fer:";
     			t1 = space();
     			create_component(textfield.$$.fragment);
-    			add_location(div, file$4, 162, 3, 5364);
+    			add_location(div, file$4, 163, 3, 5360);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -50736,14 +50681,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_33.name,
     		type: "slot",
-    		source: "(162:2) <FormField>",
+    		source: "(163:2) <FormField>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (148:0) <Card padded>
+    // (149:0) <Card padded>
     function create_default_slot_32(ctx) {
     	let select;
     	let updating_value;
@@ -50845,14 +50790,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_32.name,
     		type: "slot",
-    		source: "(148:0) <Card padded>",
+    		source: "(149:0) <Card padded>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (171:3) <Option value={position}>
+    // (172:3) <Option value={position}>
     function create_default_slot_31(ctx) {
     	let t0_value = /*positionText*/ ctx[32] + "";
     	let t0;
@@ -50878,14 +50823,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_31.name,
     		type: "slot",
-    		source: "(171:3) <Option value={position}>",
+    		source: "(172:3) <Option value={position}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (170:2) {#each Object.entries(effectsLamps) as [position, positionText]}
+    // (171:2) {#each Object.entries(effectsLamps) as [position, positionText]}
     function create_each_block_9(ctx) {
     	let option;
     	let current;
@@ -50934,14 +50879,14 @@ var app = (function () {
     		block,
     		id: create_each_block_9.name,
     		type: "each",
-    		source: "(170:2) {#each Object.entries(effectsLamps) as [position, positionText]}",
+    		source: "(171:2) {#each Object.entries(effectsLamps) as [position, positionText]}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (169:1) <Select style="max-width: 400px" label="Als llums penjats:" bind:value={formValues.effectsLamps}>
+    // (170:1) <Select style="max-width: 400px" label="Als llums penjats:" bind:value={formValues.effectsLamps}>
     function create_default_slot_30(ctx) {
     	let each_1_anchor;
     	let current;
@@ -51030,14 +50975,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_30.name,
     		type: "slot",
-    		source: "(169:1) <Select style=\\\"max-width: 400px\\\" label=\\\"Als llums penjats:\\\" bind:value={formValues.effectsLamps}>",
+    		source: "(170:1) <Select style=\\\"max-width: 400px\\\" label=\\\"Als llums penjats:\\\" bind:value={formValues.effectsLamps}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (168:0) <Card padded>
+    // (169:0) <Card padded>
     function create_default_slot_29(ctx) {
     	let select;
     	let updating_value;
@@ -51102,14 +51047,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_29.name,
     		type: "slot",
-    		source: "(168:0) <Card padded>",
+    		source: "(169:0) <Card padded>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (186:3) <Option value={position}>
+    // (187:3) <Option value={position}>
     function create_default_slot_28(ctx) {
     	let t0_value = /*positionText*/ ctx[32] + "";
     	let t0;
@@ -51135,14 +51080,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_28.name,
     		type: "slot",
-    		source: "(186:3) <Option value={position}>",
+    		source: "(187:3) <Option value={position}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (185:2) {#each Object.entries(effectsLiquids) as [position, positionText]}
+    // (186:2) {#each Object.entries(effectsLiquids) as [position, positionText]}
     function create_each_block_8(ctx) {
     	let option;
     	let current;
@@ -51191,14 +51136,14 @@ var app = (function () {
     		block,
     		id: create_each_block_8.name,
     		type: "each",
-    		source: "(185:2) {#each Object.entries(effectsLiquids) as [position, positionText]}",
+    		source: "(186:2) {#each Object.entries(effectsLiquids) as [position, positionText]}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (180:1) <Select   style="max-width: 400px"   label="Als líquids en recipients:"   bind:value={formValues.effectsLiquids}  >
+    // (181:1) <Select   style="max-width: 400px"   label="Als líquids en recipients:"   bind:value={formValues.effectsLiquids}  >
     function create_default_slot_27(ctx) {
     	let each_1_anchor;
     	let current;
@@ -51287,14 +51232,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_27.name,
     		type: "slot",
-    		source: "(180:1) <Select   style=\\\"max-width: 400px\\\"   label=\\\"Als líquids en recipients:\\\"   bind:value={formValues.effectsLiquids}  >",
+    		source: "(181:1) <Select   style=\\\"max-width: 400px\\\"   label=\\\"Als líquids en recipients:\\\"   bind:value={formValues.effectsLiquids}  >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (197:3) <Option value={position}>
+    // (198:3) <Option value={position}>
     function create_default_slot_26(ctx) {
     	let t0_value = /*positionText*/ ctx[32] + "";
     	let t0;
@@ -51320,14 +51265,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_26.name,
     		type: "slot",
-    		source: "(197:3) <Option value={position}>",
+    		source: "(198:3) <Option value={position}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (196:2) {#each Object.entries(effectsPaintings) as [position, positionText]}
+    // (197:2) {#each Object.entries(effectsPaintings) as [position, positionText]}
     function create_each_block_7(ctx) {
     	let option;
     	let current;
@@ -51376,14 +51321,14 @@ var app = (function () {
     		block,
     		id: create_each_block_7.name,
     		type: "each",
-    		source: "(196:2) {#each Object.entries(effectsPaintings) as [position, positionText]}",
+    		source: "(197:2) {#each Object.entries(effectsPaintings) as [position, positionText]}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (191:1) <Select   style="max-width: 400px"   label="Als quadres penjats a les parets:"   bind:value={formValues.effectsPaintings}  >
+    // (192:1) <Select   style="max-width: 400px"   label="Als quadres penjats a les parets:"   bind:value={formValues.effectsPaintings}  >
     function create_default_slot_25(ctx) {
     	let each_1_anchor;
     	let current;
@@ -51472,14 +51417,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_25.name,
     		type: "slot",
-    		source: "(191:1) <Select   style=\\\"max-width: 400px\\\"   label=\\\"Als quadres penjats a les parets:\\\"   bind:value={formValues.effectsPaintings}  >",
+    		source: "(192:1) <Select   style=\\\"max-width: 400px\\\"   label=\\\"Als quadres penjats a les parets:\\\"   bind:value={formValues.effectsPaintings}  >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (209:3) <Option value={position}>
+    // (210:3) <Option value={position}>
     function create_default_slot_24(ctx) {
     	let t0_value = /*positionText*/ ctx[32] + "";
     	let t0;
@@ -51505,14 +51450,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_24.name,
     		type: "slot",
-    		source: "(209:3) <Option value={position}>",
+    		source: "(210:3) <Option value={position}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (208:2) {#each Object.entries(effectsDoorsWindows) as [position, positionText]}
+    // (209:2) {#each Object.entries(effectsDoorsWindows) as [position, positionText]}
     function create_each_block_6(ctx) {
     	let option;
     	let current;
@@ -51561,14 +51506,14 @@ var app = (function () {
     		block,
     		id: create_each_block_6.name,
     		type: "each",
-    		source: "(208:2) {#each Object.entries(effectsDoorsWindows) as [position, positionText]}",
+    		source: "(209:2) {#each Object.entries(effectsDoorsWindows) as [position, positionText]}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (203:1) <Select   style="max-width: 400px"   label="A portes i finestres:"   bind:value={formValues.effectsDoorsWindows}  >
+    // (204:1) <Select   style="max-width: 400px"   label="A portes i finestres:"   bind:value={formValues.effectsDoorsWindows}  >
     function create_default_slot_23(ctx) {
     	let each_1_anchor;
     	let current;
@@ -51657,14 +51602,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_23.name,
     		type: "slot",
-    		source: "(203:1) <Select   style=\\\"max-width: 400px\\\"   label=\\\"A portes i finestres:\\\"   bind:value={formValues.effectsDoorsWindows}  >",
+    		source: "(204:1) <Select   style=\\\"max-width: 400px\\\"   label=\\\"A portes i finestres:\\\"   bind:value={formValues.effectsDoorsWindows}  >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (221:3) <Option value={position}>
+    // (222:3) <Option value={position}>
     function create_default_slot_22(ctx) {
     	let t0_value = /*positionText*/ ctx[32] + "";
     	let t0;
@@ -51690,14 +51635,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_22.name,
     		type: "slot",
-    		source: "(221:3) <Option value={position}>",
+    		source: "(222:3) <Option value={position}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (220:2) {#each Object.entries(effectsFurniture) as [position, positionText]}
+    // (221:2) {#each Object.entries(effectsFurniture) as [position, positionText]}
     function create_each_block_5(ctx) {
     	let option;
     	let current;
@@ -51746,14 +51691,14 @@ var app = (function () {
     		block,
     		id: create_each_block_5.name,
     		type: "each",
-    		source: "(220:2) {#each Object.entries(effectsFurniture) as [position, positionText]}",
+    		source: "(221:2) {#each Object.entries(effectsFurniture) as [position, positionText]}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (215:1) <Select   style="max-width: 400px"   label="A mobles i electrodomèstics:"   bind:value={formValues.effectsFurniture}  >
+    // (216:1) <Select   style="max-width: 400px"   label="A mobles i electrodomèstics:"   bind:value={formValues.effectsFurniture}  >
     function create_default_slot_21(ctx) {
     	let each_1_anchor;
     	let current;
@@ -51842,14 +51787,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_21.name,
     		type: "slot",
-    		source: "(215:1) <Select   style=\\\"max-width: 400px\\\"   label=\\\"A mobles i electrodomèstics:\\\"   bind:value={formValues.effectsFurniture}  >",
+    		source: "(216:1) <Select   style=\\\"max-width: 400px\\\"   label=\\\"A mobles i electrodomèstics:\\\"   bind:value={formValues.effectsFurniture}  >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (229:3) <Option value={position}>
+    // (230:3) <Option value={position}>
     function create_default_slot_20(ctx) {
     	let t0_value = /*positionText*/ ctx[32] + "";
     	let t0;
@@ -51875,14 +51820,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_20.name,
     		type: "slot",
-    		source: "(229:3) <Option value={position}>",
+    		source: "(230:3) <Option value={position}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (228:2) {#each Object.entries(effectsPlants) as [position, positionText]}
+    // (229:2) {#each Object.entries(effectsPlants) as [position, positionText]}
     function create_each_block_4(ctx) {
     	let option;
     	let current;
@@ -51931,14 +51876,14 @@ var app = (function () {
     		block,
     		id: create_each_block_4.name,
     		type: "each",
-    		source: "(228:2) {#each Object.entries(effectsPlants) as [position, positionText]}",
+    		source: "(229:2) {#each Object.entries(effectsPlants) as [position, positionText]}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (227:1) <Select style="max-width: 400px" label="A les plantes:" bind:value={formValues.effectsPlants}>
+    // (228:1) <Select style="max-width: 400px" label="A les plantes:" bind:value={formValues.effectsPlants}>
     function create_default_slot_19(ctx) {
     	let each_1_anchor;
     	let current;
@@ -52027,14 +51972,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_19.name,
     		type: "slot",
-    		source: "(227:1) <Select style=\\\"max-width: 400px\\\" label=\\\"A les plantes:\\\" bind:value={formValues.effectsPlants}>",
+    		source: "(228:1) <Select style=\\\"max-width: 400px\\\" label=\\\"A les plantes:\\\" bind:value={formValues.effectsPlants}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (241:3) <Option value={position}>
+    // (242:3) <Option value={position}>
     function create_default_slot_18(ctx) {
     	let t0_value = /*positionText*/ ctx[32] + "";
     	let t0;
@@ -52060,14 +52005,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_18.name,
     		type: "slot",
-    		source: "(241:3) <Option value={position}>",
+    		source: "(242:3) <Option value={position}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (240:2) {#each Object.entries(effectsShelves) as [position, positionText]}
+    // (241:2) {#each Object.entries(effectsShelves) as [position, positionText]}
     function create_each_block_3(ctx) {
     	let option;
     	let current;
@@ -52116,14 +52061,14 @@ var app = (function () {
     		block,
     		id: create_each_block_3.name,
     		type: "each",
-    		source: "(240:2) {#each Object.entries(effectsShelves) as [position, positionText]}",
+    		source: "(241:2) {#each Object.entries(effectsShelves) as [position, positionText]}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (235:1) <Select   style="max-width: 400px"   label="Als objectes a les prestatgeries o taules:"   bind:value={formValues.effectsShelves}  >
+    // (236:1) <Select   style="max-width: 400px"   label="Als objectes a les prestatgeries o taules:"   bind:value={formValues.effectsShelves}  >
     function create_default_slot_17(ctx) {
     	let each_1_anchor;
     	let current;
@@ -52212,14 +52157,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_17.name,
     		type: "slot",
-    		source: "(235:1) <Select   style=\\\"max-width: 400px\\\"   label=\\\"Als objectes a les prestatgeries o taules:\\\"   bind:value={formValues.effectsShelves}  >",
+    		source: "(236:1) <Select   style=\\\"max-width: 400px\\\"   label=\\\"Als objectes a les prestatgeries o taules:\\\"   bind:value={formValues.effectsShelves}  >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (247:1) <FormField style="width: 100%">
+    // (248:1) <FormField style="width: 100%">
     function create_default_slot_16(ctx) {
     	let div;
     	let t1;
@@ -52246,7 +52191,7 @@ var app = (function () {
     			div.textContent = "Descriviu, si voleu, quins objectes van vibrar o van caure:";
     			t1 = space();
     			create_component(textfield.$$.fragment);
-    			add_location(div, file$4, 247, 2, 7534);
+    			add_location(div, file$4, 248, 2, 7530);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -52285,14 +52230,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_16.name,
     		type: "slot",
-    		source: "(247:1) <FormField style=\\\"width: 100%\\\">",
+    		source: "(248:1) <FormField style=\\\"width: 100%\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (178:0) <Card padded>
+    // (179:0) <Card padded>
     function create_default_slot_15(ctx) {
     	let div;
     	let t1;
@@ -52452,7 +52397,7 @@ var app = (function () {
     			create_component(select5.$$.fragment);
     			t7 = space();
     			create_component(formfield.$$.fragment);
-    			add_location(div, file$4, 178, 1, 5804);
+    			add_location(div, file$4, 179, 1, 5800);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -52603,14 +52548,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_15.name,
     		type: "slot",
-    		source: "(178:0) <Card padded>",
+    		source: "(179:0) <Card padded>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (259:3) <Option value={position}>
+    // (260:3) <Option value={position}>
     function create_default_slot_14(ctx) {
     	let t0_value = /*positionText*/ ctx[32] + "";
     	let t0;
@@ -52636,14 +52581,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_14.name,
     		type: "slot",
-    		source: "(259:3) <Option value={position}>",
+    		source: "(260:3) <Option value={position}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (258:2) {#each Object.entries(buildingType) as [position, positionText]}
+    // (259:2) {#each Object.entries(buildingType) as [position, positionText]}
     function create_each_block_2(ctx) {
     	let option;
     	let current;
@@ -52692,14 +52637,14 @@ var app = (function () {
     		block,
     		id: create_each_block_2.name,
     		type: "each",
-    		source: "(258:2) {#each Object.entries(buildingType) as [position, positionText]}",
+    		source: "(259:2) {#each Object.entries(buildingType) as [position, positionText]}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (253:1) <Select   style="max-width: 400px"   label="La construcció de l'edifici és del tipus:"   bind:value={formValues.buildingType}  >
+    // (254:1) <Select   style="max-width: 400px"   label="La construcció de l'edifici és del tipus:"   bind:value={formValues.buildingType}  >
     function create_default_slot_13(ctx) {
     	let each_1_anchor;
     	let current;
@@ -52788,14 +52733,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_13.name,
     		type: "slot",
-    		source: "(253:1) <Select   style=\\\"max-width: 400px\\\"   label=\\\"La construcció de l'edifici és del tipus:\\\"   bind:value={formValues.buildingType}  >",
+    		source: "(254:1) <Select   style=\\\"max-width: 400px\\\"   label=\\\"La construcció de l'edifici és del tipus:\\\"   bind:value={formValues.buildingType}  >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (265:1) <FormField>
+    // (266:1) <FormField>
     function create_default_slot_12(ctx) {
     	let div;
     	let t1;
@@ -52822,7 +52767,7 @@ var app = (function () {
     			div.textContent = "Any de construcció de l'edifici (si el sap)";
     			t1 = space();
     			create_component(textfield.$$.fragment);
-    			add_location(div, file$4, 265, 2, 8031);
+    			add_location(div, file$4, 266, 2, 8027);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -52861,14 +52806,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_12.name,
     		type: "slot",
-    		source: "(265:1) <FormField>",
+    		source: "(266:1) <FormField>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (252:0) <Card padded>
+    // (253:0) <Card padded>
     function create_default_slot_11(ctx) {
     	let select;
     	let updating_value;
@@ -52958,14 +52903,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_11.name,
     		type: "slot",
-    		source: "(252:0) <Card padded>",
+    		source: "(253:0) <Card padded>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (278:3) <Option value={position}>
+    // (279:3) <Option value={position}>
     function create_default_slot_10(ctx) {
     	let t0_value = /*positionText*/ ctx[32] + "";
     	let t0;
@@ -52991,14 +52936,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_10.name,
     		type: "slot",
-    		source: "(278:3) <Option value={position}>",
+    		source: "(279:3) <Option value={position}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (277:2) {#each Object.entries(buildingDamage) as [position, positionText]}
+    // (278:2) {#each Object.entries(buildingDamage) as [position, positionText]}
     function create_each_block_1(ctx) {
     	let option;
     	let current;
@@ -53047,14 +52992,14 @@ var app = (function () {
     		block,
     		id: create_each_block_1.name,
     		type: "each",
-    		source: "(277:2) {#each Object.entries(buildingDamage) as [position, positionText]}",
+    		source: "(278:2) {#each Object.entries(buildingDamage) as [position, positionText]}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (272:1) <Select   style="max-width: 400px"   label="Va observar danys a l'edifici?"   bind:value={formValues.buildingDamage}  >
+    // (273:1) <Select   style="max-width: 400px"   label="Va observar danys a l'edifici?"   bind:value={formValues.buildingDamage}  >
     function create_default_slot_9(ctx) {
     	let each_1_anchor;
     	let current;
@@ -53143,14 +53088,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_9.name,
     		type: "slot",
-    		source: "(272:1) <Select   style=\\\"max-width: 400px\\\"   label=\\\"Va observar danys a l'edifici?\\\"   bind:value={formValues.buildingDamage}  >",
+    		source: "(273:1) <Select   style=\\\"max-width: 400px\\\"   label=\\\"Va observar danys a l'edifici?\\\"   bind:value={formValues.buildingDamage}  >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (284:1) {#if formValues.buildingDamage === 'yes'}
+    // (285:1) {#if formValues.buildingDamage === 'yes'}
     function create_if_block_2$1(ctx) {
     	let div0;
     	let t;
@@ -53171,7 +53116,7 @@ var app = (function () {
 
     	formfield = new FormField({
     			props: {
-    				$$slots: { default: [create_default_slot_7$1] },
+    				$$slots: { default: [create_default_slot_7] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -53189,8 +53134,8 @@ var app = (function () {
     			div1 = element("div");
     			create_component(formfield.$$.fragment);
     			attr_dev(div0, "class", "two-column svelte-161svza");
-    			add_location(div0, file$4, 284, 2, 8508);
-    			add_location(div1, file$4, 299, 2, 8835);
+    			add_location(div0, file$4, 285, 2, 8504);
+    			add_location(div1, file$4, 300, 2, 8831);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div0, anchor);
@@ -53274,14 +53219,14 @@ var app = (function () {
     		block,
     		id: create_if_block_2$1.name,
     		type: "if",
-    		source: "(284:1) {#if formValues.buildingDamage === 'yes'}",
+    		source: "(285:1) {#if formValues.buildingDamage === 'yes'}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (288:3) <FormField>
+    // (289:3) <FormField>
     function create_default_slot_8(ctx) {
     	let checkbox;
     	let updating_group;
@@ -53341,14 +53286,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_8.name,
     		type: "slot",
-    		source: "(288:3) <FormField>",
+    		source: "(289:3) <FormField>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (294:4) 
+    // (295:4) 
     function create_label_slot(ctx) {
     	let span;
     	let t_value = /*positionText*/ ctx[32] + "";
@@ -53359,7 +53304,7 @@ var app = (function () {
     			span = element("span");
     			t = text(t_value);
     			attr_dev(span, "slot", "label");
-    			add_location(span, file$4, 293, 4, 8742);
+    			add_location(span, file$4, 294, 4, 8738);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -53375,14 +53320,14 @@ var app = (function () {
     		block,
     		id: create_label_slot.name,
     		type: "slot",
-    		source: "(294:4) ",
+    		source: "(295:4) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (287:3) {#each Object.entries(buildingDamageDescription) as [position, positionText]}
+    // (288:3) {#each Object.entries(buildingDamageDescription) as [position, positionText]}
     function create_each_block$1(ctx) {
     	let formfield;
     	let current;
@@ -53433,15 +53378,15 @@ var app = (function () {
     		block,
     		id: create_each_block$1.name,
     		type: "each",
-    		source: "(287:3) {#each Object.entries(buildingDamageDescription) as [position, positionText]}",
+    		source: "(288:3) {#each Object.entries(buildingDamageDescription) as [position, positionText]}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (301:3) <FormField>
-    function create_default_slot_7$1(ctx) {
+    // (302:3) <FormField>
+    function create_default_slot_7(ctx) {
     	let div;
     	let t1;
     	let textfield;
@@ -53467,7 +53412,7 @@ var app = (function () {
     			div.textContent = "Altres comentaris sobre els danys";
     			t1 = space();
     			create_component(textfield.$$.fragment);
-    			add_location(div, file$4, 301, 4, 8860);
+    			add_location(div, file$4, 302, 4, 8856);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -53504,16 +53449,16 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_7$1.name,
+    		id: create_default_slot_7.name,
     		type: "slot",
-    		source: "(301:3) <FormField>",
+    		source: "(302:3) <FormField>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (309:1) {#if formValues.buildingDamage === 'yes' && !formValues.image}
+    // (310:1) {#if formValues.buildingDamage === 'yes' && !formValues.image}
     function create_if_block_1$1(ctx) {
     	let div;
     	let t1;
@@ -53536,7 +53481,7 @@ var app = (function () {
     			div.textContent = "Afegeix una foto si en tens:";
     			t1 = space();
     			create_component(dropzone.$$.fragment);
-    			add_location(div, file$4, 309, 2, 9077);
+    			add_location(div, file$4, 310, 2, 9073);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -53573,14 +53518,14 @@ var app = (function () {
     		block,
     		id: create_if_block_1$1.name,
     		type: "if",
-    		source: "(309:1) {#if formValues.buildingDamage === 'yes' && !formValues.image}",
+    		source: "(310:1) {#if formValues.buildingDamage === 'yes' && !formValues.image}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (311:2) <Dropzone on:drop={handleFilesSelect}    >
+    // (312:2) <Dropzone on:drop={handleFilesSelect}    >
     function create_default_slot_6$1(ctx) {
     	let t;
 
@@ -53600,14 +53545,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_6$1.name,
     		type: "slot",
-    		source: "(311:2) <Dropzone on:drop={handleFilesSelect}    >",
+    		source: "(312:2) <Dropzone on:drop={handleFilesSelect}    >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (316:1) {#if formValues.image}
+    // (317:1) {#if formValues.image}
     function create_if_block$2(ctx) {
     	let img;
     	let img_src_value;
@@ -53617,7 +53562,7 @@ var app = (function () {
     			img = element("img");
     			if (!src_url_equal(img.src, img_src_value = /*publicUrl*/ ctx[1])) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "imatge de l'usuari");
-    			add_location(img, file$4, 316, 3, 9264);
+    			add_location(img, file$4, 317, 3, 9260);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, img, anchor);
@@ -53636,14 +53581,14 @@ var app = (function () {
     		block,
     		id: create_if_block$2.name,
     		type: "if",
-    		source: "(316:1) {#if formValues.image}",
+    		source: "(317:1) {#if formValues.image}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (271:0) <Card padded>
+    // (272:0) <Card padded>
     function create_default_slot_5$1(ctx) {
     	let select;
     	let updating_value;
@@ -53799,14 +53744,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_5$1.name,
     		type: "slot",
-    		source: "(271:0) <Card padded>",
+    		source: "(272:0) <Card padded>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (321:1) <FormField>
+    // (322:1) <FormField>
     function create_default_slot_4$1(ctx) {
     	let div;
     	let t1;
@@ -53833,7 +53778,7 @@ var app = (function () {
     			div.textContent = "Desitgeu afegir algun aclariment o descriure el que heu notat?";
     			t1 = space();
     			create_component(textfield.$$.fragment);
-    			add_location(div, file$4, 321, 2, 9357);
+    			add_location(div, file$4, 322, 2, 9353);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -53872,14 +53817,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_4$1.name,
     		type: "slot",
-    		source: "(321:1) <FormField>",
+    		source: "(322:1) <FormField>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (325:1) <FormField>
+    // (326:1) <FormField>
     function create_default_slot_3$1(ctx) {
     	let div;
     	let t1;
@@ -53906,7 +53851,7 @@ var app = (function () {
     			div.textContent = "Si just abans o després d'aquest terratrèmol en va notar d'altres indiqui-ho a continuació";
     			t1 = space();
     			create_component(textfield.$$.fragment);
-    			add_location(div, file$4, 325, 2, 9541);
+    			add_location(div, file$4, 326, 2, 9537);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -53945,14 +53890,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_3$1.name,
     		type: "slot",
-    		source: "(325:1) <FormField>",
+    		source: "(326:1) <FormField>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (320:0) <Card padded>
+    // (321:0) <Card padded>
     function create_default_slot_2$1(ctx) {
     	let formfield0;
     	let t;
@@ -54025,14 +53970,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_2$1.name,
     		type: "slot",
-    		source: "(320:0) <Card padded>",
+    		source: "(321:0) <Card padded>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (334:1) <Button variant="raised" on:click={handlePrevious}>
+    // (335:1) <Button variant="raised" on:click={handlePrevious}>
     function create_default_slot_1$1(ctx) {
     	let t;
 
@@ -54052,14 +53997,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_1$1.name,
     		type: "slot",
-    		source: "(334:1) <Button variant=\\\"raised\\\" on:click={handlePrevious}>",
+    		source: "(335:1) <Button variant=\\\"raised\\\" on:click={handlePrevious}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (335:1) <Button variant="raised"  on:click={handleSubmit}>
+    // (336:1) <Button variant="raised"  on:click={handleSubmit}>
     function create_default_slot$3(ctx) {
     	let t;
 
@@ -54079,7 +54024,7 @@ var app = (function () {
     		block,
     		id: create_default_slot$3.name,
     		type: "slot",
-    		source: "(335:1) <Button variant=\\\"raised\\\"  on:click={handleSubmit}>",
+    		source: "(336:1) <Button variant=\\\"raised\\\"  on:click={handleSubmit}>",
     		ctx
     	});
 
@@ -54089,42 +54034,40 @@ var app = (function () {
     function create_fragment$7(ctx) {
     	let div0;
     	let t1;
-    	let linearprogress;
-    	let t2;
-    	let card0;
-    	let t3;
-    	let card1;
-    	let t4;
-    	let card2;
-    	let t5;
-    	let card3;
-    	let t6;
-    	let card4;
-    	let t7;
-    	let card5;
-    	let t8;
-    	let card6;
-    	let t9;
-    	let card7;
-    	let t10;
-    	let card8;
-    	let t11;
-    	let card9;
-    	let t12;
-    	let card10;
-    	let t13;
     	let div1;
-    	let button0;
+    	let t3;
+    	let linearprogress;
+    	let t4;
+    	let card0;
+    	let t5;
+    	let card1;
+    	let t6;
+    	let card2;
+    	let t7;
+    	let card3;
+    	let t8;
+    	let card4;
+    	let t9;
+    	let card5;
+    	let t10;
+    	let card6;
+    	let t11;
+    	let card7;
+    	let t12;
+    	let card8;
+    	let t13;
+    	let card9;
     	let t14;
+    	let card10;
+    	let t15;
+    	let div2;
+    	let button0;
+    	let t16;
     	let button1;
     	let current;
 
     	linearprogress = new LinearProgress({
-    			props: {
-    				progress: 0.666,
-    				$$slots: { default: [create_default_slot_49] },
-    				$$scope: { ctx }
-    			},
+    			props: { progress: 0.666 },
     			$$inline: true
     		});
 
@@ -54254,38 +54197,42 @@ var app = (function () {
     			div0 = element("div");
     			div0.textContent = "Percepció personal";
     			t1 = space();
-    			create_component(linearprogress.$$.fragment);
-    			t2 = space();
-    			create_component(card0.$$.fragment);
-    			t3 = space();
-    			create_component(card1.$$.fragment);
-    			t4 = space();
-    			create_component(card2.$$.fragment);
-    			t5 = space();
-    			create_component(card3.$$.fragment);
-    			t6 = space();
-    			create_component(card4.$$.fragment);
-    			t7 = space();
-    			create_component(card5.$$.fragment);
-    			t8 = space();
-    			create_component(card6.$$.fragment);
-    			t9 = space();
-    			create_component(card7.$$.fragment);
-    			t10 = space();
-    			create_component(card8.$$.fragment);
-    			t11 = space();
-    			create_component(card9.$$.fragment);
-    			t12 = space();
-    			create_component(card10.$$.fragment);
-    			t13 = space();
     			div1 = element("div");
-    			create_component(button0.$$.fragment);
+    			div1.textContent = "Pàgina 2 de 3";
+    			t3 = space();
+    			create_component(linearprogress.$$.fragment);
+    			t4 = space();
+    			create_component(card0.$$.fragment);
+    			t5 = space();
+    			create_component(card1.$$.fragment);
+    			t6 = space();
+    			create_component(card2.$$.fragment);
+    			t7 = space();
+    			create_component(card3.$$.fragment);
+    			t8 = space();
+    			create_component(card4.$$.fragment);
+    			t9 = space();
+    			create_component(card5.$$.fragment);
+    			t10 = space();
+    			create_component(card6.$$.fragment);
+    			t11 = space();
+    			create_component(card7.$$.fragment);
+    			t12 = space();
+    			create_component(card8.$$.fragment);
+    			t13 = space();
+    			create_component(card9.$$.fragment);
     			t14 = space();
+    			create_component(card10.$$.fragment);
+    			t15 = space();
+    			div2 = element("div");
+    			create_component(button0.$$.fragment);
+    			t16 = space();
     			create_component(button1.$$.fragment);
     			attr_dev(div0, "class", "section-title svelte-161svza");
     			add_location(div0, file$4, 72, 0, 3163);
-    			attr_dev(div1, "class", "buttons svelte-161svza");
-    			add_location(div1, file$4, 332, 0, 9757);
+    			add_location(div1, file$4, 73, 0, 3215);
+    			attr_dev(div2, "class", "buttons svelte-161svza");
+    			add_location(div2, file$4, 333, 0, 9753);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -54293,44 +54240,39 @@ var app = (function () {
     		m: function mount(target, anchor) {
     			insert_dev(target, div0, anchor);
     			insert_dev(target, t1, anchor);
-    			mount_component(linearprogress, target, anchor);
-    			insert_dev(target, t2, anchor);
-    			mount_component(card0, target, anchor);
-    			insert_dev(target, t3, anchor);
-    			mount_component(card1, target, anchor);
-    			insert_dev(target, t4, anchor);
-    			mount_component(card2, target, anchor);
-    			insert_dev(target, t5, anchor);
-    			mount_component(card3, target, anchor);
-    			insert_dev(target, t6, anchor);
-    			mount_component(card4, target, anchor);
-    			insert_dev(target, t7, anchor);
-    			mount_component(card5, target, anchor);
-    			insert_dev(target, t8, anchor);
-    			mount_component(card6, target, anchor);
-    			insert_dev(target, t9, anchor);
-    			mount_component(card7, target, anchor);
-    			insert_dev(target, t10, anchor);
-    			mount_component(card8, target, anchor);
-    			insert_dev(target, t11, anchor);
-    			mount_component(card9, target, anchor);
-    			insert_dev(target, t12, anchor);
-    			mount_component(card10, target, anchor);
-    			insert_dev(target, t13, anchor);
     			insert_dev(target, div1, anchor);
-    			mount_component(button0, div1, null);
-    			append_dev(div1, t14);
-    			mount_component(button1, div1, null);
+    			insert_dev(target, t3, anchor);
+    			mount_component(linearprogress, target, anchor);
+    			insert_dev(target, t4, anchor);
+    			mount_component(card0, target, anchor);
+    			insert_dev(target, t5, anchor);
+    			mount_component(card1, target, anchor);
+    			insert_dev(target, t6, anchor);
+    			mount_component(card2, target, anchor);
+    			insert_dev(target, t7, anchor);
+    			mount_component(card3, target, anchor);
+    			insert_dev(target, t8, anchor);
+    			mount_component(card4, target, anchor);
+    			insert_dev(target, t9, anchor);
+    			mount_component(card5, target, anchor);
+    			insert_dev(target, t10, anchor);
+    			mount_component(card6, target, anchor);
+    			insert_dev(target, t11, anchor);
+    			mount_component(card7, target, anchor);
+    			insert_dev(target, t12, anchor);
+    			mount_component(card8, target, anchor);
+    			insert_dev(target, t13, anchor);
+    			mount_component(card9, target, anchor);
+    			insert_dev(target, t14, anchor);
+    			mount_component(card10, target, anchor);
+    			insert_dev(target, t15, anchor);
+    			insert_dev(target, div2, anchor);
+    			mount_component(button0, div2, null);
+    			append_dev(div2, t16);
+    			mount_component(button1, div2, null);
     			current = true;
     		},
     		p: function update(ctx, dirty) {
-    			const linearprogress_changes = {};
-
-    			if (dirty[2] & /*$$scope*/ 4) {
-    				linearprogress_changes.$$scope = { dirty, ctx };
-    			}
-
-    			linearprogress.$set(linearprogress_changes);
     			const card0_changes = {};
 
     			if (dirty[0] & /*formValues*/ 1 | dirty[2] & /*$$scope*/ 4) {
@@ -54461,31 +54403,33 @@ var app = (function () {
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(div0);
     			if (detaching) detach_dev(t1);
-    			destroy_component(linearprogress, detaching);
-    			if (detaching) detach_dev(t2);
-    			destroy_component(card0, detaching);
-    			if (detaching) detach_dev(t3);
-    			destroy_component(card1, detaching);
-    			if (detaching) detach_dev(t4);
-    			destroy_component(card2, detaching);
-    			if (detaching) detach_dev(t5);
-    			destroy_component(card3, detaching);
-    			if (detaching) detach_dev(t6);
-    			destroy_component(card4, detaching);
-    			if (detaching) detach_dev(t7);
-    			destroy_component(card5, detaching);
-    			if (detaching) detach_dev(t8);
-    			destroy_component(card6, detaching);
-    			if (detaching) detach_dev(t9);
-    			destroy_component(card7, detaching);
-    			if (detaching) detach_dev(t10);
-    			destroy_component(card8, detaching);
-    			if (detaching) detach_dev(t11);
-    			destroy_component(card9, detaching);
-    			if (detaching) detach_dev(t12);
-    			destroy_component(card10, detaching);
-    			if (detaching) detach_dev(t13);
     			if (detaching) detach_dev(div1);
+    			if (detaching) detach_dev(t3);
+    			destroy_component(linearprogress, detaching);
+    			if (detaching) detach_dev(t4);
+    			destroy_component(card0, detaching);
+    			if (detaching) detach_dev(t5);
+    			destroy_component(card1, detaching);
+    			if (detaching) detach_dev(t6);
+    			destroy_component(card2, detaching);
+    			if (detaching) detach_dev(t7);
+    			destroy_component(card3, detaching);
+    			if (detaching) detach_dev(t8);
+    			destroy_component(card4, detaching);
+    			if (detaching) detach_dev(t9);
+    			destroy_component(card5, detaching);
+    			if (detaching) detach_dev(t10);
+    			destroy_component(card6, detaching);
+    			if (detaching) detach_dev(t11);
+    			destroy_component(card7, detaching);
+    			if (detaching) detach_dev(t12);
+    			destroy_component(card8, detaching);
+    			if (detaching) detach_dev(t13);
+    			destroy_component(card9, detaching);
+    			if (detaching) detach_dev(t14);
+    			destroy_component(card10, detaching);
+    			if (detaching) detach_dev(t15);
+    			if (detaching) detach_dev(div2);
     			destroy_component(button0);
     			destroy_component(button1);
     		}
@@ -56600,34 +56544,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (49:0) <LinearProgress progress={1}>
-    function create_default_slot_7(ctx) {
-    	let t;
-
-    	const block = {
-    		c: function create() {
-    			t = text("Pàgina 1 de 3");
-    		},
-    		m: function mount(target, anchor) {
-    			insert_dev(target, t, anchor);
-    		},
-    		d: function destroy(detaching) {
-    			if (detaching) detach_dev(t);
-    		}
-    	};
-
-    	dispatch_dev("SvelteRegisterBlock", {
-    		block,
-    		id: create_default_slot_7.name,
-    		type: "slot",
-    		source: "(49:0) <LinearProgress progress={1}>",
-    		ctx
-    	});
-
-    	return block;
-    }
-
-    // (60:4) <ImageAspectContainer>
+    // (61:4) <ImageAspectContainer>
     function create_default_slot_6(ctx) {
     	let image;
     	let current;
@@ -56667,14 +56584,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_6.name,
     		type: "slot",
-    		source: "(60:4) <ImageAspectContainer>",
+    		source: "(61:4) <ImageAspectContainer>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (64:5) <Label>
+    // (65:5) <Label>
     function create_default_slot_5(ctx) {
     	let t_value = /*image*/ ctx[7].text + "";
     	let t;
@@ -56696,14 +56613,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_5.name,
     		type: "slot",
-    		source: "(64:5) <Label>",
+    		source: "(65:5) <Label>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (63:4) <Supporting>
+    // (64:4) <Supporting>
     function create_default_slot_4(ctx) {
     	let label;
     	let current;
@@ -56751,14 +56668,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_4.name,
     		type: "slot",
-    		source: "(63:4) <Supporting>",
+    		source: "(64:4) <Supporting>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (55:3) <Item     on:click={() => (formValues.perceptionImage = image.value)}     class={formValues.perceptionImage === image.value && 'selected-image'}     StyleSheet    >
+    // (56:3) <Item     on:click={() => (formValues.perceptionImage = image.value)}     class={formValues.perceptionImage === image.value && 'selected-image'}     StyleSheet    >
     function create_default_slot_3(ctx) {
     	let imageaspectcontainer;
     	let t0;
@@ -56835,14 +56752,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_3.name,
     		type: "slot",
-    		source: "(55:3) <Item     on:click={() => (formValues.perceptionImage = image.value)}     class={formValues.perceptionImage === image.value && 'selected-image'}     StyleSheet    >",
+    		source: "(56:3) <Item     on:click={() => (formValues.perceptionImage = image.value)}     class={formValues.perceptionImage === image.value && 'selected-image'}     StyleSheet    >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (54:2) {#each perceptionIndexImages as image}
+    // (55:2) {#each perceptionIndexImages as image}
     function create_each_block(ctx) {
     	let item;
     	let current;
@@ -56900,14 +56817,14 @@ var app = (function () {
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(54:2) {#each perceptionIndexImages as image}",
+    		source: "(55:2) {#each perceptionIndexImages as image}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (53:1) <ImageList masonry>
+    // (54:1) <ImageList masonry>
     function create_default_slot_2(ctx) {
     	let each_1_anchor;
     	let current;
@@ -56996,14 +56913,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_2.name,
     		type: "slot",
-    		source: "(53:1) <ImageList masonry>",
+    		source: "(54:1) <ImageList masonry>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (72:1) <Button variant="raised" on:click={handlePrevious}>
+    // (73:1) <Button variant="raised" on:click={handlePrevious}>
     function create_default_slot_1(ctx) {
     	let t;
 
@@ -57023,14 +56940,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_1.name,
     		type: "slot",
-    		source: "(72:1) <Button variant=\\\"raised\\\" on:click={handlePrevious}>",
+    		source: "(73:1) <Button variant=\\\"raised\\\" on:click={handlePrevious}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (73:1) <Button variant="raised" on:click={handleSubmit}>
+    // (74:1) <Button variant="raised" on:click={handleSubmit}>
     function create_default_slot(ctx) {
     	let t;
 
@@ -57050,7 +56967,7 @@ var app = (function () {
     		block,
     		id: create_default_slot.name,
     		type: "slot",
-    		source: "(73:1) <Button variant=\\\"raised\\\" on:click={handleSubmit}>",
+    		source: "(74:1) <Button variant=\\\"raised\\\" on:click={handleSubmit}>",
     		ctx
     	});
 
@@ -57060,27 +56977,21 @@ var app = (function () {
     function create_fragment$2(ctx) {
     	let div0;
     	let t1;
-    	let linearprogress;
-    	let t2;
     	let div1;
+    	let t3;
+    	let linearprogress;
     	let t4;
     	let div2;
-    	let imagelist;
-    	let t5;
-    	let div3;
-    	let button0;
     	let t6;
+    	let div3;
+    	let imagelist;
+    	let t7;
+    	let div4;
+    	let button0;
+    	let t8;
     	let button1;
     	let current;
-
-    	linearprogress = new LinearProgress({
-    			props: {
-    				progress: 1,
-    				$$slots: { default: [create_default_slot_7] },
-    				$$scope: { ctx }
-    			},
-    			$$inline: true
-    		});
+    	linearprogress = new LinearProgress({ props: { progress: 1 }, $$inline: true });
 
     	imagelist = new ImageList({
     			props: {
@@ -57118,25 +57029,29 @@ var app = (function () {
     			div0 = element("div");
     			div0.textContent = "Índex de percepció";
     			t1 = space();
-    			create_component(linearprogress.$$.fragment);
-    			t2 = space();
     			div1 = element("div");
-    			div1.textContent = "Seleccioni la imatge que millor resumeixi la situació viscuda";
+    			div1.textContent = "Pàgina 3 de 3";
+    			t3 = space();
+    			create_component(linearprogress.$$.fragment);
     			t4 = space();
     			div2 = element("div");
-    			create_component(imagelist.$$.fragment);
-    			t5 = space();
-    			div3 = element("div");
-    			create_component(button0.$$.fragment);
+    			div2.textContent = "Seleccioni la imatge que millor resumeixi la situació viscuda";
     			t6 = space();
+    			div3 = element("div");
+    			create_component(imagelist.$$.fragment);
+    			t7 = space();
+    			div4 = element("div");
+    			create_component(button0.$$.fragment);
+    			t8 = space();
     			create_component(button1.$$.fragment);
     			attr_dev(div0, "class", "section-title svelte-1mauk85");
     			add_location(div0, file$1, 47, 0, 2045);
-    			add_location(div1, file$1, 50, 0, 2158);
-    			attr_dev(div2, "class", "image-list-masonry svelte-1mauk85");
-    			add_location(div2, file$1, 51, 0, 2231);
-    			attr_dev(div3, "class", "buttons");
-    			add_location(div3, file$1, 70, 0, 2714);
+    			add_location(div1, file$1, 48, 0, 2097);
+    			add_location(div2, file$1, 51, 0, 2154);
+    			attr_dev(div3, "class", "image-list-masonry svelte-1mauk85");
+    			add_location(div3, file$1, 52, 0, 2227);
+    			attr_dev(div4, "class", "buttons");
+    			add_location(div4, file$1, 71, 0, 2710);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -57144,27 +57059,22 @@ var app = (function () {
     		m: function mount(target, anchor) {
     			insert_dev(target, div0, anchor);
     			insert_dev(target, t1, anchor);
-    			mount_component(linearprogress, target, anchor);
-    			insert_dev(target, t2, anchor);
     			insert_dev(target, div1, anchor);
+    			insert_dev(target, t3, anchor);
+    			mount_component(linearprogress, target, anchor);
     			insert_dev(target, t4, anchor);
     			insert_dev(target, div2, anchor);
-    			mount_component(imagelist, div2, null);
-    			insert_dev(target, t5, anchor);
+    			insert_dev(target, t6, anchor);
     			insert_dev(target, div3, anchor);
-    			mount_component(button0, div3, null);
-    			append_dev(div3, t6);
-    			mount_component(button1, div3, null);
+    			mount_component(imagelist, div3, null);
+    			insert_dev(target, t7, anchor);
+    			insert_dev(target, div4, anchor);
+    			mount_component(button0, div4, null);
+    			append_dev(div4, t8);
+    			mount_component(button1, div4, null);
     			current = true;
     		},
     		p: function update(ctx, [dirty]) {
-    			const linearprogress_changes = {};
-
-    			if (dirty & /*$$scope*/ 1024) {
-    				linearprogress_changes.$$scope = { dirty, ctx };
-    			}
-
-    			linearprogress.$set(linearprogress_changes);
     			const imagelist_changes = {};
 
     			if (dirty & /*$$scope, formValues*/ 1025) {
@@ -57205,14 +57115,16 @@ var app = (function () {
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(div0);
     			if (detaching) detach_dev(t1);
-    			destroy_component(linearprogress, detaching);
-    			if (detaching) detach_dev(t2);
     			if (detaching) detach_dev(div1);
+    			if (detaching) detach_dev(t3);
+    			destroy_component(linearprogress, detaching);
     			if (detaching) detach_dev(t4);
     			if (detaching) detach_dev(div2);
-    			destroy_component(imagelist);
-    			if (detaching) detach_dev(t5);
+    			if (detaching) detach_dev(t6);
     			if (detaching) detach_dev(div3);
+    			destroy_component(imagelist);
+    			if (detaching) detach_dev(t7);
+    			if (detaching) detach_dev(div4);
     			destroy_component(button0);
     			destroy_component(button1);
     		}

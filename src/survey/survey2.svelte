@@ -52,7 +52,8 @@
 </script>
 
 <div class="section-title">Índex de percepció</div>
-<LinearProgress progress={1}>Pàgina 1 de 3</LinearProgress>
+<div>Pàgina 3 de 3</div>
+<LinearProgress progress={1}/>
 
 <div>Seleccioni la imatge que millor resumeixi la situació viscuda</div>
 <div class="image-list-masonry">

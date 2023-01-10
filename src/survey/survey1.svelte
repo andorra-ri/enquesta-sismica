@@ -100,7 +100,8 @@
 </script>
 
 <div class="section-title">Percepció personal</div>
-<LinearProgress progress={0.666}>Pàgina 2 de 3</LinearProgress>
+<div>Pàgina 2 de 3</div>
+<LinearProgress progress={0.666}/>
 
 <Card padded>
 	<Select
