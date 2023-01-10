@@ -41217,7 +41217,7 @@ var app = (function () {
     	const block = {
     		c: function create() {
     			div = element("div");
-    			div.textContent = "Seleccioneu la ubicació el més detallada possible arrossegant la icona blava del mapa";
+    			div.textContent = "Seleccioneu la ubicació tan detallada com sigui possible, arrossegant la icona blava i fent zoom sobre el mapa";
     			t1 = space();
     			create_component(leaflet.$$.fragment);
     			add_location(div, file$7, 270, 1, 8799);
@@ -43054,8 +43054,8 @@ var app = (function () {
     			t1 = space();
     			create_component(textfield.$$.fragment);
     			attr_dev(span, "class", "field-label svelte-1bnmz5f");
-    			add_location(span, file$7, 293, 3, 9396);
-    			add_location(div, file$7, 292, 2, 9387);
+    			add_location(span, file$7, 293, 3, 9421);
+    			add_location(div, file$7, 292, 2, 9412);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -43223,9 +43223,9 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			add_location(p, file$7, 301, 3, 9642);
+    			add_location(p, file$7, 301, 3, 9667);
     			attr_dev(div, "class", "radio-group");
-    			add_location(div, file$7, 300, 2, 9613);
+    			add_location(div, file$7, 300, 2, 9638);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -43309,7 +43309,7 @@ var app = (function () {
     	const block = {
     		c: function create() {
     			br = element("br");
-    			add_location(br, file$7, 304, 5, 9835);
+    			add_location(br, file$7, 304, 5, 9860);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, br, anchor);
@@ -43410,7 +43410,7 @@ var app = (function () {
     			t0 = text(t0_value);
     			t1 = space();
     			attr_dev(span, "slot", "label");
-    			add_location(span, file$7, 308, 5, 9977);
+    			add_location(span, file$7, 308, 5, 10002);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -43530,9 +43530,9 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			add_location(p, file$7, 318, 3, 10159);
+    			add_location(p, file$7, 318, 3, 10184);
     			attr_dev(div, "class", "radio-group");
-    			add_location(div, file$7, 317, 2, 10130);
+    			add_location(div, file$7, 317, 2, 10155);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -43616,7 +43616,7 @@ var app = (function () {
     	const block = {
     		c: function create() {
     			br = element("br");
-    			add_location(br, file$7, 321, 5, 10353);
+    			add_location(br, file$7, 321, 5, 10378);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, br, anchor);
@@ -43717,7 +43717,7 @@ var app = (function () {
     			t0 = text(t0_value);
     			t1 = space();
     			attr_dev(span, "slot", "label");
-    			add_location(span, file$7, 325, 5, 10496);
+    			add_location(span, file$7, 325, 5, 10521);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -43914,7 +43914,7 @@ var app = (function () {
     	const block = {
     		c: function create() {
     			br = element("br");
-    			add_location(br, file$7, 338, 4, 10845);
+    			add_location(br, file$7, 338, 4, 10870);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, br, anchor);
@@ -44015,7 +44015,7 @@ var app = (function () {
     			t0 = text(t0_value);
     			t1 = space();
     			attr_dev(span, "slot", "label");
-    			add_location(span, file$7, 342, 4, 10985);
+    			add_location(span, file$7, 342, 4, 11010);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -44135,9 +44135,9 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			add_location(p, file$7, 335, 2, 10649);
+    			add_location(p, file$7, 335, 2, 10674);
     			attr_dev(div, "class", "radio-group");
-    			add_location(div, file$7, 334, 1, 10621);
+    			add_location(div, file$7, 334, 1, 10646);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -44221,7 +44221,7 @@ var app = (function () {
     	const block = {
     		c: function create() {
     			br = element("br");
-    			add_location(br, file$7, 354, 4, 11297);
+    			add_location(br, file$7, 354, 4, 11322);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, br, anchor);
@@ -44322,7 +44322,7 @@ var app = (function () {
     			t0 = text(t0_value);
     			t1 = space();
     			attr_dev(span, "slot", "label");
-    			add_location(span, file$7, 358, 4, 11434);
+    			add_location(span, file$7, 358, 4, 11459);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -44442,9 +44442,9 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			add_location(p, file$7, 351, 2, 11126);
+    			add_location(p, file$7, 351, 2, 11151);
     			attr_dev(div, "class", "radio-group");
-    			add_location(div, file$7, 350, 1, 11098);
+    			add_location(div, file$7, 350, 1, 11123);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -44530,7 +44530,7 @@ var app = (function () {
     			div = element("div");
     			div.textContent = "Hi ha camps obligatoris sense omplir. Si us plau revisi les respostes";
     			attr_dev(div, "class", "error");
-    			add_location(div, file$7, 368, 2, 11595);
+    			add_location(div, file$7, 368, 2, 11620);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -44783,7 +44783,7 @@ var app = (function () {
     			add_location(div2, file$7, 75, 0, 2874);
     			add_location(div3, file$7, 90, 0, 3357);
     			attr_dev(div4, "class", "buttons svelte-1bnmz5f");
-    			add_location(div4, file$7, 366, 0, 11533);
+    			add_location(div4, file$7, 366, 0, 11558);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");

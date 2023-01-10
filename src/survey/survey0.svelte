@@ -291,7 +291,7 @@
 	{:else if  formValues.position}
 	<Card padded>
 
-	<div>Seleccioneu la ubicació el més detallada possible arrossegant la icona blava del mapa</div>
+	<div>Seleccioneu la ubicació tan detallada com sigui possible, arrossegant la icona blava i fent zoom sobre el mapa</div>
 	<Leaflet onChange={setCoordinates} /> 
 	</Card>
 	{/if}
