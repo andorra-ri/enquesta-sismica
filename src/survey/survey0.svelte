@@ -179,10 +179,10 @@
 	</Select>
 	</FormField>
 </Card>
-<Card padded>
+<Card padded class={'position' in errors ? 'error' : 'valid'}>
 	<Select
 		style="min-width: 300px"
-		label="En el moment de la sacsejada es trobava..."
+		label="En el moment de la sacsejada es trobava...*"
 		bind:value={formValues.position}
 	>
 		{#each Object.entries(positionOptions) as [position, positionText]}

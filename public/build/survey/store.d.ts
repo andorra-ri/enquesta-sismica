@@ -15,7 +15,7 @@ export declare const schema: yup.ObjectSchema<import("yup/lib/object").Assign<im
     municipality: yup.StringSchema<string | undefined, import("yup/lib/types").AnyObject, string | undefined>;
     street: yup.StringSchema<string | undefined, import("yup/lib/types").AnyObject, string | undefined>;
     streetNumber: yup.StringSchema<string | undefined, import("yup/lib/types").AnyObject, string | undefined>;
-    position: yup.StringSchema<string | undefined, import("yup/lib/types").AnyObject, string | undefined>;
+    position: import("yup/lib/string").RequiredStringSchema<string | undefined, import("yup/lib/types").AnyObject>;
     floor: yup.StringSchema<string | undefined, import("yup/lib/types").AnyObject, string | undefined>;
     totalFloors: yup.StringSchema<string | undefined, import("yup/lib/types").AnyObject, string | undefined>;
     commentsPosition: yup.StringSchema<string | undefined, import("yup/lib/types").AnyObject, string | undefined>;
@@ -59,7 +59,7 @@ export declare const schema: yup.ObjectSchema<import("yup/lib/object").Assign<im
     municipality: yup.StringSchema<string | undefined, import("yup/lib/types").AnyObject, string | undefined>;
     street: yup.StringSchema<string | undefined, import("yup/lib/types").AnyObject, string | undefined>;
     streetNumber: yup.StringSchema<string | undefined, import("yup/lib/types").AnyObject, string | undefined>;
-    position: yup.StringSchema<string | undefined, import("yup/lib/types").AnyObject, string | undefined>;
+    position: import("yup/lib/string").RequiredStringSchema<string | undefined, import("yup/lib/types").AnyObject>;
     floor: yup.StringSchema<string | undefined, import("yup/lib/types").AnyObject, string | undefined>;
     totalFloors: yup.StringSchema<string | undefined, import("yup/lib/types").AnyObject, string | undefined>;
     commentsPosition: yup.StringSchema<string | undefined, import("yup/lib/types").AnyObject, string | undefined>;
@@ -103,7 +103,7 @@ export declare const schema: yup.ObjectSchema<import("yup/lib/object").Assign<im
     municipality: yup.StringSchema<string | undefined, import("yup/lib/types").AnyObject, string | undefined>;
     street: yup.StringSchema<string | undefined, import("yup/lib/types").AnyObject, string | undefined>;
     streetNumber: yup.StringSchema<string | undefined, import("yup/lib/types").AnyObject, string | undefined>;
-    position: yup.StringSchema<string | undefined, import("yup/lib/types").AnyObject, string | undefined>;
+    position: import("yup/lib/string").RequiredStringSchema<string | undefined, import("yup/lib/types").AnyObject>;
     floor: yup.StringSchema<string | undefined, import("yup/lib/types").AnyObject, string | undefined>;
     totalFloors: yup.StringSchema<string | undefined, import("yup/lib/types").AnyObject, string | undefined>;
     commentsPosition: yup.StringSchema<string | undefined, import("yup/lib/types").AnyObject, string | undefined>;
