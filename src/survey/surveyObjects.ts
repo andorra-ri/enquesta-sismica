@@ -12,6 +12,15 @@ export const positionOptions = {
   other: "Altres",
 };
 
+export const streetTypes = {
+  avinguda: "Avinguda",
+  cami: "Camí",
+  carretera: "Carretera",
+  passatge: "Passatge",
+  urbanitzacio: "Urbanització",
+  other: "Altre",
+};
+
 export const situationObserverOptions = {
   notSpecified: "Sense especificar",
   moving: "En moviment",

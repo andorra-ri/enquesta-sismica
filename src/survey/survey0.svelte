@@ -18,7 +18,7 @@
 	  numberPeopleOutsideOptions,
 	  positionOptions,
 	  situationObserverOptions,
-	  totalFloorOptions, yesNo
+	  totalFloorOptions, yesNo, streetTypes
 	} from './surveyObjects';
 
 	let seisms: SeismsData[] = [];
@@ -83,7 +83,7 @@
 					(acc, d) => ({ ...acc, [d.path]: { value: d.value, message: d.message } }),
 					{}
 				);
-				console.log(errors);
+				console.log(errors, formValues);
 			});
 	};
 
@@ -275,8 +275,23 @@
 				</FormField>
 			{/if}
 			{#if !!formValues.pais}
+			<div class="mdc-form-field">
+				<Select
+						bind:value={formValues.streetType}
+						label="Tipus de via"
+					>
+						{#each Object.entries(streetTypes) as [streetType,streetTypeText]}
+							<Option value={streetType}>{streetTypeText}</Option>
+						{/each}
+					</Select>
+				</div>
+				{#if formValues.streetType==="other"}
+					<div class="mdc-form-field">
+						<Textfield bind:value={formValues.streetTypeOther} type="email" />
+					</div>
+				{/if}
 				<div class="mdc-form-field">
-					<div class="text-field-label">Carrer</div>
+					<div class="text-field-label">Nom de la via</div>
 					<Textfield bind:value={formValues.street} type="email" />
 				</div>
 

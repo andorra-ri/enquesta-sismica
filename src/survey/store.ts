@@ -33,6 +33,7 @@ export const surveyValues = writable<FormValues>({
   earthquakeDate: "",
   earthquakeHour: "",
   locationMap: "yes",
+  streetTypeOther: "",
   street: "",
   streetNumber: "",
   commentsPosition: "",
@@ -147,6 +148,8 @@ export interface FormValues {
   parroquia?: string;
   territori?: string;
   municipality?: string;
+  streetType?: string;
+  streetTypeOther?: string;
   street?: string;
   streetNumber?: string;
   position?: keyof typeof positionOptions;
