@@ -232,7 +232,7 @@
 	<Card padded>
 
 		<div
-			class={'pais' in errors || 'parroquia' in errors || 'territori' in errors ? 'error' : 'valid'}
+			class={'pais' in errors || 'parroquia' in errors || 'territori' in errors || 'municipality' in errors? 'error' : 'valid'}
 		>
 			<FormField>
 				<Select bind:value={pais} label="País">
@@ -240,7 +240,7 @@
 						<Option value={country}>{country}</Option>
 					{/each}
 				</Select>
-				<span slot="label">País on es trobava en el moment del terratrèmol</span>
+				<span slot="label">País on es trobava en el moment del terratrèmol*</span>
 			</FormField>
 			{#if formValues.pais === 'Andorra'}
 				<FormField>
@@ -249,7 +249,7 @@
 							<Option value={parroquia}>{parroquia}</Option>
 						{/each}
 					</Select>
-					<span slot="label">Parròquia on es trobava en el moment del terratrèmol</span>
+					<span slot="label">Parròquia on es trobava en el moment del terratrèmol*</span>
 				</FormField>
 
 				<FormField>
@@ -271,7 +271,7 @@
 			{:else if formValues.pais === 'Espanya' || formValues.pais === 'França'}
 				<FormField>
 					<Textfield bind:value={municipality} type="email" />
-					<span slot="label">Municipi on es trobava en el moment del terratrèmol</span>
+					<span slot="label">Municipi on es trobava en el moment del terratrèmol*</span>
 				</FormField>
 			{/if}
 			{#if !!formValues.pais}

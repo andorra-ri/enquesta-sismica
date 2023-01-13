@@ -73,7 +73,16 @@ export const schema = yup.object().shape({
     is: "insideBuilding",
     then: yup.string().required(),
   }),
-  municipality: yup.string(),
+  parroquia: yup.string().when(["position", "pais"], {
+    is: (position: string, pais: string) =>
+      position === "insideBuilding" && pais === "Andorra",
+    then: yup.string().required(),
+  }),
+  municipality: yup.string().when(["position", "pais"], {
+    is: (position: string, pais: string) =>
+      position === "insideBuilding" && pais !== "Andorra",
+    then: yup.string().required(),
+  }),
   street: yup.string(),
   streetNumber: yup.string(),
   position: yup.string().oneOf(Object.keys(positionOptions)).required(),
