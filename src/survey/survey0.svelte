@@ -271,18 +271,18 @@
 			{:else if formValues.pais === 'Espanya' || formValues.pais === 'França'}
 				<FormField>
 					<Textfield bind:value={municipality} type="email" />
-					<span slot="label">Municipi on es trobava en el moment del terratrèmol*</span>
+					<span slot="label" class="text-field-label">Municipi on es trobava en el moment del terratrèmol*</span>
 				</FormField>
 			{/if}
 			{#if !!formValues.pais}
 				<FormField>
 					<Textfield bind:value={formValues.street} type="email" />
-					<span slot="label">Carrer</span>
+					<span slot="label" class="text-field-label">Carrer</span>
 				</FormField>
 
 				<FormField>
 					<Textfield bind:value={formValues.streetNumber} type="email" />
-					<span slot="label">Número</span>
+					<span slot="label" class="text-field-label">Número</span>
 				</FormField>
 			{/if}
 		</div>
@@ -442,5 +442,9 @@
 	}
 	.buttons{
 		margin-top:5px;
+	}
+	.text-field-label{height: 70px;
+		align-items: center;
+		display: flex;
 	}
 </style>
