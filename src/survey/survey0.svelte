@@ -181,7 +181,7 @@
 </Card>
 <Card padded class={'position' in errors ? 'error' : 'valid'}>
 	<Select
-		style="min-width: 300px"
+		style="width: 350px"
 		label="En el moment de la sacsejada es trobava...*"
 		bind:value={formValues.position}
 	>
@@ -275,15 +275,17 @@
 				</FormField>
 			{/if}
 			{#if !!formValues.pais}
-				<FormField>
+				<div class="mdc-form-field">
+					<div class="text-field-label">Carrer</div>
 					<Textfield bind:value={formValues.street} type="email" />
-					<span slot="label" class="text-field-label">Carrer</span>
-				</FormField>
+				</div>
 
-				<FormField>
+				<div class="mdc-form-field">
+					<div class="text-field-label">Número</div>
 					<Textfield bind:value={formValues.streetNumber} type="email" />
-					<span slot="label" class="text-field-label">Número</span>
-				</FormField>
+				</div>
+					
+					
 			{/if}
 		</div>
 	</Card>
@@ -300,7 +302,7 @@
 <Card padded>
 	<FormField>
 		<Select
-			style="min-width: 300px"
+			style="min-width: 350px"
 			label="En el moment de la sacsejada, estava..."
 			bind:value={formValues.situationObserver}
 		>
@@ -401,6 +403,7 @@
 </div> 
 
 <style>
+	
 	:global(.error) {
 		border-style: dotted;
 		border-color: red;
@@ -447,4 +450,5 @@
 		align-items: center;
 		display: flex;
 	}
+	
 </style>
