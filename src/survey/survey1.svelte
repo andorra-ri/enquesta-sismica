@@ -3,7 +3,7 @@
 	import Checkbox from '@smui/checkbox';
 	import Radio from '@smui/radio';
 	import { v4 as uuidv4 } from 'uuid';
-	import { onDestroy} from 'svelte';
+	import { onDestroy, onMount} from 'svelte';
 
 	import Button from '@smui/button';
 	import LinearProgress from '@smui/linear-progress';
@@ -23,6 +23,7 @@
 	  effectsFurniture,
 	  effectsLamps,
 	  effectsLiquids,
+	  effectsOnLandscape,
 	  effectsPaintings,
 	  effectsPlants,
 	  effectsShelves,
@@ -39,8 +40,13 @@
 		formValues = data;
 	});
 
-
+	
 	onDestroy(unsubscribe);
+
+	onMount(async () => {
+		document.body.scrollIntoView();
+	});
+
 
 	interface Files {
 		accepted: string[];
@@ -196,6 +202,7 @@
 	{/if}
 </Card>
 
+{#if formValues.position === 'insideBuilding'}
 
 <Card padded>
 	<div>Quins efectes va observar sobre els següents objectes?</div>
@@ -278,24 +285,25 @@
 		<Textfield style="width: 70%" bind:value={formValues.commentseffectsShelves} type="email" />
 	</FormField>
 </Card>
-<Card padded>
-	<Select
-		style="max-width: 400px"
-		label="La construcció de l'edifici és del tipus:"
-		bind:value={formValues.buildingType}
-	>
-		{#each Object.entries(buildingType) as [position, positionText]}
-			<Option value={position}>
-				{positionText}
-			</Option>
-		{/each}
-	</Select>
+	<Card padded>
+		<Select
+			style="max-width: 400px"
+			label="La construcció de l'edifici és del tipus:"
+			bind:value={formValues.buildingType}
+		>
+			{#each Object.entries(buildingType) as [position, positionText]}
+				<Option value={position}>
+					{positionText}
+				</Option>
+			{/each}
+		</Select>
 
-	<FormField>
-		<div>Any de construcció de l'edifici (si el sap)</div>
-		<Textfield bind:value={formValues.buildingYear} type="number" />
-	</FormField>
-</Card>
+		<FormField>
+			<div>Any de construcció de l'edifici (si el sap)</div>
+			<Textfield bind:value={formValues.buildingYear} type="number" />
+		</FormField>
+	</Card>
+
 
 <Card padded>
 	<Select
@@ -336,6 +344,9 @@
 		
 	{/if}
 
+
+	
+	
 	{#if formValues.buildingDamage === 'yes' && !formValues.image}
 		<div>Afegeixi fotos dels danys si en té:</div>
 		<Dropzone on:drop={handleFilesSelect}
@@ -347,14 +358,29 @@
 			<img src={publicUrl} alt="imatge de l'usuari" />
 	{/if}
 </Card>
-<Card padded>
+{/if}
+<Card padded>	
+	<div>Marqui si va observar efectes sobre l’entorn:</div>
+	<div class="two-column">
+	{#each Object.entries(effectsOnLandscape) as [position, positionText]}
+		<FormField>
+			<Checkbox
+				bind:group={formValues.effectsOnLandscape}
+				  value={position}
+				/>
+				<span slot="label"
+				  >{positionText}</span
+				>
+		</FormField>
+	{/each}
+</div>
 	<FormField>
 		<div>Desitgeu afegir algun aclariment o descriure el que heu notat?</div>
 		<Textfield style="width: 70%" bind:value={formValues.comments} type="email" />
 	</FormField>
 	<FormField>
 		<div>
-			Si just abans o després d'aquest terratrèmol en va notar d'altres indiqui-ho a continuació
+			Just abans o després d'aquest terratrèmol en va notar d'altres?
 		</div>
 		<Textfield style="width: 70%" bind:value={formValues.otherSeisms} type="email" />
 	</FormField>

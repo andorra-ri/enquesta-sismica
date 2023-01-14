@@ -47,6 +47,7 @@ export const surveyValues = writable<FormValues>({
   otherSeisms: "",
   perceptionImage: "",
   buildingDamageDescription: [],
+  effectsOnLandscape: [],
 });
 
 export const surveyPage = writable(0);
@@ -183,6 +184,7 @@ export interface FormValues {
   buildingYear?: string;
   buildingDamage?: keyof typeof buildingDamage;
   buildingDamageDescription?: (keyof typeof buildingDamageDescription)[];
+  effectsOnLandscape?: (keyof typeof effectsOnLandscape)[];
   commentsDamage?: string;
   comments?: string;
   otherSeisms?: string;

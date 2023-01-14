@@ -8,7 +8,7 @@
 		Supporting,
 		Label
 	} from '@smui/image-list';
-	import { onDestroy } from 'svelte';
+	import { onDestroy, onMount } from 'svelte';
 
 	import { sendToSupabase } from './fetch';
 	import { schema, surveyValues, previousPage, nextPage, type FormValues } from './store';
@@ -21,6 +21,11 @@
 	});
 
 	onDestroy(unsubscribe);
+
+	onMount(async () => {
+		document.body.scrollIntoView();
+	});
+
 
 	const handleSubmit = async () => {
 		try {

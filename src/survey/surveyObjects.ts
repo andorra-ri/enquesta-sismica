@@ -243,6 +243,19 @@ export const buildingDamageDescription = {
   fallenBuilding: "Desplaçament permanent de l’edifici",
 };
 
+export const effectsOnLandscape = {
+  riverFlow:
+    "Variació del cabal en rius, torrents o fonts Fissures en el terreny",
+  wellLevel: "Variació del nivell d’aigua dels pous",
+  cracksRoads: "Fissures en els camins i/o carreteres",
+  fountainVariations: "Aparició o desaparició de noves fonts o torrents",
+  landslides: "Esllavissades o despreniments",
+  lakeLevel: "Canvi sobtat del nivell d’un llac o estany",
+  vegetationShaking: "Agitació d’arbres i de la vegetació",
+  muddyWater: "Terbolesa de petites masses d’aigua",
+  terrainLevel: "Subsidència o elevació del terreny",
+};
+
 export const perceptionIndexImages = [
   {
     text: "No percebut",
