@@ -105,7 +105,7 @@
 
 <Card padded>
 	<Select
-		style="max-width: 400px"
+		style="max-width: 430px"
 		label="Com descriuria el moviment durant el terratrèmol?"
 		bind:value={formValues.movementDescription}
 	>
@@ -118,7 +118,7 @@
 </Card>
 
 <Card padded>
-	<Select style="max-width: 400px" label="Va sentir soroll?" bind:value={formValues.noise}>
+	<Select style="max-width: 430px" label="Va sentir soroll?" bind:value={formValues.noise}>
 		{#each Object.entries(noise) as [position, positionText]}
 			<Option value={position}>
 				{positionText}
@@ -129,7 +129,7 @@
 
 <Card padded>
 	<Select
-		style="max-width: 400px"
+		style="max-width: 430px"
 		label="Quina reacció va tenir durant el terratrèmol?"
 		bind:value={formValues.reaction}
 	>
@@ -195,15 +195,7 @@
 		</FormField>
 	{/if}
 </Card>
-<Card padded>
-	<Select style="max-width: 400px" label="Als llums penjats:" bind:value={formValues.effectsLamps}>
-		{#each Object.entries(effectsLamps) as [position, positionText]}
-			<Option value={position}>
-				{positionText}
-			</Option>
-		{/each}
-	</Select>
-</Card>
+
 
 <Card padded>
 	<div>Quins efectes va observar sobre els següents objectes?</div>
@@ -224,6 +216,13 @@
 		bind:value={formValues.effectsPaintings}
 	>
 		{#each Object.entries(effectsPaintings) as [position, positionText]}
+			<Option value={position}>
+				{positionText}
+			</Option>
+		{/each}
+	</Select>
+	<Select style="max-width: 400px" label="Als llums penjats:" bind:value={formValues.effectsLamps}>
+		{#each Object.entries(effectsLamps) as [position, positionText]}
 			<Option value={position}>
 				{positionText}
 			</Option>
@@ -312,6 +311,7 @@
 	</Select>
 
 	{#if formValues.buildingDamage === 'yes'}
+	<div>Marqui tots els danys que va observar:</div>
 		<div class="two-column">
 			
 			{#each Object.entries(buildingDamageDescription) as [position, positionText]}
@@ -328,16 +328,16 @@
 			{/each}
 		</div>
 		<div>
-			<FormField>
-				<div>Altres comentaris sobre els danys</div>
-				<Textfield bind:value={formValues.commentsDamage} type="email" />
+			<FormField style="width: 100%">
+				<div>Altres comentaris sobre els danys a l'edifici</div>
+				<Textfield bind:value={formValues.commentsDamage} style="width: 100%" type="email" />
 			</FormField>
 		</div>
 		
 	{/if}
 
 	{#if formValues.buildingDamage === 'yes' && !formValues.image}
-		<div>Afegeix una foto si en tens:</div>
+		<div>Afegeixi fotos dels danys si en té:</div>
 		<Dropzone on:drop={handleFilesSelect}
 			>Arrossega el fitxer o fes clic per afegir les imatges</Dropzone
 		>

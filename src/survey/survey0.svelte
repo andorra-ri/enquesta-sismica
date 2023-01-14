@@ -202,9 +202,7 @@
 					{/each}
 				</Select>
 			</div>
-		{/if}
-
-		{#if formValues.position === 'insideBuilding'}
+		
 			<div>
 				<Select
 					style="min-width: 300px"
@@ -217,6 +215,10 @@
 						</Option>
 					{/each}
 				</Select>
+			</div>
+			<div>
+				<span class="field-label">Comentaris:</span>
+				<Textfield style="width:70%" bind:value={formValues.floorComments} type="email" />
 			</div>
 		{/if}
 	</div>
@@ -309,7 +311,7 @@
 	<Card padded>
 
 	<div>Seleccioneu la ubicació tan detallada com sigui possible, arrossegant la icona blava i fent zoom sobre el mapa</div>
-	<Leaflet onChange={setCoordinates} /> 
+	<Leaflet onChange={setCoordinates} initialLng={formValues.coordinates && formValues.coordinates[0]} initialLat={formValues.coordinates && formValues.coordinates[1]}/> 
 	</Card>
 	{/if}
 

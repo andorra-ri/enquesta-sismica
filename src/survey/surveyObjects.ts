@@ -86,12 +86,12 @@ export const numberPeopleGoingOutOptions = {
 };
 
 export const numberPeopleAwake = {
+  notSpecified: "Sense especificar",
   nobody: "Ningú",
   some: "Algunes, la majoria no",
   most: "La majoria, algunes no",
   everybody: "Tothom",
   noOneSleeping: "Ningú no dormia",
-  notSpecified: "Sense especificar",
 };
 
 export const movementDescription = {
@@ -106,7 +106,7 @@ export const movementDescription = {
 
 export const noise = {
   no: "No",
-  didntNotice: "No mi vaig fixar",
+  didntNotice: "No m'hi vaig fixar",
   weak: "Feble",
   moderate: "Moderat",
   strong: "Fort",
@@ -139,12 +139,13 @@ export const animalsFrightened = {
 export const whatDidYouDo = {
   notSpecified: "Sense especificar",
   nothing: "Res",
-  ranOutside: "Va córrer cap a fora",
-  enteredBuilding: "Va entrar en un edifici",
-  protectedUnderSolidTable: "Es va protegir sota una taula sòlida",
-  protectedOnWallAngle: "Es va refugiar en un angle de la paret",
-  protectedUnderDoorFrame: "Es va protegir sota el marc d’una porta",
-  lookedThroughWindow: "Va mirar per la finestra per veure què passava",
+  ranOutside: "Vaig córrer cap a fora",
+  enteredBuilding: "Vaig entrar en un edifici",
+  protectedUnderSolidTable: "Em vaig protegir sota una taula sòlida",
+  protectedOnWallAngle: "Em vaig refugiar en un angle de la paret",
+  protectedUnderDoorFrame: "Em vaig protegir sota el marc d’una porta",
+  lookedThroughWindow: "Vaig mirar per la finestra per veure què passava",
+  checkPetsFamily: "Vaig anar a mirar si els familiars i/o animals estaven bé",
   other: "Altres",
 };
 
@@ -199,8 +200,8 @@ export const effectsShelves = {
   none: "Cap",
   vibration: "Van vibrar",
   strongVibration: "Van vibrar amb força",
-  someFall: "Alguna va caure",
-  manyFall: "Moltes van caure",
+  someFall: "Algun va caure",
+  manyFall: "Molts van caure",
   mostFall: "La majoria van caure",
 };
 
@@ -226,18 +227,20 @@ export const buildingDamageDescription = {
   cracksWallsMany: "Parets amb moltes esquerdes grans",
   fallenTiles: "Teules o lluminàries caigudes",
   cracksSmokestack: "Xemeneies esquerdades",
-  cracksWindowsMany: "Molres finestres esquerdades o trencades",
+  cracksWindowsMany: "Moltes finestres esquerdades o trencades",
   stonesFromWalls: "Pedres o rajoles caigudes de les parets",
   fallenCoating: "Petits trossos de revestiment caiguts",
+  fallenCoatingBig: "Grans trossos de revestiment caiguts",
   damagedSmokestack: "Xemeneies antigues amb grans danys",
   fallenSmokestack: "Xemeneies antigues caigudes",
   damagedSmokestackModern: "Xemeneies modernes amb grans danys",
   fallenSmokestackModern: "Xemeneies modernes caigudes",
   fallenFloatingWall: "Mur flotant caigut",
-  fallenWall: "Mur caigut",
+  fallenWall: "Parets d’edificis caigudes",
+  fallenIsolatedWall: "Murs aïllats caiguts",
   fallenBalcony:
     "Porxos, balcons o altres afegits del edifici separats o caiguts",
-  fallenBuilding: "Edifici desplaçat permanentment",
+  fallenBuilding: "Desplaçament permanent de l’edifici",
 };
 
 export const perceptionIndexImages = [
