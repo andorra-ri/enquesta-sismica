@@ -148,7 +148,7 @@
 			</Select>
 		</FormField>
 	</Card>
-{:else}<Card padded class="aaabbbccc">
+{:else}<Card padded class="date-time">
 		<div class={'earthquakeDate' in errors ? 'error' : 'valid'}>
 			<FormField>
 				<div>Data del terratrèmol *</div>
@@ -446,10 +446,10 @@
 	}
 
 	@media(min-width: 800px){
-	:global(.aaabbbccc){
-		display: flex;
-		flex-direction: row;
-	}
+		:global(.date-time){
+			display: flex;
+			flex-direction: row;
+		}
 	}
 
 	.title {

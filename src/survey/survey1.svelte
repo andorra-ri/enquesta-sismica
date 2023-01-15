@@ -400,10 +400,20 @@
 	.radio-group {
 		font-family: Roboto, sans-serif;
 	}
-	.two-column{
-		font-family: Roboto, sans-serif;
-		display: grid;
-  		grid-template-columns: 1fr 1fr;	
+
+	@media(min-width: 800px){
+		.two-column{
+			font-family: Roboto, sans-serif;
+			display: grid;
+			grid-template-columns: 1fr 1fr;	
+		}
+	}
+
+	@media(max-width: 800px){
+		.two-column{
+			display: flex;
+			flex-direction: column;		
+		}
 	}
 	.buttons{
 		margin-top:5px;
