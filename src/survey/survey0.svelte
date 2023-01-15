@@ -148,7 +148,7 @@
 			</Select>
 		</FormField>
 	</Card>
-{:else}<Card padded class="halign">
+{:else}<Card padded class="aaabbbccc">
 		<div class={'earthquakeDate' in errors ? 'error' : 'valid'}>
 			<FormField>
 				<div>Data del terratrèmol *</div>
@@ -160,8 +160,8 @@
 				<div>Hora local (HH:MM) *</div>
 				<Textfield bind:value={formValues.earthquakeHour} type="time" />
 			</FormField>
-		</div></Card
-	>
+		</div>
+		</Card>
 {/if}
 
 <Card padded class={'felt' in errors ? 'error' : 'valid'}>
@@ -439,10 +439,19 @@
 
  @media(max-width: 800px){
 	.header{
-			display:flex;
-			flex-direction:column;
+		display:flex;
+		flex-direction:column;
 		}
+	
 	}
+
+	@media(min-width: 800px){
+	:global(.aaabbbccc){
+		display: flex;
+		flex-direction: row;
+	}
+	}
+
 	.title {
 		font-size: 2em;
 	}
