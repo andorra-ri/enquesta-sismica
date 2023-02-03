@@ -37,6 +37,7 @@ export const surveyValues = writable<FormValues>({
   floorComments: "",
   street: "",
   streetNumber: "",
+  addressNotes: "",
   commentsPosition: "",
   commentsBuilding: "",
   commentsWhatDidYouDo: "",
@@ -154,6 +155,7 @@ export interface FormValues {
   streetTypeOther?: string;
   street?: string;
   streetNumber?: string;
+  addressNotes?: string;
   position?: keyof typeof positionOptions;
   floor?: keyof typeof floorOptions;
   floorComments?: string;

@@ -304,6 +304,11 @@
 					<div class="text-field-label">Número</div>
 					<Textfield bind:value={formValues.streetNumber} type="email" />
 				</div>
+
+				<div class="mdc-form-field" style="width:70%">
+					<div class="text-field-label">Complement d'adreça:</div>
+					<Textfield style="width:100%" bind:value={formValues.addressNotes} type="email" />
+				</div>
 					
 					
 			{/if}
