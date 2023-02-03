@@ -32,6 +32,9 @@
 	onDestroy(unsubscribe);
 	onMount(async () => {
 		seisms = await getSeismData();
+		if(seisms.length===0){
+			formValues.existentSeism = "no";
+		}
 		parroquies = await getParroquiesData();
 	});
 
@@ -116,8 +119,8 @@
 <Card padded class={'existentSeism' in errors ? 'error' : 'valid'}>
 	<div>Surt a la pregunta següent el sisme que ha percebut o no?</div>
 	<FormField>
-		<Radio bind:group={formValues.existentSeism} value="yes" touch />
-		<span slot="label">Sí, triar de la llista de sota</span>
+		<Radio bind:group={formValues.existentSeism} value="yes" touch disabled={seisms.length === 0}/>
+		<div slot="label"><span class:not-available="{seisms.length === 0}">Sí, triar de la llista de sota </span>{#if seisms.length === 0 }<spam>No hi ha cap sisme recent.</spam>{/if}</div>
 	</FormField>
 	<FormField>
 		<Radio bind:group={formValues.existentSeism} value="no" touch />
@@ -481,4 +484,7 @@
 		display: flex;
 	}
 	
+	.not-available {
+		text-decoration: line-through;
+	}
 </style>

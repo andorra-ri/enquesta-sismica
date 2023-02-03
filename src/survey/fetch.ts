@@ -22,12 +22,20 @@ export const getSeismData = async () => {
     },
   });
 
+  const now = new Date();
+  const fifteenDaysAgo = new Date(
+    now.getFullYear(),
+    now.getMonth(),
+    now.getDate() - 15
+  );
+
   const { data: dataSeism, error: errorSeism } = await supabaseClient
     .from("last_seisms")
-    .select();
+    .select()
+    .gt("datetime", fifteenDaysAgo.toISOString().split("T")[0]);
 
   errorSeism && console.log("Error downloading seisms:", errorSeism);
-  return dataSeism as SeismsData[];
+  return (dataSeism ?? []) as SeismsData[];
 };
 
 export interface ParroquiaData {
