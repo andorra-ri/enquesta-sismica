@@ -434,13 +434,17 @@
 		display: flex;
 	}
 	.header img {
-		max-width: 500px;
+		max-width: 210px;
+		max-height: 82px;
+		height: auto;
+		width: auto;
 	}
 
  @media(max-width: 800px){
 	.header{
 		display:flex;
 		flex-direction:column;
+		align-items: center;
 		}
 	
 	}
