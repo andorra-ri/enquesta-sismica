@@ -13,7 +13,9 @@ export const positionOptions = {
 };
 
 export const streetTypes = {
+  carrer: "Carrer",
   avinguda: "Avinguda",
+  placa: "Plaça",
   cami: "Camí",
   carretera: "Carretera",
   passatge: "Passatge",
