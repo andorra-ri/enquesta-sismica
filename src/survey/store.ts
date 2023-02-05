@@ -70,7 +70,9 @@ export const schema = yup.object().shape({
     .default(undefined)
     .transform((curr, orig) => (orig === "" ? null : curr))
     .matches(/[0-2]{1}[0-9]{1}:[0-5]{1}[0-9]{1}/),
-  seism: yup.string().required(),
+  seism: yup
+    .string()
+    .when("existentSeism", { is: "yes", then: yup.string().required() }),
   felt: yup.string().oneOf(["yes", "no"]).required(),
   locationMap: yup.string().oneOf(["yes", "no"]).required(),
   pais: yup.string().when("position", {

@@ -418,9 +418,9 @@
 	{#if Object.keys(errors).length > 0}
 		<div class="error">
 			Hi ha camps obligatoris sense omplir. Si us plau revisi les respostes
-			<!-- {#each Object.entries(errors) as [fieldName, error]}
+			{#each Object.entries(errors) as [fieldName, error]}
 				<div>{fieldName}: {error.message}</div>
-			{/each} -->
+			{/each}
 		</div>
 	{/if}
 
