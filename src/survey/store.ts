@@ -193,5 +193,5 @@ export interface FormValues {
   comments?: string;
   otherSeisms?: string;
   perceptionImage?: string;
-  image?: string;
+  image?: string[];
 }

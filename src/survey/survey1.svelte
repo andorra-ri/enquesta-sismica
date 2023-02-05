@@ -52,20 +52,31 @@
 		accepted: string[];
 		rejected: string[];
 	}
+
 	let files: Files = {
 		accepted: [],
 		rejected: []
 	};
+	let publicUrls: string[] = [];
+
+	
 	const handleFilesSelect = async (e) => {
 		const { acceptedFiles, fileRejections } = e.detail;
+
 		files.accepted = [...files.accepted, ...acceptedFiles];
 		files.rejected = [...files.rejected, ...fileRejections];
-		console.log(files.accepted);
-		const fileToUpload = files.accepted[0];
-		const fileName = `public/${uuidv4()}.jpg`;
-		publicUrl = await uploadImage(fileName, fileToUpload);
-		buildingDamageDescription
-		formValues.image = fileName;
+		const fileNames: string[] = [];
+		const newPublicUrls: string[] = [];
+
+		for(const fileToUpload of files.accepted){		
+			const fileName = `public/${uuidv4()}.jpg`;
+			publicUrl = await uploadImage(fileName, fileToUpload);
+			fileNames.push(fileName);
+			newPublicUrls.push(publicUrl);
+		};
+		
+		publicUrls = newPublicUrls;
+		formValues.image = fileNames;
 	};
 
 
@@ -347,16 +358,18 @@
 
 	
 	
-	{#if formValues.buildingDamage === 'yes' && !formValues.image}
+	{#if formValues.buildingDamage === 'yes'}
 		<div>Afegeixi fotos dels danys si en té:</div>
 		<Dropzone on:drop={handleFilesSelect}
-			>Arrossega el fitxer o fes clic per afegir les imatges</Dropzone
+			>Arrossega els fitxers o fes clic per afegir les imatges</Dropzone
 		>
 	{/if}
 
-	{#if formValues.image}
-			<img src={publicUrl} alt="imatge de l'usuari" />
-	{/if}
+	
+	{#each publicUrls as imageUrl}
+		<img src={imageUrl} alt="imatge de l'usuari" />
+	{/each}
+	
 </Card>
 {/if}
 <Card padded>	
