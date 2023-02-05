@@ -387,6 +387,8 @@
 		</FormField>
 	{/each}
 </div>
+</Card>
+<Card padded>
 	<FormField>
 		<div>Desitgeu afegir algun aclariment o descriure el que heu notat?</div>
 		<Textfield style="width: 70%" bind:value={formValues.comments} type="email" />
