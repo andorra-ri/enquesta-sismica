@@ -297,18 +297,22 @@
 	</FormField>
 </Card>
 	<Card padded>
-		<Select
-			style="max-width: 400px"
-			label="La construcció de l'edifici és del tipus:"
-			bind:value={formValues.buildingType}
-		>
-			{#each Object.entries(buildingType) as [position, positionText]}
-				<Option value={position}>
+	
+		<div class="radio-group">
+			<p>La construcció de l'edifici és del tipus:</p>
+		{#each Object.entries(buildingType) as [position, positionText], i}
+			{#if i > 0 && i % 3 === 0}
+				<br />
+			{/if}
+			<FormField style="min-width: 250px">
+				<Radio bind:group={formValues.buildingType} value={position} />
+				<span slot="label">
 					{positionText}
-				</Option>
-			{/each}
-		</Select>
+				</span>
+			</FormField>
 
+		{/each}
+		</div>
 		<FormField>
 			<div>Any de construcció de l'edifici (si el sap)</div>
 			<Textfield bind:value={formValues.buildingYear} type="number" />
