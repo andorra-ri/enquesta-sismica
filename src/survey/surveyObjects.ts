@@ -305,3 +305,9 @@ export const perceptionIndexImages = [
     imageLink: "images/EMS98-0.jpg",
   },
 ];
+
+export const otherSeisms = {
+  notSpecified: "Sense especificar",
+  no: "No",
+  yes: "Sí",
+};

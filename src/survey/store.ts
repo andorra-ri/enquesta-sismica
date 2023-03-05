@@ -19,6 +19,7 @@ import {
   numberPeopleGoingOutOptions,
   numberPeopleInsideOptions,
   numberPeopleOutsideOptions,
+  otherSeisms,
   positionOptions,
   reaction,
   situationObserverOptions,
@@ -45,7 +46,7 @@ export const surveyValues = writable<FormValues>({
   buildingYear: "",
   commentsDamage: "",
   comments: "",
-  otherSeisms: "",
+  otherSeismsText: "",
   perceptionImage: "",
   buildingDamageDescription: [],
   effectsOnLandscape: [],
@@ -191,7 +192,8 @@ export interface FormValues {
   effectsOnLandscape?: (keyof typeof effectsOnLandscape)[];
   commentsDamage?: string;
   comments?: string;
-  otherSeisms?: string;
+  otherSeisms?: keyof typeof otherSeisms;
+  otherSeismsText?: string;
   perceptionImage?: string;
   image?: string[];
 }
