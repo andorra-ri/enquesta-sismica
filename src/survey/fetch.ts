@@ -49,11 +49,6 @@ export interface ParroquiaData {
 export const getParroquiesData = async () => {
   const supabaseClientPublic = createClient(supabaseUrl, supabaseAnonKey);
 
-  // const { data: dataMunicipalities, error: errorMunicipalities } =
-  //   await supabaseClientPublic
-  //     .from("territorial_division")
-  //     .select("parroquia, territori");
-
   const { data: dataMunicipalities, error: errorMunicipalities } =
     await supabaseClientPublic.from("parroquia").select(`parroquia,
             territori (nom)`);
