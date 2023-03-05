@@ -38,18 +38,25 @@ export const getSeismData = async () => {
   return (dataSeism ?? []) as SeismsData[];
 };
 
+export interface TerritoriData {
+  nom: string;
+}
 export interface ParroquiaData {
   parroquia: string;
-  territori: string;
+  territori: TerritoriData[];
 }
 
 export const getParroquiesData = async () => {
   const supabaseClientPublic = createClient(supabaseUrl, supabaseAnonKey);
 
+  // const { data: dataMunicipalities, error: errorMunicipalities } =
+  //   await supabaseClientPublic
+  //     .from("territorial_division")
+  //     .select("parroquia, territori");
+
   const { data: dataMunicipalities, error: errorMunicipalities } =
-    await supabaseClientPublic
-      .from("territorial_division")
-      .select("parroquia, territori");
+    await supabaseClientPublic.from("parroquia").select(`parroquia,
+            territori (nom)`);
 
   errorMunicipalities &&
     console.log("Error downloading municipalities:", errorMunicipalities);

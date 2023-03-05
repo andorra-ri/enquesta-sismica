@@ -42,6 +42,7 @@
 		formValues.coordinates = coords;
 	};
 
+
 	
 	let pais: string | undefined;
 	let parroquia: string | undefined;
@@ -242,7 +243,7 @@
 			<FormField>
 				<Select bind:value={pais} label="País">
 					{#each ['Andorra', 'Espanya', 'França'] as country}
-						<Option value={country}>{country}</Option>
+					<Option value={country}>{country}</Option>
 					{/each}
 				</Select>
 				<span slot="label">País on es trobava en el moment del terratrèmol*</span>
@@ -263,9 +264,9 @@
 						bind:value={formValues.territori}
 						label="Territori"
 					>
-						{#each parroquies
-							.filter((d) => d.parroquia === formValues.parroquia)
-							.map((d) => d.territori) as territori}
+						{#each (parroquies
+							.find((d) => d.parroquia === formValues.parroquia)?.territori
+							.map((d) => d.nom))??"" as territori}
 							<Option value={territori}>{territori}</Option>
 						{/each}
 					</Select>
