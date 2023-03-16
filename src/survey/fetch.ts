@@ -68,17 +68,31 @@ export const sendToSupabase = async (data: FormValues) => {
   const indices = getIndices(data);
 
   const xmlReport = createXMLReport(data);
-  await supabaseClient.from("survey").insert([
-    {
-      survey_data: data,
+  // await supabaseClient.from("survey").insert([
+  //   {
+  //     survey_data: data,
+  //     cws: indices.cws,
+  //     cii: indices.cii,
+  //     indices: indices,
+  //     xml_report: xmlReport,
+  //     seism_guid: data.seism,
+  //     image: data.image,
+  //   },
+  // ]);
+  data.coordinates &&
+    (await supabaseClient.rpc("addsurvey", {
+      survey_data: JSON.stringify(data),
       cws: indices.cws,
       cii: indices.cii,
-      indices: indices,
-      xml_report: xmlReport,
+      indices: JSON.stringify(indices),
       seism_guid: data.seism,
-      image: data.image,
-    },
-  ]);
+      xml_report: xmlReport,
+      parroquia: "",
+      territori: "",
+      image: data.image ?? "",
+      lon: data.coordinates[0],
+      lat: data.coordinates[1],
+    }));
 };
 
 export const uploadImage = async (fileName: string, fileToUpload: string) => {
