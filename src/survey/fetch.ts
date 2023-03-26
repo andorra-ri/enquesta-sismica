@@ -51,7 +51,7 @@ export const getParroquiesData = async () => {
 
   const { data: dataMunicipalities, error: errorMunicipalities } =
     await supabaseClientPublic.from("parroquia").select(`parroquia,
-            territori (nom)`);
+    territori!fk_parroquia (nom)`);
 
   errorMunicipalities &&
     console.log("Error downloading municipalities:", errorMunicipalities);
@@ -79,20 +79,20 @@ export const sendToSupabase = async (data: FormValues) => {
   //     image: data.image,
   //   },
   // ]);
-  data.coordinates &&
-    (await supabaseClient.rpc("addsurvey", {
-      survey_data: JSON.stringify(data),
-      cws: indices.cws,
-      cii: indices.cii,
-      indices: JSON.stringify(indices),
-      seism_guid: data.seism,
-      xml_report: xmlReport,
-      parroquia: "",
-      territori: "",
-      image: data.image ?? "",
-      lon: data.coordinates[0],
-      lat: data.coordinates[1],
-    }));
+
+  await supabaseClient.rpc("addsurvey", {
+    survey_data: JSON.stringify(data),
+    cws: indices.cws,
+    cii: indices.cii,
+    indices: JSON.stringify(indices),
+    seism_guid: data.seism,
+    xml_report: xmlReport,
+    parroquia: data.parroquia,
+    territori: data.territori,
+    image: data.image ?? "",
+    lon: data.coordinates ? data.coordinates[0] : 0,
+    lat: data.coordinates ? data.coordinates[1] : 0,
+  });
 };
 
 export const uploadImage = async (fileName: string, fileToUpload: string) => {
