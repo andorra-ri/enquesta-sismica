@@ -7,19 +7,22 @@
 	import Select, { Option } from '@smui/select';
 	import Textfield from '@smui/textfield';
 	import { onDestroy, onMount } from 'svelte';
-	import { getParroquiesData, getSeismData, type ParroquiaData, type SeismsData } from './fetch';
-	import Leaflet from './leaflet.svelte';
-	import { nextPage, schema, surveyValues, type FormValues } from './store';
+	import { getParroquiesData, getSeismData, type ParroquiaData, type SeismsData } from '$lib/fetch';
+	import Leaflet from '$lib/leaflet.svelte';
+	import { nextPage, schema, surveyValues, type FormValues } from '$lib/store';
 	import {
-	  floorOptions,
-	  numberPeopleAwake,
-	  numberPeopleGoingOutOptions,
-	  numberPeopleInsideOptions,
-	  numberPeopleOutsideOptions,
-	  positionOptions,
-	  situationObserverOptions,
-	  totalFloorOptions, yesNo, streetTypes
-	} from './surveyObjects';
+		floorOptions,
+		numberPeopleAwake,
+		numberPeopleGoingOutOptions,
+		numberPeopleInsideOptions,
+		numberPeopleOutsideOptions,
+		positionOptions,
+		situationObserverOptions,
+		totalFloorOptions,
+		yesNo,
+		streetTypes
+	} from '$lib/surveyObjects';
+	import { routeToPage } from '$lib';
 
 	let seisms: SeismsData[] = [];
 	let parroquies: ParroquiaData[] = [];
@@ -32,8 +35,8 @@
 	onDestroy(unsubscribe);
 	onMount(async () => {
 		seisms = await getSeismData();
-		if(seisms.length===0){
-			formValues.existentSeism = "no";
+		if (seisms.length === 0) {
+			formValues.existentSeism = 'no';
 		}
 		parroquies = await getParroquiesData();
 	});
@@ -42,8 +45,6 @@
 		formValues.coordinates = coords;
 	};
 
-
-	
 	let pais: string | undefined;
 	let parroquia: string | undefined;
 	let municipality: string = '';
@@ -75,20 +76,21 @@
 	let errors: Error[] = [];
 
 	const handleSubmit = () => {
-		schema
-			.validate(formValues, { abortEarly: false })
-			.then(function (valid) {
-				console.log('VALID  !');
-				surveyValues.update(() => formValues);
-				nextPage();}
-			)
-			.catch(function (valid) {
-				errors = valid.inner.reduce(
-					(acc, d) => ({ ...acc, [d.path]: { value: d.value, message: d.message } }),
-					{}
-				);
-				console.log(errors, formValues);
-			});
+		routeToPage('1', true);
+		// schema
+		// 	.validate(formValues, { abortEarly: false })
+		// 	.then(function (valid) {
+		// 		console.log('VALID  !');
+		// 		surveyValues.update(() => formValues);
+		// 		nextPage();}
+		// 	)
+		// 	.catch(function (valid) {
+		// 		errors = valid.inner.reduce(
+		// 			(acc, d) => ({ ...acc, [d.path]: { value: d.value, message: d.message } }),
+		// 			{}
+		// 		);
+		// 		console.log(errors, formValues);
+		// 	});
 	};
 
 	// Workaround so it works on Chrome: https://github.com/hperrin/svelte-material-ui/issues/268#issuecomment-1227112762
@@ -97,17 +99,19 @@
 			e.target.showPicker();
 		}
 	}
-
 </script>
 
+<svelte:head>
+	<title>Enquesta sísmica</title>
+	<meta name="description" content="Enquesta sísmica Andorra Recerca i Innovació" />
+</svelte:head>
 <div class="header">
 	<img src="images/logo.png" alt="logo" class="logo" />
 	<div>
 		<div class="title">Enquesta sísmica</div>
 		<p>
 			Per tal d'avaluar la o les intensitats amb les quals s’ha notat el terratrèmol al territori
-			andorrà, li agrairíem omplir la següent enquesta sísmica de la manera més detallada
-			possible.
+			andorrà, li agrairíem omplir la següent enquesta sísmica de la manera més detallada possible.
 		</p>
 		<p>
 			Encara que no hagi notat el terratrèmol, la seva informació és igualment útil. Gràcies per la
@@ -116,12 +120,16 @@
 	</div>
 </div>
 <div>Pàgina 1 de 3</div>
-<LinearProgress progress={0.333}/>
+<LinearProgress progress={0.333} />
 <Card padded class={'existentSeism' in errors ? 'error' : 'valid'}>
 	<div>Surt a la pregunta següent el sisme que ha percebut o no?</div>
 	<FormField>
-		<Radio bind:group={formValues.existentSeism} value="yes" touch disabled={seisms.length === 0}/>
-		<div slot="label"><span class:not-available="{seisms.length === 0}">Sí, triar de la llista de sota </span>{#if seisms.length === 0 }<spam>No hi ha cap sisme recent.</spam>{/if}</div>
+		<Radio bind:group={formValues.existentSeism} value="yes" touch disabled={seisms.length === 0} />
+		<div slot="label">
+			<span class:not-available={seisms.length === 0}
+				>Sí, triar de la llista de sota
+			</span>{#if seisms.length === 0}<spam>No hi ha cap sisme recent.</spam>{/if}
+		</div>
 	</FormField>
 	<FormField>
 		<Radio bind:group={formValues.existentSeism} value="no" touch />
@@ -165,22 +173,18 @@
 				<Textfield bind:value={formValues.earthquakeHour} type="time" />
 			</FormField>
 		</div>
-		</Card>
+	</Card>
 {/if}
 
 <Card padded class={'felt' in errors ? 'error' : 'valid'}>
 	<FormField>
-		<Select
-		style="min-width: 300px"
-		label="Ha notat el sisme? *"
-		bind:value={formValues.felt}
-	>
-		{#each Object.entries(yesNo) as [position, positionText]}
-			<Option value={position}>
-				{positionText}
-			</Option>
-		{/each}
-	</Select>
+		<Select style="min-width: 300px" label="Ha notat el sisme? *" bind:value={formValues.felt}>
+			{#each Object.entries(yesNo) as [position, positionText]}
+				<Option value={position}>
+					{positionText}
+				</Option>
+			{/each}
+		</Select>
 	</FormField>
 </Card>
 <Card padded class={'position' in errors ? 'error' : 'valid'}>
@@ -195,7 +199,7 @@
 			</Option>
 		{/each}
 	</Select>
-	<div >
+	<div>
 		{#if formValues.position === 'insideBuilding'}
 			<div>
 				<Select style="min-width: 300px" label="Al pis" bind:value={formValues.floor}>
@@ -206,7 +210,7 @@
 					{/each}
 				</Select>
 			</div>
-		
+
 			<div>
 				<Select
 					style="min-width: 300px"
@@ -234,16 +238,20 @@
 		</div>
 	{/if}
 </Card>
-	{#if  formValues.position === 'insideBuilding'}
+{#if formValues.position === 'insideBuilding'}
 	<Card padded>
-
 		<div
-			class={'pais' in errors || 'parroquia' in errors || 'territori' in errors || 'municipality' in errors? 'error' : 'valid'}
+			class={'pais' in errors ||
+			'parroquia' in errors ||
+			'territori' in errors ||
+			'municipality' in errors
+				? 'error'
+				: 'valid'}
 		>
 			<FormField>
 				<Select bind:value={pais} label="País">
 					{#each ['Andorra', 'Espanya', 'França'] as country}
-					<Option value={country}>{country}</Option>
+						<Option value={country}>{country}</Option>
 					{/each}
 				</Select>
 				<span slot="label">País on es trobava en el moment del terratrèmol*</span>
@@ -264,9 +272,9 @@
 						bind:value={formValues.territori}
 						label="Territori"
 					>
-						{#each (parroquies
-							.find((d) => d.parroquia === formValues.parroquia)?.territori
-							.map((d) => d.nom))??"" as territori}
+						{#each parroquies
+							.find((d) => d.parroquia === formValues.parroquia)
+							?.territori.map((d) => d.nom) ?? '' as territori}
 							<Option value={territori}>{territori}</Option>
 						{/each}
 					</Select>
@@ -277,21 +285,20 @@
 			{:else if formValues.pais === 'Espanya' || formValues.pais === 'França'}
 				<FormField>
 					<Textfield bind:value={municipality} type="email" />
-					<span slot="label" class="text-field-label">Municipi on es trobava en el moment del terratrèmol*</span>
+					<span slot="label" class="text-field-label"
+						>Municipi on es trobava en el moment del terratrèmol*</span
+					>
 				</FormField>
 			{/if}
 			{#if !!formValues.pais}
-			<div class="mdc-form-field">
-				<Select
-						bind:value={formValues.streetType}
-						label="Tipus de via"
-					>
-						{#each Object.entries(streetTypes) as [streetType,streetTypeText]}
+				<div class="mdc-form-field">
+					<Select bind:value={formValues.streetType} label="Tipus de via">
+						{#each Object.entries(streetTypes) as [streetType, streetTypeText]}
 							<Option value={streetType}>{streetTypeText}</Option>
 						{/each}
 					</Select>
 				</div>
-				{#if formValues.streetType==="other"}
+				{#if formValues.streetType === 'other'}
 					<div class="mdc-form-field">
 						<Textfield bind:value={formValues.streetTypeOther} type="email" />
 					</div>
@@ -310,20 +317,22 @@
 					<div class="text-field-label">Complement d'adreça:</div>
 					<Textfield style="width:100%" bind:value={formValues.addressNotes} type="email" />
 				</div>
-					
-					
 			{/if}
 		</div>
 	</Card>
-		
-	{:else if  formValues.position}
+{:else if formValues.position}
 	<Card padded>
-
-	<div>Seleccioneu la ubicació tan detallada com sigui possible, arrossegant la icona blava i fent zoom sobre el mapa</div>
-	<Leaflet onChange={setCoordinates} initialLng={formValues.coordinates && formValues.coordinates[0]} initialLat={formValues.coordinates && formValues.coordinates[1]}/> 
+		<div>
+			Seleccioneu la ubicació tan detallada com sigui possible, arrossegant la icona blava i fent
+			zoom sobre el mapa
+		</div>
+		<Leaflet
+			onChange={setCoordinates}
+			initialLng={formValues.coordinates && formValues.coordinates[0]}
+			initialLat={formValues.coordinates && formValues.coordinates[1]}
+		/>
 	</Card>
-	{/if}
-
+{/if}
 
 <Card padded>
 	<FormField>
@@ -426,10 +435,9 @@
 	{/if}
 
 	<Button variant="raised" type="submit" on:click={handleSubmit}>Següent</Button>
-</div> 
+</div>
 
 <style>
-	
 	:global(.error) {
 		border-style: dotted;
 		border-color: red;
@@ -449,17 +457,16 @@
 		width: auto;
 	}
 
- @media(max-width: 800px){
-	.header{
-		display:flex;
-		flex-direction:column;
-		align-items: center;
+	@media (max-width: 800px) {
+		.header {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
 		}
-	
 	}
 
-	@media(min-width: 800px){
-		:global(.date-time){
+	@media (min-width: 800px) {
+		:global(.date-time) {
 			display: flex;
 			flex-direction: row;
 		}
@@ -482,14 +489,15 @@
 		font-family: Roboto, sans-serif;
 		font-size: 14px;
 	}
-	.buttons{
-		margin-top:5px;
+	.buttons {
+		margin-top: 5px;
 	}
-	.text-field-label{height: 70px;
+	.text-field-label {
+		height: 70px;
 		align-items: center;
 		display: flex;
 	}
-	
+
 	.not-available {
 		text-decoration: line-through;
 	}

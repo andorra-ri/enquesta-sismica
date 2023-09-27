@@ -1,2 +1,7 @@
 node_modules
-public/build
+build
+.svelte-kit
+dist
+package-lock.json
+yarn.lock
+.netlify

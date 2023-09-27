@@ -10,9 +10,9 @@
 	} from '@smui/image-list';
 	import { onDestroy, onMount } from 'svelte';
 
-	import { sendToSupabase } from './fetch';
-	import { schema, surveyValues, previousPage, nextPage, type FormValues } from './store';
-	import { perceptionIndexImages } from './surveyObjects';
+	import { sendToSupabase } from '$lib/fetch';
+	import { schema, surveyValues, previousPage, nextPage, type FormValues } from '$lib/store';
+	import { perceptionIndexImages } from '$lib/surveyObjects';
 	import LinearProgress from '@smui/linear-progress';
 
 	let formValues: FormValues = {};
@@ -25,7 +25,6 @@
 	onMount(async () => {
 		document.body.scrollIntoView();
 	});
-
 
 	const handleSubmit = async () => {
 		try {
@@ -58,7 +57,7 @@
 
 <div class="section-title">Índex de percepció</div>
 <div>Pàgina 3 de 3</div>
-<LinearProgress progress={1}/>
+<LinearProgress progress={1} />
 
 <div>Seleccioni la imatge que millor resumeixi la situació viscuda</div>
 <div class="image-list-masonry">
@@ -83,7 +82,6 @@
 <div class="buttons">
 	<Button variant="raised" on:click={handlePrevious}>Anterior</Button>
 	<Button variant="raised" on:click={handleSubmit}>Enviar el formulari</Button>
-
 </div>
 
 <style lang="scss">
