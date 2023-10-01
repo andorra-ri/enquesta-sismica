@@ -1,15 +1,8 @@
 <script lang="ts">
-	import Button from '@smui/button';
-	import Card from '@smui/card';
-	import FormField from '@smui/form-field';
-	import LinearProgress from '@smui/linear-progress';
-	import Radio from '@smui/radio';
-	import Select, { Option } from '@smui/select';
-	import Textfield from '@smui/textfield';
-	import { onDestroy, onMount } from 'svelte';
+	import { goto } from '$app/navigation';
 	import { getParroquiesData, getSeismData, type ParroquiaData, type SeismsData } from '$lib/fetch';
 	import Leaflet from '$lib/leaflet.svelte';
-	import { nextPage, schema, surveyValues, type FormValues } from '$lib/store';
+	import { schema, surveyValues, type FormValues } from '$lib/store';
 	import {
 		floorOptions,
 		numberPeopleAwake,
@@ -18,11 +11,18 @@
 		numberPeopleOutsideOptions,
 		positionOptions,
 		situationObserverOptions,
+		streetTypes,
 		totalFloorOptions,
-		yesNo,
-		streetTypes
+		yesNo
 	} from '$lib/surveyObjects';
-	import { routeToPage } from '$lib';
+	import Button from '@smui/button';
+	import Card from '@smui/card';
+	import FormField from '@smui/form-field';
+	import LinearProgress from '@smui/linear-progress';
+	import Radio from '@smui/radio';
+	import Select, { Option } from '@smui/select';
+	import Textfield from '@smui/textfield';
+	import { onDestroy, onMount } from 'svelte';
 
 	let seisms: SeismsData[] = [];
 	let parroquies: ParroquiaData[] = [];
@@ -76,21 +76,21 @@
 	let errors: Error[] = [];
 
 	const handleSubmit = () => {
-		routeToPage('1', true);
-		// schema
-		// 	.validate(formValues, { abortEarly: false })
-		// 	.then(function (valid) {
-		// 		console.log('VALID  !');
-		// 		surveyValues.update(() => formValues);
-		// 		nextPage();}
-		// 	)
-		// 	.catch(function (valid) {
-		// 		errors = valid.inner.reduce(
-		// 			(acc, d) => ({ ...acc, [d.path]: { value: d.value, message: d.message } }),
-		// 			{}
-		// 		);
-		// 		console.log(errors, formValues);
-		// 	});
+		schema
+			.validate(formValues, { abortEarly: false })
+			.then(function (valid) {
+				console.log('VALID  !');
+				surveyValues.update(() => formValues);
+				goto('/1');
+			})
+			.catch(function (valid) {
+				console.log(valid);
+				errors = valid.inner.reduce(
+					(acc, d) => ({ ...acc, [d.path]: { value: d.value, message: d.message } }),
+					{}
+				);
+				console.log(errors, formValues);
+			});
 	};
 
 	// Workaround so it works on Chrome: https://github.com/hperrin/svelte-material-ui/issues/268#issuecomment-1227112762

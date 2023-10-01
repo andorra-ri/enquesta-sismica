@@ -11,9 +11,10 @@
 	import { onDestroy, onMount } from 'svelte';
 
 	import { sendToSupabase } from '$lib/fetch';
-	import { schema, surveyValues, previousPage, nextPage, type FormValues } from '$lib/store';
+	import { schema, surveyValues, previousPage, type FormValues } from '$lib/store';
 	import { perceptionIndexImages } from '$lib/surveyObjects';
 	import LinearProgress from '@smui/linear-progress';
+	import { goto } from '$app/navigation';
 
 	let formValues: FormValues = {};
 	const unsubscribe = surveyValues.subscribe((data) => {
@@ -27,12 +28,13 @@
 	});
 
 	const handleSubmit = async () => {
+		console.log('2', formValues);
 		try {
 			await schema.validate(formValues, { abortEarly: false });
 			surveyValues.update(() => formValues);
 			await sendToSupabase($surveyValues);
 			console.log('data sent');
-			nextPage();
+			goto('/3');
 		} catch (error) {
 			console.log('Errors enviant dades', error);
 		}
