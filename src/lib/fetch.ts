@@ -109,12 +109,25 @@ export const uploadImage = async (fileName: string, fileToUpload: string) => {
 export interface SurveyData {
 	perceptionImage: string;
 }
+export interface SurveyIndices {
+	cii: string;
+	cws: string;
+	feltIndex: string;
+	shelfIndex: string;
+	standIndex: string;
+	damageIndex: string;
+	motionIndex: string;
+	pictureIndex: string;
+	reactionIndex: string;
+	furnitureIndex: string;
+}
+
 export interface Survey {
 	guid: string;
-	cws: number;
-	cii: number;
+	approved: boolean;
 	input_date: Date;
 	survey_data: SurveyData;
+	indices: SurveyIndices;
 }
 export const getSeismSurveys = async (seismGuid: string) => {
 	const supabaseClient = createClient(supabaseUrl, supabaseAnonKey, {
@@ -130,4 +143,15 @@ export const getSeismSurveys = async (seismGuid: string) => {
 
 	errorSeism && console.log('Error downloading seisms:', errorSeism);
 	return (dataSeism ?? []) as Survey[];
+};
+
+export const setSeismSurveyApproval = async (seismGuid: string, value: boolean) => {
+	console.log(`Approve ${value} ${seismGuid}`);
+
+	const supabaseClient = createClient(supabaseUrl, supabaseAnonKey, {
+		db: {
+			schema: 'seismology'
+		}
+	});
+	await supabaseClient.from('survey').update({ approved: value }).eq('guid', seismGuid);
 };

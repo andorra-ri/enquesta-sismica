@@ -3,6 +3,7 @@
 		getParroquiesData,
 		getSeismData,
 		getSeismSurveys,
+		setSeismSurveyApproval,
 		type ParroquiaData,
 		type SeismsData,
 		type Survey
@@ -14,12 +15,15 @@
 	import Select, { Option } from '@smui/select';
 	import { onMount } from 'svelte';
 	import { format } from 'date-fns';
+	import Checkbox from '@smui/checkbox';
 	let seisms: SeismsData[] = [];
 	let parroquies: ParroquiaData[] = [];
 
 	let seism: string;
 
 	let surveys: Survey[] = [];
+
+	let approved: string[] = [];
 
 	onMount(async () => {
 		seisms = await getSeismData();
@@ -30,7 +34,17 @@
 		if (seism) surveys = await getSeismSurveys(seism);
 	};
 
+	const setApproved = () => (approved = surveys.filter((d) => d.approved).map((d) => d.guid));
+
 	$: seism, getSurveys();
+	$: surveys, setApproved();
+
+	$: approved, console.log(approved);
+
+	const pathChanged = (event: Event, guid: string) => {
+		const target = event.target as HTMLInputElement;
+		setSeismSurveyApproval(guid, target.checked);
+	};
 </script>
 
 <svelte:head>
@@ -69,18 +83,40 @@
 <DataTable>
 	<Head>
 		<Row>
+			<Cell>Aprovat</Cell>
 			<Cell>Data</Cell>
-			<Cell>Favorite Color</Cell>
+			<Cell>Indexs</Cell>
+			<Cell>Respostes</Cell>
 			<Cell>Percepció</Cell>
 		</Row>
 	</Head>
 	<Body>
 		{#each surveys as survey}
 			<Row>
-				<Cell>{format(new Date(survey.input_date), 'yyyy-MM-dd HH:mm')}</Cell>
-				<Cell>Favorite Color</Cell>
 				<Cell
-					><img
+					><Checkbox
+						checked={survey.approved}
+						value={survey.guid}
+						on:change={(e) => pathChanged(e, survey.guid)}
+					/></Cell
+				>
+				<Cell>{format(new Date(survey.input_date), 'yyyy-MM-dd HH:mm')}</Cell>
+				<Cell>
+					<ul>
+						{#each Object.entries(survey.indices) as index}
+							<li>{index[0]}: {index[1]}</li>
+						{/each}
+					</ul>
+				</Cell>
+				<Cell>
+					<ul>
+						{#each Object.entries(survey.survey_data) as data}
+							<li>{data[0]}: {data[1]}</li>
+						{/each}
+					</ul>
+				</Cell>
+				<Cell>
+					<img
 						src={perceptionIndexImages.find((d) => d.value === survey.survey_data.perceptionImage)
 							?.imageLink}
 						alt="imatge percebuda"
