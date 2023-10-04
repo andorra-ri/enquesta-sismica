@@ -91,7 +91,7 @@ export const schema = yup.object().shape({
 	streetNumber: yup.string(),
 	position: yup.string().oneOf(Object.keys(positionOptions)).required(),
 	floor: yup.string().oneOf(Object.keys(floorOptions)),
-	totalFloors: yup.string().oneOf(Object.keys(floorOptions)),
+	totalFloors: yup.string().oneOf(Object.keys(totalFloorOptions)),
 	commentsPosition: yup.string(),
 	situationObserver: yup.string().oneOf(Object.keys(situationObserverOptions)),
 	commentsBuilding: yup.string(),

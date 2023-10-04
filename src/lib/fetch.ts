@@ -15,6 +15,12 @@ export interface SeismsData {
 	lat: string;
 }
 
+export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
+	db: {
+		schema: 'seismology'
+	}
+});
+
 export const getSeismData = async () => {
 	const supabaseClient = createClient(supabaseUrl, supabaseAnonKey, {
 		db: {
@@ -154,4 +160,15 @@ export const setSeismSurveyApproval = async (seismGuid: string, value: boolean) 
 		}
 	});
 	await supabaseClient.from('survey').update({ approved: value }).eq('guid', seismGuid);
+};
+
+export const deleteSeismSurvey = async (seismGuid: string) => {
+	console.log(`Delete  ${seismGuid}`);
+
+	const supabaseClient = createClient(supabaseUrl, supabaseAnonKey, {
+		db: {
+			schema: 'seismology'
+		}
+	});
+	await supabaseClient.from('survey').delete().eq('guid', seismGuid);
 };

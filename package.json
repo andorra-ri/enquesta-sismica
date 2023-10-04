@@ -12,7 +12,6 @@
 		"format": "prettier --plugin-search-dir . --write ."
 	},
 	"devDependencies": {
-		"@smui/data-table": "^7.0.0-beta.15",
 		"@sveltejs/adapter-auto": "^2.0.0",
 		"@sveltejs/kit": "^1.20.4",
 		"@typescript-eslint/eslint-plugin": "^6.0.0",
@@ -35,7 +34,11 @@
 		"@smui/button": "^7.0.0-beta.15",
 		"@smui/card": "^7.0.0-beta.15",
 		"@smui/checkbox": "^7.0.0-beta.15",
+		"@smui/circular-progress": "^7.0.0-beta.15",
+		"@smui/common": "^7.0.0-beta.15",
+		"@smui/data-table": "^7.0.0-beta.15",
 		"@smui/form-field": "^7.0.0-beta.15",
+		"@smui/icon-button": "^7.0.0-beta.15",
 		"@smui/image-list": "^7.0.0-beta.15",
 		"@smui/linear-progress": "^7.0.0-beta.15",
 		"@smui/radio": "^7.0.0-beta.15",
