@@ -33,7 +33,10 @@
 	const handleLogin = async () => {
 		try {
 			loading = true;
-			const { error } = await supabase.auth.signInWithOtp({ email: email ?? '' });
+			const { error } = await supabase.auth.signInWithPassword({
+				email: email ?? '',
+				password: password ?? ''
+			});
 			if (error) throw error;
 			messageStatus = 'success';
 		} catch (error) {
