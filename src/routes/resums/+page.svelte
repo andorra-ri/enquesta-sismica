@@ -2,11 +2,14 @@
 	import Auth from '$lib/Auth.svelte';
 	import {
 		deleteSeismSurvey,
+		getCalculatedIndicesAndorra,
+		getCalculatedIndicesParroquies,
 		getParroquiesData,
 		getSeismData,
 		getSeismSurveys,
 		setSeismSurveyApproval,
 		supabase,
+		type Indices,
 		type ParroquiaData,
 		type SeismsData,
 		type Survey
@@ -27,17 +30,21 @@
 	let seism: string;
 
 	let surveys: Survey[] = [];
+	let indicesParroquies: Indices[] = [];
+	let indicesAndorra: Indices;
 
 	onMount(async () => {
-		seisms = await getSeismData();
+		seisms = await getSeismData(false);
 
 		parroquies = await getParroquiesData();
 	});
-	const getSurveys = async () => {
+	const getSeismInfo = async () => {
 		if (seism) surveys = await getSeismSurveys(seism);
+		if (seism) indicesParroquies = await getCalculatedIndicesParroquies(seism);
+		if (seism) indicesAndorra = await getCalculatedIndicesAndorra(seism);
 	};
 
-	$: seism, getSurveys();
+	$: seism, getSeismInfo();
 
 	const pathChanged = (event: Event, guid: string) => {
 		const target = event.target as HTMLInputElement;
@@ -94,6 +101,35 @@
 			</Select>
 		</FormField>
 	</Card>
+	{#if indicesAndorra}
+		<DataTable>
+			<Row>
+				<Cell>Resultats per tot Andorra:</Cell>
+				<Cell>CWS: {indicesAndorra.cws}</Cell>
+				<Cell>CII: {indicesAndorra.cii}</Cell>
+			</Row>
+		</DataTable>
+	{/if}
+	<br />
+	<DataTable>
+		<Head>
+			<Row>
+				<Cell>Parròquia</Cell>
+				<Cell>CWS</Cell>
+				<Cell>CII</Cell>
+			</Row>
+		</Head>
+		<Body>
+			{#each indicesParroquies as index}
+				<Row>
+					<Cell>{index.parroquia}</Cell>
+					<Cell>{index.cws}</Cell>
+					<Cell>{index.cii}</Cell>
+				</Row>
+			{/each}
+		</Body>
+	</DataTable>
+	<br />
 	<DataTable>
 		<Head>
 			<Row>

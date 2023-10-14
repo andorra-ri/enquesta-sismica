@@ -21,7 +21,7 @@ export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
 	}
 });
 
-export const getSeismData = async () => {
+export const getSeismData = async (last: boolean = true) => {
 	const supabaseClient = createClient(supabaseUrl, supabaseAnonKey, {
 		db: {
 			schema: 'seismology'
@@ -31,10 +31,12 @@ export const getSeismData = async () => {
 	const now = new Date();
 	const fifteenDaysAgo = new Date(now.getFullYear(), now.getMonth(), now.getDate() - 15);
 
-	const { data: dataSeism, error: errorSeism } = await supabaseClient
-		.from('last_seisms')
-		.select()
-		.gt('datetime', fifteenDaysAgo.toISOString().split('T')[0]);
+	const { data: dataSeism, error: errorSeism } = last
+		? await supabaseClient
+				.from('last_seisms')
+				.select()
+				.gt('datetime', fifteenDaysAgo.toISOString().split('T')[0])
+		: await supabaseClient.from('last_seisms').select();
 
 	errorSeism && console.log('Error downloading seisms:', errorSeism);
 	return (dataSeism ?? []) as SeismsData[];
@@ -149,6 +151,46 @@ export const getSeismSurveys = async (seismGuid: string) => {
 
 	errorSeism && console.log('Error downloading seisms:', errorSeism);
 	return (dataSeism ?? []) as Survey[];
+};
+
+export interface Indices {
+	seism_guid: string;
+	datetime: Date;
+	cii: number;
+	cws: number;
+	parroquia: string;
+	parroquia_id: number;
+}
+export const getCalculatedIndicesParroquies = async (seismGuid: string) => {
+	const supabaseClient = createClient(supabaseUrl, supabaseAnonKey, {
+		db: {
+			schema: 'seismology'
+		}
+	});
+
+	const { data: dataIndices, error: errorSeism } = await supabaseClient
+		.from('indexes_parroquies')
+		.select()
+		.eq('seism_guid', seismGuid);
+
+	errorSeism && console.log('Error downloading indexes:', errorSeism);
+	return (dataIndices ?? []) as Indices[];
+};
+
+export const getCalculatedIndicesAndorra = async (seismGuid: string) => {
+	const supabaseClient = createClient(supabaseUrl, supabaseAnonKey, {
+		db: {
+			schema: 'seismology'
+		}
+	});
+
+	const { data: dataIndices, error: errorSeism } = await supabaseClient
+		.from('indexes_andorra')
+		.select()
+		.eq('seism_guid', seismGuid);
+
+	errorSeism && console.log('Error downloading indexes:', errorSeism);
+	return (dataIndices ?? [])[0] as Indices;
 };
 
 export const setSeismSurveyApproval = async (seismGuid: string, value: boolean) => {
