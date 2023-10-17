@@ -50,12 +50,29 @@
 			dirtyPassword = false;
 		}
 	};
+
+	const handleReset = async () => {
+		try {
+			loading = true;
+			const { error } = await supabase.auth.resetPasswordForEmail(email ?? '');
+			if (error) throw error;
+			messageStatus = 'success';
+		} catch (error) {
+			messageStatus = 'failure';
+			errorMessage = error.error_description || error.message;
+		} finally {
+			loading = false;
+			email = null;
+			password = null;
+			dirtyEmail = false;
+			dirtyPassword = false;
+		}
+	};
 </script>
 
 {#if messageStatus === 'filling'}
 	<div>
 		<h3>Cal autenticació!!</h3>
-		<p>Posa el teu correu i hi rebràs un enllaç màgic per entrar</p>
 		<div class="form">
 			<Textfield
 				type="email"
@@ -91,6 +108,7 @@
 			<Button {disabled} on:click={handleLogin}
 				><Icon class="material-icons">send</Icon><Label>Enviar</Label></Button
 			>
+			<Button on:click={handleReset}>He oblidat la contrassenya</Button>
 		</div>
 	</div>
 {:else if messageStatus === 'success'}
