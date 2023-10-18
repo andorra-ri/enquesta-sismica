@@ -158,8 +158,9 @@ export interface Indices {
 	datetime: Date;
 	cii: number;
 	cws: number;
-	parroquia: string;
-	parroquia_id: number;
+	parroquia?: string;
+	parroquia_id?: number;
+	num_surveys: number;
 }
 export const getCalculatedIndicesParroquies = async (seismGuid: string) => {
 	const supabaseClient = createClient(supabaseUrl, supabaseAnonKey, {

@@ -42,6 +42,7 @@
 		if (seism) surveys = await getSeismSurveys(seism);
 		if (seism) indicesParroquies = await getCalculatedIndicesParroquies(seism);
 		if (seism) indicesAndorra = await getCalculatedIndicesAndorra(seism);
+		console.log(indicesAndorra);
 	};
 
 	$: seism, getSeismInfo();
@@ -69,116 +70,124 @@
 	<meta name="description" content="Enquesta sísmica Andorra Recerca i Innovació" />
 </svelte:head>
 
-<div class="header">
-	<img src="images/logo.png" alt="logo" class="logo" />
-	<div>
-		<div class="title">Enquesta sísmica</div>
-		<p>Resums de les enquestes</p>
+{#if !session}
+	<Auth />
+{:else}
+	<div class="header">
+		<img src="images/logo.png" alt="logo" class="logo" />
+		<div>
+			<div class="title">Enquesta sísmica</div>
+			<p>Resums de les enquestes</p>
+		</div>
 	</div>
-</div>
-<Card padded>
-	<div>Triï el sisme</div>
-	<FormField>
-		<Select style="min-width: 300px" label="Data del sisme" bind:value={seism}>
-			{#each seisms as seism}
-				<Option value={seism.guid}
-					>{`${new Date(seism.datetime).toLocaleDateString('ca-ES', {
-						weekday: 'long',
-						year: 'numeric',
-						month: 'long',
-						day: 'numeric',
-						timeZone: 'CET'
-					})} ${new Date(seism.datetime).toLocaleTimeString('ca-ES', {
-						hour: '2-digit',
-						minute: '2-digit',
-						timeZone: 'CET'
-					})} (${seism.region}). Mag:${seism.magnitude}`}</Option
-				>
-			{/each}
-		</Select>
-	</FormField>
-</Card>
-{#if indicesAndorra}
+	<Card padded>
+		<div>Triï el sisme</div>
+		<FormField>
+			<Select style="min-width: 300px" label="Data del sisme" bind:value={seism}>
+				{#each seisms as seism}
+					<Option value={seism.guid}
+						>{`${new Date(seism.datetime).toLocaleDateString('ca-ES', {
+							weekday: 'long',
+							year: 'numeric',
+							month: 'long',
+							day: 'numeric',
+							timeZone: 'CET'
+						})} ${new Date(seism.datetime).toLocaleTimeString('ca-ES', {
+							hour: '2-digit',
+							minute: '2-digit',
+							timeZone: 'CET'
+						})} (${seism.region}). Mag:${seism.magnitude}`}</Option
+					>
+				{/each}
+			</Select>
+		</FormField>
+	</Card>
+	{#if indicesAndorra}
+		<DataTable>
+			<Row>
+				<Cell>Resultats per tot Andorra:</Cell>
+				<Cell>CWS: {indicesAndorra.cws}</Cell>
+				<Cell>CII: {indicesAndorra.cii}</Cell>
+				<Cell>Nombre de respostes: {indicesAndorra.num_surveys}</Cell>
+			</Row>
+		</DataTable>
+	{/if}
+	<br />
 	<DataTable>
-		<Row>
-			<Cell>Resultats per tot Andorra:</Cell>
-			<Cell>CWS: {indicesAndorra.cws}</Cell>
-			<Cell>CII: {indicesAndorra.cii}</Cell>
-		</Row>
+		<Head>
+			<Row>
+				<Cell>Parròquia</Cell>
+				<Cell>CWS</Cell>
+				<Cell>CII</Cell>
+				<Cell>Nombre de respostes</Cell>
+			</Row>
+		</Head>
+		<Body>
+			{#each indicesParroquies as index}
+				<Row>
+					<Cell>{index.parroquia}</Cell>
+					<Cell>{index.cws}</Cell>
+					<Cell>{index.cii}</Cell>
+					<Cell>{index.num_surveys}</Cell>
+				</Row>
+			{/each}
+		</Body>
+	</DataTable>
+	<br />
+	<DataTable>
+		<Head>
+			<Row>
+				<Cell>Aprovat</Cell>
+				<Cell>Data</Cell>
+				<Cell>Indexs</Cell>
+				<Cell>Respostes</Cell>
+				<Cell>Percepció</Cell>
+			</Row>
+		</Head>
+		<Body>
+			{#each surveys as survey}
+				<Row>
+					<Cell>
+						<div class="approve">
+							<Checkbox
+								checked={survey.approved}
+								value={survey.guid}
+								on:change={(e) => pathChanged(e, survey.guid)}
+							/>
+							<IconButton on:click={() => deleteSeismSurvey(survey.guid)} style="margin:0">
+								<Icon class="material-icons" on>delete</Icon><Icon class="material-icons"
+									>delete</Icon
+								></IconButton
+							>
+						</div>
+					</Cell>
+					<Cell>{format(new Date(survey.input_date), 'yyyy-MM-dd HH:mm')}</Cell>
+					<Cell>
+						<ul>
+							{#each Object.entries(survey.indices) as index}
+								<li>{index[0]}: {index[1]}</li>
+							{/each}
+						</ul>
+					</Cell>
+					<Cell>
+						<ul>
+							{#each Object.entries(survey.survey_data) as data}
+								<li>{data[0]}: {data[1]}</li>
+							{/each}
+						</ul>
+					</Cell>
+					<Cell>
+						<img
+							src={perceptionIndexImages.find((d) => d.value === survey.survey_data.perceptionImage)
+								?.imageLink}
+							alt="imatge percebuda"
+						/>
+					</Cell>
+				</Row>
+			{/each}
+		</Body>
 	</DataTable>
 {/if}
-<br />
-<DataTable>
-	<Head>
-		<Row>
-			<Cell>Parròquia</Cell>
-			<Cell>CWS</Cell>
-			<Cell>CII</Cell>
-		</Row>
-	</Head>
-	<Body>
-		{#each indicesParroquies as index}
-			<Row>
-				<Cell>{index.parroquia}</Cell>
-				<Cell>{index.cws}</Cell>
-				<Cell>{index.cii}</Cell>
-			</Row>
-		{/each}
-	</Body>
-</DataTable>
-<br />
-<DataTable>
-	<Head>
-		<Row>
-			<Cell>Aprovat</Cell>
-			<Cell>Data</Cell>
-			<Cell>Indexs</Cell>
-			<Cell>Respostes</Cell>
-			<Cell>Percepció</Cell>
-		</Row>
-	</Head>
-	<Body>
-		{#each surveys as survey}
-			<Row>
-				<Cell>
-					<div class="approve">
-						<Checkbox
-							checked={survey.approved}
-							value={survey.guid}
-							on:change={(e) => pathChanged(e, survey.guid)}
-						/>
-						<IconButton on:click={() => deleteSeismSurvey(survey.guid)} style="margin:0">
-							<Icon class="material-icons" on>delete</Icon><Icon class="material-icons">delete</Icon
-							></IconButton
-						>
-					</div>
-				</Cell>
-				<Cell>{format(new Date(survey.input_date), 'yyyy-MM-dd HH:mm')}</Cell>
-				<Cell>
-					<ul>
-						{#each Object.entries(survey.indices) as index}
-							<li>{index[0]}: {index[1]}</li>
-						{/each}
-					</ul>
-				</Cell>
-				<Cell>
-					<ul>
-						{#each Object.entries(survey.survey_data) as data}
-							<li>{data[0]}: {data[1]}</li>
-						{/each}
-					</ul>
-				</Cell>
-				<Cell>
-					<img
-						src={perceptionIndexImages.find((d) => d.value === survey.survey_data.perceptionImage)
-							?.imageLink}
-						alt="imatge percebuda"
-					/>
-				</Cell>
-			</Row>
-		{/each}
-	</Body>
-</DataTable>
 
 <style>
 	.header {
