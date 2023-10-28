@@ -154,11 +154,11 @@
 								value={survey.guid}
 								on:change={(e) => pathChanged(e, survey.guid)}
 							/>
-							<IconButton on:click={() => deleteSeismSurvey(survey.guid)} style="margin:0">
+							<!-- <IconButton on:click={() => deleteSeismSurvey(survey.guid)} style="margin:0">
 								<Icon class="material-icons" on>delete</Icon><Icon class="material-icons"
 									>delete</Icon
-								></IconButton
-							>
+								>
+							</IconButton> -->
 						</div>
 					</Cell>
 					<Cell>{format(new Date(survey.input_date), 'yyyy-MM-dd HH:mm')}</Cell>
