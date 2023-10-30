@@ -42,7 +42,6 @@
 		if (seism) surveys = await getSeismSurveys(seism);
 		if (seism) indicesParroquies = await getCalculatedIndicesParroquies(seism);
 		if (seism) indicesAndorra = await getCalculatedIndicesAndorra(seism);
-		console.log(indicesAndorra);
 	};
 
 	$: seism, getSeismInfo();
