@@ -30,6 +30,7 @@
 	let seism: string;
 
 	let surveys: Survey[] = [];
+
 	let indicesParroquies: Indices[] = [];
 	let indicesAndorra: Indices;
 
