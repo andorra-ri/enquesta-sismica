@@ -45,7 +45,7 @@
 			.validate(formValues, { abortEarly: false })
 			.then(function (valid) {
 				surveyValues.update(() => formValues);
-				previousPage();
+				goto('/1');
 			})
 			.catch(function (valid) {
 				errors = valid.inner.reduce(

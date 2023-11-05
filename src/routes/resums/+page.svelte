@@ -81,9 +81,9 @@
 		</div>
 	</div>
 	<Card padded>
-		<div>Triï el sisme</div>
+		<div>Triï el terratrèmol</div>
 		<FormField>
-			<Select style="min-width: 300px" label="Data del sisme" bind:value={seism}>
+			<Select style="min-width: 300px" label="Data del terratrèmol" bind:value={seism}>
 				{#each seisms as seism}
 					<Option value={seism.guid}
 						>{`${new Date(seism.datetime).toLocaleDateString('ca-ES', {

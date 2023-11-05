@@ -105,7 +105,7 @@
 			.validate(formValues, { abortEarly: false })
 			.then(function (valid) {
 				surveyValues.update(() => formValues);
-				previousPage();
+				goto('/');
 			})
 			.catch(function (valid) {
 				errors = valid.inner.reduce(
@@ -199,7 +199,7 @@
 <Card padded>
 	<Select
 		style="max-width: 400px"
-		label="Què va fer durant la sacsejada?"
+		label="Què va fer durant la terratrèmol?"
 		bind:value={formValues.whatDidYouDo}
 	>
 		{#each Object.entries(whatDidYouDo) as [position, positionText]}

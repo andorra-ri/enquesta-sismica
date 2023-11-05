@@ -122,13 +122,13 @@
 <div>Pàgina 1 de 3</div>
 <LinearProgress progress={0.333} />
 <Card padded class={'existentSeism' in errors ? 'error' : 'valid'}>
-	<div>Surt a la pregunta següent el sisme que ha percebut o no?</div>
+	<div>Surt a la pregunta següent el terratrèmol que ha percebut o no?</div>
 	<FormField>
 		<Radio bind:group={formValues.existentSeism} value="yes" touch disabled={seisms.length === 0} />
 		<div slot="label">
 			<span class:not-available={seisms.length === 0}
 				>Sí, triar de la llista de sota
-			</span>{#if seisms.length === 0}<spam>No hi ha cap sisme recent.</spam>{/if}
+			</span>{#if seisms.length === 0}<spam>No hi ha cap terratrèmol recent.</spam>{/if}
 		</div>
 	</FormField>
 	<FormField>
@@ -139,9 +139,9 @@
 <!-- if length is not checked, option doesn't exist before loading seisms and seismuuid is set to undefined! -->
 {#if formValues.existentSeism === 'yes' && seisms.length > 0}
 	<Card padded class={'seism' in errors ? 'error' : 'valid'}>
-		<div>Triï el sisme *</div>
+		<div>Triï el terratrèmol *</div>
 		<FormField>
-			<Select style="min-width: 300px" label="Data del sisme" bind:value={formValues.seism}>
+			<Select style="min-width: 300px" label="Data del terratrèmol" bind:value={formValues.seism}>
 				{#each seisms as seism}
 					<Option value={seism.guid}
 						>{`${new Date(seism.datetime).toLocaleDateString('ca-ES', {
@@ -178,7 +178,11 @@
 
 <Card padded class={'felt' in errors ? 'error' : 'valid'}>
 	<FormField>
-		<Select style="min-width: 300px" label="Ha notat el sisme? *" bind:value={formValues.felt}>
+		<Select
+			style="min-width: 300px"
+			label="Ha notat el terratrèmol? *"
+			bind:value={formValues.felt}
+		>
 			{#each Object.entries(yesNo) as [position, positionText]}
 				<Option value={position}>
 					{positionText}
@@ -190,7 +194,7 @@
 <Card padded class={'position' in errors ? 'error' : 'valid'}>
 	<Select
 		style="width: 350px"
-		label="En el moment de la sacsejada es trobava...*"
+		label="En el moment de la terratrèmol es trobava...*"
 		bind:value={formValues.position}
 	>
 		{#each Object.entries(positionOptions) as [position, positionText]}
@@ -338,7 +342,7 @@
 	<FormField>
 		<Select
 			style="min-width: 350px"
-			label="En el moment de la sacsejada, estava..."
+			label="En el moment de la terratrèmol, estava..."
 			bind:value={formValues.situationObserver}
 		>
 			{#each Object.entries(situationObserverOptions) as [situationObserver, situationObserverText]}
