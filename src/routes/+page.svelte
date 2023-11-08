@@ -48,6 +48,7 @@
 	let pais: string | undefined;
 	let parroquia: string | undefined;
 	let municipality: string = '';
+	let selectedSeism: string | undefined;
 
 	$: {
 		formValues.pais = pais;
@@ -64,6 +65,15 @@
 
 	$: {
 		formValues.municipality = municipality;
+	}
+
+	$: {
+		if (selectedSeism !== 'new') {
+			formValues.seism = selectedSeism;
+			formValues.existentSeism = 'yes';
+		} else {
+			formValues.existentSeism = 'no';
+		}
 	}
 
 	type Error = Record<
@@ -121,27 +131,27 @@
 </div>
 <div>Pàgina 1 de 3</div>
 <LinearProgress progress={0.333} />
-<Card padded class={'existentSeism' in errors ? 'error' : 'valid'}>
+<!-- <Card padded class={'existentSeism' in errors ? 'error' : 'valid'}>
 	<div>Surt a la pregunta següent el terratrèmol que ha percebut o no?</div>
 	<FormField>
 		<Radio bind:group={formValues.existentSeism} value="yes" touch disabled={seisms.length === 0} />
 		<div slot="label">
-			<span class:not-available={seisms.length === 0}
-				>Sí, triar de la llista de sota
-			</span>{#if seisms.length === 0}<spam>No hi ha cap terratrèmol recent.</spam>{/if}
+			<span class:not-available={seisms.length === 0}> Sí, triar de la llista de sota </span>
+			{#if seisms.length === 0}<spam>No hi ha cap terratrèmol recent.</spam>{/if}
 		</div>
 	</FormField>
 	<FormField>
 		<Radio bind:group={formValues.existentSeism} value="no" touch />
 		<span slot="label">No apareix a la llista. Introduir la data i hora manualment</span>
 	</FormField>
-</Card>
+</Card> -->
 <!-- if length is not checked, option doesn't exist before loading seisms and seismuuid is set to undefined! -->
 {#if formValues.existentSeism === 'yes' && seisms.length > 0}
 	<Card padded class={'seism' in errors ? 'error' : 'valid'}>
 		<div>Triï el terratrèmol *</div>
 		<FormField>
-			<Select style="min-width: 300px" label="Data del terratrèmol" bind:value={formValues.seism}>
+			<Select style="min-width: 300px" label="Data del terratrèmol" bind:value={selectedSeism}>
+				<Option value="new">Cap d'aquesta llista</Option>
 				{#each seisms as seism}
 					<Option value={seism.guid}
 						>{`${new Date(seism.datetime).toLocaleDateString('ca-ES', {
@@ -173,6 +183,15 @@
 				<Textfield bind:value={formValues.earthquakeHour} type="time" />
 			</FormField>
 		</div>
+		<button
+			on:click={() => {
+				formValues.existentSeism = 'yes';
+				selectedSeism = undefined;
+			}}
+			class="seism-button"
+		>
+			triar de la llista
+		</button>
 	</Card>
 {/if}
 
@@ -503,7 +522,9 @@
 		display: flex;
 	}
 
-	.not-available {
-		text-decoration: line-through;
+	.seism-button {
+		margin-top: 10px;
+		width: 140px;
+		background-color: transparent;
 	}
 </style>
