@@ -109,6 +109,19 @@
 			e.target.showPicker();
 		}
 	}
+
+	let geocodingSearch: string = '';
+	let geocodingCoords: { lon: number; lat: number } | undefined = undefined;
+
+	const getGeocoding = async () => {
+		const res = await fetch(
+			`https://nominatim.openstreetmap.org/search?q=${geocodingSearch}&limit=1&format=jsonv2`
+		);
+		const data: { lon: string; lat: string }[] = await res.json();
+		if (data.length > 0)
+			geocodingCoords = { lon: parseFloat(data[0].lon), lat: parseFloat(data[0].lat) };
+		return data;
+	};
 </script>
 
 <svelte:head>
@@ -131,20 +144,7 @@
 </div>
 <div>Pàgina 1 de 3</div>
 <LinearProgress progress={0.333} />
-<!-- <Card padded class={'existentSeism' in errors ? 'error' : 'valid'}>
-	<div>Surt a la pregunta següent el terratrèmol que ha percebut o no?</div>
-	<FormField>
-		<Radio bind:group={formValues.existentSeism} value="yes" touch disabled={seisms.length === 0} />
-		<div slot="label">
-			<span class:not-available={seisms.length === 0}> Sí, triar de la llista de sota </span>
-			{#if seisms.length === 0}<spam>No hi ha cap terratrèmol recent.</spam>{/if}
-		</div>
-	</FormField>
-	<FormField>
-		<Radio bind:group={formValues.existentSeism} value="no" touch />
-		<span slot="label">No apareix a la llista. Introduir la data i hora manualment</span>
-	</FormField>
-</Card> -->
+
 <!-- if length is not checked, option doesn't exist before loading seisms and seismuuid is set to undefined! -->
 {#if formValues.existentSeism === 'yes' && seisms.length > 0}
 	<Card padded class={'seism' in errors ? 'error' : 'valid'}>
@@ -349,11 +349,23 @@
 			Seleccioneu la ubicació tan detallada com sigui possible, arrossegant la icona blava i fent
 			zoom sobre el mapa
 		</div>
-		<Leaflet
-			onChange={setCoordinates}
-			initialLng={formValues.coordinates && formValues.coordinates[0]}
-			initialLat={formValues.coordinates && formValues.coordinates[1]}
-		/>
+		<div class="geocoding">
+			<span class="field-label">Cercar ubicacio posant l'adreça aproximada:</span>
+			<Textfield bind:value={geocodingSearch} type="email" />
+			<button on:click={() => getGeocoding()}>Cerca</button>
+		</div>
+		{#key geocodingCoords}
+			<Leaflet
+				onChange={setCoordinates}
+				initialLng={geocodingCoords
+					? geocodingCoords.lon
+					: formValues.coordinates && formValues.coordinates[0]}
+				initialLat={geocodingCoords
+					? geocodingCoords.lat
+					: formValues.coordinates && formValues.coordinates[1]}
+				autoPosition={geocodingCoords !== undefined}
+			/>
+		{/key}
 	</Card>
 {/if}
 
@@ -525,6 +537,14 @@
 	.seism-button {
 		margin-top: 10px;
 		width: 140px;
+		background-color: transparent;
+	}
+
+	.geocoding {
+		margin-bottom: 10px;
+	}
+
+	.geocoding button {
 		background-color: transparent;
 	}
 </style>

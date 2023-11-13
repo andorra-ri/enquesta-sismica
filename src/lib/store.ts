@@ -65,13 +65,15 @@ export const schema = yup.object().shape({
 		.nullable()
 		.default(undefined)
 		.transform((curr, orig) => (orig === '' ? null : curr))
-		.typeError('Format de data invàlid'),
+		.typeError('Format de data invàlid')
+		.when('existentSeism', { is: 'no', then: (schema) => schema.required() }),
 	earthquakeHour: yup
 		.string()
 		.nullable()
 		.default(undefined)
 		.transform((curr, orig) => (orig === '' ? null : curr))
-		.matches(/[0-2]{1}[0-9]{1}:[0-5]{1}[0-9]{1}/),
+		.matches(/[0-2]{1}[0-9]{1}:[0-5]{1}[0-9]{1}/)
+		.when('existentSeism', { is: 'no', then: (schema) => schema.required() }),
 	seism: yup.string().when('existentSeism', { is: 'yes', then: (schema) => schema.required() }),
 	felt: yup.string().oneOf(['yes', 'no']).required(),
 	locationMap: yup.string().oneOf(['yes', 'no']).required(),
