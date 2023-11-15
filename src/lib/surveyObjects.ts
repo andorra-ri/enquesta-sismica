@@ -244,7 +244,8 @@ export const buildingDamageDescription = {
 };
 
 export const effectsOnLandscape = {
-	riverFlow: 'Variació del cabal en rius, torrents o fonts Fissures en el terreny',
+	riverFlow: 'Variació del cabal en rius, torrents o fonts',
+	cracksTerrain: 'Fissures en el terreny',
 	wellLevel: 'Variació del nivell d’aigua dels pous',
 	cracksRoads: 'Fissures en els camins i/o carreteres',
 	fountainVariations: 'Aparició o desaparició de noves fonts o torrents',
@@ -297,7 +298,7 @@ export const perceptionIndexImages = [
 		imageLink: 'images/EMS98-8.jpg'
 	},
 	{
-		text: 'No especificat',
+		text: 'Sense especificar',
 		value: 'notSpecified',
 		imageLink: 'images/EMS98-0.jpg'
 	}

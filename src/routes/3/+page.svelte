@@ -1,6 +1,6 @@
 <div class="header">
 	<img src="images/logo.png" alt="logo" class="logo" />
-	<div>Les dades s'han enviat correctament, gràcies per respondre al formulari</div>
+	<div>Les dades s'han enviat correctament, gràcies per respondre al formulari.</div>
 </div>
 
 <style>
@@ -16,5 +16,9 @@
 
 		display: flex;
 		flex-direction: column;
+	}
+	.logo{
+		max-width: 800px;
+		width: 80%;
 	}
 </style>

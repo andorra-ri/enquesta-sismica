@@ -64,7 +64,13 @@
 <div>Seleccioni la imatge que millor resumeixi la situació viscuda</div>
 <div class="image-list-masonry">
 	<ImageList masonry>
-		{#each perceptionIndexImages as image}
+		{#each perceptionIndexImages.reduce((acc, cur, i)=> {
+			/*Had to reorder since masonry can't be in rows and other options don't work*/
+			const row= i%3;
+			const col = (i-row)/3;
+			acc[col+row*3]=cur;
+			return acc;
+			}, new Array(perceptionIndexImages.length)) as image}
 			<Item
 				on:click={() => (formValues.perceptionImage = image.value)}
 				class={formValues.perceptionImage === image.value && 'selected-image'}
@@ -90,9 +96,10 @@
 	@use '@material/image-list/index' as image-list;
 
 	.image-list-masonry {
-		@include image-list.masonry-columns(2);
+		@include image-list.masonry-columns(3);
 		@include image-list.shape-radius(10px);
 		max-width: 599px;
+		padding-bottom: 10px;
 	}
 
 	:global(.selected-image) {
@@ -109,6 +116,10 @@
 	}
 	:global(.mdc-image-list__image-aspect-container) {
 		padding-bottom: calc(100% / 1.2);
+	}
+
+	:global(.mdc-image-list){
+		background-color: #e8dff5;
 	}
 	.section-title {
 		font-weight: bold;

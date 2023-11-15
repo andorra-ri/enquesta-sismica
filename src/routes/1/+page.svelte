@@ -118,6 +118,8 @@
 				console.log(errors);
 			});
 	};
+
+	const alphabet = "abcdefghijklmnopqrstuvwxyz";
 </script>
 
 <div class="section-title">Percepció personal</div>
@@ -340,10 +342,10 @@
 		{#if formValues.buildingDamage === 'yes'}
 			<div>Marqui tots els danys que va observar:</div>
 			<div class="two-column">
-				{#each Object.entries(buildingDamageDescription) as [position, positionText]}
+				{#each Object.entries(buildingDamageDescription) as [position, positionText], i (i)}
 					<FormField>
 						<Checkbox bind:group={formValues.buildingDamageDescription} value={position} />
-						<span slot="label">{positionText}</span>
+						<span slot="label">{alphabet[i]}) {positionText}</span>
 					</FormField>
 				{/each}
 			</div>
@@ -363,7 +365,7 @@
 		{/if}
 
 		{#each publicUrls as imageUrl}
-			<img src={imageUrl} alt="imatge de l'usuari" />
+			<img src={imageUrl} width="500px" alt="imatge de l'usuari" />
 		{/each}
 	</Card>
 {/if}
@@ -379,14 +381,17 @@
 	</div>
 </Card>
 <Card padded>
+	<div>Desitgeu afegir algun aclariment o descriure el que heu notat?</div>
 	<FormField>
-		<div>Desitgeu afegir algun aclariment o descriure el que heu notat?</div>
+		
 		<Textfield style="width: 70%" bind:value={formValues.comments} type="email" />
 	</FormField>
+	<div>Just abans o després d'aquest terratrèmol en va notar d'altres?</div>
 	<FormField>
+		
 		<Select
 			style="width: 525px"
-			label="Just abans o després d'aquest terratrèmol en va notar d'altres?"
+			label='Sí-No-Sense especificar'
 			bind:value={formValues.otherSeisms}
 		>
 			{#each Object.entries(otherSeisms) as [position, positionText]}
