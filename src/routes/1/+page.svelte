@@ -320,7 +320,7 @@
 		</div>
 		<FormField>
 			<div>Any de construcció de l'edifici (si el sap)</div>
-			<Textfield bind:value={formValues.buildingYear} type="number" />
+			<Textfield bind:value={formValues.buildingYear}  />
 		</FormField>
 	</Card>
 

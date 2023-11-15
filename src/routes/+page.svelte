@@ -271,6 +271,7 @@
 				? 'error'
 				: 'valid'}
 		>
+		<div>
 			<FormField>
 				<Select bind:value={pais} label="País">
 					{#each ['Andorra', 'Espanya', 'França'] as country}
@@ -279,7 +280,9 @@
 				</Select>
 				<span slot="label">País on es trobava en el moment del terratrèmol*</span>
 			</FormField>
+		</div>
 			{#if formValues.pais === 'Andorra'}
+			<div>
 				<FormField>
 					<Select disabled={formValues.pais !== 'Andorra'} bind:value={parroquia} label="Parròquia">
 						{#each [...new Set(parroquies.map((d) => d.parroquia))] as parroquia}
@@ -288,7 +291,8 @@
 					</Select>
 					<span slot="label">Parròquia on es trobava en el moment del terratrèmol*</span>
 				</FormField>
-
+			</div>
+			<div>
 				<FormField>
 					<Select
 						disabled={!formValues.parroquia}
@@ -305,16 +309,19 @@
 						>Territori dins la parròquia on es trobava en el moment del terratrèmol</span
 					>
 				</FormField>
+			</div>
 			{:else if formValues.pais === 'Espanya' || formValues.pais === 'França'}
+			<div>
 				<FormField>
 					<Textfield bind:value={municipality} type="email" />
 					<span slot="label" class="text-field-label"
 						>Municipi on es trobava en el moment del terratrèmol*</span
 					>
 				</FormField>
+			</div>
 			{/if}
 			{#if !!formValues.pais}
-				<div class="mdc-form-field">
+				<div >
 					<Select bind:value={formValues.streetType} label="Tipus de via">
 						{#each Object.entries(streetTypes) as [streetType, streetTypeText]}
 							<Option value={streetType}>{streetTypeText}</Option>
@@ -322,20 +329,24 @@
 					</Select>
 				</div>
 				{#if formValues.streetType === 'other'}
+				<div>
 					<div class="mdc-form-field">
 						<Textfield bind:value={formValues.streetTypeOther} type="email" />
 					</div>
+				</div>
 				{/if}
+				<div>
 				<div class="mdc-form-field">
 					<div class="text-field-label">Nom de la via</div>
 					<Textfield bind:value={formValues.street} type="email" />
 				</div>
-
+			    </div>
+				<div>
 				<div class="mdc-form-field">
 					<div class="text-field-label">Número</div>
 					<Textfield bind:value={formValues.streetNumber} type="email" />
 				</div>
-
+				</div>
 				<div class="mdc-form-field" style="width:70%">
 					<div class="text-field-label">Complement d'adreça:</div>
 					<Textfield style="width:100%" bind:value={formValues.addressNotes} type="email" />
@@ -347,7 +358,7 @@
 	<Card padded>
 		<div>
 			Seleccioneu la ubicació tan detallada com sigui possible, arrossegant la icona blava i fent
-			zoom sobre el mapa
+			zoom sobre el mapa.
 		</div>
 		<div class="geocoding">
 			<span class="field-label">Cercar ubicacio posant l'adreça aproximada:</span>
