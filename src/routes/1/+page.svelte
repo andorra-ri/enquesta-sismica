@@ -13,6 +13,12 @@
 	import FormField from '@smui/form-field';
 	import Textfield from '@smui/textfield';
 	import Dropzone from 'svelte-file-dropzone/Dropzone.svelte';
+	import  {
+	
+		ImageAspectContainer,
+		Image
+	
+	} from '@smui/image-list';
 	import { uploadImage } from '$lib/fetch';
 	import {
 		animalsFrightened,
@@ -309,15 +315,18 @@
 		<div class="radio-group">
 			<p>La construcció de l'edifici és del tipus:</p>
 			{#each Object.entries(buildingType) as [position, positionText], i}
-				{#if i > 0 && i % 3 === 0}
-					<br />
-				{/if}
+			<div>
 				<FormField style="min-width: 250px">
 					<Radio bind:group={formValues.buildingType} value={position} />
 					<span slot="label">
-						{positionText}
+						{positionText} 
+						
 					</span>
+					{#if position!== 'notSpecified'}
+								<Image src={`images/${position}.png`} alt={position} />
+					{/if}
 				</FormField>
+			</div>
 			{/each}
 		</div>
 		<FormField>
@@ -441,5 +450,10 @@
 	}
 	.buttons {
 		margin-top: 5px;
+	}
+
+	:global(.mdc-image-list__image){
+		max-width: 200px;
+		max-height: 200px;
 	}
 </style>
