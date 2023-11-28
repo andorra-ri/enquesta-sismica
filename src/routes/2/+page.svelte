@@ -108,15 +108,19 @@
 		border-width: 1px;
 		background-color: whitesmoke;
 	}
-
+	:global(.mdc-image-list__image-aspect-container) {
+		padding-bottom: calc(100% / 1.2);
+	
+	}
 	@media (max-width: 599px) {
 		.image-list-masonry {
 			@include image-list.masonry-columns(1);
 		}
+		:global(.mdc-image-list__image-aspect-container) {
+			padding-bottom: 45%;
+		}
 	}
-	:global(.mdc-image-list__image-aspect-container) {
-		padding-bottom: calc(100% / 1.2);
-	}
+	
 
 	:global(.mdc-image-list){
 		background-color: #e8dff5;

@@ -212,7 +212,8 @@ export const buildingType = {
 	notSpecified: 'Sense especificar',
 	typeA: 'Tipus A: Parets de maçoneria en sec o amb fang, o edifici amb patologia generalitzada',
 	typeB: 'Tipus B: Construccions amb mur de fàbrica de totxo, blocs de morter, etc.',
-	typeC: 'Tipus C: Construccions amb estructura metàl·lica o de formigó armat'
+	typeC: 'Tipus C: Construccions amb estructura metàl·lica o de formigó armat',
+	typeD: 'Tipus D: Construccions amb estructura de fusta'
 };
 export const buildingDamage = {
 	notSpecified: 'Sense especificar',

@@ -315,17 +315,18 @@
 		<div class="radio-group">
 			<p>La construcció de l'edifici és del tipus:</p>
 			{#each Object.entries(buildingType) as [position, positionText], i}
-			<div>
+			<div class="building-type"> 
 				<FormField style="min-width: 250px">
 					<Radio bind:group={formValues.buildingType} value={position} />
+					
 					<span slot="label">
 						{positionText} 
-						
 					</span>
-					{#if position!== 'notSpecified'}
-								<Image src={`images/${position}.png`} alt={position} />
-					{/if}
+					
 				</FormField>
+				{#if position!== 'notSpecified' && position!== 'typeD'}
+						<Image src={`images/${position}.png`} alt={position} />
+					{/if}
 			</div>
 			{/each}
 		</div>
@@ -395,12 +396,13 @@
 		
 		<Textfield style="width: 70%" bind:value={formValues.comments} type="email" />
 	</FormField>
-	<div>Just abans o després d'aquest terratrèmol en va notar d'altres?</div>
+
+	<div style="padding-top: 15px">Just abans o després d'aquest terratrèmol en va notar d'altres?</div>
+	
 	<FormField>
 		
 		<Select
 			style="width: 525px"
-			label='Sí-No-Sense especificar'
 			bind:value={formValues.otherSeisms}
 		>
 			{#each Object.entries(otherSeisms) as [position, positionText]}
@@ -432,6 +434,10 @@
 	}
 	.radio-group {
 		font-family: Roboto, sans-serif;
+	}
+	.building-type{
+		display: flex;
+		align-items: center;
 	}
 
 	@media (min-width: 800px) {

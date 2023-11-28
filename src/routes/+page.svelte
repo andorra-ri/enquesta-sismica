@@ -164,7 +164,7 @@
 							hour: '2-digit',
 							minute: '2-digit',
 							timeZone: 'CET'
-						})} (${seism.region}). Mag:${seism.magnitude}`}</Option
+						})} (${seism.region}). Mag:${seism.magnitude.toFixed(1)}`}</Option
 					>
 				{/each}
 			</Select>
@@ -360,11 +360,11 @@
 			Seleccioneu la ubicació tan detallada com sigui possible, arrossegant la icona blava i fent
 			zoom sobre el mapa.
 		</div>
-		<div class="geocoding">
+		<!-- <div class="geocoding">
 			<span class="field-label">Cercar ubicacio posant l'adreça aproximada:</span>
 			<Textfield bind:value={geocodingSearch} type="email" />
 			<button on:click={() => getGeocoding()}>Cerca</button>
-		</div>
+		</div> -->
 		{#key geocodingCoords}
 			<Leaflet
 				onChange={setCoordinates}
