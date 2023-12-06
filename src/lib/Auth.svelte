@@ -75,7 +75,7 @@
 		<h3>Cal autenticació!!</h3>
 		<div class="form">
 			<Textfield
-				type="email"
+				type="text"
 				bind:dirty={dirtyEmail}
 				bind:invalid={invalidEmail}
 				updateInvalid

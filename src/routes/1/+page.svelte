@@ -13,12 +13,7 @@
 	import FormField from '@smui/form-field';
 	import Textfield from '@smui/textfield';
 	import Dropzone from 'svelte-file-dropzone/Dropzone.svelte';
-	import  {
-	
-		ImageAspectContainer,
-		Image
-	
-	} from '@smui/image-list';
+	import { ImageAspectContainer, Image } from '@smui/image-list';
 	import { uploadImage } from '$lib/fetch';
 	import {
 		animalsFrightened,
@@ -125,7 +120,7 @@
 			});
 	};
 
-	const alphabet = "abcdefghijklmnopqrstuvwxyz";
+	const alphabet = 'abcdefghijklmnopqrstuvwxyz';
 </script>
 
 <div class="section-title">Percepció personal</div>
@@ -220,7 +215,7 @@
 	{#if formValues.whatDidYouDo === 'other'}
 		<FormField>
 			<div>Indiqui què va fer:</div>
-			<Textfield style="width:70%" bind:value={formValues.commentsWhatDidYouDo} type="email" />
+			<Textfield style="width:70%" bind:value={formValues.commentsWhatDidYouDo} type="text" />
 		</FormField>
 	{/if}
 </Card>
@@ -308,31 +303,30 @@
 
 		<FormField style="width: 100%">
 			<div>Descriviu, si voleu, quins objectes van vibrar o van caure:</div>
-			<Textfield style="width: 70%" bind:value={formValues.commentseffectsShelves} type="email" />
+			<Textfield style="width: 70%" bind:value={formValues.commentseffectsShelves} type="text" />
 		</FormField>
 	</Card>
 	<Card padded>
 		<div class="radio-group">
 			<p>La construcció de l'edifici és del tipus:</p>
 			{#each Object.entries(buildingType) as [position, positionText], i}
-			<div class="building-type"> 
-				<FormField style="min-width: 250px">
-					<Radio bind:group={formValues.buildingType} value={position} />
-					
-					<span slot="label">
-						{positionText} 
-					</span>
-					
-				</FormField>
-				{#if position!== 'notSpecified' && position!== 'typeD'}
+				<div class="building-type">
+					<FormField style="min-width: 250px">
+						<Radio bind:group={formValues.buildingType} value={position} />
+
+						<span slot="label">
+							{positionText}
+						</span>
+					</FormField>
+					{#if position !== 'notSpecified' && position !== 'typeD'}
 						<Image src={`images/${position}.png`} alt={position} />
 					{/if}
-			</div>
+				</div>
 			{/each}
 		</div>
 		<FormField>
 			<div>Any de construcció de l'edifici (si el sap)</div>
-			<Textfield bind:value={formValues.buildingYear}  />
+			<Textfield bind:value={formValues.buildingYear} />
 		</FormField>
 	</Card>
 
@@ -362,7 +356,7 @@
 			<div>
 				<FormField style="width: 100%">
 					<div>Altres comentaris sobre els danys a l'edifici</div>
-					<Textfield bind:value={formValues.commentsDamage} style="width: 100%" type="email" />
+					<Textfield bind:value={formValues.commentsDamage} style="width: 100%" type="text" />
 				</FormField>
 			</div>
 		{/if}
@@ -393,18 +387,15 @@
 <Card padded>
 	<div>Desitgeu afegir algun aclariment o descriure el que heu notat?</div>
 	<FormField>
-		
-		<Textfield style="width: 70%" bind:value={formValues.comments} type="email" />
+		<Textfield style="width: 70%" bind:value={formValues.comments} type="text" />
 	</FormField>
 
-	<div style="padding-top: 15px">Just abans o després d'aquest terratrèmol en va notar d'altres?</div>
-	
+	<div style="padding-top: 15px">
+		Just abans o després d'aquest terratrèmol en va notar d'altres?
+	</div>
+
 	<FormField>
-		
-		<Select
-			style="width: 525px"
-			bind:value={formValues.otherSeisms}
-		>
+		<Select style="width: 525px" bind:value={formValues.otherSeisms}>
 			{#each Object.entries(otherSeisms) as [position, positionText]}
 				<Option value={position}>
 					{positionText}
@@ -415,7 +406,7 @@
 	{#if formValues.otherSeisms === 'yes'}
 		<FormField>
 			<div>Què va notar i quan?</div>
-			<Textfield style="width: 70%" bind:value={formValues.otherSeismsText} type="email" />
+			<Textfield style="width: 70%" bind:value={formValues.otherSeismsText} type="text" />
 		</FormField>
 	{/if}
 </Card>
@@ -435,7 +426,7 @@
 	.radio-group {
 		font-family: Roboto, sans-serif;
 	}
-	.building-type{
+	.building-type {
 		display: flex;
 		align-items: center;
 	}
@@ -458,7 +449,7 @@
 		margin-top: 5px;
 	}
 
-	:global(.mdc-image-list__image){
+	:global(.mdc-image-list__image) {
 		max-width: 200px;
 		max-height: 200px;
 	}

@@ -249,7 +249,7 @@
 			</div>
 			<div>
 				<span class="field-label">Comentaris:</span>
-				<Textfield style="width:70%" bind:value={formValues.floorComments} type="email" />
+				<Textfield style="width:70%" bind:value={formValues.floorComments} type="text" />
 			</div>
 		{/if}
 	</div>
@@ -257,7 +257,7 @@
 	{#if formValues.position === 'other'}
 		<div>
 			<span class="field-label">Indiqui on es trobava:</span>
-			<Textfield style="width:70%" bind:value={formValues.commentsPosition} type="email" />
+			<Textfield style="width:70%" bind:value={formValues.commentsPosition} type="text" />
 		</div>
 	{/if}
 </Card>
@@ -313,7 +313,7 @@
 			{:else if formValues.pais === 'Espanya' || formValues.pais === 'França'}
 			<div>
 				<FormField>
-					<Textfield bind:value={municipality} type="email" />
+					<Textfield bind:value={municipality} type="text" />
 					<span slot="label" class="text-field-label"
 						>Municipi on es trobava en el moment del terratrèmol*</span
 					>
@@ -331,25 +331,25 @@
 				{#if formValues.streetType === 'other'}
 				<div>
 					<div class="mdc-form-field">
-						<Textfield bind:value={formValues.streetTypeOther} type="email" />
+						<Textfield bind:value={formValues.streetTypeOther} type="text" />
 					</div>
 				</div>
 				{/if}
 				<div>
 				<div class="mdc-form-field">
 					<div class="text-field-label">Nom de la via</div>
-					<Textfield bind:value={formValues.street} type="email" />
+					<Textfield bind:value={formValues.street} type="text" />
 				</div>
 			    </div>
 				<div>
 				<div class="mdc-form-field">
 					<div class="text-field-label">Número</div>
-					<Textfield bind:value={formValues.streetNumber} type="email" />
+					<Textfield bind:value={formValues.streetNumber} type="text" />
 				</div>
 				</div>
 				<div class="mdc-form-field" style="width:70%">
 					<div class="text-field-label">Complement d'adreça:</div>
-					<Textfield style="width:100%" bind:value={formValues.addressNotes} type="email" />
+					<Textfield style="width:100%" bind:value={formValues.addressNotes} type="text" />
 				</div>
 			{/if}
 		</div>
@@ -362,7 +362,7 @@
 		</div>
 		<!-- <div class="geocoding">
 			<span class="field-label">Cercar ubicacio posant l'adreça aproximada:</span>
-			<Textfield bind:value={geocodingSearch} type="email" />
+			<Textfield bind:value={geocodingSearch} type="text" />
 			<button on:click={() => getGeocoding()}>Cerca</button>
 		</div> -->
 		{#key geocodingCoords}
@@ -398,7 +398,7 @@
 	{#if formValues.situationObserver === 'other'}
 		<div>
 			<span class="field-label">Indiqui què estava fent:</span>
-			<Textfield bind:value={formValues.commentsBuilding} type="email" />
+			<Textfield bind:value={formValues.commentsBuilding} type="text" />
 		</div>
 	{/if}
 </Card>
