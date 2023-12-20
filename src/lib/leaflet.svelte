@@ -13,13 +13,24 @@
 
 	onMount(async () => {
 		const leaflet = await import('leaflet');
+		const icon = leaflet.icon({
+			iconUrl: 'images/marker.png',
+			shadowUrl: 'images/marker-shadow.png',
+
+			iconSize: [30, 38],
+			shadowSize: [50, 64],
+			iconAnchor: [19, 38],
+			shadowAnchor: [16, 62],
+			popupAnchor: [-3, -76]
+		});
 
 		map = leaflet.map(mapElement).setView([initialLat, initialLng], initialZoom);
 		marker = leaflet
 			.marker([initialLat, initialLng], {
 				title: 'Mou-me!',
 				alt: 'Mou-me!',
-				draggable: true
+				draggable: true,
+				icon: icon
 			})
 			.addTo(map);
 
