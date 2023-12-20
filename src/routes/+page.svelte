@@ -23,6 +23,9 @@
 	import Select, { Option } from '@smui/select';
 	import Textfield from '@smui/textfield';
 	import { onDestroy, onMount } from 'svelte';
+	import { page } from '$app/stores';
+
+	const initialSeismId = $page.url.searchParams.get('id');
 
 	let seisms: SeismsData[] = [];
 	let parroquies: ParroquiaData[] = [];
@@ -48,7 +51,7 @@
 	let pais: string | undefined;
 	let parroquia: string | undefined;
 	let municipality: string = '';
-	let selectedSeism: string | undefined;
+	let selectedSeism: string | undefined = initialSeismId ?? undefined;
 
 	$: {
 		formValues.pais = pais;
@@ -271,57 +274,61 @@
 				? 'error'
 				: 'valid'}
 		>
-		<div>
-			<FormField>
-				<Select bind:value={pais} label="País">
-					{#each ['Andorra', 'Espanya', 'França'] as country}
-						<Option value={country}>{country}</Option>
-					{/each}
-				</Select>
-				<span slot="label">País on es trobava en el moment del terratrèmol*</span>
-			</FormField>
-		</div>
+			<div>
+				<FormField>
+					<Select bind:value={pais} label="País">
+						{#each ['Andorra', 'Espanya', 'França'] as country}
+							<Option value={country}>{country}</Option>
+						{/each}
+					</Select>
+					<span slot="label">País on es trobava en el moment del terratrèmol*</span>
+				</FormField>
+			</div>
 			{#if formValues.pais === 'Andorra'}
-			<div>
-				<FormField>
-					<Select disabled={formValues.pais !== 'Andorra'} bind:value={parroquia} label="Parròquia">
-						{#each [...new Set(parroquies.map((d) => d.parroquia))] as parroquia}
-							<Option value={parroquia}>{parroquia}</Option>
-						{/each}
-					</Select>
-					<span slot="label">Parròquia on es trobava en el moment del terratrèmol*</span>
-				</FormField>
-			</div>
-			<div>
-				<FormField>
-					<Select
-						disabled={!formValues.parroquia}
-						bind:value={formValues.territori}
-						label="Territori"
-					>
-						{#each parroquies
-							.find((d) => d.parroquia === formValues.parroquia)
-							?.territori.map((d) => d.nom) ?? '' as territori}
-							<Option value={territori}>{territori}</Option>
-						{/each}
-					</Select>
-					<span slot="label"
-						>Territori dins la parròquia on es trobava en el moment del terratrèmol</span
-					>
-				</FormField>
-			</div>
+				<div>
+					<FormField>
+						<Select
+							disabled={formValues.pais !== 'Andorra'}
+							bind:value={parroquia}
+							label="Parròquia"
+						>
+							{#each [...new Set(parroquies.map((d) => d.parroquia))] as parroquia}
+								<Option value={parroquia}>{parroquia}</Option>
+							{/each}
+						</Select>
+						<span slot="label">Parròquia on es trobava en el moment del terratrèmol*</span>
+					</FormField>
+				</div>
+				<div>
+					<FormField>
+						<Select
+							disabled={!formValues.parroquia}
+							bind:value={formValues.territori}
+							label="Territori"
+						>
+							{#each parroquies
+								.find((d) => d.parroquia === formValues.parroquia)
+								?.territori.map((d) => d.nom) ?? '' as territori}
+								<Option value={territori}>{territori}</Option>
+							{/each}
+						</Select>
+						<span slot="label"
+							>Territori dins la parròquia on es trobava en el moment del terratrèmol</span
+						>
+					</FormField>
+				</div>
 			{:else if formValues.pais === 'Espanya' || formValues.pais === 'França'}
-			<div>
-				<FormField>
-					<Textfield bind:value={municipality} type="text" />
-					<span slot="label" class="text-field-label"
-						>Municipi on es trobava en el moment del terratrèmol*</span
-					>
-				</FormField>
-			</div>
+				<div>
+					<FormField>
+						<Textfield bind:value={municipality} type="text" />
+						<span slot="label" class="text-field-label"
+							>Municipi on es trobava en el moment del terratrèmol*</span
+						>
+					</FormField>
+				</div>
 			{/if}
 			{#if !!formValues.pais}
-				<div >
+				<div>
 					<Select bind:value={formValues.streetType} label="Tipus de via">
 						{#each Object.entries(streetTypes) as [streetType, streetTypeText]}
 							<Option value={streetType}>{streetTypeText}</Option>
@@ -329,23 +336,23 @@
 					</Select>
 				</div>
 				{#if formValues.streetType === 'other'}
-				<div>
-					<div class="mdc-form-field">
-						<Textfield bind:value={formValues.streetTypeOther} type="text" />
+					<div>
+						<div class="mdc-form-field">
+							<Textfield bind:value={formValues.streetTypeOther} type="text" />
+						</div>
 					</div>
-				</div>
 				{/if}
 				<div>
-				<div class="mdc-form-field">
-					<div class="text-field-label">Nom de la via</div>
-					<Textfield bind:value={formValues.street} type="text" />
+					<div class="mdc-form-field">
+						<div class="text-field-label">Nom de la via</div>
+						<Textfield bind:value={formValues.street} type="text" />
+					</div>
 				</div>
-			    </div>
 				<div>
-				<div class="mdc-form-field">
-					<div class="text-field-label">Número</div>
-					<Textfield bind:value={formValues.streetNumber} type="text" />
-				</div>
+					<div class="mdc-form-field">
+						<div class="text-field-label">Número</div>
+						<Textfield bind:value={formValues.streetNumber} type="text" />
+					</div>
 				</div>
 				<div class="mdc-form-field" style="width:70%">
 					<div class="text-field-label">Complement d'adreça:</div>
