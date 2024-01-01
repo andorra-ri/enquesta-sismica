@@ -171,7 +171,8 @@ export interface Survey {
 	input_date: Date;
 	survey_data: SurveyData;
 	indices: SurveyIndices;
-	parroquia: string;
+	parroquia_id: number;
+	territori_id: number;
 }
 export const getSeismSurveys = async (seismGuid: string) => {
 	const supabaseClient = createClient(supabaseUrl, supabaseAnonKey, {

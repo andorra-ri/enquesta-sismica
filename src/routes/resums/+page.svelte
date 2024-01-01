@@ -25,7 +25,7 @@
 	import { format } from 'date-fns';
 	import { onMount } from 'svelte';
 	let seisms: SeismsData[] = [];
-	let parroquies: ParroquiaData[] = [];
+	let parroquies: ParroquiaData[] | undefined = [];
 
 	let seism: string;
 
@@ -163,7 +163,12 @@
 						</div>
 					</Cell>
 					<Cell>{format(new Date(survey.input_date), 'yyyy-MM-dd HH:mm')}</Cell>
-					<Cell>{survey.parroquia ?? "Fora d'Andorra"}</Cell>
+					<Cell
+						>{parroquies?.find((d) => d.id === survey.parroquia_id)?.parroquia ?? "Fora d'Andorra"} -
+						{parroquies
+							?.find((d) => d.id === survey.parroquia_id)
+							?.territori.find((d) => d.id === survey.territori_id)?.nom ?? ''}</Cell
+					>
 					<Cell>
 						<ul>
 							{#each Object.entries(survey.indices) as index}
