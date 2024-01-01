@@ -81,11 +81,11 @@ export const schema = yup.object().shape({
 		is: 'insideBuilding',
 		then: (schema) => schema.required()
 	}),
-	parroquia: yup.string().when(['position', 'pais'], {
+	parroquia: yup.number().when(['position', 'pais'], {
 		is: (position: string, pais: string) => position === 'insideBuilding' && pais === 'Andorra',
 		then: (schema) => schema.required()
 	}),
-	municipality: yup.string().when(['position', 'pais'], {
+	municipality: yup.number().when(['position', 'pais'], {
 		is: (position: string, pais: string) => position === 'insideBuilding' && pais !== 'Andorra',
 		then: (schema) => schema.required()
 	}),
@@ -144,8 +144,8 @@ export interface FormValues {
 	locationMap?: string;
 	coordinates?: [number, number];
 	pais?: string;
-	parroquia?: string;
-	territori?: string;
+	parroquia?: number;
+	territori?: number;
 	municipality?: string;
 	streetType?: string;
 	streetTypeOther?: string;

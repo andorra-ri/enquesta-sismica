@@ -44,22 +44,54 @@ export const getSeismData = async (last: boolean = true) => {
 
 export interface TerritoriData {
 	nom: string;
+	id: number;
 }
 export interface ParroquiaData {
 	parroquia: string;
+	id: number;
 	territori: TerritoriData[];
 }
 
 export const getParroquiesData = async () => {
-	const supabaseClientPublic = createClient(supabaseUrl, supabaseAnonKey);
+	const supabaseClientPublic = createClient(supabaseUrl, supabaseAnonKey, {
+		db: {
+			schema: 'seismology'
+		}
+	});
 
-	const { data: dataMunicipalities, error: errorMunicipalities } = await supabaseClientPublic.from(
-		'parroquia'
-	).select(`parroquia,
-    territori!fk_parroquia (nom)`);
+	// const { data: dataMunicipalities, error: errorMunicipalities } = await supabaseClientPublic.from(
+	// 	'parroquia'
+	// ).select(`parroquia,id,
+	// territori!fk_parroquia (nom, id)`);
 
-	errorMunicipalities && console.log('Error downloading municipalities:', errorMunicipalities);
-	return dataMunicipalities as ParroquiaData[];
+	// errorMunicipalities && console.log('Error downloading municipalities:', errorMunicipalities);
+
+	const { data: dataTerritorial, error: errorTerritorial } = await supabaseClientPublic
+		.from('territorial_division')
+		.select('parroquia, territori, parroquia_id, territori_id');
+
+	const parroquiesData = dataTerritorial?.reduce<ParroquiaData[]>((acc, cur) => {
+		const territori = { nom: cur.territori, id: cur.territori_id } as TerritoriData;
+		const parroquia_idx = acc.findIndex((d) => d.id === cur.parroquia_id);
+		if (parroquia_idx === -1) {
+			return [
+				...acc,
+				{
+					parroquia: cur.parroquia,
+					id: cur.parroquia_id,
+					territori: [territori]
+				}
+			];
+		}
+		return [
+			...acc.slice(0, parroquia_idx),
+			{ ...acc[parroquia_idx], territori: [...acc[parroquia_idx].territori, territori] },
+			...acc.slice(parroquia_idx + 1)
+		];
+	}, []);
+
+	errorTerritorial && console.log('Error downloading municipalities:', errorTerritorial);
+	return parroquiesData;
 };
 
 export const sendToSupabase = async (data: FormValues) => {
@@ -72,31 +104,34 @@ export const sendToSupabase = async (data: FormValues) => {
 	const indices = getIndices(data);
 
 	const xmlReport = createXMLReport(data);
-	// await supabaseClient.from("survey").insert([
-	//   {
-	//     survey_data: data,
-	//     cws: indices.cws,
-	//     cii: indices.cii,
-	//     indices: indices,
-	//     xml_report: xmlReport,
-	//     seism_guid: data.seism,
-	//     image: data.image,
-	//   },
-	// ]);
 
-	await supabaseClient.rpc('addsurvey', {
-		survey_data: JSON.stringify(data),
-		cws: indices.cws,
-		cii: indices.cii,
-		indices: JSON.stringify(indices),
-		seism_guid: data.seism,
-		xml_report: xmlReport,
-		parroquia: data.parroquia,
-		territori: data.territori,
-		image: data.image ?? '',
-		lon: data.coordinates ? data.coordinates[0] : 0,
-		lat: data.coordinates ? data.coordinates[1] : 0
-	});
+	// await supabaseClient.rpc('addsurvey', {
+	// 	survey_data: JSON.stringify(data),
+	// 	cws: indices.cws,
+	// 	cii: indices.cii,
+	// 	indices: JSON.stringify(indices),
+	// 	seism_guid: data.seism,
+	// 	xml_report: xmlReport,
+	// 	parroquia_id: data.parroquia,
+	// 	territori_id: data.territori,
+	// 	image: data.image ?? '',
+	// 	lon: data.coordinates ? data.coordinates[0] : 0,
+	// 	lat: data.coordinates ? data.coordinates[1] : 0
+	// });
+
+	await supabaseClient.from('survey').insert([
+		{
+			survey_data: data,
+			cws: indices.cws,
+			cii: indices.cii,
+			indices: indices,
+			seism_guid: data.seism,
+			xml_report: xmlReport,
+			parroquia_id: data.parroquia,
+			territori_id: data.territori,
+			image: data.image ?? ''
+		}
+	]);
 };
 
 export const uploadImage = async (fileName: string, fileToUpload: string) => {
@@ -136,6 +171,7 @@ export interface Survey {
 	input_date: Date;
 	survey_data: SurveyData;
 	indices: SurveyIndices;
+	parroquia: string;
 }
 export const getSeismSurveys = async (seismGuid: string) => {
 	const supabaseClient = createClient(supabaseUrl, supabaseAnonKey, {
@@ -159,7 +195,6 @@ export interface Indices {
 	cii: number;
 	cws: number;
 	parroquia?: string;
-	parroquia_id?: number;
 	num_surveys: number;
 }
 export const getCalculatedIndicesParroquies = async (seismGuid: string) => {

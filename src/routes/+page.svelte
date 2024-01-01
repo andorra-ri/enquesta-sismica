@@ -49,8 +49,8 @@
 	};
 
 	let pais: string | undefined;
-	let parroquia: string | undefined;
-	let municipality: string = '';
+	let parroquia: number | undefined;
+	let municipality: string | undefined;
 	let selectedSeism: string | undefined = initialSeismId ?? undefined;
 
 	$: {
@@ -58,7 +58,7 @@
 		parroquia = undefined;
 		pais;
 		formValues.territori = undefined;
-		municipality = '';
+		municipality = undefined;
 	}
 
 	$: {
@@ -292,8 +292,8 @@
 							bind:value={parroquia}
 							label="Parròquia"
 						>
-							{#each [...new Set(parroquies.map((d) => d.parroquia))] as parroquia}
-								<Option value={parroquia}>{parroquia}</Option>
+							{#each [...new Set(parroquies)] as parroquia}
+								<Option value={parroquia.id}>{parroquia.parroquia}</Option>
 							{/each}
 						</Select>
 						<span slot="label">Parròquia on es trobava en el moment del terratrèmol*</span>
@@ -306,10 +306,8 @@
 							bind:value={formValues.territori}
 							label="Territori"
 						>
-							{#each parroquies
-								.find((d) => d.parroquia === formValues.parroquia)
-								?.territori.map((d) => d.nom) ?? '' as territori}
-								<Option value={territori}>{territori}</Option>
+							{#each parroquies.find((d) => d.id === formValues.parroquia)?.territori ?? [] as territori}
+								<Option value={territori.id}>{territori.nom}</Option>
 							{/each}
 						</Select>
 						<span slot="label"

@@ -139,6 +139,7 @@
 			<Row>
 				<Cell>Aprovat</Cell>
 				<Cell>Data</Cell>
+				<Cell>Localització</Cell>
 				<Cell>Indexs</Cell>
 				<Cell>Respostes</Cell>
 				<Cell>Percepció</Cell>
@@ -162,6 +163,7 @@
 						</div>
 					</Cell>
 					<Cell>{format(new Date(survey.input_date), 'yyyy-MM-dd HH:mm')}</Cell>
+					<Cell>{survey.parroquia ?? "Fora d'Andorra"}</Cell>
 					<Cell>
 						<ul>
 							{#each Object.entries(survey.indices) as index}
