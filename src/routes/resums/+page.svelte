@@ -28,6 +28,7 @@
 	let seism: string;
 
 	let surveys: Survey[] = [];
+	let surveysOutside: number = 0;
 
 	let indicesParroquies: Indices[] = [];
 	let indicesAndorra: Indices;
@@ -38,16 +39,26 @@
 		parroquies = await getParroquiesData();
 	});
 	const getSeismInfo = async () => {
-		if (seism) surveys = await getSeismSurveys(seism);
-		if (seism) indicesParroquies = await getCalculatedIndicesParroquies(seism);
-		if (seism) indicesAndorra = await getCalculatedIndicesAndorra(seism);
+		if (seism) {
+			surveys = await getSeismSurveys(seism);
+			indicesParroquies = await getCalculatedIndicesParroquies(seism);
+			indicesAndorra = await getCalculatedIndicesAndorra(seism);
+			surveysOutside = surveys.reduce((acc, cur) => {
+				if (!cur.parroquia_id) {
+					return acc + 1;
+				}
+				return acc;
+			}, 0);
+		}
 	};
 
 	$: seism, getSeismInfo();
 
-	const pathChanged = (event: Event, guid: string) => {
+	const pathChanged = async (event: Event, guid: string) => {
 		const target = event.target as HTMLInputElement;
-		setSeismSurveyApproval(guid, target.checked);
+		await setSeismSurveyApproval(guid, target.checked);
+		indicesParroquies = await getCalculatedIndicesParroquies(seism);
+		indicesAndorra = await getCalculatedIndicesAndorra(seism);
 	};
 
 	let session: AuthSession | null;
@@ -111,7 +122,7 @@
 			</Row>
 		</DataTable>
 	{/if}
-	<Card>Enquestes fora d'Andorra: {surveys.length - (indicesAndorra?.num_surveys ?? 0)}</Card>
+	<Card>Enquestes fora d'Andorra: {surveysOutside}</Card>
 	<br />
 	<DataTable>
 		<Head>
