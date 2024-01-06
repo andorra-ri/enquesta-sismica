@@ -197,6 +197,7 @@ export interface Indices {
 	cws: number;
 	parroquia?: string;
 	num_surveys: number;
+	num_felt: number;
 }
 export const getCalculatedIndicesParroquies = async (seismGuid: string) => {
 	const supabaseClient = createClient(supabaseUrl, supabaseAnonKey, {

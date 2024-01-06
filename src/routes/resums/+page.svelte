@@ -19,7 +19,6 @@
 	import Checkbox from '@smui/checkbox';
 	import DataTable, { Body, Cell, Head, Row } from '@smui/data-table';
 	import FormField from '@smui/form-field';
-	import IconButton, { Icon } from '@smui/icon-button';
 	import Select, { Option } from '@smui/select';
 	import type { AuthSession } from '@supabase/supabase-js';
 	import { format } from 'date-fns';
@@ -109,6 +108,7 @@
 				<Cell>CWS: {indicesAndorra.cws}</Cell>
 				<Cell>CII: {indicesAndorra.cii}</Cell>
 				<Cell>Nombre de respostes: {indicesAndorra.num_surveys}</Cell>
+				<Cell>Nombre sentits: {indicesAndorra.num_felt}</Cell>
 			</Row>
 		</DataTable>
 	{/if}
@@ -119,7 +119,7 @@
 				<Cell>Parròquia</Cell>
 				<Cell>CWS</Cell>
 				<Cell>CII</Cell>
-				<Cell>Nombre de respostes</Cell>
+				<Cell>Nombre de respostes/sentits</Cell>
 			</Row>
 		</Head>
 		<Body>
@@ -128,7 +128,7 @@
 					<Cell>{index.parroquia}</Cell>
 					<Cell>{index.cws}</Cell>
 					<Cell>{index.cii}</Cell>
-					<Cell>{index.num_surveys}</Cell>
+					<Cell>{index.num_surveys}/{index.num_felt}</Cell>
 				</Row>
 			{/each}
 		</Body>
