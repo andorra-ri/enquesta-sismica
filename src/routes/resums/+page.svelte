@@ -1,7 +1,6 @@
 <script lang="ts">
 	import Auth from '$lib/Auth.svelte';
 	import {
-		deleteSeismSurvey,
 		getCalculatedIndicesAndorra,
 		getCalculatedIndicesParroquies,
 		getParroquiesData,
@@ -112,6 +111,7 @@
 			</Row>
 		</DataTable>
 	{/if}
+	<Card>Enquestes fora d'Andorra: {surveys.length - (indicesAndorra?.num_surveys ?? 0)}</Card>
 	<br />
 	<DataTable>
 		<Head>
