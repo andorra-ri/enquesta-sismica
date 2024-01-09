@@ -42,6 +42,20 @@ export const getSeismData = async (last: boolean = true) => {
 	return (dataSeism ?? []) as SeismsData[];
 };
 
+export const getOneSeismData = async (guid: string) => {
+	const supabaseClient = createClient(supabaseUrl, supabaseAnonKey, {
+		db: {
+			schema: 'seismology'
+		}
+	});
+	const { data: dataSeism, error: errorSeism } = await supabaseClient
+		.from('last_seisms')
+		.select()
+		.eq('guid', guid);
+
+	errorSeism && console.log('Error downloading seisms:', errorSeism);
+	return dataSeism?.[0] as SeismsData | undefined;
+};
 export interface TerritoriData {
 	nom: string;
 	id: number;

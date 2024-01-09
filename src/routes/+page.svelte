@@ -1,6 +1,12 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
-	import { getParroquiesData, getSeismData, type ParroquiaData, type SeismsData } from '$lib/fetch';
+	import {
+		getOneSeismData,
+		getParroquiesData,
+		getSeismData,
+		type ParroquiaData,
+		type SeismsData
+	} from '$lib/fetch';
 	import Leaflet from '$lib/leaflet.svelte';
 	import { schema, surveyValues, type FormValues } from '$lib/store';
 	import {
@@ -36,12 +42,24 @@
 	});
 
 	onDestroy(unsubscribe);
+	let selectedSeism: string | undefined;
 	onMount(async () => {
+		parroquies = (await getParroquiesData()) ?? [];
 		seisms = await getSeismData();
 		if (seisms.length === 0) {
 			formValues.existentSeism = 'no';
 		}
-		parroquies = await getParroquiesData();
+		if (initialSeismId) {
+			if (seisms.findIndex((d) => d.guid === initialSeismId) === -1) {
+				const missingSeism = await getOneSeismData(initialSeismId);
+
+				if (missingSeism) {
+					seisms = [...seisms, missingSeism];
+				}
+			}
+			selectedSeism = initialSeismId;
+			formValues.existentSeism = 'yes';
+		}
 	});
 
 	const setCoordinates = (coords: [number, number]) => {
@@ -51,7 +69,6 @@
 	let pais: string | undefined;
 	let parroquia: number | undefined;
 	let municipality: string | undefined;
-	let selectedSeism: string | undefined = initialSeismId ?? undefined;
 
 	$: {
 		formValues.pais = pais;
