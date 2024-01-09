@@ -209,8 +209,9 @@
 				selectedSeism = undefined;
 			}}
 			class="seism-button"
+			disabled={seisms.length === 0}
 		>
-			triar de la llista
+			{#if seisms.length > 0}triar de la llista{:else}no hi ha sismes recents{/if}
 		</button>
 	</Card>
 {/if}
