@@ -1,4 +1,4 @@
-import { createClient } from '@supabase/supabase-js';
+import { createClient, type PostgrestError } from '@supabase/supabase-js';
 import { createXMLReport, getIndices } from './index-functions';
 import type { FormValues } from './store';
 
@@ -195,10 +195,20 @@ export const getSeismSurveys = async (seismGuid: string) => {
 		}
 	});
 
-	const { data: dataSeism, error: errorSeism } = await supabaseClient
-		.from('survey')
-		.select()
-		.eq('seism_guid', seismGuid);
+	let dataSeism: Survey[] = [];
+	let errorSeism: PostgrestError | null;
+	if (seismGuid === 'none') {
+		const { data, error } = await supabaseClient.from('survey').select().is('seism_guid', null);
+		dataSeism = data ?? [];
+		errorSeism = error;
+	} else {
+		const { data, error } = await supabaseClient
+			.from('survey')
+			.select()
+			.eq('seism_guid', seismGuid);
+		dataSeism = data ?? [];
+		errorSeism = error;
+	}
 
 	errorSeism && console.log('Error downloading seisms:', errorSeism);
 	return (dataSeism ?? []) as Survey[];

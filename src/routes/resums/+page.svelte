@@ -36,6 +36,18 @@
 	onMount(async () => {
 		seisms = await getSeismData(false);
 
+		seisms = [
+			{
+				guid: 'none',
+				datetime: new Date(1970, 1, 1),
+				magnitude: 0,
+				region: 'SENSE REGISTRAR',
+				lon: '0',
+				lat: '0'
+			},
+			...seisms
+		];
+
 		parroquies = await getParroquiesData();
 	});
 	const getSeismInfo = async () => {
