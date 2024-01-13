@@ -165,7 +165,7 @@
 				<Cell>Localització</Cell>
 				<Cell>Indexs</Cell>
 				<Cell>Respostes</Cell>
-				<Cell>Percepció</Cell>
+				<Cell>Percepció/Foto</Cell>
 			</Row>
 		</Head>
 		<Body>
@@ -212,6 +212,14 @@
 								?.imageLink}
 							alt="imatge percebuda"
 						/>
+						{#if survey.image}
+							{#each JSON.parse(survey.image) as imageUrl}
+								<img
+									src={`https://svyhccttsxgjrefxiiro.supabase.co/storage/v1/object/public/seismology/${imageUrl}`}
+									alt="foto"
+								/>
+							{/each}
+						{/if}
 					</Cell>
 				</Row>
 			{/each}

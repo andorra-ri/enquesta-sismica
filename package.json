@@ -44,7 +44,7 @@
 		"@smui/radio": "^7.0.0-beta.15",
 		"@smui/select": "^7.0.0-beta.15",
 		"@smui/textfield": "^7.0.0-beta.15",
-		"@supabase/supabase-js": "^2.36.0",
+		"@supabase/supabase-js": "^2.39.2",
 		"@types/uuid": "^9.0.4",
 		"leaflet": "^1.9.4",
 		"svelte-file-dropzone": "^2.0.2",

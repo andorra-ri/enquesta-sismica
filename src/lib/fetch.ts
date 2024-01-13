@@ -154,9 +154,14 @@ export const uploadImage = async (fileName: string, fileToUpload: string) => {
 			schema: 'seismology'
 		}
 	});
+
+	console.log('Uploading image', fileName, fileToUpload);
 	const { data, error } = await supabaseClient.storage
 		.from('seismology')
-		.upload(fileName, fileToUpload);
+		.upload(fileName, fileToUpload, {
+			cacheControl: '3600',
+			upsert: false
+		});
 
 	const publicUrl = await supabaseClient.storage.from('seismology').getPublicUrl(fileName);
 
@@ -187,6 +192,7 @@ export interface Survey {
 	indices: SurveyIndices;
 	parroquia_id: number;
 	territori_id: number;
+	image: string;
 }
 export const getSeismSurveys = async (seismGuid: string) => {
 	const supabaseClient = createClient(supabaseUrl, supabaseAnonKey, {
