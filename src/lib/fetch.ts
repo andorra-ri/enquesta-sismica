@@ -204,14 +204,19 @@ export const getSeismSurveys = async (seismGuid: string) => {
 	let dataSeism: Survey[] = [];
 	let errorSeism: PostgrestError | null;
 	if (seismGuid === 'none') {
-		const { data, error } = await supabaseClient.from('survey').select().is('seism_guid', null);
+		const { data, error } = await supabaseClient
+			.from('survey')
+			.select()
+			.is('seism_guid', null)
+			.order('input_date', { ascending: false });
 		dataSeism = data ?? [];
 		errorSeism = error;
 	} else {
 		const { data, error } = await supabaseClient
 			.from('survey')
 			.select()
-			.eq('seism_guid', seismGuid);
+			.eq('seism_guid', seismGuid)
+			.order('input_date', { ascending: false });
 		dataSeism = data ?? [];
 		errorSeism = error;
 	}
