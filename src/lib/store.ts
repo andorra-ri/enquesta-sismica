@@ -85,7 +85,7 @@ export const schema = yup.object().shape({
 		is: (position: string, pais: string) => position === 'insideBuilding' && pais === 'Andorra',
 		then: (schema) => schema.required()
 	}),
-	municipality: yup.number().when(['position', 'pais'], {
+	municipality: yup.string().when(['position', 'pais'], {
 		is: (position: string, pais: string) => position === 'insideBuilding' && pais !== 'Andorra',
 		then: (schema) => schema.required()
 	}),

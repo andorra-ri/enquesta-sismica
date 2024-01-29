@@ -68,14 +68,14 @@
 
 	let pais: string | undefined;
 	let parroquia: number | undefined;
-	let municipality: string | undefined;
+	let municipality: string;
 
 	$: {
 		formValues.pais = pais;
 		parroquia = undefined;
 		pais;
 		formValues.territori = undefined;
-		municipality = undefined;
+		municipality = '';
 	}
 
 	$: {
@@ -335,12 +335,10 @@
 				</div>
 			{:else if formValues.pais === 'Espanya' || formValues.pais === 'França'}
 				<div>
-					<FormField>
+					<div class="mdc-form-field">
+						<div class="text-field-label">Municipi on es trobava en el moment del terratrèmol*</div>
 						<Textfield bind:value={municipality} type="text" />
-						<span slot="label" class="text-field-label"
-							>Municipi on es trobava en el moment del terratrèmol*</span
-						>
-					</FormField>
+					</div>
 				</div>
 			{/if}
 			{#if !!formValues.pais}
