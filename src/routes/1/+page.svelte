@@ -154,7 +154,7 @@
 <Card padded>
 	<Select
 		style="max-width: 430px"
-		label="Quina reacció va tenir durant el terratrèmol?"
+		label="Què va fer durant el terratrèmol?"
 		bind:value={formValues.reaction}
 	>
 		{#each Object.entries(reaction) as [position, positionText]}
@@ -184,7 +184,7 @@
 
 <Card padded>
 	<div class="radio-group">
-		<p>Es van espantar els animals?</p>
+		<p>Si tenia animals a la vora, es van espantar?</p>
 		{#each Object.entries(animalsFrightened) as [position, positionText], i}
 			{#if i > 0 && i % 4 === 0}
 				<br />

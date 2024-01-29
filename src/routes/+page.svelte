@@ -263,7 +263,7 @@
 					label="Nombre total de plantes"
 					bind:value={formValues.totalFloors}
 				>
-					{#each Object.entries(totalFloorOptions) as [floor, floorText]}
+					{#each Object.entries(totalFloorOptions).sort( (a, b) => (isNaN(parseFloat(a[0])) ? 1 : -1) ) as [floor, floorText]}
 						<Option value={floor}>
 							{floorText}
 						</Option>
@@ -271,7 +271,7 @@
 				</Select>
 			</div>
 			<div>
-				<span class="field-label">Comentaris:</span>
+				<span class="field-label">Aclariment sobre les plantes, si s’escau:</span>
 				<Textfield style="width:70%" bind:value={formValues.floorComments} type="text" />
 			</div>
 		{/if}

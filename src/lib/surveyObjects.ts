@@ -59,6 +59,7 @@ export const floorOptions = {
 };
 
 export const totalFloorOptions = {
+	plantaBaixa: 'Planta Baixa',
 	notSpecified: 'Sense especificar',
 	'1': '1 planta',
 	'2': '2 plantes',

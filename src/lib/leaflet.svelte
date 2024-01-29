@@ -55,6 +55,7 @@
 				if (!autoPosition) {
 					marker.setLatLng([e.latitude, e.longitude]);
 					map.setView([e.latitude, e.longitude], initialZoom + 4);
+					onChange([e.longitude, e.latitude]);
 				}
 			})
 			.on('locationerror', function (e) {
