@@ -168,7 +168,7 @@
 <!-- if length is not checked, option doesn't exist before loading seisms and seismuuid is set to undefined! -->
 {#if formValues.existentSeism === 'yes' && seisms.length > 0}
 	<Card padded class={'seism' in errors ? 'error' : 'valid'}>
-		<div>Triï el terratrèmol *</div>
+		<div class="mandatory">Triï el terratrèmol *</div>
 		<FormField>
 			<Select style="min-width: 300px" label="Data del terratrèmol" bind:value={selectedSeism}>
 				<Option value="new">Cap d'aquesta llista</Option>
@@ -193,13 +193,13 @@
 {:else}<Card padded class="date-time">
 		<div class={'earthquakeDate' in errors ? 'error' : 'valid'}>
 			<FormField>
-				<div>Data del terratrèmol *</div>
+				<div class="mandatory">Data del terratrèmol *</div>
 				<Textfield on:click={dateClicked} bind:value={formValues.earthquakeDate} type="date" />
 			</FormField>
 		</div>
 		<div class={'earthquakeHour' in errors ? 'error' : 'valid'}>
 			<FormField>
-				<div>Hora local (HH:MM) *</div>
+				<div class="mandatory">Hora local (HH:MM) *</div>
 				<Textfield bind:value={formValues.earthquakeHour} type="time" />
 			</FormField>
 		</div>
@@ -221,6 +221,7 @@
 		<Select
 			style="min-width: 300px"
 			label="Ha notat el terratrèmol? *"
+			class="mandatory"
 			bind:value={formValues.felt}
 		>
 			{#each Object.entries(yesNo) as [position, positionText]}
@@ -235,6 +236,7 @@
 	<Select
 		style="width: 350px"
 		label="En el moment de la terratrèmol es trobava...*"
+		class="mandatory"
 		bind:value={formValues.position}
 	>
 		{#each Object.entries(positionOptions) as [position, positionText]}
@@ -299,7 +301,9 @@
 							<Option value={country}>{country}</Option>
 						{/each}
 					</Select>
-					<span slot="label">País on es trobava en el moment del terratrèmol*</span>
+					<span slot="label" class="mandatory"
+						>País on es trobava en el moment del terratrèmol*</span
+					>
 				</FormField>
 			</div>
 			{#if formValues.pais === 'Andorra'}
@@ -314,7 +318,9 @@
 								<Option value={parroquia.id}>{parroquia.parroquia}</Option>
 							{/each}
 						</Select>
-						<span slot="label">Parròquia on es trobava en el moment del terratrèmol*</span>
+						<span slot="label" class="mandatory"
+							>Parròquia on es trobava en el moment del terratrèmol*</span
+						>
 					</FormField>
 				</div>
 				<div>
@@ -336,7 +342,9 @@
 			{:else if formValues.pais === 'Espanya' || formValues.pais === 'França'}
 				<div>
 					<div class="mdc-form-field">
-						<div class="text-field-label">Municipi on es trobava en el moment del terratrèmol*</div>
+						<div class="text-field-label mandatory">
+							Municipi on es trobava en el moment del terratrèmol*
+						</div>
 						<Textfield bind:value={municipality} type="text" />
 					</div>
 				</div>
@@ -556,6 +564,12 @@
 	.field-label {
 		font-family: Roboto, sans-serif;
 		font-size: 14px;
+	}
+	.mandatory {
+		font-weight: 500;
+	}
+	:global(.mandatory .mdc-floating-label) {
+		font-weight: 500;
 	}
 	.buttons {
 		margin-top: 5px;
