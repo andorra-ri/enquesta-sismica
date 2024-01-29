@@ -169,10 +169,11 @@
 			</Row>
 		</Head>
 		<Body>
-			{#each surveys as survey}
+			{#each surveys as survey, i}
 				<Row>
 					<Cell>
 						<div class="approve">
+							{i}
 							<Checkbox
 								checked={survey.approved}
 								value={survey.guid}
