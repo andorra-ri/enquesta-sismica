@@ -1,3 +1,4 @@
+import { ca } from 'date-fns/locale';
 import type { FormValues } from './store';
 
 export const getIndices = (data: FormValues) => {
@@ -22,6 +23,9 @@ export const getIndices = (data: FormValues) => {
 		case 'everybody':
 			numberPeopleInside = 1;
 			break;
+		case 'alone':
+			numberPeopleInside = 0.72;
+			break;
 		default:
 			numberPeopleInside = 0.72;
 	}
@@ -42,6 +46,9 @@ export const getIndices = (data: FormValues) => {
 			break;
 		case 'everybody':
 			numberPeopleOutside = 1;
+			break;
+		case 'alone':
+			numberPeopleOutside = 0.72;
 			break;
 		default:
 			numberPeopleOutside = 0.72;
@@ -578,6 +585,9 @@ const createFeel = (data: FormValues, doc: XMLDocument) => {
 			break;
 		case 'everybody':
 			numberPeopleGoingOutCode = 6;
+			break;
+		case 'alone':
+			numberPeopleGoingOutCode = 1;
 			break;
 	}
 
