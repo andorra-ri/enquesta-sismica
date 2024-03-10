@@ -235,7 +235,7 @@
 <Card padded class={'position' in errors ? 'error' : 'valid'}>
 	<Select
 		style="width: 350px"
-		label="En el moment de la terratrèmol es trobava...*"
+		label="En el moment del terratrèmol es trobava...*"
 		class="mandatory"
 		bind:value={formValues.position}
 	>
@@ -413,7 +413,7 @@
 	<FormField>
 		<Select
 			style="min-width: 350px"
-			label="En el moment de la terratrèmol, estava..."
+			label="En el moment del terratrèmol, estava..."
 			bind:value={formValues.situationObserver}
 		>
 			{#each Object.entries(situationObserverOptions) as [situationObserver, situationObserverText]}
