@@ -41,7 +41,7 @@
 				guid: 'none',
 				datetime: new Date(1970, 1, 1),
 				magnitude: 0,
-				region: 'SENSE REGISTRAR',
+				region: 'SISME NO ESPECIFICAT',
 				lon: '0',
 				lat: '0'
 			},
