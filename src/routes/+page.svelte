@@ -67,7 +67,8 @@
 	};
 
 	let pais: string | undefined;
-	let parroquia: number | undefined;
+	let parroquia: string | undefined;
+	let territori: string | undefined;
 	let municipality: string;
 
 	$: {
@@ -79,12 +80,16 @@
 	}
 
 	$: {
-		formValues.parroquia = parroquia;
+		formValues.parroquia = parroquia ? parseInt(parroquia) : undefined;
 		formValues.territori = undefined;
 	}
 
 	$: {
 		formValues.municipality = municipality;
+	}
+
+	$: {
+		formValues.territori = territori ? parseInt(territori) : undefined;
 	}
 
 	$: {
@@ -315,7 +320,7 @@
 							label="Parròquia"
 						>
 							{#each [...new Set(parroquies)] as parroquia}
-								<Option value={parroquia.id}>{parroquia.parroquia}</Option>
+								<Option value={parroquia.id.toString()}>{parroquia.parroquia}</Option>
 							{/each}
 						</Select>
 						<span slot="label" class="mandatory"
@@ -325,13 +330,9 @@
 				</div>
 				<div>
 					<FormField>
-						<Select
-							disabled={!formValues.parroquia}
-							bind:value={formValues.territori}
-							label="Territori"
-						>
+						<Select disabled={!formValues.parroquia} bind:value={territori} label="Territori">
 							{#each parroquies.find((d) => d.id === formValues.parroquia)?.territori ?? [] as territori}
-								<Option value={territori.id}>{territori.nom}</Option>
+								<Option value={territori.id.toString()}>{territori.nom}</Option>
 							{/each}
 						</Select>
 						<span slot="label"
