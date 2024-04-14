@@ -50,7 +50,8 @@ export const surveyValues = writable<FormValues>({
 	otherSeismsText: '',
 	perceptionImage: '',
 	buildingDamageDescription: [],
-	effectsOnLandscape: []
+	effectsOnLandscape: [],
+	coordinates: [1.555, 42.518]
 });
 
 export const surveyPage = writable(0);
