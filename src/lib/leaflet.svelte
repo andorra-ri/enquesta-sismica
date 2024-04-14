@@ -24,6 +24,7 @@
 			popupAnchor: [-3, -76]
 		});
 
+		onChange([initialLng, initialLat]);
 		map = leaflet.map(mapElement).setView([initialLat, initialLng], initialZoom);
 		marker = leaflet
 			.marker([initialLat, initialLng], {
