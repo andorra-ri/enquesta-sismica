@@ -15,6 +15,7 @@
 	import { perceptionIndexImages } from '$lib/surveyObjects';
 	import LinearProgress from '@smui/linear-progress';
 	import { goto } from '$app/navigation';
+	import ImageCard from '$lib/ImageCard.svelte';
 
 	let formValues: FormValues = {};
 	const unsubscribe = surveyValues.subscribe((data) => {
@@ -62,29 +63,17 @@
 <LinearProgress progress={1} />
 
 <div>Seleccioni la imatge que millor resumeixi la situació viscuda</div>
-<div class="image-list-masonry">
-	<ImageList masonry>
-		{#each perceptionIndexImages.reduce((acc, cur, i)=> {
-			/*Had to reorder since masonry can't be in rows and other options don't work*/
-			const row= i%3;
-			const col = (i-row)/3;
-			acc[col+row*3]=cur;
-			return acc;
-			}, new Array(perceptionIndexImages.length)) as image}
-			<Item
-				on:click={() => (formValues.perceptionImage = image.value)}
-				class={formValues.perceptionImage === image.value && 'selected-image'}
-				StyleSheet
-			>
-				<ImageAspectContainer>
-					<Image src={image.imageLink} alt={image.text} />
-				</ImageAspectContainer>
-				<Supporting>
-					<Label>{image.text}</Label>
-				</Supporting>
-			</Item>
-		{/each}
-	</ImageList>
+<div class="image-list">
+	{#each perceptionIndexImages as image}
+		<ImageCard
+			imageUrl={image.imageLink}
+			label={image.text}
+			selected={formValues.perceptionImage === image.value}
+			on:click={() => {
+				formValues.perceptionImage = image.value;
+			}}
+		/>
+	{/each}
 </div>
 
 <div class="buttons">
@@ -95,36 +84,18 @@
 <style lang="scss">
 	@use '@material/image-list/index' as image-list;
 
-	.image-list-masonry {
-		@include image-list.masonry-columns(3);
-		@include image-list.shape-radius(10px);
-		max-width: 599px;
-		padding-bottom: 10px;
+	.image-list {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 10px;
 	}
 
-	:global(.selected-image) {
-		border-style: dotted;
-		border-color: #ff3e00;
-		border-width: 1px;
-		background-color: whitesmoke;
-	}
-	:global(.mdc-image-list__image-aspect-container) {
-		padding-bottom: calc(100% / 1.2);
-	
-	}
-	@media (max-width: 599px) {
-		.image-list-masonry {
-			@include image-list.masonry-columns(1);
-		}
-		:global(.mdc-image-list__image-aspect-container) {
-			padding-bottom: 45%;
+	@media (max-width: 600px) {
+		.image-list {
+			grid-template-columns: 1fr; /* Changes to single column */
 		}
 	}
-	
 
-	:global(.mdc-image-list){
-		background-color: #e8dff5;
-	}
 	.section-title {
 		font-weight: bold;
 		display: flex;
