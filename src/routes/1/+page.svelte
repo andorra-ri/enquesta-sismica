@@ -154,7 +154,7 @@
 <Card padded>
 	<Select
 		style="max-width: 430px"
-		label="Què va fer sentir el terratrèmol?"
+		label="Què va sentir durant el terratrèmol?"
 		bind:value={formValues.reaction}
 	>
 		{#each Object.entries(reaction) as [position, positionText]}
