@@ -2,8 +2,8 @@
 	import { onMount, onDestroy } from 'svelte';
 
 	export let initialZoom = 11;
-	export let initialLng = 1.555;
-	export let initialLat = 42.518;
+	export let initialLng = 1.43;
+	export let initialLat = 42.51;
 	export let autoPosition = true;
 	export let onChange;
 
