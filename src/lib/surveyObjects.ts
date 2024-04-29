@@ -122,7 +122,7 @@ export const noise = {
 
 export const reaction = {
 	notSpecified: 'Sense especificar',
-	none: 'Cap',
+	none: 'Res',
 	smallFright: 'Un petit ensurt',
 	alarm: 'Vaig alarmar-me',
 	frightened: 'Vaig tenir por',
