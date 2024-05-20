@@ -7,6 +7,9 @@
 	export let autoPosition = true;
 	export let onChange;
 
+	const defaultLat = 42.51;
+	const defaultLng = 1.43;
+
 	let mapElement;
 	let map;
 	let marker;
@@ -24,10 +27,12 @@
 			popupAnchor: [-3, -76]
 		});
 
-		onChange([initialLng, initialLat]);
-		map = leaflet.map(mapElement).setView([initialLat, initialLng], initialZoom);
+		onChange([initialLng ?? defaultLng, initialLat ?? defaultLat]);
+		map = leaflet
+			.map(mapElement)
+			.setView([initialLat ?? defaultLat, initialLng ?? defaultLng], initialZoom);
 		marker = leaflet
-			.marker([initialLat, initialLng], {
+			.marker([initialLat ?? defaultLat, initialLng ?? defaultLng], {
 				title: 'Mou-me!',
 				alt: 'Mou-me!',
 				draggable: true,
