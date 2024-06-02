@@ -44,7 +44,6 @@ export const surveyValues = writable<FormValues>({
 	numberPeopleOutside: 'notSpecified',
 	numberPeopleGoingOut: 'notSpecified',
 	numberPeopleAwake: 'notSpecified',
-	position: 'notSpecified',
 	floor: 'notSpecified',
 	totalFloors: 'notSpecified',
 	situationObserver: 'notSpecified',
