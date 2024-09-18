@@ -3,6 +3,7 @@
 	import {
 		getCalculatedIndicesAndorra,
 		getCalculatedIndicesParroquies,
+		getCalculatedIndicesParroquiesFromSurveys,
 		getParroquiesData,
 		getSeismData,
 		getSeismSurveys,
@@ -52,9 +53,9 @@
 	});
 	const getSeismInfo = async () => {
 		if (seism) {
-			surveys = await getSeismSurveys(seism);
-			indicesParroquies = await getCalculatedIndicesParroquies(seism);
-			indicesAndorra = await getCalculatedIndicesAndorra(seism);
+			[surveys, indicesAndorra] = await Promise.all([getSeismSurveys(seism), getCalculatedIndicesAndorra(seism)]);
+			indicesParroquies = getCalculatedIndicesParroquiesFromSurveys(surveys, parroquies);
+			
 			surveysOutside = surveys.reduce((acc, cur) => {
 				if (!cur.parroquia_id) {
 					return acc + 1;
