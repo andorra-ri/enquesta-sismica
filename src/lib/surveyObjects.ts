@@ -40,7 +40,7 @@ export const numberPeopleInsideOptions = {
 	most: 'La majoria, algunes no',
 	upperFloors: 'Només a les plantes superiors',
 	everybody: 'Tothom',
-	alone: 'No ho sé/Estava sol'
+	alone: 'No ho sé - Estava sol/a'
 };
 
 export const floorOptions = {
@@ -80,7 +80,7 @@ export const numberPeopleOutsideOptions = {
 	some: 'Algunes, la majoria no',
 	most: 'La majoria, algunes no',
 	everybody: 'Tothom',
-	alone: 'No ho sé/Estava sol'
+	alone: 'No ho sé - Estava sol/a'
 };
 
 export const numberPeopleGoingOutOptions = {
@@ -89,7 +89,7 @@ export const numberPeopleGoingOutOptions = {
 	some: 'Algunes, la majoria no',
 	most: 'La majoria, algunes no',
 	everybody: 'Tothom',
-	alone: 'No ho sé/Estava sol'
+	alone: 'No ho sé - Estava sol/a'
 };
 
 export const numberPeopleAwake = {

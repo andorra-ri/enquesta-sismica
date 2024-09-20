@@ -175,7 +175,7 @@
 	<Card padded class={'seism' in errors ? 'error' : 'valid'}>
 		<div class="mandatory">Triï el terratrèmol *</div>
 		<FormField>
-			<Select style="min-width: 300px" label="Data del terratrèmol" bind:value={selectedSeism}>
+			<Select style="min-width: 400px" label="Data del terratrèmol" bind:value={selectedSeism}>
 				<Option value="new">Cap d'aquesta llista</Option>
 				{#each seisms as seism}
 					<Option value={seism.guid}

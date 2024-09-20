@@ -29,7 +29,7 @@ export const getSeismData = async (last: boolean = true) => {
 	});
 
 	const now = new Date();
-	const fifteenDaysAgo = new Date(now.getFullYear(), now.getMonth(), now.getDate() - 50);
+	const fifteenDaysAgo = new Date(now.getFullYear(), now.getMonth(), now.getDate() - 15);
 
 	const { data: dataSeism, error: errorSeism } = last
 		? await supabaseClient

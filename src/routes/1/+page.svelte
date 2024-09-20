@@ -167,7 +167,7 @@
 
 <Card padded>
 	<div class="radio-group">
-		<p>Li va resultar difícil estar dret durant el terratrèmol?</p>
+		<p>Li va resultar difícil estar dret/a durant el terratrèmol?</p>
 		{#each Object.entries(standingDifficulty) as [position, positionText], i}
 			{#if i > 0 && i % 4 === 0}
 				<br />
