@@ -132,7 +132,7 @@ export const reaction = {
 
 export const standingDifficulty = {
 	notSpecified: 'Sense especificar',
-	seated: 'No estava dret',
+	seated: 'No estava dret/a',
 	no: 'No',
 	yes: 'Sí'
 };
