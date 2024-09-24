@@ -2,13 +2,13 @@
 	import { onMount, onDestroy } from 'svelte';
 
 	export let initialZoom = 11;
-	export let initialLng = 1.43;
-	export let initialLat = 42.51;
+	export let initialLng = 1.52;
+	export let initialLat = 42.507;
 	export let autoPosition = true;
 	export let onChange;
 
-	const defaultLat = 42.51;
-	const defaultLng = 1.43;
+	const defaultLat = 42.507;
+	const defaultLng = 1.52;
 
 	let mapElement;
 	let map;
@@ -55,19 +55,23 @@
 					'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 			})
 			.addTo(map);
-		map
-			.locate({ watch: false })
-			.on('locationfound', function (e) {
-				if (!autoPosition) {
-					marker.setLatLng([e.latitude, e.longitude]);
-					map.setView([e.latitude, e.longitude], initialZoom + 4);
-					onChange([e.longitude, e.latitude]);
-				}
-			})
-			.on('locationerror', function (e) {
-				marker.setLatLng([initialLat, initialLng]);
-				map.setView([initialLat, initialLng], initialZoom);
-			});
+
+
+		// AUTO LOCATE DEACTIVATED
+
+		// map
+		// 	.locate({ watch: false })
+		// 	.on('locationfound', function (e) {
+		// 		if (!autoPosition) {
+		// 			marker.setLatLng([e.latitude, e.longitude]);
+		// 			map.setView([e.latitude, e.longitude], initialZoom + 4);
+		// 			onChange([e.longitude, e.latitude]);
+		// 		}
+		// 	})
+		// 	.on('locationerror', function (e) {
+		// 		marker.setLatLng([initialLat, initialLng]);
+		// 		map.setView([initialLat, initialLng], initialZoom);
+		// 	});
 	});
 
 	onDestroy(async () => {
