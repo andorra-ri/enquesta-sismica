@@ -162,9 +162,10 @@
 			agrairíem que omplís la següent enquesta sísmica de la manera més detallada possible.
 		</p>
 		<p>
-			Encara que no hagi notat el terratrèmol, la seva informació és igualment útil. Gràcies per la
-			seva col·laboració.
+			Encara que no hagi notat el terratrèmol, la seva informació és igualment útil.
 		</p>
+		<p>Les dades de l'enquesta sísmica es tracten de forma totalment anònima. Per a més informació sobre la privadesa: dpd@ari.ad.</p>
+		<p>Gràcies per la seva col·laboració.</p>
 	</div>
 </div>
 <div>Pàgina 1 de 3</div>

@@ -2,13 +2,13 @@
 	import { onMount, onDestroy } from 'svelte';
 
 	export let initialZoom = 11;
-	export let initialLng = 1.52;
-	export let initialLat = 42.507;
+	export let initialLng = 1.43;
+	export let initialLat = 42.51;
 	export let autoPosition = true;
 	export let onChange;
 
-	const defaultLat = 42.507;
-	const defaultLng = 1.52;
+	const defaultLat = 42.51;
+	const defaultLng = 1.43;
 
 	let mapElement;
 	let map;
