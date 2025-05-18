@@ -338,7 +338,6 @@ export const getCalculatedIndicesParroquiesFromSurveys = (
 				acc[cur.parroquia_id].numSurveys
 			);
 		}
-		console.log(cur.survey_data.felt);
 		if (cur.survey_data.felt !== 'no') {
 			acc[cur.parroquia_id].felt = true;
 			acc[cur.parroquia_id].numFelt += 1;
