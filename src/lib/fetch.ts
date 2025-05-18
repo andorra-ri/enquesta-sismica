@@ -170,7 +170,7 @@ export const uploadImage = async (fileName: string, fileToUpload: string) => {
 
 export interface SurveyData {
 	perceptionImage: string;
-	felt: boolean;
+	felt: 'yes' | 'no';
 }
 export interface SurveyIndices {
 	cii: string;
@@ -251,9 +251,9 @@ export const getCalculatedIndicesParroquies = async (seismGuid: string) => {
 	return (dataIndices ?? []) as Indices[];
 };
 
-interface IndicesParroquia{
-	numSurveys:number;
-	numFelt:number;
+interface IndicesParroquia {
+	numSurveys: number;
+	numFelt: number;
 	felt: boolean;
 	feltIndex: number;
 	motionIndex: number;
@@ -266,75 +266,118 @@ interface IndicesParroquia{
 	cws: number;
 	cii: number;
 }
-interface IndicesParroquies{
-	[parroguia_id:string]: IndicesParroquia
+interface IndicesParroquies {
+	[parroguia_id: string]: IndicesParroquia;
 }
-const recalculateAvg=(prev: number, cur: number, num:number)=> (prev*(num-1)+cur)/num
+const recalculateAvg = (prev: number, cur: number, num: number) => (prev * (num - 1) + cur) / num;
 
-export const getCalculatedIndicesParroquiesFromSurveys = (surveys:Survey[], parroquies: ParroquiaData[]=[] ): Indices[]=>{
-const byParroquia=surveys.reduce((acc, cur)=>{
-	if(!(cur.parroquia_id in acc)){
-		acc[cur.parroquia_id] = {numSurveys: 1, 
-			felt: false, 
-			numFelt:0, 
-			feltIndex: parseFloat(cur.indices.feltIndex),
-			motionIndex: parseFloat(cur.indices.motionIndex),
-			reactionIndex: parseFloat(cur.indices.reactionIndex),
-			standIndex:  parseFloat(cur.indices.standIndex),
-			shelfIndex: parseFloat(cur.indices.shelfIndex),
-			pictureIndex:  parseFloat(cur.indices.pictureIndex),
-			furnitureIndex:  parseFloat(cur.indices.furnitureIndex),
-			damageIndex:  parseFloat(cur.indices.damageIndex),
-			cws:0,
-			cii: 0,
+export const getCalculatedIndicesParroquiesFromSurveys = (
+	surveys: Survey[],
+	parroquies: ParroquiaData[] = []
+): Indices[] => {
+	if (surveys.length === 0) {
+		return [];
+	}
+	const byParroquia = surveys.reduce((acc, cur) => {
+		if (!(cur.parroquia_id in acc)) {
+			acc[cur.parroquia_id] = {
+				numSurveys: 1,
+				felt: false,
+				numFelt: 0,
+				feltIndex: parseFloat(cur.indices.feltIndex),
+				motionIndex: parseFloat(cur.indices.motionIndex),
+				reactionIndex: parseFloat(cur.indices.reactionIndex),
+				standIndex: parseFloat(cur.indices.standIndex),
+				shelfIndex: parseFloat(cur.indices.shelfIndex),
+				pictureIndex: parseFloat(cur.indices.pictureIndex),
+				furnitureIndex: parseFloat(cur.indices.furnitureIndex),
+				damageIndex: parseFloat(cur.indices.damageIndex),
+				cws: 0,
+				cii: 0
+			};
+		} else {
+			acc[cur.parroquia_id].numSurveys += 1;
+			acc[cur.parroquia_id].feltIndex = recalculateAvg(
+				acc[cur.parroquia_id].feltIndex,
+				parseFloat(cur.indices.feltIndex),
+				acc[cur.parroquia_id].numSurveys
+			);
+			acc[cur.parroquia_id].motionIndex = recalculateAvg(
+				acc[cur.parroquia_id].motionIndex,
+				parseFloat(cur.indices.motionIndex),
+				acc[cur.parroquia_id].numSurveys
+			);
+			acc[cur.parroquia_id].reactionIndex = recalculateAvg(
+				acc[cur.parroquia_id].reactionIndex,
+				parseFloat(cur.indices.reactionIndex),
+				acc[cur.parroquia_id].numSurveys
+			);
+			acc[cur.parroquia_id].standIndex = recalculateAvg(
+				acc[cur.parroquia_id].standIndex,
+				parseFloat(cur.indices.standIndex),
+				acc[cur.parroquia_id].numSurveys
+			);
+			acc[cur.parroquia_id].shelfIndex = recalculateAvg(
+				acc[cur.parroquia_id].shelfIndex,
+				parseFloat(cur.indices.shelfIndex),
+				acc[cur.parroquia_id].numSurveys
+			);
+			acc[cur.parroquia_id].pictureIndex = recalculateAvg(
+				acc[cur.parroquia_id].pictureIndex,
+				parseFloat(cur.indices.pictureIndex),
+				acc[cur.parroquia_id].numSurveys
+			);
+			acc[cur.parroquia_id].furnitureIndex = recalculateAvg(
+				acc[cur.parroquia_id].furnitureIndex,
+				parseFloat(cur.indices.furnitureIndex),
+				acc[cur.parroquia_id].numSurveys
+			);
+			acc[cur.parroquia_id].damageIndex = recalculateAvg(
+				acc[cur.parroquia_id].damageIndex,
+				parseFloat(cur.indices.damageIndex),
+				acc[cur.parroquia_id].numSurveys
+			);
 		}
-	}else {
-		acc[cur.parroquia_id].numSurveys += 1
-		acc[cur.parroquia_id].feltIndex = recalculateAvg(acc[cur.parroquia_id].feltIndex, parseFloat(cur.indices.feltIndex), acc[cur.parroquia_id].numSurveys);
-		acc[cur.parroquia_id].motionIndex = recalculateAvg(acc[cur.parroquia_id].motionIndex, parseFloat(cur.indices.motionIndex), acc[cur.parroquia_id].numSurveys)
-		acc[cur.parroquia_id].reactionIndex = recalculateAvg(acc[cur.parroquia_id].reactionIndex, parseFloat(cur.indices.reactionIndex), acc[cur.parroquia_id].numSurveys)
-		acc[cur.parroquia_id].standIndex = recalculateAvg(acc[cur.parroquia_id].standIndex, parseFloat(cur.indices.standIndex), acc[cur.parroquia_id].numSurveys)
-		acc[cur.parroquia_id].shelfIndex = recalculateAvg(acc[cur.parroquia_id].shelfIndex, parseFloat(cur.indices.shelfIndex), acc[cur.parroquia_id].numSurveys)
-		acc[cur.parroquia_id].pictureIndex = recalculateAvg(acc[cur.parroquia_id].pictureIndex, parseFloat(cur.indices.pictureIndex), acc[cur.parroquia_id].numSurveys)
-		acc[cur.parroquia_id].furnitureIndex = recalculateAvg(acc[cur.parroquia_id].furnitureIndex, parseFloat(cur.indices.furnitureIndex), acc[cur.parroquia_id].numSurveys)
-		acc[cur.parroquia_id].damageIndex = recalculateAvg(acc[cur.parroquia_id].damageIndex, parseFloat(cur.indices.damageIndex), acc[cur.parroquia_id].numSurveys)
-	}
-	if(cur.survey_data.felt){
-		acc[cur.parroquia_id].felt = true
-		acc[cur.parroquia_id].numFelt += 1
-	}
-	acc[cur.parroquia_id].cws = 5 * acc[cur.parroquia_id].feltIndex 
-	+ acc[cur.parroquia_id].motionIndex
-	+ acc[cur.parroquia_id].reactionIndex
-	+ 2 * acc[cur.parroquia_id].standIndex
-	+ 5 * acc[cur.parroquia_id].shelfIndex
-	+ 2 * acc[cur.parroquia_id].pictureIndex
-	+ 3 * acc[cur.parroquia_id].furnitureIndex
-	+ 5 * acc[cur.parroquia_id].damageIndex
-	if(!acc[cur.parroquia_id].felt){
-		acc[cur.parroquia_id].cii = 1
-	} else if(acc[cur.parroquia_id].cws < 6.53){
-		acc[cur.parroquia_id].cii = 2
-	} else {
-		acc[cur.parroquia_id].cii = 3.4 * Math.log(acc[cur.parroquia_id].cws) - 4.38
-	}
-	return acc
-},{} as IndicesParroquies)
+		console.log(cur.survey_data.felt);
+		if (cur.survey_data.felt !== 'no') {
+			acc[cur.parroquia_id].felt = true;
+			acc[cur.parroquia_id].numFelt += 1;
+		}
+		acc[cur.parroquia_id].cws =
+			5 * acc[cur.parroquia_id].feltIndex +
+			acc[cur.parroquia_id].motionIndex +
+			acc[cur.parroquia_id].reactionIndex +
+			2 * acc[cur.parroquia_id].standIndex +
+			5 * acc[cur.parroquia_id].shelfIndex +
+			2 * acc[cur.parroquia_id].pictureIndex +
+			3 * acc[cur.parroquia_id].furnitureIndex +
+			5 * acc[cur.parroquia_id].damageIndex;
+		if (!acc[cur.parroquia_id].felt) {
+			acc[cur.parroquia_id].cii = 1;
+		} else if (acc[cur.parroquia_id].cws < 6.53) {
+			acc[cur.parroquia_id].cii = 2;
+		} else {
+			acc[cur.parroquia_id].cii = 3.4 * Math.log(acc[cur.parroquia_id].cws) - 4.38;
+		}
+		return acc;
+	}, {} as IndicesParroquies);
 
+	const seismGuid = surveys[0].guid;
+	const datetime = surveys[0].input_date;
 
-	const seismGuid = surveys[0].guid
-	const datetime = surveys[0].input_date
-
-	return Object.entries(byParroquia).map(([parroquiaId, indices])=>({
+	const result = Object.entries(byParroquia).map(([parroquiaId, indices]) => ({
 		seism_guid: seismGuid,
 		datetime: datetime,
-		parroquia: parroquies?.find((d) => d.id === parseInt(parroquiaId))?.parroquia ?? "Fora d'Andorra",
+		parroquia:
+			parroquies?.find((d) => d.id === parseInt(parroquiaId))?.parroquia ?? "Fora d'Andorra",
 		cii: indices.cii,
 		cws: indices.cws,
 		num_felt: indices.numFelt,
 		num_surveys: indices.numSurveys
-	}))
-}
+	}));
+
+	return result;
+};
 
 export const getCalculatedIndicesAndorra = async (seismGuid: string) => {
 	const supabaseClient = createClient(supabaseUrl, supabaseAnonKey, {

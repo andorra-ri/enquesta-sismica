@@ -143,7 +143,7 @@
 				<Cell>Parròquia</Cell>
 				<Cell>CWS</Cell>
 				<Cell>CII</Cell>
-				<Cell>Nombre de respostes/sentits</Cell>
+				<Cell>Nombre de sentits/respostes</Cell>
 			</Row>
 		</Head>
 		<Body>
@@ -152,7 +152,7 @@
 					<Cell>{index.parroquia}</Cell>
 					<Cell>{index.cws}</Cell>
 					<Cell>{index.cii}</Cell>
-					<Cell>{index.num_surveys}/{index.num_felt}</Cell>
+					<Cell>{index.num_felt}/{index.num_surveys}</Cell>
 				</Row>
 			{/each}
 		</Body>
