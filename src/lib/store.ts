@@ -163,6 +163,9 @@ export interface FormValues {
 	earthquakeDate?: string;
 	earthquakeHour?: string;
 	seism?: string;
+	datetime?: string;
+	region?: string;
+	magnitude?: number;
 	felt?: string;
 	locationMap?: string;
 	coordinates?: [number, number];

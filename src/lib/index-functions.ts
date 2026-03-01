@@ -1,4 +1,3 @@
-import { ca } from 'date-fns/locale';
 import type { FormValues } from './store';
 
 export const getIndices = (data: FormValues) => {
@@ -325,6 +324,48 @@ export const createXMLReport = (data: FormValues) => {
 	survey.setAttribute('font', 'pocrisc_ari_web');
 	survey.setAttribute('institucio', 'AndorraRecerca+Innovació');
 	const event = doc.createElement('esdeveniment');
+	const tipusSeleccio = doc.createElement('tipus_seleccio');
+	tipusSeleccio.innerHTML = data.existentSeism === 'yes' ? '2' : '1';
+
+	const codiSeleccio = doc.createElement('codi_esdeveniment');
+	codiSeleccio.innerHTML = data.seism ?? '';
+	const toSeleccionat = doc.createElement('to_eqseleccionat');
+	const toSeleccionatUnix = data.earthquakeDate
+		? Math.round(new Date(data.earthquakeDate).getTime() / 1000)
+		: '';
+	toSeleccionat.innerHTML = toSeleccionatUnix.toString();
+	const magEqSeleccionat = doc.createElement('mag_eqseleccionat');
+	magEqSeleccionat.innerHTML = data.magnitude ? (data.magnitude - 10).toString() : '';
+	const regepiEqSeleccionat = doc.createElement('regepi_eqseleccionat');
+	regepiEqSeleccionat.innerHTML = data.region ?? '';
+	const toProposatValue =
+		data.existentSeism === 'no' && data.earthquakeDate && data.earthquakeHour
+			? `${data.earthquakeDate}T${data.earthquakeHour.slice(0, 5)}:00`
+			: '';
+	const toProposat = doc.createElement('to_proposat');
+	toProposat.innerHTML = toProposatValue;
+
+	const toProposatUnix = doc.createElement('to_proposat_unix');
+	toProposatUnix.innerHTML = toProposatValue
+		? Math.round(new Date(toProposatValue).getTime() / 1000).toString()
+		: '';
+	const toEsdeveniment = doc.createElement('to_esdeveniment');
+	toEsdeveniment.innerHTML = '';
+	const magEsdeveniment = doc.createElement('mag_esdeveniment');
+	magEsdeveniment.innerHTML = '';
+	const regepiEsdeveniment = doc.createElement('regepi_esdeveniment');
+	regepiEsdeveniment.innerHTML = '';
+
+	event.appendChild(tipusSeleccio);
+	event.appendChild(codiSeleccio);
+	event.appendChild(toSeleccionat);
+	event.appendChild(magEqSeleccionat);
+	event.appendChild(regepiEqSeleccionat);
+	event.appendChild(toProposat);
+	event.appendChild(toProposatUnix);
+	event.appendChild(toEsdeveniment);
+	event.appendChild(magEsdeveniment);
+	event.appendChild(regepiEsdeveniment);
 
 	survey.appendChild(event);
 	survey.appendChild(createPerceptionLocation(data, doc));
@@ -351,11 +392,21 @@ const createPerceptionLocation = (data: FormValues, doc: XMLDocument) => {
 	const userLocationLayer = doc.createElement('capa_municipi_usuari');
 	const userLocationLayerDescription = doc.createElement('desc_capa_municipi_usuari');
 	const userLocationCode = doc.createElement('codi_municipi_usuari');
-
 	const userLocationName = doc.createElement('nom_municipi_usuari');
 	const userLocationEntityLayer = doc.createElement('capa_entitat_poblacio_usuari');
 	const userLocationEntityDescription = doc.createElement('desc_capa_entitat_poblacio_usuari');
 	const userLocationEntityCode = doc.createElement('codi_entitat_poblacio_usuari');
+
+	userLocationLayer.textContent = '';
+	userLocationLayerDescription.textContent = '';
+	userLocationCode.textContent = /^\d{1,6}$/.test(data.municipality ?? '')
+		? data.municipality ?? ''
+		: '0';
+	userLocationName.textContent = '';
+	userLocationEntityLayer.textContent = '';
+	userLocationEntityDescription.textContent = '';
+	userLocationEntityCode.textContent = '';
+
 	const userLocationEntityName = doc.createElement('nom_entitat_poblacio_usuari');
 	const userStreetType = doc.createElement('tipus_via_usuari');
 	const userStreetName = doc.createElement('nom_via_usuari');
@@ -421,6 +472,39 @@ const createPerceptionLocation = (data: FormValues, doc: XMLDocument) => {
 	return perceptionLocation;
 };
 
+const parsePositionFloorValue = (floorValue: FormValues['floor']): number => {
+	switch (floorValue) {
+		case 'plantaBaixa':
+			return 0;
+		case 'soterrani':
+			return -1;
+		case 'notSpecified':
+			return -2;
+		case 'Planta 1':
+			return 1;
+		case 'Planta 2':
+			return 2;
+		case 'Planta 3':
+			return 3;
+		case 'Planta 4':
+			return 4;
+		case 'Planta 5':
+			return 5;
+		case 'Planta 6':
+			return 6;
+		case 'Planta 7':
+			return 7;
+		case 'Planta 8':
+			return 8;
+		case 'Planta 9':
+			return 9;
+		case 'Planta 10':
+			return 10;
+		default:
+			return -2;
+	}
+};
+
 const createPosition = (data: FormValues, doc: XMLDocument) => {
 	const position = doc.createElement('ubicacio');
 
@@ -462,7 +546,7 @@ const createPosition = (data: FormValues, doc: XMLDocument) => {
 	position.appendChild(positionTextEl);
 
 	const positionFloor = doc.createElement('trobava_pis');
-	if (data.floor) positionFloor.innerHTML = data.floor.toString();
+	positionFloor.innerHTML = parsePositionFloorValue(data.floor).toString();
 	position.appendChild(positionFloor);
 
 	const positionTotalFloors = doc.createElement('trobava_plantes');
@@ -797,6 +881,38 @@ const createObjects = (data: FormValues, doc: XMLDocument) => {
 	effectsLiquids.innerHTML = effectsLiquidsCode.toString();
 	objects.appendChild(effectsLiquids);
 
+	const effectsShelves = doc.createElement('obj_vibrar');
+	let effectsShelvesCode = 1;
+	switch (data.effectsShelves) {
+		case 'notSpecified':
+			effectsShelvesCode = 1;
+			break;
+		case 'none':
+			effectsShelvesCode = 3;
+			break;
+		case 'vibration':
+			effectsShelvesCode = 4;
+			break;
+		case 'strongVibration':
+			effectsShelvesCode = 5;
+			break;
+		case 'someFall':
+			effectsShelvesCode = 6;
+			break;
+		case 'manyFall':
+			effectsShelvesCode = 7;
+			break;
+		case 'mostFall':
+			effectsShelvesCode = 8;
+			break;
+	}
+	effectsShelves.innerHTML = effectsShelvesCode.toString();
+	objects.appendChild(effectsShelves);
+
+	const commentseffectsShelves = doc.createElement('obj_vibrar_txt');
+	if (data.commentseffectsShelves) commentseffectsShelves.innerHTML = data.commentseffectsShelves;
+	objects.appendChild(commentseffectsShelves);
+
 	const effectsPaintings = doc.createElement('quadres');
 	let effectsPaintingsCode = 1;
 	switch (data.effectsPaintings) {
@@ -885,38 +1001,6 @@ const createObjects = (data: FormValues, doc: XMLDocument) => {
 	effectsPlants.innerHTML = effectsPlantsCode.toString();
 	objects.appendChild(effectsPlants);
 
-	const effectsShelves = doc.createElement('obj_vibrar');
-	let effectsShelvesCode = 1;
-	switch (data.effectsShelves) {
-		case 'notSpecified':
-			effectsShelvesCode = 1;
-			break;
-		case 'none':
-			effectsShelvesCode = 3;
-			break;
-		case 'vibration':
-			effectsShelvesCode = 4;
-			break;
-		case 'strongVibration':
-			effectsShelvesCode = 5;
-			break;
-		case 'someFall':
-			effectsShelvesCode = 6;
-			break;
-		case 'manyFall':
-			effectsShelvesCode = 7;
-			break;
-		case 'mostFall':
-			effectsShelvesCode = 8;
-			break;
-	}
-	effectsShelves.innerHTML = effectsShelvesCode.toString();
-	objects.appendChild(effectsShelves);
-
-	const commentseffectsShelves = doc.createElement('obj_vibrar_txt');
-	if (data.commentseffectsShelves) commentseffectsShelves.innerHTML = data.commentseffectsShelves;
-	objects.appendChild(commentseffectsShelves);
-
 	return objects;
 };
 
@@ -946,7 +1030,10 @@ const createDamage = (data: FormValues, doc: XMLDocument) => {
 	damage.appendChild(buildingType);
 
 	const buildingYear = doc.createElement('any_edifici');
-	if (data.buildingYear) buildingYear.innerHTML = data.buildingYear;
+	const sanitizedBuildingYear = /^\d{4}$/.test(data.buildingYear ?? '')
+		? data.buildingYear ?? ''
+		: '0';
+	buildingYear.innerHTML = sanitizedBuildingYear;
 	damage.appendChild(buildingYear);
 
 	const buildingDamage = doc.createElement('danys');
@@ -963,6 +1050,7 @@ const createDamage = (data: FormValues, doc: XMLDocument) => {
 
 	//What is supposed to go here?
 	const buildingDamageDescription = doc.createElement('danys_tipus');
+	buildingDamageDescription.innerHTML = '0';
 	damage.appendChild(buildingDamageDescription);
 
 	const commentsDamage = doc.createElement('danys_txt');
@@ -978,8 +1066,8 @@ const createComments = (data: FormValues, doc: XMLDocument) => {
 	const userComments = doc.createElement('comentari_usuari');
 	if (data.comments) userComments.innerHTML = data.comments;
 	comments.appendChild(userComments);
-	//What is supposed to go here?
 	const comments_txt = doc.createElement('varis_txt');
+	comments_txt.innerHTML = (data.otherSeismsText ?? '').slice(0, 255);
 	comments.appendChild(comments_txt);
 	return comments;
 };
@@ -988,38 +1076,20 @@ const createImage = (data: FormValues, doc: XMLDocument) => {
 	const image = doc.createElement('imatge');
 
 	const imageValue = doc.createElement('imatge');
-	let imageValueCode = 1;
+	const imageCodes: Record<string, number> = {
+		notSpecified: 0,
+		notPerceived: 1,
+		perceived: 2,
+		light: 3,
+		moderate: 4,
+		strong: 5,
+		veryStrong: 6,
+		severe: 7,
+		verySevere: 8
+	};
 
-	switch (data.perceptionImage) {
-		case 'notSpecified':
-			imageValueCode = 0;
-			break;
-		case 'notPerceived':
-			imageValueCode = 1;
-			break;
-		case 'perceived':
-			imageValueCode = 2;
-			break;
-		case 'light':
-			imageValueCode = 3;
-			break;
-		case 'moderate':
-			imageValueCode = 4;
-			break;
-		case 'strong':
-			imageValueCode = 5;
-			break;
-		case 'veryStrong':
-			imageValueCode = 6;
-			break;
-		case 'severe':
-			imageValueCode = 7;
-			break;
-		case 'verySevere':
-			imageValueCode = 8;
-			break;
-	}
-	imageValue.innerHTML = imageValueCode.toString();
+	const imageValueCode = imageCodes[data.perceptionImage ?? 'notSpecified'] ?? 0;
+	imageValue.textContent = imageValueCode.toString();
 
 	image.appendChild(imageValue);
 	return image;
@@ -1027,7 +1097,9 @@ const createImage = (data: FormValues, doc: XMLDocument) => {
 
 const createStats = (doc: XMLDocument) => {
 	const stats = doc.createElement('estadistica');
-	const userLangValue = navigator.language;
+	const rawUserLangValue = navigator.language;
+	const normalizedLang = rawUserLangValue.toLowerCase().replace(':', '-').split('-')[0];
+	const userLangValue = ['ca', 'en', 'es'].includes(normalizedLang) ? normalizedLang : 'ca';
 
 	const language = doc.createElement('idioma');
 	language.innerHTML = userLangValue;

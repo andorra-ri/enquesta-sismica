@@ -1,0 +1,671 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+<xsd:simpleType name="tref-decimal-or-empty">
+  <xsd:union memberTypes="tref-decimal empty-string" />
+</xsd:simpleType>
+
+<xsd:simpleType name="dateTime-or-empty">
+  <xsd:union memberTypes="xsd:dateTime empty-string" />
+</xsd:simpleType>
+
+<xsd:simpleType name="mag-decimal-or-empty">
+  <xsd:union memberTypes="mag-decimal empty-string" />
+</xsd:simpleType>
+
+<xsd:simpleType name="lat-decimal-or-empty">
+  <xsd:union memberTypes="lat-decimal empty-string" />
+</xsd:simpleType>
+<xsd:simpleType name="lon-decimal-or-empty">
+  <xsd:union memberTypes="lon-decimal empty-string" />
+</xsd:simpleType>
+<xsd:simpleType name="sr-epsg-or-empty">
+  <xsd:union memberTypes="sr-epsg empty-string" />
+</xsd:simpleType>
+
+<xsd:simpleType name="elev-decimal-or-empty">
+  <xsd:union memberTypes="elev-decimal empty-string" />
+</xsd:simpleType>
+<xsd:simpleType name="indicador_exactitud_geo-or-empty">
+  <xsd:union memberTypes="indicador_exactitud_geo empty-string" />
+</xsd:simpleType>
+
+<xsd:simpleType name="tref-decimal"> 
+	<xsd:restriction base="xsd:decimal"><xsd:minInclusive value="0.0"/><xsd:maxInclusive value="4102444800.0"/> 
+	</xsd:restriction>
+</xsd:simpleType> 
+
+<xsd:simpleType name="mag-decimal"> 
+	<xsd:restriction base="xsd:decimal"><xsd:minInclusive value="-10.0"/><xsd:maxInclusive value="+10.0"/>
+	<xsd:totalDigits value="3"/><xsd:fractionDigits value="1"/>
+	</xsd:restriction>
+</xsd:simpleType> 
+					
+<xsd:simpleType name="lat-decimal"> 
+	<xsd:restriction base="xsd:decimal"><xsd:minInclusive value="-90.0"/><xsd:maxInclusive value="+90.0"/>
+	</xsd:restriction>
+</xsd:simpleType>  
+<xsd:simpleType name="lon-decimal"> 
+	<xsd:restriction base="xsd:decimal"><xsd:minInclusive value="-180.0"/><xsd:maxInclusive value="+180.0"/>
+	</xsd:restriction>
+</xsd:simpleType> 
+<xsd:simpleType name="sr-epsg">	
+	<xsd:restriction base="xsd:string"><xsd:maxLength value="40"/> <xsd:pattern value="EPSG:[0-9.]+"/>
+   </xsd:restriction>			
+</xsd:simpleType>	
+
+
+<xsd:simpleType name="elev-decimal"> 
+	<xsd:restriction base="xsd:decimal"><xsd:minInclusive value="-100000.0"/><xsd:maxInclusive value="+100000.0"/>
+	</xsd:restriction>
+</xsd:simpleType> 
+
+<xsd:simpleType name="indicador_exactitud_geo">	
+	<xsd:restriction base="xsd:integer"><xsd:minInclusive value="-1"/><xsd:maxInclusive value="13"/>
+  </xsd:restriction>	
+</xsd:simpleType>
+
+<xsd:simpleType name="empty-string">
+  <xsd:restriction base="xsd:string"> <xsd:enumeration value="" />
+  </xsd:restriction>
+</xsd:simpleType>
+
+<!-- definició de COORDENADA -->
+<xsd:group name="coordenada">
+  <xsd:sequence>
+	<xsd:element name="latitud">	
+		<xsd:simpleType><xsd:restriction base="lat-decimal-or-empty"></xsd:restriction>
+		</xsd:simpleType>			
+	</xsd:element>					
+	<xsd:element name="longitud">				
+		<xsd:simpleType><xsd:restriction base="lon-decimal-or-empty"></xsd:restriction>
+		</xsd:simpleType>							
+	</xsd:element>							
+	<xsd:element name="elevacio">	
+		<xsd:simpleType><xsd:restriction base="elev-decimal-or-empty"></xsd:restriction>
+		</xsd:simpleType>					
+	</xsd:element>				
+	<xsd:element name="sistema_referencia" >												
+		<xsd:simpleType><xsd:restriction base="sr-epsg-or-empty"></xsd:restriction>
+		</xsd:simpleType>			
+	</xsd:element>
+  </xsd:sequence>
+</xsd:group>
+
+
+<!-- definició de PROC -->
+<xsd:group name="lloc_percepcio_proc">	
+	<xsd:sequence>
+		<xsd:element name="codi_municipi_proc" >	
+			<xsd:simpleType> <xsd:restriction base="xsd:string"><xsd:pattern value="([0-9])*"/> <xsd:maxLength value="6"/> </xsd:restriction>
+			</xsd:simpleType>				
+		</xsd:element>
+		<xsd:element name="nom_municipi_proc" >
+			<xsd:simpleType> <xsd:restriction base="xsd:string"><xsd:maxLength value="255"/> </xsd:restriction>
+			</xsd:simpleType>				
+		</xsd:element>
+		<xsd:element name="codi_entitat_poblacio_proc" >
+			<xsd:simpleType> <xsd:restriction base="xsd:string"><xsd:pattern value="([0-9])*"/> <xsd:maxLength value="12"/> </xsd:restriction>
+			</xsd:simpleType>				
+		</xsd:element>				
+		<xsd:element name="nom_entitat_poblacio_proc" >
+			<xsd:simpleType> <xsd:restriction base="xsd:string"><xsd:maxLength value="255"/> </xsd:restriction>
+			</xsd:simpleType>				
+		</xsd:element>				
+		<xsd:element name="coordenada_proc" >
+			<xsd:complexType><xsd:group ref="coordenada"/></xsd:complexType>						
+		</xsd:element>
+		<xsd:element name="indicador_exactitud_proc" >	
+			<xsd:simpleType><xsd:restriction base="xsd:integer"><xsd:minInclusive value="-1"/><xsd:maxInclusive value="13"/> </xsd:restriction>
+			</xsd:simpleType>				
+		</xsd:element>
+		<xsd:element name="depi_proc">	
+			<xsd:simpleType> <xsd:restriction base="xsd:decimal"><xsd:minInclusive value="-1"/><xsd:maxInclusive value="+40100"/> </xsd:restriction>
+			</xsd:simpleType>				
+		</xsd:element>		
+	</xsd:sequence>
+</xsd:group>
+
+
+
+
+
+
+
+
+<xsd:element name="cataleg_macrosismica">
+  <xsd:complexType>
+   <xsd:sequence>
+	<xsd:element name="questionari" minOccurs ="0" maxOccurs="unbounded">
+	  <xsd:complexType>
+		<xsd:sequence>
+		
+		<xsd:element name="esdeveniment" >
+			<xsd:complexType>
+              <xsd:sequence>
+				<xsd:element name="tipus_seleccio" >	
+					<xsd:simpleType> <xsd:restriction base="xsd:integer"><xsd:minInclusive value="1"/><xsd:maxInclusive value="3"/></xsd:restriction>
+					</xsd:simpleType>				
+				</xsd:element>				
+															
+				<xsd:element name="codi_esdeveniment" >	
+					<xsd:simpleType> <xsd:restriction base="xsd:string"><xsd:maxLength value="40"/> </xsd:restriction>
+					</xsd:simpleType>				
+				</xsd:element>		
+
+				<xsd:element name="to_eqseleccionat" >	
+					<xsd:simpleType><xsd:restriction base="tref-decimal-or-empty"></xsd:restriction>
+					</xsd:simpleType>					
+				</xsd:element>				
+				<xsd:element name="mag_eqseleccionat" >	
+					<xsd:simpleType><xsd:restriction base="mag-decimal-or-empty"></xsd:restriction>
+					</xsd:simpleType>			
+				</xsd:element>						
+				<xsd:element name="regepi_eqseleccionat" >	
+					<xsd:simpleType> <xsd:restriction base="xsd:string"><xsd:maxLength value="255"/> </xsd:restriction>
+					</xsd:simpleType>				
+				</xsd:element>		
+
+				<xsd:element name="to_proposat" >	
+					<xsd:simpleType><xsd:restriction base="dateTime-or-empty"></xsd:restriction>
+					</xsd:simpleType>			
+				</xsd:element>
+				<xsd:element name="to_proposat_unix">	
+					<xsd:simpleType><xsd:restriction base="tref-decimal-or-empty"></xsd:restriction>
+					</xsd:simpleType>						
+				</xsd:element>			
+
+				<xsd:element name="to_esdeveniment" minOccurs ="0">	
+					<xsd:simpleType><xsd:restriction base="tref-decimal-or-empty"></xsd:restriction>
+					</xsd:simpleType>					
+				</xsd:element>				
+				<xsd:element name="mag_esdeveniment" minOccurs ="0">	
+					<xsd:simpleType><xsd:restriction base="mag-decimal-or-empty"></xsd:restriction>
+					</xsd:simpleType>			
+				</xsd:element>						
+				<xsd:element name="regepi_esdeveniment" minOccurs ="0">	
+					<xsd:simpleType> <xsd:restriction base="xsd:string"><xsd:maxLength value="255"/> </xsd:restriction>
+					</xsd:simpleType>				
+				</xsd:element>				
+				
+                </xsd:sequence>
+			</xsd:complexType>
+		</xsd:element>	
+
+			
+		<xsd:element name="lloc_percepcio" >
+			<xsd:complexType>
+              <xsd:sequence>
+				<xsd:element name="capa_municipi_usuari" >	
+					<xsd:simpleType> <xsd:restriction base="xsd:string"><xsd:maxLength value="255"/> </xsd:restriction>
+					</xsd:simpleType>				
+				</xsd:element>	
+				<xsd:element name="desc_capa_municipi_usuari" >	
+					<xsd:simpleType> <xsd:restriction base="xsd:string"><xsd:maxLength value="1024"/> </xsd:restriction>
+					</xsd:simpleType>				
+				</xsd:element>					
+				<xsd:element name="codi_municipi_usuari" >	
+				<xsd:simpleType> <xsd:restriction base="xsd:string"><xsd:pattern value="([0-9])*"/><xsd:minLength value="1"/><xsd:maxLength value="6"/> </xsd:restriction>
+					</xsd:simpleType>				
+				</xsd:element>																	
+				<xsd:element name="nom_municipi_usuari" >	
+					<xsd:simpleType> <xsd:restriction base="xsd:string"><xsd:maxLength value="255"/> </xsd:restriction>
+					</xsd:simpleType>				
+				</xsd:element>		
+				<xsd:element name="capa_entitat_poblacio_usuari" >		
+					<xsd:simpleType> <xsd:restriction base="xsd:string"><xsd:maxLength value="255"/> </xsd:restriction>
+					</xsd:simpleType>				
+				</xsd:element>			
+				<xsd:element name="desc_capa_entitat_poblacio_usuari" >	
+					<xsd:simpleType> <xsd:restriction base="xsd:string"><xsd:maxLength value="1024"/> </xsd:restriction>
+					</xsd:simpleType>				
+				</xsd:element>					
+				<xsd:element name="codi_entitat_poblacio_usuari" >	
+					<xsd:simpleType> <xsd:restriction base="xsd:string"><xsd:pattern value="([0-9])*"/> <xsd:maxLength value="12"/> </xsd:restriction>
+					</xsd:simpleType>			
+				</xsd:element>
+				<xsd:element name="nom_entitat_poblacio_usuari" >		
+					<xsd:simpleType> <xsd:restriction base="xsd:string"><xsd:maxLength value="255"/> </xsd:restriction>
+					</xsd:simpleType>				
+				</xsd:element>
+				<xsd:element name="tipus_via_usuari" >	
+					<xsd:simpleType> <xsd:restriction base="xsd:string"><xsd:maxLength value="40"/> </xsd:restriction>
+					</xsd:simpleType>				
+				</xsd:element>
+				<xsd:element name="nom_via_usuari" >	
+					<xsd:simpleType> <xsd:restriction base="xsd:string"><xsd:maxLength value="255"/> </xsd:restriction>
+					</xsd:simpleType>				
+				</xsd:element>
+				<xsd:element name="numero_via_usuari" >	
+					<xsd:simpleType> <xsd:restriction base="xsd:string"><xsd:maxLength value="40"/> </xsd:restriction>
+					</xsd:simpleType>				
+				</xsd:element>	
+				<xsd:element name="codi_postal_usuari" >	
+					<xsd:simpleType> <xsd:restriction base="xsd:string"><xsd:maxLength value="5"/> </xsd:restriction>
+					</xsd:simpleType>				
+				</xsd:element>									
+				<xsd:element name="toponim_usuari" >	
+					<xsd:simpleType> <xsd:restriction base="xsd:string"><xsd:maxLength value="255"/> </xsd:restriction>
+					</xsd:simpleType>				
+				</xsd:element>
+				<xsd:element name="pais_usuari" >	
+					<xsd:simpleType> <xsd:restriction base="xsd:string"><xsd:maxLength value="255"/> </xsd:restriction>
+					</xsd:simpleType>				
+				</xsd:element>
+				
+				<xsd:element name="codi_municipi_geo" >	
+					<xsd:simpleType> <xsd:restriction base="xsd:string"><xsd:pattern value="([0-9])*"/> <xsd:maxLength value="6"/> </xsd:restriction>
+					</xsd:simpleType>				
+				</xsd:element>
+				<xsd:element name="nom_municipi_geo" >	
+					<xsd:simpleType> <xsd:restriction base="xsd:string"><xsd:maxLength value="255"/> </xsd:restriction>
+					</xsd:simpleType>				
+				</xsd:element>
+				<xsd:element name="codi_entitat_poblacio_geo" >	
+					<xsd:simpleType> <xsd:restriction base="xsd:string"><xsd:pattern value="([0-9])*"/> <xsd:maxLength value="12"/> </xsd:restriction>
+					</xsd:simpleType>				
+				</xsd:element>				
+				<xsd:element name="nom_entitat_poblacio_geo" >	
+					<xsd:simpleType> <xsd:restriction base="xsd:string"><xsd:maxLength value="255"/> </xsd:restriction>
+					</xsd:simpleType>				
+				</xsd:element>
+				<xsd:element name="tipus_via_geo" >	
+					<xsd:simpleType> <xsd:restriction base="xsd:string"><xsd:maxLength value="40"/> </xsd:restriction>
+					</xsd:simpleType>				
+				</xsd:element>
+				<xsd:element name="nom_via_geo" >	
+					<xsd:simpleType> <xsd:restriction base="xsd:string"><xsd:maxLength value="255"/> </xsd:restriction>
+					</xsd:simpleType>				
+				</xsd:element>
+				<xsd:element name="numero_via_geo" >	
+					<xsd:simpleType> <xsd:restriction base="xsd:string"><xsd:maxLength value="40"/> </xsd:restriction>
+					</xsd:simpleType>				
+				</xsd:element>	
+				<xsd:element name="codi_postal_geo" >	
+					<xsd:simpleType> <xsd:restriction base="xsd:string"><xsd:maxLength value="5"/> </xsd:restriction>
+					</xsd:simpleType>				
+				</xsd:element>									
+				<xsd:element name="toponim_geo" >					
+					<xsd:simpleType> <xsd:restriction base="xsd:string"><xsd:maxLength value="255"/> </xsd:restriction>
+					</xsd:simpleType>				
+				</xsd:element>															
+				<xsd:element name="coordenada_geo" >
+					<xsd:complexType><xsd:group ref="coordenada"/></xsd:complexType>  				
+				</xsd:element>
+			
+				<xsd:element name="indicador_exactitud_geo" >	
+					<xsd:simpleType> <xsd:restriction base="indicador_exactitud_geo-or-empty"></xsd:restriction>
+					</xsd:simpleType>				
+				</xsd:element>								
+				
+				<xsd:group ref="lloc_percepcio_proc" minOccurs ="0"/>
+				
+			  </xsd:sequence>
+			</xsd:complexType>
+		</xsd:element>	
+
+	
+		<xsd:element name="ubicacio" >
+			<xsd:complexType>
+              <xsd:sequence>
+			  
+				<xsd:element name="trobava" >	
+					<xsd:simpleType> <xsd:restriction base="xsd:integer"><xsd:minInclusive value="0"/><xsd:maxInclusive value="5"/></xsd:restriction>
+					</xsd:simpleType>				
+				</xsd:element>		
+				
+				<xsd:element name="trobava_txt" >	
+					<xsd:simpleType> <xsd:restriction base="xsd:string"><xsd:maxLength value="255"/> </xsd:restriction>
+					</xsd:simpleType>				
+				</xsd:element>				
+				
+				<xsd:element name="trobava_pis" >	
+					<xsd:simpleType> <xsd:restriction base="xsd:integer"><xsd:minInclusive value="-2"/><xsd:maxInclusive value="10"/></xsd:restriction>
+					</xsd:simpleType>					
+				</xsd:element>		
+				<xsd:element name="trobava_plantes" >	
+					<xsd:simpleType> <xsd:restriction base="xsd:integer"><xsd:minInclusive value="-1"/><xsd:maxInclusive value="10"/></xsd:restriction>
+					</xsd:simpleType>					
+				</xsd:element>	
+				
+				<xsd:element name="estava" >	
+					<xsd:simpleType> <xsd:restriction base="xsd:integer"><xsd:minInclusive value="0"/><xsd:maxInclusive value="6"/></xsd:restriction>
+					</xsd:simpleType>				
+				</xsd:element>		
+
+				<xsd:element name="estava_txt" >
+					<xsd:simpleType> <xsd:restriction base="xsd:string"><xsd:maxLength value="255"/> </xsd:restriction>
+					</xsd:simpleType>				
+				</xsd:element>
+								
+                </xsd:sequence>
+			</xsd:complexType>
+		</xsd:element>			
+		
+		
+		<xsd:element name="sentir" >
+			<xsd:complexType>
+              <xsd:sequence>
+				<xsd:element name="sentit" type="xsd:boolean"  />
+				<xsd:element name="quants_dins" >	
+					<xsd:simpleType> <xsd:restriction base="xsd:integer"><xsd:minInclusive value="0"/><xsd:maxInclusive value="6"/></xsd:restriction>
+					</xsd:simpleType>				
+				</xsd:element>		
+				<xsd:element name="quants_fora" >	
+					<xsd:simpleType> <xsd:restriction base="xsd:integer"><xsd:minInclusive value="0"/><xsd:maxInclusive value="5"/></xsd:restriction>
+					</xsd:simpleType>				
+				</xsd:element>		
+				<xsd:element name="quants_correr" >
+					<xsd:simpleType> <xsd:restriction base="xsd:integer"><xsd:minInclusive value="0"/><xsd:maxInclusive value="5"/></xsd:restriction>
+					</xsd:simpleType>				
+				</xsd:element>		
+				<xsd:element name="quants_despertarse" >
+					<xsd:simpleType> <xsd:restriction base="xsd:integer"><xsd:minInclusive value="0"/><xsd:maxInclusive value="6"/></xsd:restriction>
+					</xsd:simpleType>				
+				</xsd:element>		
+                </xsd:sequence>
+			</xsd:complexType>
+		</xsd:element>				
+		
+		<xsd:element name="percepcio" >
+			<xsd:complexType>
+              <xsd:sequence>
+				<xsd:element name="moviment" >	
+					<xsd:simpleType> <xsd:restriction base="xsd:integer"><xsd:minInclusive value="0"/><xsd:maxInclusive value="6"/></xsd:restriction>
+					</xsd:simpleType>				
+				</xsd:element>	
+				<xsd:element name="moviment_txt" >	
+					<xsd:simpleType> <xsd:restriction base="xsd:string"><xsd:maxLength value="255"/> </xsd:restriction>
+					</xsd:simpleType>				
+				</xsd:element>
+				
+				<xsd:element name="soroll" >	
+					<xsd:simpleType> <xsd:restriction base="xsd:integer"><xsd:minInclusive value="0"/><xsd:maxInclusive value="5"/></xsd:restriction>
+					</xsd:simpleType>		
+				</xsd:element>					
+				<xsd:element name="soroll_txt" >	
+					<xsd:simpleType> <xsd:restriction base="xsd:string"><xsd:maxLength value="255"/> </xsd:restriction>
+					</xsd:simpleType>				
+				</xsd:element>				
+				
+				<xsd:element name="reaccio" >	
+					<xsd:simpleType> <xsd:restriction base="xsd:integer"><xsd:minInclusive value="0"/><xsd:maxInclusive value="6"/></xsd:restriction>
+					</xsd:simpleType>	
+				</xsd:element>						
+				<xsd:element name="dret" >	
+					<xsd:simpleType> <xsd:restriction base="xsd:integer"><xsd:minInclusive value="0"/><xsd:maxInclusive value="3"/></xsd:restriction>
+					</xsd:simpleType>		
+				</xsd:element>						
+				<xsd:element name="animals" >	
+					<xsd:simpleType> <xsd:restriction base="xsd:integer"><xsd:minInclusive value="0"/><xsd:maxInclusive value="3"/></xsd:restriction>
+					</xsd:simpleType>		
+				</xsd:element>						
+                </xsd:sequence>
+			</xsd:complexType>
+		</xsd:element>			
+		<xsd:element name="objectes" >
+			<xsd:complexType>
+              <xsd:sequence>
+				<xsd:element name="llums" >
+					<xsd:simpleType> <xsd:restriction base="xsd:integer"><xsd:minInclusive value="0"/><xsd:maxInclusive value="4"/></xsd:restriction>
+					</xsd:simpleType>	
+				</xsd:element>						
+				<xsd:element name="liquids" >	
+					<xsd:simpleType> <xsd:restriction base="xsd:integer"><xsd:minInclusive value="0"/><xsd:maxInclusive value="4"/></xsd:restriction>
+					</xsd:simpleType>					
+				</xsd:element>						
+				<xsd:element name="obj_vibrar" >	
+					<xsd:simpleType> <xsd:restriction base="xsd:integer"><xsd:minInclusive value="0"/><xsd:maxInclusive value="7"/></xsd:restriction>
+					</xsd:simpleType>						
+				</xsd:element>						
+				<xsd:element name="obj_vibrar_txt" >	
+					<xsd:simpleType> <xsd:restriction base="xsd:string"><xsd:maxLength value="255"/> </xsd:restriction>
+					</xsd:simpleType>				
+				</xsd:element>									
+				<xsd:element name="quadres" >	
+					<xsd:simpleType> <xsd:restriction base="xsd:integer"><xsd:minInclusive value="0"/><xsd:maxInclusive value="5"/></xsd:restriction>
+					</xsd:simpleType>								
+				</xsd:element>						
+				<xsd:element name="portes" >	
+					<xsd:simpleType> <xsd:restriction base="xsd:integer"><xsd:minInclusive value="0"/><xsd:maxInclusive value="5"/></xsd:restriction>
+					</xsd:simpleType>						
+				</xsd:element>						
+				<xsd:element name="mobles" >	
+					<xsd:simpleType> <xsd:restriction base="xsd:integer"><xsd:minInclusive value="0"/><xsd:maxInclusive value="5"/></xsd:restriction>
+					</xsd:simpleType>						
+				</xsd:element>						
+				<xsd:element name="plantes" >	
+					<xsd:simpleType> <xsd:restriction base="xsd:integer"><xsd:minInclusive value="0"/><xsd:maxInclusive value="5"/></xsd:restriction>
+					</xsd:simpleType>		
+				</xsd:element>										
+                </xsd:sequence>
+			</xsd:complexType>
+		</xsd:element>	
+		<xsd:element name="danys" >
+			<xsd:complexType>
+              <xsd:sequence>
+				<xsd:element name="tipus_edifici" >	
+					<xsd:simpleType> <xsd:restriction base="xsd:integer"><xsd:minInclusive value="0"/><xsd:maxInclusive value="3"/></xsd:restriction>
+					</xsd:simpleType>	
+				</xsd:element>						
+				<xsd:element name="any_edifici" >	
+					<xsd:simpleType> <xsd:restriction base="xsd:string"><xsd:maxLength value="5"/> </xsd:restriction>
+					</xsd:simpleType>				
+				</xsd:element>
+				<xsd:element name="danys" >	
+					<xsd:simpleType> <xsd:restriction base="xsd:integer"><xsd:minInclusive value="0"/><xsd:maxInclusive value="3"/></xsd:restriction>
+					</xsd:simpleType>		
+				</xsd:element>						
+				<xsd:element name="danys_tipus" >	
+					<xsd:simpleType> <xsd:restriction base="xsd:integer"><xsd:minInclusive value="0"/><xsd:maxInclusive value="1048575"/></xsd:restriction>
+					</xsd:simpleType>		
+				</xsd:element>						
+				<xsd:element name="danys_txt" >	
+					<xsd:simpleType> <xsd:restriction base="xsd:string"><xsd:maxLength value="255"/> </xsd:restriction>
+					</xsd:simpleType>				
+				</xsd:element>				
+                </xsd:sequence>
+			</xsd:complexType>
+		</xsd:element>			
+
+		<xsd:element name="comentari" >
+			<xsd:complexType>
+              <xsd:sequence>
+				<xsd:element name="comentari_usuari" >	
+					<xsd:simpleType> <xsd:restriction base="xsd:string"><xsd:maxLength value="4000"/> </xsd:restriction>
+					</xsd:simpleType>				
+				</xsd:element>					
+				<xsd:element name="varis_txt" >	
+					<xsd:simpleType> <xsd:restriction base="xsd:string"><xsd:maxLength value="255"/> </xsd:restriction>
+					</xsd:simpleType>					
+				</xsd:element>
+				<xsd:element name="comentari_proc" minOccurs ="0" >		
+					<xsd:simpleType> <xsd:restriction base="xsd:string"><xsd:maxLength value="4000"/> </xsd:restriction>
+					</xsd:simpleType>				
+				</xsd:element>				
+                </xsd:sequence>
+			</xsd:complexType>
+		</xsd:element> 	
+	
+		<xsd:element name="imatge" >				
+			<xsd:complexType>
+              <xsd:sequence>
+				<xsd:element name="imatge" >	
+					<xsd:simpleType> <xsd:restriction base="xsd:integer"><xsd:minInclusive value="0"/><xsd:maxInclusive value="8"/></xsd:restriction>
+					</xsd:simpleType>		
+				</xsd:element>						
+                </xsd:sequence>
+			</xsd:complexType>
+		</xsd:element> 		
+				
+	
+		<xsd:element name="index_percepcio" minOccurs ="0" >			
+			<xsd:complexType>
+              <xsd:sequence>
+				<xsd:element name="ipf" minOccurs ="0" maxOccurs="unbounded">	
+					<xsd:complexType>				
+						<xsd:attribute name="intensitat" use="required">
+							<xsd:simpleType> <xsd:restriction base="xsd:integer"><xsd:minInclusive value="100"/><xsd:maxInclusive value="1250"/></xsd:restriction>
+							</xsd:simpleType>			
+						</xsd:attribute>			
+						<xsd:attribute name="escala" use="required">
+							<xsd:simpleType> <xsd:restriction base="xsd:string">
+							<xsd:enumeration value="EMS98"/>
+							<xsd:enumeration value="EMS92"/>
+							<xsd:enumeration value="MSK64"/>
+							<xsd:enumeration value="MM56"/>  
+							<xsd:enumeration value="MM31"/>
+							<xsd:enumeration value="MCS"/>
+							<xsd:enumeration value="MM09"/>  
+							<xsd:enumeration value="RF"/>  
+							</xsd:restriction> </xsd:simpleType>			
+						</xsd:attribute>	
+						<xsd:attribute name="qualitat" use="required">						
+							<xsd:simpleType> <xsd:restriction base="xsd:string"><xsd:maxLength value="1"/> <xsd:pattern value="[A-D]"/></xsd:restriction>
+							</xsd:simpleType>		
+						</xsd:attribute>	
+						<xsd:attribute name="temps_calcul"  use="required">
+							<xsd:simpleType><xsd:restriction base="tref-decimal-or-empty"></xsd:restriction>
+							</xsd:simpleType>				
+						</xsd:attribute>	
+						<xsd:attribute name="nom" use="required">
+							<xsd:simpleType> <xsd:restriction base="xsd:string"><xsd:minLength value="1"/> <xsd:maxLength value="40"/> </xsd:restriction>
+							</xsd:simpleType>				
+						</xsd:attribute>
+						<xsd:attribute name="pref" use="required">
+							<xsd:simpleType> <xsd:restriction base="xsd:integer"><xsd:minInclusive value="0"/><xsd:maxInclusive value="1"/></xsd:restriction>
+							</xsd:simpleType>		
+						</xsd:attribute>					
+						<xsd:attribute name="comentari" use="required">
+							<xsd:simpleType> <xsd:restriction base="xsd:string"><xsd:maxLength value="4000"/> </xsd:restriction>
+							</xsd:simpleType>				
+						</xsd:attribute>						
+						<xsd:attribute name="programa" use="required">
+							<xsd:simpleType> <xsd:restriction base="xsd:string"><xsd:minLength value="1"/> <xsd:maxLength value="40"/> </xsd:restriction>
+							</xsd:simpleType>				
+						</xsd:attribute>
+						<xsd:attribute name="institucio" use="required">	
+							<xsd:simpleType> <xsd:restriction base="xsd:string"><xsd:minLength value="1"/> <xsd:maxLength value="40"/> </xsd:restriction>
+							</xsd:simpleType>				
+						</xsd:attribute>
+						<xsd:attribute name="font" use="required">	
+							<xsd:simpleType> <xsd:restriction base="xsd:string"><xsd:minLength value="1"/> <xsd:maxLength value="50"/> </xsd:restriction>
+							</xsd:simpleType>				
+						</xsd:attribute>						
+						
+					</xsd:complexType>				
+				</xsd:element>		
+				<xsd:element name="ipi" minOccurs ="0" maxOccurs="unbounded">				
+					<xsd:complexType>											
+						<xsd:attribute name="intensitat" use="required">
+							<xsd:simpleType> <xsd:restriction base="xsd:integer"><xsd:minInclusive value="100"/><xsd:maxInclusive value="1250"/></xsd:restriction>
+							</xsd:simpleType>	
+						</xsd:attribute>			
+						<xsd:attribute name="escala" use="required">
+							<xsd:simpleType> <xsd:restriction base="xsd:string">
+							<xsd:enumeration value="EMS98"/>
+							<xsd:enumeration value="EMS92"/>
+							<xsd:enumeration value="MSK64"/>
+							<xsd:enumeration value="MM56"/>  
+							<xsd:enumeration value="MM31"/>
+							<xsd:enumeration value="MCS"/>
+							<xsd:enumeration value="MM09"/>  
+							<xsd:enumeration value="RF"/>  
+							</xsd:restriction>
+							</xsd:simpleType>			
+						</xsd:attribute>		
+						<xsd:attribute name="qualitat" use="required">						
+							<xsd:simpleType> <xsd:restriction base="xsd:string"><xsd:maxLength value="1"/> <xsd:pattern value="[A-D]"/></xsd:restriction>
+							</xsd:simpleType>		
+						</xsd:attribute>	
+						<xsd:attribute name="temps_calcul"  use="required">
+							<xsd:simpleType><xsd:restriction base="tref-decimal-or-empty"></xsd:restriction>
+							</xsd:simpleType>				
+						</xsd:attribute>	
+						<xsd:attribute name="nom" use="required">
+							<xsd:simpleType> <xsd:restriction base="xsd:string"><xsd:minLength value="1"/> <xsd:maxLength value="40"/> </xsd:restriction>
+							</xsd:simpleType>				
+						</xsd:attribute>
+						<xsd:attribute name="pref" use="required">
+							<xsd:simpleType> <xsd:restriction base="xsd:integer"><xsd:minInclusive value="0"/><xsd:maxInclusive value="1"/></xsd:restriction>
+							</xsd:simpleType>		
+						</xsd:attribute>					
+						<xsd:attribute name="comentari" use="required">
+							<xsd:simpleType> <xsd:restriction base="xsd:string"><xsd:maxLength value="4000"/> </xsd:restriction>
+							</xsd:simpleType>				
+						</xsd:attribute>						
+						<xsd:attribute name="programa" use="required">
+							<xsd:simpleType> <xsd:restriction base="xsd:string"><xsd:minLength value="1"/><xsd:maxLength value="40"/> </xsd:restriction>
+							</xsd:simpleType>				
+						</xsd:attribute>
+						<xsd:attribute name="institucio" use="required">	
+							<xsd:simpleType> <xsd:restriction base="xsd:string"><xsd:minLength value="1"/><xsd:maxLength value="40"/> </xsd:restriction>
+							</xsd:simpleType>				
+						</xsd:attribute>
+						<xsd:attribute name="font" use="required">	
+							<xsd:simpleType> <xsd:restriction base="xsd:string"><xsd:minLength value="1"/><xsd:maxLength value="50"/> </xsd:restriction>
+							</xsd:simpleType>				
+						</xsd:attribute>					
+					</xsd:complexType>				
+				</xsd:element>
+							
+                </xsd:sequence>
+			</xsd:complexType>
+		</xsd:element> 		
+		
+		<xsd:element name="estadistica" >
+			<xsd:complexType>
+              <xsd:sequence>
+				<xsd:element name="idioma" >	
+					<xsd:simpleType> <xsd:restriction base="xsd:string"><xsd:enumeration value="ca"/> <xsd:enumeration value="es"/> <xsd:enumeration value="en"/> <xsd:enumeration value=""/> </xsd:restriction>
+					</xsd:simpleType>					
+				</xsd:element>
+				<xsd:element name="mobil">	
+					<xsd:simpleType> <xsd:restriction base="xsd:integer"><xsd:minInclusive value="-1"/><xsd:maxInclusive value="1"/></xsd:restriction>
+					</xsd:simpleType>		
+				</xsd:element>
+				<xsd:element name="usuari">	
+						<xsd:simpleType> <xsd:restriction base="xsd:string"><xsd:minLength value="0"/><xsd:maxLength value="25"/> </xsd:restriction>
+						</xsd:simpleType>		
+				</xsd:element>				
+                </xsd:sequence>
+			</xsd:complexType>
+		</xsd:element> 			
+		</xsd:sequence>        
+		<xsd:attribute name="codi" use="optional">
+			<xsd:simpleType> <xsd:restriction base="xsd:string"><xsd:maxLength value="40"/> </xsd:restriction>
+			</xsd:simpleType>				
+		</xsd:attribute>
+		<xsd:attribute name="valid" 	type="xsd:boolean" use="optional"/>
+		<xsd:attribute name="revisat"	type="xsd:boolean" use="optional"/>
+		<xsd:attribute name="temps_rx"  use="optional">
+			<xsd:simpleType><xsd:restriction base="tref-decimal-or-empty"></xsd:restriction>
+			</xsd:simpleType>				
+		</xsd:attribute>		
+		<xsd:attribute name="temps_bd"  use="optional">
+			<xsd:simpleType><xsd:restriction base="tref-decimal-or-empty"></xsd:restriction>
+			</xsd:simpleType>				
+		</xsd:attribute>			
+		<xsd:attribute name="temps_ultima_actualitzacio"  use="optional">
+			<xsd:simpleType><xsd:restriction base="tref-decimal-or-empty"></xsd:restriction>
+			</xsd:simpleType>				
+		</xsd:attribute>			
+		<xsd:attribute name="programa" use="optional">
+			<xsd:simpleType> <xsd:restriction base="xsd:string"><xsd:minLength value="1"/><xsd:maxLength value="40"/> </xsd:restriction>
+			</xsd:simpleType>				
+		</xsd:attribute>
+		<xsd:attribute name="institucio" use="optional">	
+			<xsd:simpleType> <xsd:restriction base="xsd:string"><xsd:minLength value="1"/><xsd:maxLength value="40"/> </xsd:restriction>
+			</xsd:simpleType>				
+		</xsd:attribute>
+		<xsd:attribute name="font" use="optional">	
+			<xsd:simpleType> <xsd:restriction base="xsd:string"><xsd:minLength value="1"/><xsd:maxLength value="50"/> </xsd:restriction>
+			</xsd:simpleType>				
+		</xsd:attribute>
+		</xsd:complexType>
+	</xsd:element>
+  </xsd:sequence>
+ </xsd:complexType>	    
+</xsd:element>
+</xsd:schema>

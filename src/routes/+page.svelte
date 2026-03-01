@@ -96,8 +96,15 @@
 		if (selectedSeism !== 'new') {
 			formValues.seism = selectedSeism;
 			formValues.existentSeism = 'yes';
+			const seism = seisms.find((s) => s.guid === selectedSeism);
+			formValues.datetime = seism?.datetime ? new Date(seism.datetime).toISOString() : undefined;
+			formValues.region = seism?.region;
+			formValues.magnitude = seism?.magnitude;
 		} else {
 			formValues.existentSeism = 'no';
+			formValues.datetime = undefined;
+			formValues.region = undefined;
+			formValues.magnitude = undefined;
 		}
 	}
 

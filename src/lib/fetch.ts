@@ -146,6 +146,21 @@ export const sendToSupabase = async (data: FormValues) => {
 			image: data.image ?? ''
 		}
 	]);
+
+	if (!data.seism) {
+		console.log('Sending email to notify no seism selected');
+		const { error } = await supabase.functions.invoke('resend', {
+			body: JSON.stringify({
+				to: 'rveciana@gmail.com',
+				subject: 'Nou formulari enviat sense sisme',
+				body: 'Un usuari ha introduit una enquesta però no ha seleccionat un sisme.'
+			}),
+			headers: {
+				'Content-Type': 'application/json'
+			}
+		});
+		console.log('Email error', error);
+	}
 };
 
 export const uploadImage = async (fileName: string, fileToUpload: string) => {
