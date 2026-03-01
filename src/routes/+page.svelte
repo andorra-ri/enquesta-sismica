@@ -47,6 +47,7 @@
 		parroquies = (await getParroquiesData()) ?? [];
 		seisms = await getSeismData();
 		if (seisms.length === 0) {
+			selectedSeism = 'new';
 			formValues.existentSeism = 'no';
 		}
 		if (initialSeismId) {
