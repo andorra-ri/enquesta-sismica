@@ -325,36 +325,36 @@ export const createXMLReport = (data: FormValues) => {
 	survey.setAttribute('institucio', 'AndorraRecerca+Innovació');
 	const event = doc.createElement('esdeveniment');
 	const tipusSeleccio = doc.createElement('tipus_seleccio');
-	tipusSeleccio.innerHTML = data.existentSeism === 'yes' ? '2' : '1';
+	tipusSeleccio.textContent = data.existentSeism === 'yes' ? '2' : '1';
 
 	const codiSeleccio = doc.createElement('codi_esdeveniment');
-	codiSeleccio.innerHTML = data.seism ?? '';
+	codiSeleccio.textContent = data.seism ?? '';
 	const toSeleccionat = doc.createElement('to_eqseleccionat');
 	const toSeleccionatUnix = data.earthquakeDate
 		? Math.round(new Date(data.earthquakeDate).getTime() / 1000)
 		: '';
-	toSeleccionat.innerHTML = toSeleccionatUnix.toString();
+	toSeleccionat.textContent = toSeleccionatUnix.toString();
 	const magEqSeleccionat = doc.createElement('mag_eqseleccionat');
-	magEqSeleccionat.innerHTML = data.magnitude ? (data.magnitude - 10).toString() : '';
+	magEqSeleccionat.textContent = data.magnitude ? (data.magnitude - 10).toString() : '';
 	const regepiEqSeleccionat = doc.createElement('regepi_eqseleccionat');
-	regepiEqSeleccionat.innerHTML = data.region ?? '';
+	regepiEqSeleccionat.textContent = data.region ?? '';
 	const toProposatValue =
 		data.existentSeism === 'no' && data.earthquakeDate && data.earthquakeHour
 			? `${data.earthquakeDate}T${data.earthquakeHour.slice(0, 5)}:00`
 			: '';
 	const toProposat = doc.createElement('to_proposat');
-	toProposat.innerHTML = toProposatValue;
+	toProposat.textContent = toProposatValue;
 
 	const toProposatUnix = doc.createElement('to_proposat_unix');
-	toProposatUnix.innerHTML = toProposatValue
+	toProposatUnix.textContent = toProposatValue
 		? Math.round(new Date(toProposatValue).getTime() / 1000).toString()
 		: '';
 	const toEsdeveniment = doc.createElement('to_esdeveniment');
-	toEsdeveniment.innerHTML = '';
+	toEsdeveniment.textContent = '';
 	const magEsdeveniment = doc.createElement('mag_esdeveniment');
-	magEsdeveniment.innerHTML = '';
+	magEsdeveniment.textContent = '';
 	const regepiEsdeveniment = doc.createElement('regepi_esdeveniment');
-	regepiEsdeveniment.innerHTML = '';
+	regepiEsdeveniment.textContent = '';
 
 	event.appendChild(tipusSeleccio);
 	event.appendChild(codiSeleccio);
@@ -383,7 +383,7 @@ export const createXMLReport = (data: FormValues) => {
 
 	const serializer = new XMLSerializer();
 	const xmlStr = serializer.serializeToString(doc);
-	return '<?xml version="1.0"?>' + xmlStr;
+	return '<?xml version="1.0" encoding="UTF-8"?>' + xmlStr;
 };
 
 const createPerceptionLocation = (data: FormValues, doc: XMLDocument) => {
@@ -428,13 +428,13 @@ const createPerceptionLocation = (data: FormValues, doc: XMLDocument) => {
 
 	const geoCoordinatesLat = doc.createElement('latitud');
 	const lat = data.coordinates && data.coordinates[1];
-	geoCoordinatesLat.innerHTML = (lat ?? 0).toString();
+	geoCoordinatesLat.textContent = (lat ?? 0).toString();
 	const geoCoordinatesLon = doc.createElement('longitud');
 	const lon = data.coordinates && data.coordinates[0];
-	geoCoordinatesLon.innerHTML = (lon ?? 0).toString();
+	geoCoordinatesLon.textContent = (lon ?? 0).toString();
 	const geoCoordinatesAltitude = doc.createElement('elevacio');
 	const geoCoordinatesEPSG = doc.createElement('sistema_referencia');
-	geoCoordinatesEPSG.innerHTML = 'EPSG:4326';
+	geoCoordinatesEPSG.textContent = 'EPSG:4326';
 
 	geoCoordinates.appendChild(geoCoordinatesLat);
 	geoCoordinates.appendChild(geoCoordinatesLon);
@@ -569,19 +569,19 @@ const createPosition = (data: FormValues, doc: XMLDocument) => {
 	}
 
 	const positionCodeEl = doc.createElement('trobava');
-	positionCodeEl.innerHTML = positionCode.toString();
+	positionCodeEl.textContent = positionCode.toString();
 	position.appendChild(positionCodeEl);
 
 	const positionTextEl = doc.createElement('trobava_txt');
-	positionTextEl.innerHTML = positionText;
+	positionTextEl.textContent = positionText;
 	position.appendChild(positionTextEl);
 
 	const positionFloor = doc.createElement('trobava_pis');
-	positionFloor.innerHTML = parsePositionFloorValue(data.floor).toString();
+	positionFloor.textContent = parsePositionFloorValue(data.floor).toString();
 	position.appendChild(positionFloor);
 
 	const positionTotalFloors = doc.createElement('trobava_plantes');
-	positionTotalFloors.innerHTML = parseTotalFloorsValue(data.totalFloors).toString();
+	positionTotalFloors.textContent = parseTotalFloorsValue(data.totalFloors).toString();
 	position.appendChild(positionTotalFloors);
 
 	let situationObserverCode = 1;
@@ -618,11 +618,11 @@ const createPosition = (data: FormValues, doc: XMLDocument) => {
 	}
 
 	const situationObserverEl = doc.createElement('estava');
-	situationObserverEl.innerHTML = situationObserverCode.toString();
+	situationObserverEl.textContent = situationObserverCode.toString();
 	position.appendChild(situationObserverEl);
 
 	const situationObserverTextEl = doc.createElement('estava_txt');
-	situationObserverTextEl.innerHTML = situationObserverText;
+	situationObserverTextEl.textContent = situationObserverText;
 	position.appendChild(situationObserverTextEl);
 
 	return position;
@@ -632,7 +632,7 @@ const createFeel = (data: FormValues, doc: XMLDocument) => {
 	const feel = doc.createElement('sentir');
 
 	const felt = doc.createElement('sentit');
-	felt.innerHTML = data.felt === 'yes' ? '1' : '0';
+	felt.textContent = data.felt === 'yes' ? '1' : '0';
 	feel.appendChild(felt);
 
 	let numberPeopleInsideCode = 1;
@@ -658,7 +658,7 @@ const createFeel = (data: FormValues, doc: XMLDocument) => {
 	}
 
 	const numberPeopleInside = doc.createElement('quants_dins');
-	numberPeopleInside.innerHTML = numberPeopleInsideCode.toString();
+	numberPeopleInside.textContent = numberPeopleInsideCode.toString();
 	feel.appendChild(numberPeopleInside);
 
 	let numberPeopleOutsideCode = 1;
@@ -681,7 +681,7 @@ const createFeel = (data: FormValues, doc: XMLDocument) => {
 	}
 
 	const numberPeopleOutside = doc.createElement('quants_fora');
-	numberPeopleOutside.innerHTML = numberPeopleOutsideCode.toString();
+	numberPeopleOutside.textContent = numberPeopleOutsideCode.toString();
 	feel.appendChild(numberPeopleOutside);
 
 	let numberPeopleGoingOutCode = 1;
@@ -707,7 +707,7 @@ const createFeel = (data: FormValues, doc: XMLDocument) => {
 	}
 
 	const numberPeopleGoingOut = doc.createElement('quants_correr');
-	numberPeopleGoingOut.innerHTML = numberPeopleGoingOutCode.toString();
+	numberPeopleGoingOut.textContent = numberPeopleGoingOutCode.toString();
 	feel.appendChild(numberPeopleGoingOut);
 
 	let numberPeopleAwakeCode = 1;
@@ -733,7 +733,7 @@ const createFeel = (data: FormValues, doc: XMLDocument) => {
 	}
 
 	const numberPeopleAwake = doc.createElement('quants_despertarse');
-	numberPeopleAwake.innerHTML = numberPeopleAwakeCode.toString();
+	numberPeopleAwake.textContent = numberPeopleAwakeCode.toString();
 	feel.appendChild(numberPeopleAwake);
 
 	return feel;
@@ -767,7 +767,7 @@ const createPerception = (data: FormValues, doc: XMLDocument) => {
 			movementCode = 7;
 			break;
 	}
-	movement.innerHTML = movementCode.toString();
+	movement.textContent = movementCode.toString();
 	perception.appendChild(movement);
 
 	const movementText = doc.createElement('moviment_txt');
@@ -796,7 +796,7 @@ const createPerception = (data: FormValues, doc: XMLDocument) => {
 			noiseCode = 6;
 			break;
 	}
-	noise.innerHTML = noiseCode.toString();
+	noise.textContent = noiseCode.toString();
 	perception.appendChild(noise);
 
 	const noiseText = doc.createElement('soroll_txt');
@@ -828,7 +828,7 @@ const createPerception = (data: FormValues, doc: XMLDocument) => {
 			reactionCode = 6;
 			break;
 	}
-	reaction.innerHTML = reactionCode.toString();
+	reaction.textContent = reactionCode.toString();
 	perception.appendChild(reaction);
 
 	const standingDifficulty = doc.createElement('dret');
@@ -848,7 +848,7 @@ const createPerception = (data: FormValues, doc: XMLDocument) => {
 			standingDifficultyCode = 4;
 			break;
 	}
-	standingDifficulty.innerHTML = standingDifficultyCode.toString();
+	standingDifficulty.textContent = standingDifficultyCode.toString();
 	perception.appendChild(standingDifficulty);
 
 	const animalsFrightened = doc.createElement('animals');
@@ -865,7 +865,7 @@ const createPerception = (data: FormValues, doc: XMLDocument) => {
 			animalsFrightenedCode = 4;
 			break;
 	}
-	animalsFrightened.innerHTML = animalsFrightenedCode.toString();
+	animalsFrightened.textContent = animalsFrightenedCode.toString();
 	perception.appendChild(animalsFrightened);
 
 	return perception;
@@ -890,7 +890,7 @@ const createObjects = (data: FormValues, doc: XMLDocument) => {
 			effectsLampsCode = 5;
 			break;
 	}
-	effectsLamps.innerHTML = effectsLampsCode.toString();
+	effectsLamps.textContent = effectsLampsCode.toString();
 	objects.appendChild(effectsLamps);
 
 	const effectsLiquids = doc.createElement('liquids');
@@ -909,7 +909,7 @@ const createObjects = (data: FormValues, doc: XMLDocument) => {
 			effectsLiquidsCode = 5;
 			break;
 	}
-	effectsLiquids.innerHTML = effectsLiquidsCode.toString();
+	effectsLiquids.textContent = effectsLiquidsCode.toString();
 	objects.appendChild(effectsLiquids);
 
 	const effectsShelves = doc.createElement('obj_vibrar');
@@ -937,11 +937,11 @@ const createObjects = (data: FormValues, doc: XMLDocument) => {
 			effectsShelvesCode = 8;
 			break;
 	}
-	effectsShelves.innerHTML = effectsShelvesCode.toString();
+	effectsShelves.textContent = effectsShelvesCode.toString();
 	objects.appendChild(effectsShelves);
 
 	const commentseffectsShelves = doc.createElement('obj_vibrar_txt');
-	if (data.commentseffectsShelves) commentseffectsShelves.innerHTML = data.commentseffectsShelves;
+	if (data.commentseffectsShelves) commentseffectsShelves.textContent = data.commentseffectsShelves;
 	objects.appendChild(commentseffectsShelves);
 
 	const effectsPaintings = doc.createElement('quadres');
@@ -963,7 +963,7 @@ const createObjects = (data: FormValues, doc: XMLDocument) => {
 			effectsPaintingsCode = 6;
 			break;
 	}
-	effectsPaintings.innerHTML = effectsPaintingsCode.toString();
+	effectsPaintings.textContent = effectsPaintingsCode.toString();
 	objects.appendChild(effectsPaintings);
 
 	const effectsDoorsWindows = doc.createElement('portes');
@@ -985,7 +985,7 @@ const createObjects = (data: FormValues, doc: XMLDocument) => {
 			effectsDoorsWindowsCode = 6;
 			break;
 	}
-	effectsDoorsWindows.innerHTML = effectsDoorsWindowsCode.toString();
+	effectsDoorsWindows.textContent = effectsDoorsWindowsCode.toString();
 	objects.appendChild(effectsDoorsWindows);
 
 	const effectsFurniture = doc.createElement('mobles');
@@ -1007,7 +1007,7 @@ const createObjects = (data: FormValues, doc: XMLDocument) => {
 			effectsFurnitureCode = 6;
 			break;
 	}
-	effectsFurniture.innerHTML = effectsFurnitureCode.toString();
+	effectsFurniture.textContent = effectsFurnitureCode.toString();
 	objects.appendChild(effectsFurniture);
 
 	const effectsPlants = doc.createElement('plantes');
@@ -1029,7 +1029,7 @@ const createObjects = (data: FormValues, doc: XMLDocument) => {
 			effectsPlantsCode = 6;
 			break;
 	}
-	effectsPlants.innerHTML = effectsPlantsCode.toString();
+	effectsPlants.textContent = effectsPlantsCode.toString();
 	objects.appendChild(effectsPlants);
 
 	return objects;
@@ -1057,14 +1057,14 @@ const createDamage = (data: FormValues, doc: XMLDocument) => {
 			buildingTypeCode = 4;
 			break;
 	}
-	buildingType.innerHTML = buildingTypeCode.toString();
+	buildingType.textContent = buildingTypeCode.toString();
 	damage.appendChild(buildingType);
 
 	const buildingYear = doc.createElement('any_edifici');
 	const sanitizedBuildingYear = /^\d{4}$/.test(data.buildingYear ?? '')
 		? data.buildingYear ?? ''
 		: '0';
-	buildingYear.innerHTML = sanitizedBuildingYear;
+	buildingYear.textContent = sanitizedBuildingYear;
 	damage.appendChild(buildingYear);
 
 	const buildingDamage = doc.createElement('danys');
@@ -1076,16 +1076,16 @@ const createDamage = (data: FormValues, doc: XMLDocument) => {
 		default:
 			buildingDamageCode = 3;
 	}
-	buildingDamage.innerHTML = buildingDamageCode.toString();
+	buildingDamage.textContent = buildingDamageCode.toString();
 	damage.appendChild(buildingDamage);
 
 	//What is supposed to go here?
 	const buildingDamageDescription = doc.createElement('danys_tipus');
-	buildingDamageDescription.innerHTML = '0';
+	buildingDamageDescription.textContent = '0';
 	damage.appendChild(buildingDamageDescription);
 
 	const commentsDamage = doc.createElement('danys_txt');
-	if (data.commentsDamage) commentsDamage.innerHTML = data.commentsDamage;
+	if (data.commentsDamage) commentsDamage.textContent = data.commentsDamage;
 	damage.appendChild(commentsDamage);
 
 	return damage;
@@ -1095,10 +1095,10 @@ const createComments = (data: FormValues, doc: XMLDocument) => {
 	const comments = doc.createElement('comentari');
 
 	const userComments = doc.createElement('comentari_usuari');
-	if (data.comments) userComments.innerHTML = data.comments;
+	if (data.comments) userComments.textContent = data.comments;
 	comments.appendChild(userComments);
 	const comments_txt = doc.createElement('varis_txt');
-	comments_txt.innerHTML = (data.otherSeismsText ?? '').slice(0, 255);
+	comments_txt.textContent = (data.otherSeismsText ?? '').slice(0, 255);
 	comments.appendChild(comments_txt);
 	return comments;
 };
@@ -1133,15 +1133,15 @@ const createStats = (doc: XMLDocument) => {
 	const userLangValue = ['ca', 'en', 'es'].includes(normalizedLang) ? normalizedLang : 'ca';
 
 	const language = doc.createElement('idioma');
-	language.innerHTML = userLangValue;
+	language.textContent = userLangValue;
 	stats.appendChild(language);
 
 	const isMobile = doc.createElement('mobil');
 
 	if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-		isMobile.innerHTML = '1';
+		isMobile.textContent = '1';
 	} else {
-		isMobile.innerHTML = '0';
+		isMobile.textContent = '0';
 	}
 
 	stats.appendChild(isMobile);
